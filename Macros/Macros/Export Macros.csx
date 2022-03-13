@@ -1,15 +1,15 @@
-﻿#r "C:\Program Files\Tabular Editor 3\TabularEditor3.exe" // *** Needed for C# scripting ***
-#r "C:\Program Files (x86)\Tabular Editor 3\TabularEditor3.exe" // *** Needed for C# scripting ***
+﻿#r "C:\Program Files\Tabular Editor 3\TabularEditor3.exe" // *** Needed for C# scripting, remove in TE3 ***
+#r "C:\Program Files (x86)\Tabular Editor 3\TabularEditor3.exe" // *** Needed for C# scripting, remove in TE3 ***
 
-using TabularEditor.TOMWrapper; // *** Needed for C# scripting ***
-using TabularEditor.Scripting; // *** Needed for C# scripting ***
+using TabularEditor.TOMWrapper; // *** Needed for C# scripting, remove in TE3 ***
+using TabularEditor.Scripting; // *** Needed for C# scripting, remove in TE3 ***
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using System.IO;
 using System.Windows.Forms;
 
-Model Model; // *** Needed for C# scripting ***
-TabularEditor.Shared.Interaction.Selection Selected; // *** Needed for C# scripting ***
+Model Model; // *** Needed for C# scripting, remove in TE3 ***
+TabularEditor.Shared.Interaction.Selection Selected; // *** Needed for C# scripting, remove in TE3 ***
 
 
 /*
@@ -62,18 +62,18 @@ foreach (var jtokenItem in json["Actions"])
     // Define default parts
     List<string> assemblyList = new List<string>()
     {
-        "#r \"C:\\Program Files\\Tabular Editor 3\\TabularEditor3.exe\" // *** Needed for C# scripting ***",
-        "#r \"C:\\Program Files (x86)\\Tabular Editor 3\\TabularEditor3.exe\" // *** Needed for C# scripting ***"
+        "#r \"C:\\Program Files\\Tabular Editor 3\\TabularEditor3.exe\" // *** Needed for C# scripting, remove in TE3 ***",
+        "#r \"C:\\Program Files (x86)\\Tabular Editor 3\\TabularEditor3.exe\" // *** Needed for C# scripting, remove in TE3 ***"
     };
     List<string> namespaceList = new List<string>()
     {
-        "using TabularEditor.TOMWrapper; // *** Needed for C# scripting ***",
-        "using TabularEditor.Scripting; // *** Needed for C# scripting ***"
+        "using TabularEditor.TOMWrapper; // *** Needed for C# scripting, remove in TE3 ***",
+        "using TabularEditor.Scripting; // *** Needed for C# scripting, remove in TE3 ***"
     };
     List<string> classList = new List<string>()
     {
-        "Model Model; // *** Needed for C# scripting ***",
-        "TabularEditor.Shared.Interaction.Selection Selected; // *** Needed for C# scripting ***"
+        "Model Model; // *** Needed for C# scripting, remove in TE3 ***",
+        "TabularEditor.Shared.Interaction.Selection Selected; // *** Needed for C# scripting, remove in TE3 ***"
     };
     List<string> bodyList = new List<string>();
 
