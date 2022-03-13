@@ -4,6 +4,7 @@
 using TabularEditor.TOMWrapper; // *** Needed for C# scripting ***
 using TabularEditor.Scripting; // *** Needed for C# scripting ***
 using System.IO;
+using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 
 Model Model; // *** Needed for C# scripting ***
