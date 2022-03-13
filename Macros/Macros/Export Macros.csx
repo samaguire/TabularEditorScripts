@@ -18,7 +18,7 @@ Elements relating to exporting json are disabled as importing requires TE3 to be
 */
 
 // Get output folder
-var fbd = new FolderBrowserDialog() { SelectedPath = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) };
+var fbd = new FolderBrowserDialog();
 if (fbd.ShowDialog() == DialogResult.Cancel) { return; }
 var outFolder = fbd.SelectedPath;
 
