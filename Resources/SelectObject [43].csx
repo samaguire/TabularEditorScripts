@@ -7,16 +7,13 @@ using TabularEditor.Scripting; // *** Needed for C# scripting, remove in TE3 ***
 Model Model; // *** Needed for C# scripting, remove in TE3 ***
 TabularEditor.Shared.Interaction.Selection Selected; // *** Needed for C# scripting, remove in TE3 ***
 
-// https://docs.tabulareditor.com/Useful-script-snippets.html#create-measures-from-columns
+var selectedObject = ScriptHelper.SelectObject(
+    new TabularNamedObject[]
+    {
+        Model.Tables["Account"],
+        (Model.Tables["Dates"].Columns["Date"] as DataColumn),
+        Model.Tables["Transactional"].Measures["Total Actual COGS"]
+    }
+    );
 
-foreach(var c in Selected.Columns)
-{
-    var newMeasure = c.Table.AddMeasure(
-        "Distinct Count Of " + c.Name,
-        "DISTINCTCOUNT( " + c.DaxObjectFullName + " )",
-        c.DisplayFolder + "\\Distinct Count Of Measures"
-        );
-    //c.IsHidden = true;
-}
-
-ScriptHelper.Info("Script finished.");
+selectedObject.Output();

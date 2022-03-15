@@ -458,7 +458,7 @@ createButton.Click += (System.Object sender6, System.EventArgs e6) => {
      if (perspName == string.Empty)
      {
          // Invalid perspective name
-         Error("Please enter a name for the new perspective.");
+         ScriptHelper.Error("Please enter a name for the new perspective.");
      }
      else
      {

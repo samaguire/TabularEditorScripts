@@ -14,5 +14,5 @@ string defaultQuery =
 foreach (var c in Selected.Columns)
 {
     string daxQuery = defaultQuery.Replace("<column>", c.DaxObjectFullName);
-    EvaluateDax(daxQuery).Output();
+    ScriptHelper.EvaluateDax(daxQuery).Output();
 }

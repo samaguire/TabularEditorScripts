@@ -13,7 +13,7 @@ var insertLineBreakOnFirstLine = true;
 
 Func<string, string> GetFormattedDax = (string daxInput) =>
 {
-    var formattedDax = FormatDax(daxInput, shortFormat: useShortFormat, skipSpaceAfterFunctionName: !insertSpaceAfterFunctionName);
+    var formattedDax = ScriptHelper.FormatDax(daxInput, shortFormat: useShortFormat, skipSpaceAfterFunctionName: !insertSpaceAfterFunctionName);
     return insertLineBreakOnFirstLine ? "\r\n" + formattedDax : formattedDax;
 };
 
@@ -22,4 +22,4 @@ foreach (var i in Model.AllCalculationItems) { i.Expression = GetFormattedDax(i.
 foreach (var t in Model.Tables.OfType<CalculatedTable>().Where(x => !x.Name.Contains("DateTableTemplate_") && !x.Name.Contains("LocalDateTable_"))) { t.Expression = GetFormattedDax(t.Expression); }
 foreach (var c in Model.AllColumns.OfType<CalculatedColumn>().Where(x => !x.DaxTableName.Contains("DateTableTemplate_") && !x.DaxTableName.Contains("LocalDateTable_"))) { c.Expression = GetFormattedDax(c.Expression); }
 
-Info("Script finished.");
+ScriptHelper.Info("Script finished.");

@@ -58,10 +58,10 @@ foreach (var jtokenItem in json["Actions"])
 {
 
     // Generate filename without extension and relataive path
-    var fileName = string.Join("_", jtokenItem["Name"].Value<string>().Replace('\\','~').Split(Path.GetInvalidFileNameChars())).Replace('~','\\')+
-                   " ["+
-                   jtokenItem["Id"].Value<string>()+
-                   "]";
+    var fileName = string.Join("_", jtokenItem["Name"].Value<string>().Replace('\\', '~').Split(Path.GetInvalidFileNameChars())).Replace('~', '\\') +
+        " [" +
+        jtokenItem["Id"].Value<string>() +
+        "]";
 
     // Define default parts
     List<string> assemblyList = new List<string>()
@@ -108,7 +108,7 @@ foreach (var jtokenItem in json["Actions"])
     writer.Dispose();
 
     // Save csxContent
-    var csxFilePath = outFolder+"\\"+fileName+".csx";
+    var csxFilePath = outFolder + "\\" + fileName + ".csx";
     FileInfo fileInfo = new FileInfo(csxFilePath);
     if (!fileInfo.Directory.Exists) { fileInfo.Directory.Create(); }
     File.WriteAllText(csxFilePath, csxContent, System.Text.Encoding.UTF8);

@@ -19,4 +19,4 @@ foreach(var c in Selected.Columns)
     c.IsHidden = true;
 }
 
-Info("Script finished.");
+ScriptHelper.Info("Script finished.");

@@ -21,7 +21,7 @@ foreach (var c in Model.AllColumns.Where(a => a.DataType == DataType.DateTime))
     string tableName = c.Table.Name;
     var obj = Model.Tables[tableName].Columns[columnName];
     
-    var result = ExecuteDax("EVALUATE TOPN(5,SUMMARIZECOLUMNS('"+tableName+"'["+columnName+"]))").Tables[0];
+    var result = ScriptHelper.ExecuteDax("EVALUATE TOPN(5,SUMMARIZECOLUMNS('"+tableName+"'["+columnName+"]))").Tables[0];
 
     for (int r = 0; r < result.Rows.Count; r++)
     {
@@ -38,4 +38,4 @@ foreach (var c in Model.AllColumns.Where(a => a.DataType == DataType.DateTime))
     }
 }
 
-Info("Script finished.");
+ScriptHelper.Info("Script finished.");

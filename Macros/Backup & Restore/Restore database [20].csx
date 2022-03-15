@@ -85,4 +85,4 @@ restoreInfo.AllowOverwrite = true;
 
 Model.Database.TOMDatabase.Server.Restore(restoreInfo);
 
-Info("Script finished.");
+ScriptHelper.Info("Script finished.");

@@ -7,9 +7,9 @@ using TabularEditor.Scripting; // *** Needed for C# scripting, remove in TE3 ***
 Model Model; // *** Needed for C# scripting, remove in TE3 ***
 TabularEditor.Shared.Interaction.Selection Selected; // *** Needed for C# scripting, remove in TE3 ***
 
-CustomAction("Macros\\BPA rules\\Download rules");
-CustomAction("Macros\\BPA rules\\Add long length column annotations");
-CustomAction("Macros\\BPA rules\\Add split datetime annotations");
-CustomAction("Macros\\BPA rules\\Add VertiPaq annotations");
+ScriptHelper.CustomAction("Macros\\BPA rules\\Download rules");
+ScriptHelper.CustomAction("Macros\\BPA rules\\Add long length column annotations");
+ScriptHelper.CustomAction("Macros\\BPA rules\\Add split datetime annotations");
+ScriptHelper.CustomAction("Macros\\BPA rules\\Add VertiPaq annotations");
 
-Info("All scripts finished.");
+ScriptHelper.Info("All scripts finished.");

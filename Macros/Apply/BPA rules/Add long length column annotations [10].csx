@@ -19,7 +19,7 @@ foreach (var c in Model.AllColumns.Where(a => a.DataType == DataType.String))
     string columnName = c.Name;
     
     var obj = Model.Tables[tableName].Columns[columnName];
-    var result = EvaluateDax("SUMMARIZECOLUMNS(\"test\",CALCULATE(COUNTROWS(DISTINCT('"+tableName+"'["+columnName+"])),LEN('"+tableName+"'["+columnName+"]) > "+maxLen+"))");
+    var result = ScriptHelper.EvaluateDax("SUMMARIZECOLUMNS(\"test\",CALCULATE(COUNTROWS(DISTINCT('"+tableName+"'["+columnName+"])),LEN('"+tableName+"'["+columnName+"]) > "+maxLen+"))");
     
     obj.SetAnnotation(annName,result.ToString());
     
@@ -30,4 +30,4 @@ foreach (var c in Model.AllColumns.Where(a => a.DataType == DataType.String))
 
 }
 
-Info("Script finished.");
+ScriptHelper.Info("Script finished.");

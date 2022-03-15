@@ -31,11 +31,11 @@ else if (version == 2)
 else
 {
 
-    Error("Couldn't identify the version of Tabular Editor: "+version);
+    ScriptHelper.Error("Couldn't identify the version of Tabular Editor: "+version);
     return;
 
 }
 
 w.DownloadFile(url, downloadLoc);
 
-Info("Script finished.");
+ScriptHelper.Info("Script finished.");

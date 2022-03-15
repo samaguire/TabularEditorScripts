@@ -19,4 +19,4 @@ backupInfo.ApplyCompression = true;
 
 Model.Database.TOMDatabase.Backup(backupInfo);
 
-Info("Script finished.");
+ScriptHelper.Info("Script finished.");

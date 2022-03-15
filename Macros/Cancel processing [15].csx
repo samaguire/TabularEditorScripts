@@ -15,7 +15,7 @@ TabularEditor.Shared.Interaction.Selection Selected; // *** Needed for C# script
 
 
 
-var DMV_Cmd = ExecuteDax("SELECT [SESSION_ID],[SESSION_LAST_COMMAND] FROM $SYSTEM.DISCOVER_SESSIONS").Tables[0];
+var DMV_Cmd = ScriptHelper.ExecuteDax("SELECT [SESSION_ID],[SESSION_LAST_COMMAND] FROM $SYSTEM.DISCOVER_SESSIONS").Tables[0];
 bool runTMSL = true;
 string databaseID = Model.Database.ID;
 string databaseName = Model.Database.Name;
@@ -35,14 +35,14 @@ for (int r = 0; r < DMV_Cmd.Rows.Count; r++)
 
 if (sID == string.Empty)
 {
-    Error("No processing Session ID found for the '"+databaseName+"' model.");
+    ScriptHelper.Error("No processing Session ID found for the '"+databaseName+"' model.");
     return;
 }
 
 if (runTMSL)
 {
     Model.Database.TOMDatabase.Server.CancelSession(sID);
-    Info("Processing for the '"+databaseName+"' model has been cancelled (Session ID: "+sID+").");
+    ScriptHelper.Info("Processing for the '"+databaseName+"' model has been cancelled (Session ID: "+sID+").");
 }
 else
 {

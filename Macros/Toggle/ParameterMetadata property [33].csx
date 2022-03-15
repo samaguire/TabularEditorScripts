@@ -24,4 +24,4 @@ foreach (var c in Selected.Columns)
     }
 }
 
-Info("Script finished.");
+ScriptHelper.Info("Script finished.");
