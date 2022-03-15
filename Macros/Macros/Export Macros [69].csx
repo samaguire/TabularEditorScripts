@@ -15,7 +15,7 @@ TabularEditor.Shared.Interaction.Selection Selected; // *** Needed for C# script
 /*
 Notes:
 Elements relating to exporting json are disabled as importing requires TE3 to be restarted, which is a hindrance in script development (it is easier to copy and paste).
-Future dev to impliment an import script; add al as new, or override existing (by id) and add new where id doesn't exist: with a warning about potentially breaking the layout
+Future dev to impliment an import script; add all as new, or override existing (by id) and add new where id doesn't exist: with a warning about potentially breaking the layout
 */
 
 // Get output folder
@@ -27,7 +27,7 @@ var outFolder = fbd.SelectedPath;
 var mbResult = MessageBox.Show(
     // "Do you want to delete all existing csx and json files in the folder first?",
     "Do you want to delete all existing csx files in the folder first?",
-    "Reset Folder",
+    "Question",
     MessageBoxButtons.YesNoCancel,
     MessageBoxIcon.Question
     );
@@ -58,7 +58,10 @@ foreach (var jtokenItem in json["Actions"])
 {
 
     // Generate filename without extension and relataive path
-    var fileName = string.Join("_", jtokenItem["Name"].Value<string>().Replace('/','_').Split(Path.GetInvalidPathChars()));
+    var fileName = string.Join("_", jtokenItem["Name"].Value<string>().Replace('\\','~').Split(Path.GetInvalidFileNameChars())).Replace('~','\\')+
+                   " ["+
+                   jtokenItem["Id"].Value<string>()+
+                   "]";
 
     // Define default parts
     List<string> assemblyList = new List<string>()
@@ -112,7 +115,6 @@ foreach (var jtokenItem in json["Actions"])
 
     // // Get jsonContent
     // jtokenItem["Execute"].Parent.Remove();
-    // jtokenItem["Name"].Parent.Remove();
     // var jsonContent = JsonConvert.SerializeObject(jtokenItem, Newtonsoft.Json.Formatting.Indented);
 
     // // Save jsonContent
