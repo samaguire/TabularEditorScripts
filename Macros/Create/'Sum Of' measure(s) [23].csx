@@ -13,7 +13,7 @@ foreach(var c in Selected.Columns)
 {
     var newMeasure = c.Table.AddMeasure(
         "Sum Of " + c.Name,
-        "SUM(" + c.DaxObjectFullName + ")",
+        "SUM( " + c.DaxObjectFullName + " )",
         c.DisplayFolder + "\\Sum Of Measures"
         );
     c.IsHidden = true;

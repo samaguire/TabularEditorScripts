@@ -13,7 +13,7 @@ foreach(var c in Selected.Columns)
 {
     var newMeasure = c.Table.AddMeasure(
         "Distinct Count Of " + c.Name,
-        "DISTINCTCOUNT(" + c.DaxObjectFullName + ")",
+        "DISTINCTCOUNT( " + c.DaxObjectFullName + " )",
         c.DisplayFolder + "\\Distinct Count Of Measures"
         );
     //c.IsHidden = true;

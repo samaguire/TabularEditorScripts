@@ -13,7 +13,7 @@ foreach(var c in Selected.Columns)
 {
     var newMeasure = c.Table.AddMeasure(
         "Avg Of " + c.Name,
-        "AVERAGE(" + c.DaxObjectFullName + ")",
+        "AVERAGE( " + c.DaxObjectFullName + " )",
         c.DisplayFolder + "\\Avg Of Measures"
         );
     c.IsHidden = true;
