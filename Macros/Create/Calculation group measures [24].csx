@@ -183,11 +183,11 @@ foreach (var m in Selected.Measures)
             // Format string expression is a string
             nm.FormatString = e.Trim('\r', '\n', '"');
         }
-        // Todo: Add in process to handle DAX expressions e.g. https://www.esbrina-ba.com/showing-measure-descriptions-in-tooltips/
+        // todo #2 Add in process to handle DAX expressions e.g. https://www.esbrina-ba.com/showing-measure-descriptions-in-tooltips/
 
         nm.SetAnnotation("isCalculationGroupMeasure", "true");
 
-        // Todo: Add in logic to create descriptions
+        // todo #3 Add in logic to create descriptions
 
     }
 }
