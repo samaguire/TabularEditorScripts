@@ -3,17 +3,20 @@
 
 using TabularEditor.TOMWrapper; // *** Needed for C# scripting, remove in TE3 ***
 using TabularEditor.Scripting; // *** Needed for C# scripting, remove in TE3 ***
+using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
 
 Model Model; // *** Needed for C# scripting, remove in TE3 ***
 TabularEditor.Shared.Interaction.Selection Selected; // *** Needed for C# scripting, remove in TE3 ***
 
 bool fullReset = false;
 
-Func<string, string, string> RemoveFromPBI_ChangedProperties = (string textPBI_ChangedProperties, string textProperty) =>
+Func<string, string, string> RemovePBIChangedProperty = (string pbiChangedProperties, string propertyName) =>
 {
-    List<string> textProperties = textPBI_ChangedProperties.Trim('[', ']').Replace("\"", "").Split(',').ToList();
-    textProperties = textProperties.Where(p => p != textProperty).ToList();
-    return "[\"" + String.Join("\",\"", textProperties) + "\"]";
+    if (String.IsNullOrEmpty(pbiChangedProperties)) { return null; }
+    var jsonArray = JArray.Parse(pbiChangedProperties);
+    jsonArray = new JArray(jsonArray.Values<string>().Where(x => x != propertyName));
+    return jsonArray.Any() ? JsonConvert.SerializeObject(jsonArray) : null;
 };
 
 foreach (var m in Model.AllMeasures)
@@ -32,7 +35,7 @@ foreach (var m in Model.AllMeasures)
     string textPBI_ChangedProperties = m.GetAnnotation("PBI_ChangedProperties");
     if (!String.IsNullOrEmpty(textPBI_ChangedProperties))
     {
-        textPBI_ChangedProperties = RemoveFromPBI_ChangedProperties(textPBI_ChangedProperties, "FormatString");
+        textPBI_ChangedProperties = RemovePBIChangedProperty(textPBI_ChangedProperties, "FormatString");
         if (textPBI_ChangedProperties=="[\"\"]")
         {
             m.RemoveAnnotation("PBI_ChangedProperties");
@@ -99,7 +102,7 @@ foreach (var c in Model.AllColumns)
     string textPBI_ChangedProperties = c.GetAnnotation("PBI_ChangedProperties");
     if (!String.IsNullOrEmpty(textPBI_ChangedProperties))
     {
-        textPBI_ChangedProperties = RemoveFromPBI_ChangedProperties(textPBI_ChangedProperties, "FormatString");
+        textPBI_ChangedProperties = RemovePBIChangedProperty(textPBI_ChangedProperties, "FormatString");
         if (textPBI_ChangedProperties=="[\"\"]")
         {
             c.RemoveAnnotation("PBI_ChangedProperties");

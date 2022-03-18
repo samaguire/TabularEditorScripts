@@ -3,16 +3,19 @@
 
 using TabularEditor.TOMWrapper; // *** Needed for C# scripting, remove in TE3 ***
 using TabularEditor.Scripting; // *** Needed for C# scripting, remove in TE3 ***
+using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
 
 Model Model; // *** Needed for C# scripting, remove in TE3 ***
 TabularEditor.Shared.Interaction.Selection Selected; // *** Needed for C# scripting, remove in TE3 ***
 
-Func<string, string, string> AddToPBI_ChangedProperties = (string textPBI_ChangedProperties, string textProperty) =>
+Func<string, string, string> AddPBIChangedProperty = (string pbiChangedProperties, string propertyName) =>
 {
-    List<string> textProperties = textPBI_ChangedProperties.Trim('[').Trim(']').Replace("\"", "").Split(',').ToList();
-    textProperties = textProperties.Where(p => p != "").ToList();
-    if (!textProperties.Contains(textProperty)) { textProperties.Add(textProperty); }
-    return "[\"" + String.Join("\",\"", textProperties) + "\"]";
+    var jsonArray = new JArray();
+    if (!String.IsNullOrEmpty(pbiChangedProperties)) { jsonArray = JArray.Parse(pbiChangedProperties); }
+    if (!String.IsNullOrEmpty(propertyName)) { jsonArray.Add(new JValue(propertyName)); }
+    jsonArray = new JArray(jsonArray.Distinct());
+    return jsonArray.Any() ? JsonConvert.SerializeObject(jsonArray) : null;
 };
 
 foreach (var c in Selected.Columns)
@@ -24,7 +27,7 @@ foreach (var c in Selected.Columns)
     if (sortByColumn != c) { c.SortByColumn = sortByColumn; }
 
     string textPBI_ChangedProperties = c.GetAnnotation("PBI_ChangedProperties") ?? "";
-    textPBI_ChangedProperties = AddToPBI_ChangedProperties(textPBI_ChangedProperties, "SortByColumn");
+    textPBI_ChangedProperties = AddPBIChangedProperty(textPBI_ChangedProperties, "SortByColumn");
     c.SetAnnotation("PBI_ChangedProperties", textPBI_ChangedProperties);
 
 }
