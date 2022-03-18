@@ -103,6 +103,7 @@ foreach (var jtokenItem in json["Actions"])
     writer.WriteLine("");
     foreach (var listItem in classList) { writer.WriteLine(listItem); }
     writer.WriteLine("");
+    // todo #4 Add logic to remove empty lines from beginning of bodylist
     foreach (var listItem in bodyList) { writer.WriteLine(listItem); }
     csxContent = writer.ToString();
     writer.Dispose();
