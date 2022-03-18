@@ -11,10 +11,10 @@ TabularEditor.Shared.Interaction.Selection Selected; // *** Needed for C# script
 
 foreach (var c in Model.AllColumns)
 {
-    if (c.DataType == DataType.DateTime) { c.EncodingHint = EncodingHintType.Value; }
-    if (c.DataType == DataType.Decimal) { c.EncodingHint = EncodingHintType.Value; }
-    if (c.DataType == DataType.Double) { c.EncodingHint = EncodingHintType.Value; }
-    if (c.DataType == DataType.Int64) { c.EncodingHint = EncodingHintType.Value; }
+    if (c.DataType == DataType.DateTime || c.DataType == DataType.Decimal || c.DataType == DataType.Double || c.DataType == DataType.Int64)
+    {
+        c.EncodingHint = EncodingHintType.Value;
+    }
 }
 
 ScriptHelper.Info("Script finished.");
