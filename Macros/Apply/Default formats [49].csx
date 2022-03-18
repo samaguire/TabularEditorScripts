@@ -32,18 +32,15 @@ foreach (var m in Model.AllMeasures)
     m.SetAnnotation("Format", "<Format Format=\"General\" />");
     m.SetAnnotation("PBI_FormatHint", "{\"isGeneralNumber\":true}");
 
-    string textPBI_ChangedProperties = m.GetAnnotation("PBI_ChangedProperties");
-    if (!String.IsNullOrEmpty(textPBI_ChangedProperties))
+    var pbiChangedProperties = m.GetAnnotation("PBI_ChangedProperties");
+    pbiChangedProperties = RemovePBIChangedProperty(pbiChangedProperties, "FormatString");
+    if (!String.IsNullOrEmpty(pbiChangedProperties))
     {
-        textPBI_ChangedProperties = RemovePBIChangedProperty(textPBI_ChangedProperties, "FormatString");
-        if (textPBI_ChangedProperties=="[\"\"]")
-        {
-            m.RemoveAnnotation("PBI_ChangedProperties");
-        }
-        else
-        {
-            m.SetAnnotation("PBI_ChangedProperties", textPBI_ChangedProperties);
-        }
+        m.SetAnnotation("PBI_ChangedProperties", pbiChangedProperties);
+    }
+    else
+    {
+        m.RemoveAnnotation("PBI_ChangedProperties");
     }
 
     if (!fullReset)
@@ -99,18 +96,15 @@ foreach (var c in Model.AllColumns)
             break;
     }
 
-    string textPBI_ChangedProperties = c.GetAnnotation("PBI_ChangedProperties");
-    if (!String.IsNullOrEmpty(textPBI_ChangedProperties))
+    var pbiChangedProperties = c.GetAnnotation("PBI_ChangedProperties");
+    pbiChangedProperties = RemovePBIChangedProperty(pbiChangedProperties, "FormatString");
+    if (!String.IsNullOrEmpty(pbiChangedProperties))
     {
-        textPBI_ChangedProperties = RemovePBIChangedProperty(textPBI_ChangedProperties, "FormatString");
-        if (textPBI_ChangedProperties=="[\"\"]")
-        {
-            c.RemoveAnnotation("PBI_ChangedProperties");
-        }
-        else
-        {
-            c.SetAnnotation("PBI_ChangedProperties", textPBI_ChangedProperties);
-        }
+        c.SetAnnotation("PBI_ChangedProperties", pbiChangedProperties);
+    }
+    else
+    {
+        c.RemoveAnnotation("PBI_ChangedProperties");
     }
 
     if (!fullReset)

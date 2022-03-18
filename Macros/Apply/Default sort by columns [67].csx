@@ -24,18 +24,15 @@ foreach (var c in Model.AllColumns)
 
     c.SortByColumn = null;
 
-    string textPBI_ChangedProperties = c.GetAnnotation("PBI_ChangedProperties");
-    if (!String.IsNullOrEmpty(textPBI_ChangedProperties))
+    var pbiChangedProperties = c.GetAnnotation("PBI_ChangedProperties");
+    pbiChangedProperties = RemovePBIChangedProperty(pbiChangedProperties, "SortByColumn");
+    if (!String.IsNullOrEmpty(pbiChangedProperties))
     {
-        textPBI_ChangedProperties = RemovePBIChangedProperty(textPBI_ChangedProperties, "SortByColumn");
-        if (textPBI_ChangedProperties=="[\"\"]")
-        {
-            c.RemoveAnnotation("PBI_ChangedProperties");
-        }
-        else
-        {
-            c.SetAnnotation("PBI_ChangedProperties", textPBI_ChangedProperties);
-        }
+        c.SetAnnotation("PBI_ChangedProperties", pbiChangedProperties);
+    }
+    else
+    {
+        c.RemoveAnnotation("PBI_ChangedProperties");
     }
 
 }

@@ -27,9 +27,9 @@ foreach (var m in Selected.Measures)
     m.SetAnnotation("Format", "<Format Format=\"NumberWhole\" Accuracy=\"0\" ThousandSeparator=\"True\" />");
     m.RemoveAnnotation("PBI_FormatHint");
 
-    string textPBI_ChangedProperties = m.GetAnnotation("PBI_ChangedProperties") ?? "";
-    textPBI_ChangedProperties = AddPBIChangedProperty(textPBI_ChangedProperties, "FormatString");
-    m.SetAnnotation("PBI_ChangedProperties", textPBI_ChangedProperties);
+    var pbiChangedProperties = m.GetAnnotation("PBI_ChangedProperties");
+    pbiChangedProperties = AddPBIChangedProperty(pbiChangedProperties, "FormatString");
+    if (!String.IsNullOrEmpty(pbiChangedProperties)) { m.SetAnnotation("PBI_ChangedProperties", pbiChangedProperties); }
 
     m.SetAnnotation("disallowApplyingDefaultFormatting", "true");
 

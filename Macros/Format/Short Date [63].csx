@@ -28,9 +28,9 @@ foreach (var c in Selected.Columns)
     c.SetAnnotation("Format", "<Format Format=\"DateTimeGeneralPattern\"><DateTimes><DateTime LCID=\"5129\" Group=\"ShortDate\" FormatString=\"d\" /></DateTimes></Format>");
     c.SetAnnotation("UnderlyingDateTimeDataType", "Date");
 
-    string textPBI_ChangedProperties = c.GetAnnotation("PBI_ChangedProperties") ?? "";
-    textPBI_ChangedProperties = AddPBIChangedProperty(textPBI_ChangedProperties, "FormatString");
-    c.SetAnnotation("PBI_ChangedProperties", textPBI_ChangedProperties);
+    var pbiChangedProperties = c.GetAnnotation("PBI_ChangedProperties");
+    pbiChangedProperties = AddPBIChangedProperty(pbiChangedProperties, "FormatString");
+    if (!String.IsNullOrEmpty(pbiChangedProperties)) { c.SetAnnotation("PBI_ChangedProperties", pbiChangedProperties); }
 
     c.SetAnnotation("disallowApplyingDefaultFormatting", "true");
 

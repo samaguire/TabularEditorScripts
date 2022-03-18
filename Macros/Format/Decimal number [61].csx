@@ -27,9 +27,9 @@ foreach (var c in Selected.Columns)
     c.FormatString = "#,0.00";
     c.SetAnnotation("Format", "<Format Format=\"NumberDecimal\" Accuracy=\"2\" ThousandSeparator=\"True\" />");
 
-    string textPBI_ChangedProperties = c.GetAnnotation("PBI_ChangedProperties") ?? "";
-    textPBI_ChangedProperties = AddPBIChangedProperty(textPBI_ChangedProperties, "FormatString");
-    c.SetAnnotation("PBI_ChangedProperties", textPBI_ChangedProperties);
+    var pbiChangedProperties = c.GetAnnotation("PBI_ChangedProperties");
+    pbiChangedProperties = AddPBIChangedProperty(pbiChangedProperties, "FormatString");
+    if (!String.IsNullOrEmpty(pbiChangedProperties)) { c.SetAnnotation("PBI_ChangedProperties", pbiChangedProperties); }
 
     c.SetAnnotation("disallowApplyingDefaultFormatting", "true");
 

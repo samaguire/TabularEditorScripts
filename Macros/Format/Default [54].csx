@@ -17,38 +17,25 @@ Func<string, string, string> RemovePBIChangedProperty = (string pbiChangedProper
     return jsonArray.Any() ? JsonConvert.SerializeObject(jsonArray) : null;
 };
 
-// foreach (var m in Model.AllMeasures)
 foreach (var m in Selected.Measures)
 {
-
-    // if (!fullReset)
-    // {
-    //     bool disallowApplyingDefaultFormatting = Convert.ToBoolean(m.GetAnnotation("disallowApplyingDefaultFormatting"));
-    //     if (disallowApplyingDefaultFormatting) { continue; }
-    // }
 
     m.FormatString = "";
     m.SetAnnotation("Format", "<Format Format=\"General\" />");
     m.SetAnnotation("PBI_FormatHint", "{\"isGeneralNumber\":true}");
 
-    string textPBI_ChangedProperties = m.GetAnnotation("PBI_ChangedProperties");
-    if (!String.IsNullOrEmpty(textPBI_ChangedProperties))
+    var pbiChangedProperties = m.GetAnnotation("PBI_ChangedProperties");
+    pbiChangedProperties = RemovePBIChangedProperty(pbiChangedProperties, "FormatString");
+    if (!String.IsNullOrEmpty(pbiChangedProperties))
     {
-        textPBI_ChangedProperties = RemovePBIChangedProperty(textPBI_ChangedProperties, "FormatString");
-        if (textPBI_ChangedProperties=="[\"\"]")
-        {
-            m.RemoveAnnotation("PBI_ChangedProperties");
-        }
-        else
-        {
-            m.SetAnnotation("PBI_ChangedProperties", textPBI_ChangedProperties);
-        }
+        m.SetAnnotation("PBI_ChangedProperties", pbiChangedProperties);
+    }
+    else
+    {
+        m.RemoveAnnotation("PBI_ChangedProperties");
     }
 
-    // if (!fullReset)
-    // {
-        m.RemoveAnnotation("disallowApplyingDefaultFormatting");
-    // }
+    m.RemoveAnnotation("disallowApplyingDefaultFormatting");
 
 }
 

@@ -21,14 +21,17 @@ Func<string, string, string> AddPBIChangedProperty = (string pbiChangedPropertie
 foreach (var c in Selected.Columns)
 {
 
+    // Todo: insert logic to get the table's columns excluding the selected one
+
+    if (c.Table.ObjectType == ObjectType.CalculationGroupTable) { continue; }
+
     Column sortByColumn = ScriptHelper.SelectColumn(c.Table, null, "Select sort by column for " + c.DaxObjectFullName + ":");
     if (sortByColumn == null) { continue; }
-
     if (sortByColumn != c) { c.SortByColumn = sortByColumn; }
 
-    string textPBI_ChangedProperties = c.GetAnnotation("PBI_ChangedProperties") ?? "";
-    textPBI_ChangedProperties = AddPBIChangedProperty(textPBI_ChangedProperties, "SortByColumn");
-    c.SetAnnotation("PBI_ChangedProperties", textPBI_ChangedProperties);
+    var pbiChangedProperties = c.GetAnnotation("PBI_ChangedProperties");
+    pbiChangedProperties = AddPBIChangedProperty(pbiChangedProperties, "SortByColumn");
+    if (!String.IsNullOrEmpty(pbiChangedProperties)) { c.SetAnnotation("PBI_ChangedProperties", pbiChangedProperties); }
 
 }
 
