@@ -9,25 +9,25 @@ TabularEditor.Shared.Interaction.Selection Selected; // *** Needed for C# script
 
 foreach (var m in Selected.Measures)
 {
-    if (String.IsNullOrEmpty(m.GetAnnotation("disallowApplyingDefaultFormatting")))
+    if (String.IsNullOrEmpty(m.GetAnnotation("DisallowApplyingDefaultFormatting")))
     {
-        m.SetAnnotation("disallowApplyingDefaultFormatting", "true");
+        m.SetAnnotation("DisallowApplyingDefaultFormatting", "true");
     }
     else
     {
-        m.RemoveAnnotation("disallowApplyingDefaultFormatting");
+        m.RemoveAnnotation("DisallowApplyingDefaultFormatting");
     }
 }
 
 foreach (var c in Selected.Columns)
 {
-    if (String.IsNullOrEmpty(c.GetAnnotation("disallowApplyingDefaultFormatting")))
+    if (String.IsNullOrEmpty(c.GetAnnotation("DisallowApplyingDefaultFormatting")))
     {
-        c.SetAnnotation("disallowApplyingDefaultFormatting", "true");
+        c.SetAnnotation("DisallowApplyingDefaultFormatting", "true");
     }
     else
     {
-        c.RemoveAnnotation("disallowApplyingDefaultFormatting");
+        c.RemoveAnnotation("DisallowApplyingDefaultFormatting");
     }
 }
 

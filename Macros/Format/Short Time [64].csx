@@ -32,7 +32,7 @@ foreach (var c in Selected.Columns)
     pbiChangedProperties = AddPBIChangedProperty(pbiChangedProperties, "FormatString");
     if (!String.IsNullOrEmpty(pbiChangedProperties)) { c.SetAnnotation("PBI_ChangedProperties", pbiChangedProperties); }
 
-    c.SetAnnotation("disallowApplyingDefaultFormatting", "true");
+    c.SetAnnotation("DisallowApplyingDefaultFormatting", "true");
 
 }
 

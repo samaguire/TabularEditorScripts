@@ -35,7 +35,7 @@ foreach (var m in Selected.Measures)
         m.RemoveAnnotation("PBI_ChangedProperties");
     }
 
-    m.RemoveAnnotation("disallowApplyingDefaultFormatting");
+    m.RemoveAnnotation("DisallowApplyingDefaultFormatting");
 
 }
 

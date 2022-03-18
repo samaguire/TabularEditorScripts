@@ -68,7 +68,7 @@ foreach (var c in Selected.Columns)
         c.RemoveAnnotation("PBI_ChangedProperties");
     }
 
-    c.RemoveAnnotation("disallowApplyingDefaultFormatting");
+    c.RemoveAnnotation("DisallowApplyingDefaultFormatting");
 
 }
 

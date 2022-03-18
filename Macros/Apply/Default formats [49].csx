@@ -24,7 +24,7 @@ foreach (var m in Model.AllMeasures)
 
     if (!fullReset)
     {
-        bool disallowApplyingDefaultFormatting = Convert.ToBoolean(m.GetAnnotation("disallowApplyingDefaultFormatting"));
+        bool disallowApplyingDefaultFormatting = Convert.ToBoolean(m.GetAnnotation("DisallowApplyingDefaultFormatting"));
         if (disallowApplyingDefaultFormatting) { continue; }
     }
 
@@ -45,7 +45,7 @@ foreach (var m in Model.AllMeasures)
 
     if (!fullReset)
     {
-        m.RemoveAnnotation("disallowApplyingDefaultFormatting");
+        m.RemoveAnnotation("DisallowApplyingDefaultFormatting");
     }
 
 }
@@ -55,7 +55,7 @@ foreach (var c in Model.AllColumns)
 
     if (!fullReset)
     {
-        bool disallowApplyingDefaultFormatting = Convert.ToBoolean(c.GetAnnotation("disallowApplyingDefaultFormatting"));
+        bool disallowApplyingDefaultFormatting = Convert.ToBoolean(c.GetAnnotation("DisallowApplyingDefaultFormatting"));
         if (disallowApplyingDefaultFormatting) { continue; }
     }
 
@@ -109,7 +109,7 @@ foreach (var c in Model.AllColumns)
 
     if (!fullReset)
     {
-        c.RemoveAnnotation("disallowApplyingDefaultFormatting");
+        c.RemoveAnnotation("DisallowApplyingDefaultFormatting");
     }
 
 }

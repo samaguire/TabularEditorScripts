@@ -31,7 +31,7 @@ foreach (var m in Selected.Measures)
     pbiChangedProperties = AddPBIChangedProperty(pbiChangedProperties, "FormatString");
     if (!String.IsNullOrEmpty(pbiChangedProperties)) { m.SetAnnotation("PBI_ChangedProperties", pbiChangedProperties); }
 
-    m.SetAnnotation("disallowApplyingDefaultFormatting", "true");
+    m.SetAnnotation("DisallowApplyingDefaultFormatting", "true");
 
 }
 
