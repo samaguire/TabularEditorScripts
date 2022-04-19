@@ -17,9 +17,25 @@ Func<string, string> GetFormattedDax = (string daxInput) =>
     return insertLineBreakOnFirstLine ? "\r\n" + formattedDax : formattedDax;
 };
 
-foreach (var m in Model.AllMeasures) { m.Expression = GetFormattedDax(m.Expression); }
-foreach (var i in Model.AllCalculationItems) { i.Expression = GetFormattedDax(i.Expression); if (!String.IsNullOrEmpty(i.FormatStringExpression)) { i.FormatStringExpression = GetFormattedDax(i.FormatStringExpression); } }
-foreach (var t in Model.Tables.OfType<CalculatedTable>().Where(x => !x.Name.Contains("DateTableTemplate_") && !x.Name.Contains("LocalDateTable_"))) { t.Expression = GetFormattedDax(t.Expression); }
-foreach (var c in Model.AllColumns.OfType<CalculatedColumn>().Where(x => !x.DaxTableName.Contains("DateTableTemplate_") && !x.DaxTableName.Contains("LocalDateTable_"))) { c.Expression = GetFormattedDax(c.Expression); }
+foreach (var m in Model.AllMeasures)
+{
+    if (!String.IsNullOrEmpty(m.Expression)) { m.Expression = GetFormattedDax(m.Expression); } else { m.Delete(); }
+}
+
+foreach (var i in Model.AllCalculationItems)
+{
+    if (!String.IsNullOrEmpty(i.Expression)) { i.Expression = GetFormattedDax(i.Expression); } else { i.Delete(); }
+    if (!String.IsNullOrEmpty(i.FormatStringExpression)) { i.FormatStringExpression = GetFormattedDax(i.FormatStringExpression); }
+}
+
+foreach (var t in Model.Tables.OfType<CalculatedTable>().Where(x => !x.Name.StartsWith("DateTableTemplate_") && !x.Name.StartsWith("LocalDateTable_")))
+{
+    if (!String.IsNullOrEmpty(t.Expression)) { t.Expression = GetFormattedDax(t.Expression); } else { t.Delete(); }
+}
+
+foreach (var c in Model.AllColumns.OfType<CalculatedColumn>().Where(x => !x.DaxTableName.StartsWith("DateTableTemplate_") && !x.DaxTableName.StartsWith("LocalDateTable_")))
+{
+    if (!String.IsNullOrEmpty(c.Expression)) { c.Expression = GetFormattedDax(c.Expression); } else { c.Delete(); }
+}
 
 ScriptHelper.Info("Script finished.");
