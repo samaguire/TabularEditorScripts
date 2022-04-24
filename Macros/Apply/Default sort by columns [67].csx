@@ -17,7 +17,7 @@ Func<string, string, string> RemovePBIChangedProperty = (string pbiChangedProper
     return jsonArray.Any() ? JsonConvert.SerializeObject(jsonArray) : null;
 };
 
-foreach (var c in Model.AllColumns)
+foreach (var c in Model.AllColumns.Where(x => x.SortByColumn != null))
 {
 
     if (c.Table.ObjectType == ObjectType.CalculationGroupTable) { continue; }

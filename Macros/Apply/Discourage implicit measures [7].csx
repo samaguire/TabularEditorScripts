@@ -7,13 +7,10 @@ using TabularEditor.Scripting; // *** Needed for C# scripting, remove in TE3 ***
 Model Model; // *** Needed for C# scripting, remove in TE3 ***
 TabularEditor.Shared.Interaction.Selection Selected; // *** Needed for C# scripting, remove in TE3 ***
 
-foreach (var c in Model.AllColumns)
+foreach (var c in Model.AllColumns.Where(x => x.SummarizeBy != AggregateFunction.None))
 {
-    if (c.SummarizeBy != AggregateFunction.None)
-    {
-        c.SummarizeBy = AggregateFunction.None;
-        c.SetAnnotation("SummarizationSetBy", "User");
-    }
+    c.SummarizeBy = AggregateFunction.None;
+    c.SetAnnotation("SummarizationSetBy", "User");
 }
 
 Model.DiscourageImplicitMeasures = true;
