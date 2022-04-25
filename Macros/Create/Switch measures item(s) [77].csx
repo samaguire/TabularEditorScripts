@@ -11,16 +11,22 @@ if (!Selected.Measures.Any()) { return; }
 
 var cg = null as CalculationGroupTable;
 
-if (!Model.CalculationGroups.Where(x => x.Name == "UX Switch").Any())
+if (!Model.CalculationGroups.Where(x => x.Name == "Switch Measures").Any())
 {
-    cg = Model.AddCalculationGroup("ux Switch Measures");
-    cg.IsHidden = true;
+
+    cg = Model.AddCalculationGroup("Switch Measures");
     cg.CalculationGroupPrecedence = 99;
     cg.Columns["Name"].Name = "Switch Measures";
+
+    if (!Model.AllMeasures.Where(x => x.Name == "Switch Measure").Any())
+    {
+        cg.AddMeasure("Switch Measure", "ERROR(\"Please use with the 'Switch Measures' calculation group.\")");
+    }
+
 }
 else
 {
-    cg = Model.Tables["UX Switch"] as CalculationGroupTable;
+    cg = Model.Tables["Switch Measures"] as CalculationGroupTable;
 }
 
 foreach (var m in Selected.Measures)
