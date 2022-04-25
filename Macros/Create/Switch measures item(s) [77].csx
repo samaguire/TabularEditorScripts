@@ -13,10 +13,10 @@ var cg = null as CalculationGroupTable;
 
 if (!Model.CalculationGroups.Where(x => x.Name == "UX Switch").Any())
 {
-    cg = Model.AddCalculationGroup("UX Switch");
+    cg = Model.AddCalculationGroup("ux Switch Measures");
     cg.IsHidden = true;
     cg.CalculationGroupPrecedence = 99;
-    cg.Columns["Name"].Name = "Measure";
+    cg.Columns["Name"].Name = "Switch Measures";
 }
 else
 {
