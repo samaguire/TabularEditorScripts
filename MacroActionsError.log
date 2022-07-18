@@ -1,0 +1,4083 @@
+(0,1) error: #r is only allowed in scripts
+(1,1) error: #r is only allowed in scripts
+(2,1) error: #r is only allowed in scripts
+(3,1) error: #r is only allowed in scripts
+(4,1) error: #r is only allowed in scripts
+(22,45) error: Unrecognized escape sequence
+(22,51) error: Unrecognized escape sequence
+(24,45) error: Unrecognized escape sequence
+(24,51) error: Unrecognized escape sequence
+(24,61) error: Unrecognized escape sequence
+(26,45) error: Unrecognized escape sequence
+(26,51) error: Unrecognized escape sequence
+(26,61) error: Unrecognized escape sequence
+(28,45) error: Unrecognized escape sequence
+(28,51) error: Unrecognized escape sequence
+(28,61) error: Unrecognized escape sequence
+(30,45) error: Unrecognized escape sequence
+(30,51) error: Unrecognized escape sequence
+(30,61) error: Unrecognized escape sequence
+(32,45) error: Unrecognized escape sequence
+(32,51) error: Unrecognized escape sequence
+(32,61) error: Unrecognized escape sequence
+(34,44) error: Unrecognized escape sequence
+(34,50) error: Unrecognized escape sequence
+(34,60) error: Unrecognized escape sequence
+(36,45) error: Unrecognized escape sequence
+(36,51) error: Unrecognized escape sequence
+(36,61) error: Unrecognized escape sequence
+(38,45) error: Unrecognized escape sequence
+(38,51) error: Unrecognized escape sequence
+(40,45) error: Unrecognized escape sequence
+(40,51) error: Unrecognized escape sequence
+(42,44) error: Unrecognized escape sequence
+(42,50) error: Unrecognized escape sequence
+(44,45) error: Unrecognized escape sequence
+(44,62) error: Unrecognized escape sequence
+(46,45) error: Unrecognized escape sequence
+(46,62) error: Unrecognized escape sequence
+(48,45) error: Unrecognized escape sequence
+(50,45) error: Unrecognized escape sequence
+(52,45) error: Unrecognized escape sequence
+(54,45) error: Unrecognized escape sequence
+(56,45) error: Unrecognized escape sequence
+(56,52) error: Unrecognized escape sequence
+(58,45) error: Unrecognized escape sequence
+(58,52) error: Unrecognized escape sequence
+(60,45) error: Unrecognized escape sequence
+(62,45) error: Unrecognized escape sequence
+(64,45) error: Unrecognized escape sequence
+(64,52) error: Unrecognized escape sequence
+(66,45) error: Unrecognized escape sequence
+(66,52) error: Unrecognized escape sequence
+(68,45) error: Unrecognized escape sequence
+(68,52) error: Unrecognized escape sequence
+(70,45) error: Unrecognized escape sequence
+(70,52) error: Unrecognized escape sequence
+(72,45) error: Unrecognized escape sequence
+(72,52) error: Unrecognized escape sequence
+(74,45) error: Unrecognized escape sequence
+(74,52) error: Unrecognized escape sequence
+(76,45) error: Unrecognized escape sequence
+(76,52) error: Unrecognized escape sequence
+(78,45) error: Unrecognized escape sequence
+(78,52) error: Unrecognized escape sequence
+(80,45) error: Unrecognized escape sequence
+(80,52) error: Unrecognized escape sequence
+(82,45) error: Unrecognized escape sequence
+(82,52) error: Unrecognized escape sequence
+(84,45) error: Unrecognized escape sequence
+(84,52) error: Unrecognized escape sequence
+(86,45) error: Unrecognized escape sequence
+(86,52) error: Unrecognized escape sequence
+(88,45) error: Unrecognized escape sequence
+(88,52) error: Unrecognized escape sequence
+(90,45) error: Unrecognized escape sequence
+(90,52) error: Unrecognized escape sequence
+(92,45) error: Unrecognized escape sequence
+(92,52) error: Unrecognized escape sequence
+(94,45) error: Unrecognized escape sequence
+(94,52) error: Unrecognized escape sequence
+(96,45) error: Unrecognized escape sequence
+(96,52) error: Unrecognized escape sequence
+(98,45) error: Unrecognized escape sequence
+(98,52) error: Unrecognized escape sequence
+(100,45) error: Unrecognized escape sequence
+(100,52) error: Unrecognized escape sequence
+(102,45) error: Unrecognized escape sequence
+(102,52) error: Unrecognized escape sequence
+(104,45) error: Unrecognized escape sequence
+(104,52) error: Unrecognized escape sequence
+(106,45) error: Unrecognized escape sequence
+(106,52) error: Unrecognized escape sequence
+(108,45) error: Unrecognized escape sequence
+(108,52) error: Unrecognized escape sequence
+(110,44) error: Unrecognized escape sequence
+(110,51) error: Unrecognized escape sequence
+(112,45) error: Unrecognized escape sequence
+(112,52) error: Unrecognized escape sequence
+(114,45) error: Unrecognized escape sequence
+(114,52) error: Unrecognized escape sequence
+(116,45) error: Unrecognized escape sequence
+(116,52) error: Unrecognized escape sequence
+(118,45) error: Unrecognized escape sequence
+(118,52) error: Unrecognized escape sequence
+(120,45) error: Unrecognized escape sequence
+(122,45) error: Unrecognized escape sequence
+(122,52) error: Unrecognized escape sequence
+(124,45) error: Unrecognized escape sequence
+(124,49) error: Unrecognized escape sequence
+(126,45) error: Unrecognized escape sequence
+(126,52) error: Unrecognized escape sequence
+(128,45) error: Unrecognized escape sequence
+(128,52) error: Unrecognized escape sequence
+(130,48) error: Unrecognized escape sequence
+(132,48) error: Unrecognized escape sequence
+(134,48) error: Unrecognized escape sequence
+(136,48) error: Unrecognized escape sequence
+(126,182) error: 'Column' is a type, which is not valid in the given context
+(1028,3) error: 'StringBuilder' does not contain a definition for 'Output' and no accessible extension method 'Output' accepting a first argument of type 'StringBuilder' could be found (are you missing a using directive or an assembly reference?)
+(1224,0) error: The name 'ScriptHelper' does not exist in the current context
+(157,0) error: The name 'ScriptHelper' does not exist in the current context
+(973,37) warning: 'WebClient.WebClient()' is obsolete: 'WebRequest, HttpWebRequest, ServicePoint, and WebClient are obsolete. Use HttpClient instead.'
+(994,11) error: There is no argument given that corresponds to the required formal parameter 'suppressHeader' of 'ScriptHost.Error(string, int, bool)'
+(0,0) warning: Assuming assembly reference 'System.ComponentModel.Primitives, Version=4.2.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a' used by 'Microsoft.AnalysisServices.Tabular' matches identity 'System.ComponentModel.Primitives, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a' of 'System.ComponentModel.Primitives', you may need to supply runtime policy
+(0,0) warning: Assuming assembly reference 'System.ComponentModel.Primitives, Version=4.2.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a' used by 'Microsoft.AnalysisServices.Core' matches identity 'System.ComponentModel.Primitives, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a' of 'System.ComponentModel.Primitives', you may need to supply runtime policy
+(1407,0) error: The name 'ScriptHelper' does not exist in the current context
+(1198,0) error: The name 'ScriptHelper' does not exist in the current context
+(1695,0) error: The name 'ScriptHelper' does not exist in the current context
+(923,17) error: The name 'ExecuteDax' does not exist in the current context
+(1350,26) error: The name 'ExecuteDax' does not exist in the current context
+(1370,11) error: There is no argument given that corresponds to the required formal parameter 'suppressHeader' of 'ScriptHost.Error(string, int, bool)'
+(0,0) warning: Assuming assembly reference 'System.ComponentModel.Primitives, Version=4.2.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a' used by 'Microsoft.AnalysisServices.Tabular' matches identity 'System.ComponentModel.Primitives, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a' of 'System.ComponentModel.Primitives', you may need to supply runtime policy
+(0,0) warning: Assuming assembly reference 'System.ComponentModel.Primitives, Version=4.2.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a' used by 'Microsoft.AnalysisServices.Tabular' matches identity 'System.ComponentModel.Primitives, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a' of 'System.ComponentModel.Primitives', you may need to supply runtime policy
+(0,0) warning: Assuming assembly reference 'System.ComponentModel.Primitives, Version=4.2.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a' used by 'Microsoft.AnalysisServices.Core' matches identity 'System.ComponentModel.Primitives, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a' of 'System.ComponentModel.Primitives', you may need to supply runtime policy
+(1381,8) error: 'string' does not contain a definition for 'Output' and no accessible extension method 'Output' accepting a first argument of type 'string' could be found (are you missing a using directive or an assembly reference?)
+(1852,0) error: The name 'ScriptHelper' does not exist in the current context
+(1892,0) error: The name 'ScriptHelper' does not exist in the current context
+(1932,0) error: The name 'ScriptHelper' does not exist in the current context
+(1972,0) error: The name 'ScriptHelper' does not exist in the current context
+(1812,0) error: The name 'ScriptHelper' does not exist in the current context
+(2012,0) error: The name 'ScriptHelper' does not exist in the current context
+(2052,0) error: The name 'ScriptHelper' does not exist in the current context
+(2092,0) error: The name 'ScriptHelper' does not exist in the current context
+(2132,0) error: The name 'ScriptHelper' does not exist in the current context
+(2229,0) error: The name 'ScriptHelper' does not exist in the current context
+(2172,0) error: The name 'ScriptHelper' does not exist in the current context
+(2359,0) error: The name 'ScriptHelper' does not exist in the current context
+(2399,0) error: The name 'ScriptHelper' does not exist in the current context
+(0,0) warning: Assuming assembly reference 'System.ComponentModel.Primitives, Version=4.2.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a' used by 'Microsoft.AnalysisServices.Tabular' matches identity 'System.ComponentModel.Primitives, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a' of 'System.ComponentModel.Primitives', you may need to supply runtime policy
+(0,0) warning: Assuming assembly reference 'System.ComponentModel.Primitives, Version=4.2.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a' used by 'Microsoft.AnalysisServices.Tabular' matches identity 'System.ComponentModel.Primitives, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a' of 'System.ComponentModel.Primitives', you may need to supply runtime policy
+(0,0) warning: Assuming assembly reference 'System.ComponentModel.Primitives, Version=4.2.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a' used by 'Microsoft.AnalysisServices.Core' matches identity 'System.ComponentModel.Primitives, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a' of 'System.ComponentModel.Primitives', you may need to supply runtime policy
+(2439,0) error: The name 'ScriptHelper' does not exist in the current context
+(2521,0) error: The name 'ScriptHelper' does not exist in the current context
+(2480,0) error: The name 'ScriptHelper' does not exist in the current context
+(2561,0) error: The name 'ScriptHelper' does not exist in the current context
+(2600,0) error: The name 'ScriptHelper' does not exist in the current context
+(0,0) warning: Assuming assembly reference 'System.ComponentModel.Primitives, Version=4.2.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a' used by 'Microsoft.AnalysisServices.Tabular' matches identity 'System.ComponentModel.Primitives, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a' of 'System.ComponentModel.Primitives', you may need to supply runtime policy
+(0,0) warning: Assuming assembly reference 'System.ComponentModel.Primitives, Version=4.2.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a' used by 'Microsoft.AnalysisServices.Tabular' matches identity 'System.ComponentModel.Primitives, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a' of 'System.ComponentModel.Primitives', you may need to supply runtime policy
+(0,0) warning: Assuming assembly reference 'System.ComponentModel.Primitives, Version=4.2.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a' used by 'Microsoft.AnalysisServices.Core' matches identity 'System.ComponentModel.Primitives, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a' of 'System.ComponentModel.Primitives', you may need to supply runtime policy
+(0,0) warning: Assuming assembly reference 'System.ComponentModel.Primitives, Version=4.2.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a' used by 'Microsoft.AnalysisServices.Tabular' matches identity 'System.ComponentModel.Primitives, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a' of 'System.ComponentModel.Primitives', you may need to supply runtime policy
+(0,0) warning: Assuming assembly reference 'System.ComponentModel.Primitives, Version=4.2.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a' used by 'Microsoft.AnalysisServices.Tabular' matches identity 'System.ComponentModel.Primitives, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a' of 'System.ComponentModel.Primitives', you may need to supply runtime policy
+(0,0) warning: Assuming assembly reference 'System.ComponentModel.Primitives, Version=4.2.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a' used by 'Microsoft.AnalysisServices.Core' matches identity 'System.ComponentModel.Primitives, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a' of 'System.ComponentModel.Primitives', you may need to supply runtime policy
+(0,0) warning: Assuming assembly reference 'System.ComponentModel.Primitives, Version=4.2.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a' used by 'Microsoft.AnalysisServices.Tabular' matches identity 'System.ComponentModel.Primitives, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a' of 'System.ComponentModel.Primitives', you may need to supply runtime policy
+(0,0) warning: Assuming assembly reference 'System.ComponentModel.Primitives, Version=4.2.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a' used by 'Microsoft.AnalysisServices.Tabular' matches identity 'System.ComponentModel.Primitives, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a' of 'System.ComponentModel.Primitives', you may need to supply runtime policy
+(0,0) warning: Assuming assembly reference 'System.ComponentModel.Primitives, Version=4.2.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a' used by 'Microsoft.AnalysisServices.Core' matches identity 'System.ComponentModel.Primitives, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a' of 'System.ComponentModel.Primitives', you may need to supply runtime policy
+(1543,4) error: The name 'ScriptHelper' does not exist in the current context
+(1575,8) error: The name 'ScriptHelper' does not exist in the current context
+(1580,4) error: The name 'ScriptHelper' does not exist in the current context
+(1590,4) error: The name 'ScriptHelper' does not exist in the current context
+(1591,8) error: The name 'ScriptHelper' does not exist in the current context
+(1653,0) error: The name 'ScriptHelper' does not exist in the current context
+(3317,0) error: The name 'ScriptHelper' does not exist in the current context
+(172,29) error: The name 'ExecuteDax' does not exist in the current context
+(173,21) error: The name 'ExecuteDax' does not exist in the current context
+(174,24) error: The name 'ExecuteDax' does not exist in the current context
+(175,22) error: The name 'ExecuteDax' does not exist in the current context
+(176,18) error: The name 'ExecuteDax' does not exist in the current context
+(177,21) error: The name 'ExecuteDax' does not exist in the current context
+(178,28) error: The name 'ExecuteDax' does not exist in the current context
+(179,29) error: The name 'ExecuteDax' does not exist in the current context
+(180,30) error: The name 'ExecuteDax' does not exist in the current context
+(181,24) error: The name 'ExecuteDax' does not exist in the current context
+(182,25) error: The name 'ExecuteDax' does not exist in the current context
+(396,16) warning: The result of the expression is always 'true' since a value of type 'int' is never equal to 'null' of type 'int?'
+(417,16) warning: The result of the expression is always 'true' since a value of type 'int' is never equal to 'null' of type 'int?'
+(438,16) warning: The result of the expression is always 'true' since a value of type 'long' is never equal to 'null' of type 'long?'
+(459,16) warning: The result of the expression is always 'true' since a value of type 'long' is never equal to 'null' of type 'long?'
+(3480,4) error: The name 'EvaluateDax' does not exist in the current context
+(3523,0) error: The name 'ScriptHelper' does not exist in the current context
+(0,0) warning: Assuming assembly reference 'System.ComponentModel.Primitives, Version=4.2.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a' used by 'Microsoft.AnalysisServices.Tabular' matches identity 'System.ComponentModel.Primitives, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a' of 'System.ComponentModel.Primitives', you may need to supply runtime policy
+(0,0) warning: Assuming assembly reference 'System.ComponentModel.Primitives, Version=4.2.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a' used by 'Microsoft.AnalysisServices.Tabular' matches identity 'System.ComponentModel.Primitives, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a' of 'System.ComponentModel.Primitives', you may need to supply runtime policy
+(0,0) warning: Assuming assembly reference 'System.ComponentModel.Primitives, Version=4.2.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a' used by 'Microsoft.AnalysisServices.Core' matches identity 'System.ComponentModel.Primitives, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a' of 'System.ComponentModel.Primitives', you may need to supply runtime policy
+(3599,0) error: The name 'ScriptHelper' does not exist in the current context
+(3549,26) error: The name 'ScriptHelper' does not exist in the current context
+(3560,0) error: The name 'ScriptHelper' does not exist in the current context
+(3746,33) error: The name 'ScriptHelper' does not exist in the current context
+(3458,0) error: The name 'ScriptHelper' does not exist in the current context
+(3731,14) error: 'string' does not contain a definition for 'Output' and no accessible extension method 'Output' accepting a first argument of type 'string' could be found (are you missing a using directive or an assembly reference?)
+(620,11) error: There is no argument given that corresponds to the required formal parameter 'suppressHeader' of 'ScriptHost.Error(string, int, bool)'
+(633,4) error: The type name 'ZipFile' could not be found in the namespace 'System.IO.Compression'. This type has been forwarded to assembly 'System.IO.Compression.ZipFile, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089' Consider adding a reference to that assembly.
+(640,11) error: There is no argument given that corresponds to the required formal parameter 'suppressHeader' of 'ScriptHost.Error(string, int, bool)'
+(825,17) warning: The result of the expression is always 'false' since a value of type 'long' is never equal to 'null' of type 'long?'
+(3823,15) error: 'string' does not contain a definition for 'Output' and no accessible extension method 'Output' accepting a first argument of type 'string' could be found (are you missing a using directive or an assembly reference?)
+(2715,37) error: 'SharedApp' is inaccessible due to its protection level
+(0,0) warning: Assuming assembly reference 'System.ComponentModel.Primitives, Version=4.2.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a' used by 'Microsoft.AnalysisServices.Tabular' matches identity 'System.ComponentModel.Primitives, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a' of 'System.ComponentModel.Primitives', you may need to supply runtime policy
+(0,0) warning: Assuming assembly reference 'System.ComponentModel.Primitives, Version=4.2.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a' used by 'Microsoft.AnalysisServices.Tabular' matches identity 'System.ComponentModel.Primitives, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a' of 'System.ComponentModel.Primitives', you may need to supply runtime policy
+(0,0) warning: Assuming assembly reference 'System.ComponentModel.Primitives, Version=4.2.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a' used by 'Microsoft.AnalysisServices.Core' matches identity 'System.ComponentModel.Primitives, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a' of 'System.ComponentModel.Primitives', you may need to supply runtime policy
+(3850,4) error: The name 'ScriptHelper' does not exist in the current context
+(3859,79) error: 'string' does not contain a definition for 'Output' and no accessible extension method 'Output' accepting a first argument of type 'string' could be found (are you missing a using directive or an assembly reference?)
+(2778,25) warning: 'WebClient.WebClient()' is obsolete: 'WebRequest, HttpWebRequest, ServicePoint, and WebClient are obsolete. Use HttpClient instead.'
+(3209,11) error: There is no argument given that corresponds to the required formal parameter 'suppressHeader' of 'ScriptHost.Error(string, int, bool)'
+(2319,0) error: The name 'ScriptHelper' does not exist in the current context
+(1153,0) error: The name 'ScriptHelper' does not exist in the current context
+(3438,0) error: The name 'ScriptHelper' does not exist in the current context
+#r "System.Xml"
+#r "System.IO"
+#r "System.IO.Compression.FileSystem"
+#r "Microsoft.AnalysisServices.Core.dll"
+#r "System.Drawing"
+using System;
+using System.Linq;
+using System.Collections.Generic;
+using Newtonsoft.Json;
+using TabularEditor.TOMWrapper;
+using TabularEditor.TOMWrapper.Utils;
+using TabularEditor.Shared;
+using TabularEditor.Shared.Scripting;
+using TabularEditor.Shared.Interaction;
+using TabularEditor.Shared.Services;
+namespace TabularEditor.Shared.Scripting
+{
+    public static class __MacroActionsGenerator 
+    {
+        public static void __GenerateMacroActions(IMacroActionCreator __mac)
+        {
+            // Action 39
+            __mac.CreateMacroItem(39, "Macros\Apply\Apply Encoding hints", Macro39.__MacroAction.Enabled, Macro39.__MacroAction.Execute, Context.Model);
+            // Action 12
+            __mac.CreateMacroItem(12, "Macros\Apply\BPA rules\Add VertiPaq annotations", Macro12.__MacroAction.Enabled, Macro12.__MacroAction.Execute, Context.Model);
+            // Action 13
+            __mac.CreateMacroItem(13, "Macros\Apply\BPA rules\Add VertiPaq annotations from VPAX file", Macro13.__MacroAction.Enabled, Macro13.__MacroAction.Execute, Context.Model);
+            // Action 10
+            __mac.CreateMacroItem(10, "Macros\Apply\BPA rules\Add long length column annotations", Macro10.__MacroAction.Enabled, Macro10.__MacroAction.Execute, Context.Model);
+            // Action 11
+            __mac.CreateMacroItem(11, "Macros\Apply\BPA rules\Add split datetime annotations", Macro11.__MacroAction.Enabled, Macro11.__MacroAction.Execute, Context.Model);
+            // Action 47
+            __mac.CreateMacroItem(47, "Macros\Apply\BPA rules\Apply BPA rules", Macro47.__MacroAction.Enabled, Macro47.__MacroAction.Execute, Context.Model);
+            // Action 1
+            __mac.CreateMacroItem(1, "Macros\Apply\BPA rules\Download rules", Macro1.__MacroAction.Enabled, Macro1.__MacroAction.Execute, Context.Model);
+            // Action 14
+            __mac.CreateMacroItem(14, "Macros\Apply\BPA rules\Output results", Macro14.__MacroAction.Enabled, Macro14.__MacroAction.Execute, Context.Model);
+            // Action 49
+            __mac.CreateMacroItem(49, "Macros\Apply\Default formats", Macro49.__MacroAction.Enabled, Macro49.__MacroAction.Execute, Context.Model);
+            // Action 67
+            __mac.CreateMacroItem(67, "Macros\Apply\Default sort by columns", Macro67.__MacroAction.Enabled, Macro67.__MacroAction.Execute, Context.Model);
+            // Action 7
+            __mac.CreateMacroItem(7, "Macros\Apply\Discourage implicit measures", Macro7.__MacroAction.Enabled, Macro7.__MacroAction.Execute, Context.Model);
+            // Action 16
+            __mac.CreateMacroItem(16, "Macros\Backup & Restore\Backup database", Macro16.__MacroAction.Enabled, Macro16.__MacroAction.Execute, Context.Model);
+            // Action 20
+            __mac.CreateMacroItem(20, "Macros\Backup & Restore\Restore database", Macro20.__MacroAction.Enabled, Macro20.__MacroAction.Execute, Context.Model);
+            // Action 15
+            __mac.CreateMacroItem(15, "Macros\Cancel processing", Macro15.__MacroAction.Enabled, Macro15.__MacroAction.Execute, Context.Model);
+            // Action 75
+            __mac.CreateMacroItem(75, "Macros\Create\'Avg Of' measure(s)", Macro75.__MacroAction.Enabled, Macro75.__MacroAction.Execute, Context.Column);
+            // Action 48
+            __mac.CreateMacroItem(48, "Macros\Create\'Distinct Count Of' measure(s)", Macro48.__MacroAction.Enabled, Macro48.__MacroAction.Execute, Context.Column);
+            // Action 23
+            __mac.CreateMacroItem(23, "Macros\Create\'Sum Of' measure(s)", Macro23.__MacroAction.Enabled, Macro23.__MacroAction.Execute, Context.Column);
+            // Action 24
+            __mac.CreateMacroItem(24, "Macros\Create\Calculation group measures", Macro24.__MacroAction.Enabled, Macro24.__MacroAction.Execute, Context.Measure);
+            // Action 77
+            __mac.CreateMacroItem(77, "Macros\Create\Switch Measures item(s)", Macro77.__MacroAction.Enabled, Macro77.__MacroAction.Execute, Context.Measure);
+            // Action 45
+            __mac.CreateMacroItem(45, "Macros\Format all DAX", Macro45.__MacroAction.Enabled, Macro45.__MacroAction.Execute, Context.Model);
+            // Action 21
+            __mac.CreateMacroItem(21, "Macros\Format all DAX vTE2", Macro21.__MacroAction.Enabled, Macro21.__MacroAction.Execute, Context.Model);
+            // Action 51
+            __mac.CreateMacroItem(51, "Macros\Format\$ English (New Zealand)", Macro51.__MacroAction.Enabled, Macro51.__MacroAction.Execute, Context.Measure);
+            // Action 58
+            __mac.CreateMacroItem(58, "Macros\Format\$ English (New Zealand)", Macro58.__MacroAction.Enabled, Macro58.__MacroAction.Execute, Context.Column);
+            // Action 52
+            __mac.CreateMacroItem(52, "Macros\Format\$ English (United States)", Macro52.__MacroAction.Enabled, Macro52.__MacroAction.Execute, Context.Measure);
+            // Action 59
+            __mac.CreateMacroItem(59, "Macros\Format\$ English (United States)", Macro59.__MacroAction.Enabled, Macro59.__MacroAction.Execute, Context.Column);
+            // Action 73
+            __mac.CreateMacroItem(73, "Macros\Format\Custom: #,#;(#,#);0", Macro73.__MacroAction.Enabled, Macro73.__MacroAction.Execute, Context.Column);
+            // Action 74
+            __mac.CreateMacroItem(74, "Macros\Format\Custom: #,#;(#,#);0", Macro74.__MacroAction.Enabled, Macro74.__MacroAction.Execute, Context.Measure);
+            // Action 71
+            __mac.CreateMacroItem(71, "Macros\Format\Custom: #,0.00;(#,0.00);0.00", Macro71.__MacroAction.Enabled, Macro71.__MacroAction.Execute, Context.Measure);
+            // Action 72
+            __mac.CreateMacroItem(72, "Macros\Format\Custom: #,0.00;(#,0.00);0.00", Macro72.__MacroAction.Enabled, Macro72.__MacroAction.Execute, Context.Column);
+            // Action 61
+            __mac.CreateMacroItem(61, "Macros\Format\Decimal number", Macro61.__MacroAction.Enabled, Macro61.__MacroAction.Execute, Context.Column);
+            // Action 62
+            __mac.CreateMacroItem(62, "Macros\Format\Decimal number", Macro62.__MacroAction.Enabled, Macro62.__MacroAction.Execute, Context.Measure);
+            // Action 54
+            __mac.CreateMacroItem(54, "Macros\Format\Default", Macro54.__MacroAction.Enabled, Macro54.__MacroAction.Execute, Context.Measure);
+            // Action 56
+            __mac.CreateMacroItem(56, "Macros\Format\Default", Macro56.__MacroAction.Enabled, Macro56.__MacroAction.Execute, Context.Column);
+            // Action 76
+            __mac.CreateMacroItem(76, "Macros\Format\General Date", Macro76.__MacroAction.Enabled, Macro76.__MacroAction.Execute, Context.Measure);
+            // Action 53
+            __mac.CreateMacroItem(53, "Macros\Format\Percentage", Macro53.__MacroAction.Enabled, Macro53.__MacroAction.Execute, Context.Measure);
+            // Action 60
+            __mac.CreateMacroItem(60, "Macros\Format\Percentage", Macro60.__MacroAction.Enabled, Macro60.__MacroAction.Execute, Context.Column);
+            // Action 63
+            __mac.CreateMacroItem(63, "Macros\Format\Short Date", Macro63.__MacroAction.Enabled, Macro63.__MacroAction.Execute, Context.Column);
+            // Action 64
+            __mac.CreateMacroItem(64, "Macros\Format\Short Time", Macro64.__MacroAction.Enabled, Macro64.__MacroAction.Execute, Context.Column);
+            // Action 50
+            __mac.CreateMacroItem(50, "Macros\Format\Whole number", Macro50.__MacroAction.Enabled, Macro50.__MacroAction.Execute, Context.Measure);
+            // Action 55
+            __mac.CreateMacroItem(55, "Macros\Format\Whole number", Macro55.__MacroAction.Enabled, Macro55.__MacroAction.Execute, Context.Column);
+            // Action 37
+            __mac.CreateMacroItem(37, "Macros\Launch\ALM Toolkit", Macro37.__MacroAction.Enabled, Macro37.__MacroAction.Execute, Context.Model);
+            // Action 40
+            __mac.CreateMacroItem(40, "Macros\Launch\Analyze In Excel", Macro40.__MacroAction.Enabled, Macro40.__MacroAction.Execute, Context.Model);
+            // Action 36
+            __mac.CreateMacroItem(36, "Macros\Launch\DAX Studio", Macro36.__MacroAction.Enabled, Macro36.__MacroAction.Execute, Context.Model);
+            // Action 35
+            __mac.CreateMacroItem(35, "Macros\Launch\Edit in DAX Studio", Macro35.__MacroAction.Enabled, Macro35.__MacroAction.Execute, Context.Model);
+            // Action 8
+            __mac.CreateMacroItem(8, "Macros\Launch\Perspective Editor", Macro8.__MacroAction.Enabled, Macro8.__MacroAction.Execute, Context.Model);
+            // Action 46
+            __mac.CreateMacroItem(46, "Macros\Launch\Tabular Editor 2", Macro46.__MacroAction.Enabled, Macro46.__MacroAction.Execute, Context.Model);
+            // Action 70
+            __mac.CreateMacroItem(70, "Macros\Macros\Backup Macros", Macro70.__MacroAction.Enabled, Macro70.__MacroAction.Execute, Context.Model);
+            // Action 69
+            __mac.CreateMacroItem(69, "Macros\Macros\Export Macros", Macro69.__MacroAction.Enabled, Macro69.__MacroAction.Execute, Context.Model);
+            // Action 68
+            __mac.CreateMacroItem(68, "Macros\Macros\Sort Macros", Macro68.__MacroAction.Enabled, Macro68.__MacroAction.Execute, Context.Model);
+            // Action 22
+            __mac.CreateMacroItem(22, "Macros\Preview column data", Macro22.__MacroAction.Enabled, Macro22.__MacroAction.Execute, Context.Column);
+            // Action 66
+            __mac.CreateMacroItem(66, "Macros\Remove\Sort by column", Macro66.__MacroAction.Enabled, Macro66.__MacroAction.Execute, Context.Column);
+            // Action 65
+            __mac.CreateMacroItem(65, "Macros\Set\Sort by column", Macro65.__MacroAction.Enabled, Macro65.__MacroAction.Execute, Context.Column);
+            // Action 57
+            __mac.CreateMacroItem(57, "Macros\Toggle\Disallow applying default formatting annotation", Macro57.__MacroAction.Enabled, Macro57.__MacroAction.Execute, Context.Measure, Column);
+            // Action 33
+            __mac.CreateMacroItem(33, "Macros\Toggle\ParameterMetadata property", Macro33.__MacroAction.Enabled, Macro33.__MacroAction.Execute, Context.Column);
+            // Action 42
+            __mac.CreateMacroItem(42, "Resources\GetVersion", Macro42.__MacroAction.Enabled, Macro42.__MacroAction.Execute, Context.Model);
+            // Action 32
+            __mac.CreateMacroItem(32, "Resources\InputBox", Macro32.__MacroAction.Enabled, Macro32.__MacroAction.Execute, Context.Model);
+            // Action 43
+            __mac.CreateMacroItem(43, "Resources\SelectObject", Macro43.__MacroAction.Enabled, Macro43.__MacroAction.Execute, Context.Model);
+            // Action 31
+            __mac.CreateMacroItem(31, "Resources\SelectString", Macro31.__MacroAction.Enabled, Macro31.__MacroAction.Execute, Context.Model);
+            // Action 0
+            __mac.CreateMacroItem(0, "Scratchpad", Macro0.__MacroAction.Enabled, Macro0.__MacroAction.Execute, Context.Model);
+        }
+    }
+}
+namespace Macro39
+{
+    
+    
+    internal static class __MacroAction
+    {
+        public static void Execute(Selection Selected, Model Model) {
+            foreach (var c in ScriptHost.Model.AllColumns)
+{
+    if (c.DataType == DataType.DateTime) { c.EncodingHint = EncodingHintType.Value; }
+    if (c.DataType == DataType.Decimal) { c.EncodingHint = EncodingHintType.Value; }
+    if (c.DataType == DataType.Double) { c.EncodingHint = EncodingHintType.Value; }
+    if (c.DataType == DataType.Int64) { c.EncodingHint = EncodingHintType.Value; }
+}
+
+ScriptHost.Info("Script finished.");
+
+        }
+        public static bool Enabled(Selection Selected, Model Model) {
+            return true;
+        }
+    }
+}
+namespace Macro12
+{
+    using System.Xml;
+    
+    internal static class __MacroAction
+    {
+        public static void Execute(Selection Selected, Model Model) {
+            var DMV_Tables = ExecuteDax("SELECT [ID],[Name] FROM $SYSTEM.TMSCHEMA_TABLES").Tables[0];
+var DMV_Dimensions = ExecuteDax("SELECT [DIMENSION_NAME], [DIMENSION_CARDINALITY] FROM $SYSTEM.MDSCHEMA_DIMENSIONS").Tables[0];
+var DMV_Relationships = ExecuteDax("SELECT [ID],[Name] FROM $SYSTEM.TMSCHEMA_RELATIONSHIPS").Tables[0];
+var DMV_Hierarchies = ExecuteDax("SELECT [ID], [TableID], [Name] FROM $SYSTEM.TMSCHEMA_HIERARCHIES").Tables[0];
+var DMV_Columns = ExecuteDax("SELECT [ID],[TableID],[ExplicitName] FROM $SYSTEM.TMSCHEMA_COLUMNS").Tables[0];
+var DMV_Partitions = ExecuteDax("SELECT [ID],[TableID],[Name] FROM $SYSTEM.TMSCHEMA_PARTITIONS").Tables[0];
+var DMV_PartitionStorages = ExecuteDax("SELECT [ID],[PartitionID] FROM $SYSTEM.TMSCHEMA_PARTITION_STORAGES").Tables[0];
+var DMV_SegmentMapStorages = ExecuteDax("SELECT [PartitionStorageID],[RecordCount],[SegmentCount],[RecordsPerSegment] FROM $SYSTEM.TMSCHEMA_SEGMENT_MAP_STORAGES").Tables[0];
+var DMV_StorageTableColumns = ExecuteDax("SELECT [DIMENSION_NAME],[ATTRIBUTE_NAME],[COLUMN_TYPE],[DICTIONARY_SIZE] FROM $SYSTEM.DISCOVER_STORAGE_TABLE_COLUMNS").Tables[0];
+var DMV_StorageTables = ExecuteDax("SELECT [DIMENSION_NAME],[TABLE_ID],[ROWS_COUNT] FROM $SYSTEM.DISCOVER_STORAGE_TABLES").Tables[0];
+var DMV_ColumnSegments = ExecuteDax("SELECT [DIMENSION_NAME],[TABLE_ID],[COLUMN_ID],[USED_SIZE] FROM $SYSTEM.DISCOVER_STORAGE_TABLE_COLUMN_SEGMENTS").Tables[0];
+
+// Remove Existing Vertipaq Annotations
+Model.RemoveAnnotation("Vertipaq_ModelSize");
+
+foreach (var o in ScriptHost.Model.AllHierarchies)
+{   
+    o.RemoveAnnotation("Vertipaq_HierarchyID");
+    o.RemoveAnnotation("Vertipaq_UserHierarchySize");    
+}
+
+foreach (var o in ScriptHost.Model.AllColumns)
+{   
+    o.RemoveAnnotation("Vertipaq_ColumnID");
+    o.RemoveAnnotation("Vertipaq_ColumnHierarchySize");
+    o.RemoveAnnotation("Vertipaq_DataSize");
+    o.RemoveAnnotation("Vertipaq_DictionarySize");
+    o.RemoveAnnotation("Vertipaq_Cardinality");
+    o.RemoveAnnotation("Vertipaq_ColumnSize");
+    o.RemoveAnnotation("Vertipaq_ColumnSizePctOfTable");
+    o.RemoveAnnotation("Vertipaq_ColumnSizePctOfModel");
+}
+
+foreach (var o in ScriptHost.Model.Relationships.ToList())
+{    
+    o.RemoveAnnotation("Vertipaq_RelationshipID");
+    o.RemoveAnnotation("Vertipaq_RelationshipSize");   
+    o.RemoveAnnotation("Vertipaq_MaxFromCardinality");   
+    o.RemoveAnnotation("Vertipaq_MaxToCardinality");   
+     
+}
+
+foreach (var o in ScriptHost.Model.Tables.ToList())
+{
+    o.RemoveAnnotation("Vertipaq_TableID");
+    o.RemoveAnnotation("Vertipaq_RowCount");
+    o.RemoveAnnotation("Vertipaq_TableSize");
+    o.RemoveAnnotation("Vertipaq_TableSizePctOfModel");
+}
+
+foreach (var o in ScriptHost.Model.AllPartitions)
+{
+    o.RemoveAnnotation("Vertipaq_PartitionID");
+    o.RemoveAnnotation("Vertipaq_PartitionStorageID");
+    o.RemoveAnnotation("Vertipaq_RecordCount");
+    o.RemoveAnnotation("Vertipaq_RecordsPerSegment");
+    o.RemoveAnnotation("Vertipaq_SegmentCount");
+}
+
+// Set Table IDs
+for (int r = 0; r < DMV_Tables.Rows.Count; r++)
+{
+    string tblID = DMV_Tables.Rows[r][0].ToString();
+    string tblName = DMV_Tables.Rows[r][1].ToString();
+    
+    ScriptHost.Model.Tables[tblName].SetAnnotation("Vertipaq_TableID",tblID);         
+}
+
+// Set Table Row Counts
+for (int r = 0; r < DMV_Dimensions.Rows.Count; r++)
+{
+    string tblName = DMV_Dimensions.Rows[r][0].ToString();
+    string recordCount = DMV_Dimensions.Rows[r][1].ToString();
+    
+    if (tblName != "Measures")
+    {
+        ScriptHost.Model.Tables[tblName].SetAnnotation("Vertipaq_RowCount",recordCount);
+    }
+}
+
+// Set Relationship IDs
+for (int r = 0; r < DMV_Relationships.Rows.Count; r++)
+{
+    string ID = DMV_Relationships.Rows[r][0].ToString();   
+    string relID = DMV_Relationships.Rows[r][1].ToString();    
+    
+    ScriptHost.Model.Relationships[relID].SetAnnotation("Vertipaq_RelationshipID",ID);    
+}
+
+// Set Hierarchy IDs
+for (int r = 0; r < DMV_Hierarchies.Rows.Count; r++)
+{
+    string hID = DMV_Hierarchies.Rows[r][0].ToString();
+    string tableID = DMV_Hierarchies.Rows[r][1].ToString();
+    string hName = DMV_Hierarchies.Rows[r][2].ToString();
+    
+    foreach (var t in ScriptHost.Model.Tables.Where(a => a.GetAnnotation("Vertipaq_TableID") == tableID))
+    {
+        string tableName = t.Name;
+        ScriptHost.Model.Tables[tableName].Hierarchies[hName].SetAnnotation("Vertipaq_HierarchyID",hID);
+    }        
+}
+
+// Set Column IDs
+for (int r = 0; r < DMV_Columns.Rows.Count; r++)
+{
+    string colID = DMV_Columns.Rows[r][0].ToString();
+    string tableID = DMV_Columns.Rows[r][1].ToString();
+    string colName = DMV_Columns.Rows[r][2].ToString();
+    
+    foreach (var t in ScriptHost.Model.Tables.Where(a => a.GetAnnotation("Vertipaq_TableID") == tableID))
+    {
+        string tableName = t.Name;
+        
+        if (colName.StartsWith("RowNumber-") == false && colName != "")
+        {
+            ScriptHost.Model.Tables[tableName].Columns[colName].SetAnnotation("Vertipaq_ColumnID",colID);
+        }
+    }
+}
+
+// Set Partition IDs
+for (int r = 0; r < DMV_Partitions.Rows.Count; r++)
+{
+    string pID = DMV_Partitions.Rows[r][0].ToString();
+    string tableID = DMV_Partitions.Rows[r][1].ToString();
+    string pName = DMV_Partitions.Rows[r][2].ToString();
+    
+    foreach (var t in ScriptHost.Model.Tables.Where(a => a.GetAnnotation("Vertipaq_TableID") == tableID))
+    {
+        string tableName = t.Name;
+        
+        ScriptHost.Model.Tables[tableName].Partitions[pName].SetAnnotation("Vertipaq_PartitionID",pID);        
+    }
+}
+
+
+// Set Partition Storage IDs
+for (int r = 0; r < DMV_PartitionStorages.Rows.Count; r++)
+{
+    string psID = DMV_PartitionStorages.Rows[r][0].ToString();
+    string pID = DMV_PartitionStorages.Rows[r][1].ToString();    
+    
+    foreach (var p in ScriptHost.Model.AllPartitions.Where(a => a.GetAnnotation("Vertipaq_PartitionID") == pID))
+    {
+        string tableName = p.Table.Name;
+        string pName = p.Name;
+        
+        ScriptHost.Model.Tables[tableName].Partitions[pName].SetAnnotation("Vertipaq_PartitionStorageID",psID);        
+    }
+}
+
+// Set Partition Stats
+for (int r = 0; r < DMV_SegmentMapStorages.Rows.Count; r++)
+{
+    string psID = DMV_SegmentMapStorages.Rows[r][0].ToString();
+    string recordCount = DMV_SegmentMapStorages.Rows[r][1].ToString();    
+    string segmentCount = DMV_SegmentMapStorages.Rows[r][2].ToString();    
+    string recordsPerSegment = DMV_SegmentMapStorages.Rows[r][3].ToString();    
+    
+    foreach (var p in ScriptHost.Model.AllPartitions.Where(a => a.GetAnnotation("Vertipaq_PartitionStorageID") == psID))
+    {
+        string tableName = p.Table.Name;
+        string pName = p.Name;
+        
+        ScriptHost.Model.Tables[tableName].Partitions[pName].SetAnnotation("Vertipaq_RecordCount",recordCount);
+        ScriptHost.Model.Tables[tableName].Partitions[pName].SetAnnotation("Vertipaq_SegmentCount",segmentCount);
+        ScriptHost.Model.Tables[tableName].Partitions[pName].SetAnnotation("Vertipaq_RecordsPerSegment",recordsPerSegment);
+    }
+}
+
+// Set Dictionary Size
+for (int r = 0; r < DMV_StorageTableColumns.Rows.Count; r++)
+{
+    string tableName = DMV_StorageTableColumns.Rows[r][0].ToString();    
+    string colName = DMV_StorageTableColumns.Rows[r][1].ToString();
+    string colType = DMV_StorageTableColumns.Rows[r][2].ToString();
+    string dictSize = DMV_StorageTableColumns.Rows[r][3].ToString();
+      
+    if (colType == "BASIC_DATA" && colName.StartsWith("RowNumber-") == false)
+    {
+        ScriptHost.Model.Tables[tableName].Columns[colName].SetAnnotation("Vertipaq_DictionarySize",dictSize);
+    }
+}
+
+// Set Column Row Counts
+for (int r = 0; r < DMV_StorageTables.Rows.Count; r++)
+{
+    string tableName = DMV_StorageTables.Rows[r][0].ToString();    
+    string usedColumn = DMV_StorageTables.Rows[r][1].ToString();    
+    string rowCount = DMV_StorageTables.Rows[r][2].ToString();    
+    int lastInd = usedColumn.LastIndexOf("(");
+    string usedColumnID = usedColumn.Substring(lastInd+1,usedColumn.Length - lastInd - 2);
+    
+    
+    foreach (var c in ScriptHost.Model.Tables[tableName].Columns.Where(a => a.GetAnnotation("Vertipaq_ColumnID") == usedColumnID))
+    {
+        var colName = c.Name;
+        ScriptHost.Model.Tables[tableName].Columns[colName].SetAnnotation("Vertipaq_Cardinality",rowCount);
+    }    
+}
+
+// User Hierarchy Size
+for (int r = 0; r < DMV_ColumnSegments.Rows.Count; r++)
+{
+    string tableName = DMV_ColumnSegments.Rows[r][0].ToString();    
+    string usedObj = DMV_ColumnSegments.Rows[r][1].ToString();    
+    string usedCol = DMV_ColumnSegments.Rows[r][2].ToString();    
+    string usedSize = DMV_ColumnSegments.Rows[r][3].ToString();    
+    
+    int lastInd = usedObj.LastIndexOf("(");
+    string usedObjID = usedObj.Substring(lastInd+1,usedObj.Length - lastInd - 2);    
+    
+    int lastInd2 = usedCol.LastIndexOf("(");
+    string usedObjID2 = usedCol.Substring(lastInd2+1,usedCol.Length - lastInd2 - 2);    
+    
+    // User Hierarchy Size
+    foreach (var o in ScriptHost.Model.Tables[tableName].Hierarchies.Where(a => a.GetAnnotation("Vertipaq_HierarchyID") == usedObjID))
+    {
+        string hName = o.Name;
+        int hSize = Convert.ToInt32(ScriptHost.Model.Tables[tableName].Hierarchies[hName].GetAnnotation("Vertipaq_UserHierarchySize"));
+        
+        if (usedObj.StartsWith("U$"))
+        {
+            if (hSize != null)
+            {
+                hSize = hSize + Convert.ToInt32(usedSize);
+            }
+            else
+            {
+                hSize = Convert.ToInt32(usedSize);
+            }
+        
+            ScriptHost.Model.Tables[tableName].Hierarchies[hName].SetAnnotation("Vertipaq_UserHierarchySize",hSize.ToString());                
+        }   
+    }    
+    
+    // Relationship Size
+    foreach (var o in ScriptHost.Model.Relationships.Where(a => a.GetAnnotation("Vertipaq_RelationshipID") == usedObjID))
+    {
+        string rName = o.ID;
+        int rSize = Convert.ToInt32(ScriptHost.Model.Relationships[rName].GetAnnotation("Vertipaq_RelationshipSize"));
+        
+        if (usedObj.StartsWith("R$"))
+        {
+            if (rSize != null)
+            {
+                rSize = rSize + Convert.ToInt32(usedSize);
+            }
+            else
+            {
+                rSize = Convert.ToInt32(usedSize);
+            }
+        
+            ScriptHost.Model.Relationships[rName].SetAnnotation("Vertipaq_RelationshipSize",rSize.ToString());                
+        } 
+    }
+    
+    // Column Hierarchy Size
+    foreach (var o in ScriptHost.Model.Tables[tableName].Columns.Where(a => a.GetAnnotation("Vertipaq_ColumnID") == usedObjID))
+    {
+        string colName = o.Name;
+        long colSize = Convert.ToInt64(ScriptHost.Model.Tables[tableName].Columns[colName].GetAnnotation("Vertipaq_ColumnHierarchySize"));
+        
+        if (usedObj.StartsWith("H$"))
+        {
+            if (colSize != null)
+            {
+                colSize = colSize + Convert.ToInt32(usedSize);
+            }
+            else
+            {
+                colSize = Convert.ToInt64(usedSize);
+            }
+        
+            ScriptHost.Model.Tables[tableName].Columns[colName].SetAnnotation("Vertipaq_ColumnHierarchySize",colSize.ToString());                
+        }   
+    }  
+    
+    // Column Data Size
+    foreach (var o in ScriptHost.Model.Tables[tableName].Columns.Where(a => a.GetAnnotation("Vertipaq_ColumnID") == usedObjID2))
+    {
+        string colName = o.Name;
+        long colSize = Convert.ToInt64(ScriptHost.Model.Tables[tableName].Columns[colName].GetAnnotation("Vertipaq_DataSize"));
+        
+        if (usedObj.StartsWith("H$") == false && usedObj.StartsWith("R$") == false && usedObj.StartsWith("U$") == false)
+        {
+            if (colSize != null)
+            {
+                colSize = colSize + Convert.ToInt64(usedSize);
+            }
+            else
+            {
+                colSize = Convert.ToInt64(usedSize);
+            }
+        
+            ScriptHost.Model.Tables[tableName].Columns[colName].SetAnnotation("Vertipaq_DataSize",colSize.ToString());                
+        }
+    }   
+}
+
+// Set Column & Table Size
+long tableSizeCumulative = 0;
+
+foreach (var t in ScriptHost.Model.Tables.ToList())
+{
+    string tableName = t.Name;
+    long colSizeCumulative = 0;
+    long userHierSizeCumulative = 0;
+    long relSizeCumulative = 0;       
+    
+    foreach (var c in t.Columns.ToList())
+    {        
+        string colName = c.Name;
+        var obj = ScriptHost.Model.Tables[tableName].Columns[colName];
+        
+        long colHierSize = Convert.ToInt64(obj.GetAnnotation("Vertipaq_ColumnHierarchySize"));
+        long dataSize = Convert.ToInt64(obj.GetAnnotation("Vertipaq_DataSize"));
+        long dictSize = Convert.ToInt64(obj.GetAnnotation("Vertipaq_DictionarySize"));
+        
+        long colSize = colHierSize + dataSize + dictSize;
+        colSizeCumulative = colSizeCumulative + colSize;        
+        
+        // Set Column Size
+        obj.SetAnnotation("Vertipaq_ColumnSize",colSize.ToString());
+    }
+    
+    foreach (var h in t.Hierarchies.ToList())
+    {
+        string hName = h.Name;
+        var obj = ScriptHost.Model.Tables[tableName].Hierarchies[hName];
+        
+        long userHierSize = Convert.ToInt32(obj.GetAnnotation("Vertipaq_UserHierarchySize"));      
+        userHierSizeCumulative = userHierSizeCumulative + userHierSize;           
+    }
+    
+    foreach (var r in ScriptHost.Model.Relationships.Where(a => a.FromTable.Name == tableName).ToList())
+    {
+        string rName = r.ID;
+        var obj = ScriptHost.Model.Relationships[rName];
+        
+        long relSize = Convert.ToInt32(obj.GetAnnotation("Vertipaq_RelationshipSize"));
+        
+        relSizeCumulative = relSizeCumulative + relSize;                
+    }
+    
+    long tableSize = colSizeCumulative + userHierSizeCumulative + relSizeCumulative;
+    tableSizeCumulative = tableSizeCumulative + tableSize;
+    
+    // Set Table Size
+    ScriptHost.Model.Tables[tableName].SetAnnotation("Vertipaq_TableSize",tableSize.ToString());
+}
+
+// Set Model Size
+Model.SetAnnotation("Vertipaq_ModelSize",tableSizeCumulative.ToString());
+
+// Set Max From/To Cardinality
+foreach (var r in ScriptHost.Model.Relationships.ToList())
+{
+    string rName = r.ID;
+    string fromTbl = r.FromTable.Name;
+    string fromCol = r.FromColumn.Name;
+    string toTbl = r.ToTable.Name;
+    string toCol = r.ToColumn.Name;
+    var obj = ScriptHost.Model.Relationships[rName];
+    
+    string fromCard = ScriptHost.Model.Tables[fromTbl].Columns[fromCol].GetAnnotation("Vertipaq_Cardinality");
+    string toCard = ScriptHost.Model.Tables[toTbl].Columns[toCol].GetAnnotation("Vertipaq_Cardinality");
+    
+    obj.SetAnnotation("Vertipaq_MaxFromCardinality",fromCard);
+    obj.SetAnnotation("Vertipaq_MaxToCardinality",toCard);    
+}
+
+// Percent of Table and Model
+float modelSize = Convert.ToInt64(ScriptHost.Model.GetAnnotation("Vertipaq_ModelSize"));
+
+foreach (var t in ScriptHost.Model.Tables.ToList())
+{
+    string tableName = t.Name;
+    var obj = ScriptHost.Model.Tables[tableName];
+    
+    float tableSize = Convert.ToInt64(obj.GetAnnotation("Vertipaq_TableSize"));
+    double tblpct = Math.Round(tableSize / modelSize,3);
+        
+    obj.SetAnnotation("Vertipaq_TableSizePctOfModel",tblpct.ToString());
+    
+    foreach (var c in t.Columns.ToList())
+    {
+        string colName = c.Name;
+        var col = ScriptHost.Model.Tables[tableName].Columns[colName];
+        
+        float colSize = Convert.ToInt64(col.GetAnnotation("Vertipaq_ColumnSize"));
+        double colpctTbl = Math.Round(colSize / tableSize,3);
+        double colpctModel = Math.Round(colSize / modelSize,3);
+        
+        col.SetAnnotation("Vertipaq_ColumnSizePctOfTable",colpctTbl.ToString());
+        col.SetAnnotation("Vertipaq_ColumnSizePctOfModel",colpctModel.ToString());
+    }
+}
+
+// Remove Vertipaq ID Annotations
+foreach (var o in ScriptHost.Model.AllHierarchies)
+{   
+    o.RemoveAnnotation("Vertipaq_HierarchyID");
+}
+
+foreach (var o in ScriptHost.Model.AllColumns)
+{
+    o.RemoveAnnotation("Vertipaq_ColumnID");
+}
+
+foreach (var o in ScriptHost.Model.Relationships.ToList())
+{    
+    o.RemoveAnnotation("Vertipaq_RelationshipID");    
+}
+
+foreach (var o in ScriptHost.Model.Tables.ToList())
+{
+    o.RemoveAnnotation("Vertipaq_TableID");
+}
+
+foreach (var o in ScriptHost.Model.AllPartitions)
+{
+    o.RemoveAnnotation("Vertipaq_PartitionID");
+    o.RemoveAnnotation("Vertipaq_PartitionStorageID");
+}
+ScriptHost.Info("Script finished.",435);
+
+        }
+        public static bool Enabled(Selection Selected, Model Model) {
+            return true;
+        }
+    }
+}
+namespace Macro13
+{
+    using System.IO;
+using System.IO.Compression;
+    
+    internal static class __MacroAction
+    {
+        public static void Execute(Selection Selected, Model Model) {
+            string vpaxFile = @"C:\Desktop\ModelVertipaq.vpax";
+
+string fileExt = Path.GetExtension(vpaxFile);
+
+if (fileExt != ".vpax")
+{
+ScriptHost.Error("Must use a valid .vpax file",16);
+}
+
+string fileName = Path.GetFileNameWithoutExtension(vpaxFile);
+string folderName = Path.GetDirectoryName(vpaxFile) + @"\";
+string zipPath = folderName + fileName + ".zip";
+string unzipPath = folderName + fileName;
+
+try
+{
+    // Make a copy of a vpax and turn it into a zip file
+    File.Copy(vpaxFile, zipPath);
+    // Unzip file
+    System.IO.Compression.ZipFile.ExtractToDirectory(zipPath, unzipPath);
+    // Delete zip file
+    File.Delete(zipPath);
+}
+
+catch
+{
+ScriptHost.Error("File does not exist. Must use a valid .vpax file",36);
+}
+
+// Remove Existing Vertipaq Annotations
+Model.RemoveAnnotation("Vertipaq_ModelSize");
+
+foreach (var o in ScriptHost.Model.AllHierarchies)
+{
+    o.RemoveAnnotation("Vertipaq_UserHierarchySize");
+    o.RemoveAnnotation("Vertipaq_TableSizePctOfModel");
+}
+
+foreach (var o in ScriptHost.Model.AllColumns)
+{
+    o.RemoveAnnotation("Vertipaq_ColumnHierarchySize");
+    o.RemoveAnnotation("Vertipaq_DataSize");
+    o.RemoveAnnotation("Vertipaq_DictionarySize");
+    o.RemoveAnnotation("Vertipaq_Cardinality");
+    o.RemoveAnnotation("Vertipaq_ColumnSize");
+    o.RemoveAnnotation("Vertipaq_ColumnSizePctOfTable");
+    o.RemoveAnnotation("Vertipaq_ColumnSizePctOfModel");
+}
+
+foreach (var o in ScriptHost.Model.Relationships.ToList())
+{        
+    o.RemoveAnnotation("Vertipaq_RelationshipSize");   
+    o.RemoveAnnotation("Vertipaq_MaxFromCardinality");   
+    o.RemoveAnnotation("Vertipaq_MaxToCardinality");        
+}
+
+foreach (var o in ScriptHost.Model.Tables.ToList())
+{     
+    o.RemoveAnnotation("Vertipaq_RowCount");
+    o.RemoveAnnotation("Vertipaq_TableSize");
+}
+
+foreach (var o in ScriptHost.Model.AllPartitions)
+{       
+    o.RemoveAnnotation("Vertipaq_RecordCount");
+    o.RemoveAnnotation("Vertipaq_RecordsPerSegment");
+    o.RemoveAnnotation("Vertipaq_SegmentCount");
+}
+
+// Deseralize json file
+string jsonFilePath = folderName + fileName + @"\" + "DaxVpaView.json";
+var unformattedJson = File.ReadAllText(jsonFilePath,System.Text.UnicodeEncoding.Unicode);
+var formattedJson = Newtonsoft.Json.Linq.JToken.Parse(unformattedJson).ToString();
+
+dynamic json = Newtonsoft.Json.Linq.JObject.Parse(formattedJson);
+
+// Delete previously created folder
+try
+{
+    Directory.Delete(folderName + fileName,true);
+}
+catch
+{
+}
+
+int tableCount = (int)json["Tables"].Count;
+int columnCount = (int)json["Columns"].Count;
+int relationshipCount = (int)json["Relationships"].Count;
+int hierarchiesCount = (int)json["UserHierarchies"].Count;
+int columnSegmentCount = (int)json["ColumnsSegments"].Count;
+
+// Add table annotations
+for (int i=0; i<tableCount; i++)
+{
+    string tableName = (string)json["Tables"][i]["TableName"];
+    string rowCount = (string)json["Tables"][i]["RowsCount"];
+    string tableSize = (string)json["Tables"][i]["TableSize"];
+    
+    if (ScriptHost.Model.Tables.Where(a => a.Name == tableName).Count() == 1)
+    {
+        var obj = ScriptHost.Model.Tables[tableName];
+        
+        obj.SetAnnotation("Vertipaq_RowCount",rowCount);
+        obj.SetAnnotation("Vertipaq_TableSize",tableSize);
+    }
+}
+
+// Add column annotations
+for (int i=0; i<columnCount; i++)
+{
+    string columnName = (string)json["Columns"][i]["ColumnName"];
+    string tableName = (string)json["Columns"][i]["TableName"];
+    string columnCardinality = (string)json["Columns"][i]["ColumnCardinality"];
+    string dictionarySize = (string)json["Columns"][i]["DictionarySize"];
+    string dataSize = (string)json["Columns"][i]["DataSize"];
+    string hierarchiesSize = (string)json["Columns"][i]["HierarchiesSize"];
+    string totalSize = (string)json["Columns"][i]["TotalSize"];
+    
+    if (ScriptHost.Model.Tables.Where(a => a.Name == tableName && a.Columns.Any(b => b.Name == columnName)).Count() == 1)
+    
+    {
+        var obj = ScriptHost.Model.Tables[tableName].Columns[columnName];
+    
+        obj.SetAnnotation("Vertipaq_Cardinality",columnCardinality);
+        obj.SetAnnotation("Vertipaq_ColumnHierarchySize",hierarchiesSize);
+        obj.SetAnnotation("Vertipaq_ColumnSize",totalSize);
+        obj.SetAnnotation("Vertipaq_DataSize",dataSize);
+        obj.SetAnnotation("Vertipaq_DictionarySize",dictionarySize);
+    }      
+}
+
+// Add relationship annotations
+for (int i=0; i<relationshipCount; i++)
+{
+    string relationshipName = (string)json["Relationships"][i]["RelationshipName"];
+    string fromCardinality = (string)json["Relationships"][i]["FromCardinality"];
+    string toCardinality = (string)json["Relationships"][i]["ToCardinality"];
+    string usedSize = (string)json["Relationships"][i]["UsedSize"];
+    
+    if (ScriptHost.Model.Relationships.Where(a => a.ID == relationshipName).Count() == 1)
+    {
+        var obj = ScriptHost.Model.Relationships[relationshipName];
+    
+        obj.SetAnnotation("Vertipaq_MaxFromCardinality",fromCardinality);
+        obj.SetAnnotation("Vertipaq_MaxToCardinality",toCardinality);
+        obj.SetAnnotation("Vertipaq_RelationshipSize",usedSize);
+    }
+}
+
+// Add hierarchies annotations
+for (int i=0; i<hierarchiesCount; i++)
+{
+    string hierarchyName = (string)json["UserHierarchies"][i]["UserHierarchyName"];
+    string tableName = (string)json["UserHierarchies"][i]["TableName"];
+    string usedSize = (string)json["UserHierarchies"][i]["UsedSize"];
+    
+    if (ScriptHost.Model.AllHierarchies.Where(a => a.Name == hierarchyName && a.Table.Name == tableName).Count() == 1)
+    {
+        var obj = ScriptHost.Model.Tables[tableName].Hierarchies[hierarchyName];
+    
+        obj.SetAnnotation("Vertipaq_UserHierarchySize",usedSize);
+    }
+}
+
+// Add partition annotations
+for (int i=0; i<columnSegmentCount; i++)
+{
+    string tableName = (string)json["ColumnsSegments"][i]["TableName"];
+    string partitionName = (string)json["ColumnsSegments"][i]["PartitionName"];
+    string columnName = (string)json["ColumnsSegments"][i]["ColumnName"];
+    string segmentNumber = (string)json["ColumnsSegments"][i]["SegmentNumber"];
+    string tablePartitionNumber = (string)json["ColumnsSegments"][i]["TablePartitionNumber"];
+    string segmentRows = (string)json["ColumnsSegments"][i]["SegmentRows"];
+    int segmentNumberInt = Convert.ToInt32(segmentNumber);
+    int tablePartitionNumberInt = Convert.ToInt32(tablePartitionNumber);
+    long segmentRowsInt = Convert.ToInt64(segmentRows);
+    
+    var obj = ScriptHost.Model.Tables[tableName].Partitions[partitionName];
+    
+    int s = 0;
+    foreach (var t in ScriptHost.Model.Tables.Where(a => a.Name == tableName).ToList())
+    {
+        foreach (var p in t.Partitions.Where(b => b.MetadataIndex < tablePartitionNumberInt))
+        {
+            s = s + Convert.ToInt32(p.GetAnnotation("Vertipaq_SegmentCount"));
+        }
+    }
+    
+    obj.SetAnnotation("Vertipaq_SegmentCount",(segmentNumberInt - s + 1).ToString());
+    
+    if (columnName.StartsWith("RowNumber-"))
+    {            
+        long rc = Convert.ToInt64(obj.GetAnnotation("Vertipaq_RecordCount"));
+        obj.SetAnnotation("Vertipaq_RecordCount",(segmentRowsInt + rc).ToString());
+    }
+}
+
+// Add Records per Segment
+long maxRPS = 8388608;
+foreach (var t in ScriptHost.Model.Tables.ToList())
+{
+    foreach (var p in t.Partitions.ToList())
+    {
+        long rc = Convert.ToInt64(p.GetAnnotation("Vertipaq_RecordCount"));
+        long sc = Convert.ToInt64(p.GetAnnotation("Vertipaq_SegmentCount"));
+        string rps = "Vertipaq_RecordsPerSegment";
+        
+        if (sc > 1)
+        {
+            p.SetAnnotation(rps,maxRPS.ToString());            
+        }
+        else if (sc == null || sc == 0)
+        {
+            p.SetAnnotation(rps,"0");
+        }
+        else
+        {
+            p.SetAnnotation(rps,(rc / sc).ToString());
+        }
+    }
+}
+
+// Add model size annotation
+string ms = ScriptHost.Model.Tables.Sum(a => Convert.ToInt64(a.GetAnnotation("Vertipaq_TableSize"))).ToString();
+Model.SetAnnotation("Vertipaq_ModelSize",ms);
+
+// Percent of Table and Model
+float modelSize = Convert.ToInt64(ScriptHost.Model.GetAnnotation("Vertipaq_ModelSize"));
+
+foreach (var t in ScriptHost.Model.Tables.ToList())
+{
+    string tableName = t.Name;
+    var obj = ScriptHost.Model.Tables[tableName];
+    
+    float tableSize = Convert.ToInt64(obj.GetAnnotation("Vertipaq_TableSize"));
+    double tblpct = Math.Round(tableSize / modelSize,3);
+        
+    obj.SetAnnotation("Vertipaq_TableSizePctOfModel",tblpct.ToString());
+    
+    foreach (var c in t.Columns.ToList())
+    {
+        string colName = c.Name;
+        var col = ScriptHost.Model.Tables[tableName].Columns[colName];
+        
+        float colSize = Convert.ToInt64(col.GetAnnotation("Vertipaq_ColumnSize"));
+        double colpctTbl = Math.Round(colSize / tableSize,3);
+        double colpctModel = Math.Round(colSize / modelSize,3);
+        
+        col.SetAnnotation("Vertipaq_ColumnSizePctOfTable",colpctTbl.ToString());
+        col.SetAnnotation("Vertipaq_ColumnSizePctOfModel",colpctModel.ToString());
+    }
+}
+ScriptHost.Info("Script finished.",263);
+
+        }
+        public static bool Enabled(Selection Selected, Model Model) {
+            return false;
+        }
+    }
+}
+namespace Macro10
+{
+    
+    
+    internal static class __MacroAction
+    {
+        public static void Execute(Selection Selected, Model Model) {
+            int maxLen = 100;
+string annName = "LongLengthRowCount";
+
+foreach (var c in ScriptHost.Model.AllColumns.Where(a => a.DataType == DataType.String))
+{
+
+    string tableName = c.Table.Name;
+    string columnName = c.Name;
+    
+    var obj = ScriptHost.Model.Tables[tableName].Columns[columnName];
+    var result = ScriptHost.EvaluateDax("SUMMARIZECOLUMNS(\"test\",CALCULATE(COUNTROWS(DISTINCT('"+tableName+"'["+columnName+"])),LEN('"+tableName+"'["+columnName+"]) > "+maxLen+"))");
+    
+    obj.SetAnnotation(annName,result.ToString());
+    
+    if (obj.GetAnnotation(annName) == "Table")
+    {
+        obj.SetAnnotation(annName,"0");
+    }
+
+}
+ScriptHost.Info("Script finished.",24);
+
+        }
+        public static bool Enabled(Selection Selected, Model Model) {
+            return true;
+        }
+    }
+}
+namespace Macro11
+{
+    using System.Xml;
+    
+    internal static class __MacroAction
+    {
+        public static void Execute(Selection Selected, Model Model) {
+            string annName = "DateTimeWithHourMinSec";
+foreach (var c in ScriptHost.Model.AllColumns.Where(a => a.DataType == DataType.DateTime))
+{
+    string columnName = c.Name;
+    string tableName = c.Table.Name;
+    var obj = ScriptHost.Model.Tables[tableName].Columns[columnName];
+    
+    var result = ExecuteDax("EVALUATE TOPN(5,SUMMARIZECOLUMNS('"+tableName+"'["+columnName+"]))").Tables[0];
+
+    for (int r = 0; r < result.Rows.Count; r++)
+    {
+        string resultValue = result.Rows[r][0].ToString();
+        if (!resultValue.EndsWith("12:00:00 AM"))
+        {
+            obj.SetAnnotation(annName,"1");
+            r=50;
+        }
+        else
+        {
+            obj.SetAnnotation(annName,"0");
+        }
+    }
+}
+ScriptHost.Info("Script finished.",32);
+
+        }
+        public static bool Enabled(Selection Selected, Model Model) {
+            return true;
+        }
+    }
+}
+namespace Macro47
+{
+    
+    
+    internal static class __MacroAction
+    {
+        public static void Execute(Selection Selected, Model Model) {
+            ScriptHost.CustomAction("Macros\\Apply\\BPA rules\\Download rules");
+ScriptHost.CustomAction("Macros\\Apply\\BPA rules\\Add long length column annotations");
+ScriptHost.CustomAction("Macros\\Apply\\BPA rules\\Add split datetime annotations");
+ScriptHost.CustomAction("Macros\\Apply\\BPA rules\\Add VertiPaq annotations");
+ScriptHost.Info("All scripts finished.",6);
+
+        }
+        public static bool Enabled(Selection Selected, Model Model) {
+            return true;
+        }
+    }
+}
+namespace Macro1
+{
+    
+    
+    internal static class __MacroAction
+    {
+        public static void Execute(Selection Selected, Model Model) {
+            System.Net.WebClient w = new System.Net.WebClient(); 
+
+var path = System.Environment.GetFolderPath(System.Environment.SpecialFolder.LocalApplicationData);
+var url = "https://raw.githubusercontent.com/microsoft/Analysis-Services/master/BestPracticeRules/BPARules.json";
+var version = typeof(Model).Assembly.GetName().Version.Major;
+var downloadLoc = "";
+
+if (version == 3)
+{
+
+    downloadLoc = path+@"\TabularEditor3\BPARules.json";
+
+}
+else if (version == 2)
+{
+
+    downloadLoc = path+@"\TabularEditor\BPARules.json";
+
+}
+else
+{
+ScriptHost.Error("Couldn't identify the version of Tabular Editor: "+version,25);
+    return;
+
+}
+
+w.DownloadFile(url, downloadLoc);
+ScriptHost.Info("Script finished.",32);
+
+        }
+        public static bool Enabled(Selection Selected, Model Model) {
+            return true;
+        }
+    }
+}
+namespace Macro14
+{
+    using TabularEditor.Shared.BPA;
+    
+    internal static class __MacroAction
+    {
+        public static void Execute(Selection Selected, Model Model) {
+            var bpa = new Analyzer();
+bpa.SetModel(Model);
+
+var sb = new System.Text.StringBuilder();
+string newline = Environment.NewLine;
+
+sb.Append("RuleCategory" + '\t' + "RuleName" + '\t' + "ObjectName" + '\t' + "ObjectType" + '\t' + "RuleSeverity" + '\t' + "HasFixExpression" + newline);
+
+foreach (var a in bpa.AnalyzeAll().ToList())
+{
+    sb.Append(a.Rule.Category + '\t' + a.RuleName + '\t' + a.ObjectName + '\t' + a.ObjectType + '\t' + a.Rule.Severity + '\t' + a.CanFix + newline);
+}
+
+sb.Output(19);
+
+        }
+        public static bool Enabled(Selection Selected, Model Model) {
+            return true;
+        }
+    }
+}
+namespace Macro49
+{
+    
+    
+    internal static class __MacroAction
+    {
+        public static void Execute(Selection Selected, Model Model) {
+            bool fullReset = false;
+
+Func<string, string, string> RemoveFromPBI_ChangedProperties = (string textPBI_ChangedProperties, string textProperty) =>
+{
+    List<string> textProperties = textPBI_ChangedProperties.Trim('[', ']').Replace("\"", "").Split(',').ToList();
+    textProperties = textProperties.Where(p => p != textProperty).ToList();
+    return "[\"" + String.Join("\",\"", textProperties) + "\"]";
+};
+
+foreach (var m in ScriptHost.Model.AllMeasures)
+{
+
+    if (!fullReset)
+    {
+        bool disallowApplyingDefaultFormatting = Convert.ToBoolean(m.GetAnnotation("disallowApplyingDefaultFormatting"));
+        if (disallowApplyingDefaultFormatting) { continue; }
+    }
+
+    m.FormatString = "";
+    m.SetAnnotation("Format", "<Format Format=\"General\" />");
+    m.SetAnnotation("PBI_FormatHint", "{\"isGeneralNumber\":true}");
+
+    string textPBI_ChangedProperties = m.GetAnnotation("PBI_ChangedProperties");
+    if (!String.IsNullOrEmpty(textPBI_ChangedProperties))
+    {
+        textPBI_ChangedProperties = RemoveFromPBI_ChangedProperties(textPBI_ChangedProperties, "FormatString");
+        if (textPBI_ChangedProperties=="[\"\"]")
+        {
+            m.RemoveAnnotation("PBI_ChangedProperties");
+        }
+        else
+        {
+            m.SetAnnotation("PBI_ChangedProperties", textPBI_ChangedProperties);
+        }
+    }
+
+    if (!fullReset)
+    {
+        m.RemoveAnnotation("disallowApplyingDefaultFormatting");
+    }
+
+}
+
+foreach (var c in ScriptHost.Model.AllColumns)
+{
+
+    if (!fullReset)
+    {
+        bool disallowApplyingDefaultFormatting = Convert.ToBoolean(c.GetAnnotation("disallowApplyingDefaultFormatting"));
+        if (disallowApplyingDefaultFormatting) { continue; }
+    }
+
+    if (c.Table.ObjectType == ObjectType.CalculationGroupTable) { continue; }
+
+    switch (c.DataType)
+    {
+        case DataType.Boolean:
+            c.FormatString = "\"TRUE\";\"TRUE\";\"FALSE\"";
+            c.SetAnnotation("Format", "<Format Format=\"Boolean\" />");
+            break;
+        case DataType.DateTime:
+            c.FormatString = "General Date";
+            // c.SetAnnotation("Format", "<Format Format=\"DateTimeGeneralPattern\"><DateTimes><DateTime LCID=\"5129\" Group=\"GeneralDateTimeLong\" FormatString=\"G\" /></DateTimes></Format>");
+            c.SetAnnotation("Format", "<Format Format=\"DateTimeGeneralPattern\"><DateTimes><DateTime LCID=\"1033\" Group=\"GeneralDateTimeLong\" FormatString=\"G\" /></DateTimes></Format>");
+            c.RemoveAnnotation("UnderlyingDateTimeDataType");
+            break;
+        case DataType.Decimal:
+            c.FormatString = "\\$#,0.###############;-\\$#,0.###############;\\$#,0.###############";
+            // c.SetAnnotation("Format", "<Format Format=\"CurrencyGeneral\" ThousandSeparator=\"True\"><Currency LCID=\"5129\" DisplayName=\"$ English (New Zealand)\" Symbol=\"$\" PositivePattern=\"0\" NegativePattern=\"1\" /></Format>");
+            // c.SetAnnotation("PBI_FormatHint", "{\"currencyCulture\":\"en-NZ\"}");
+            c.SetAnnotation("Format", "<Format Format=\"CurrencyGeneral\" ThousandSeparator=\"True\"><Currency LCID=\"1033\" DisplayName=\"Currency General\" Symbol=\"$\" PositivePattern=\"0\" NegativePattern=\"0\" /></Format>");
+            c.RemoveAnnotation("PBI_FormatHint");
+            break;
+        case DataType.Double:
+            c.FormatString = "";
+            c.SetAnnotation("Format", "<Format Format=\"General\" />");
+            break;
+        case DataType.Int64:
+            c.FormatString = "0";
+            c.SetAnnotation("Format", "<Format Format=\"NumberWhole\" Accuracy=\"0\" />");
+            break;
+        case DataType.String:
+            c.FormatString = "";
+            c.SetAnnotation("Format", "<Format Format=\"Text\" />");
+            break;
+        default:
+            break;
+    }
+
+    string textPBI_ChangedProperties = c.GetAnnotation("PBI_ChangedProperties");
+    if (!String.IsNullOrEmpty(textPBI_ChangedProperties))
+    {
+        textPBI_ChangedProperties = RemoveFromPBI_ChangedProperties(textPBI_ChangedProperties, "FormatString");
+        if (textPBI_ChangedProperties=="[\"\"]")
+        {
+            c.RemoveAnnotation("PBI_ChangedProperties");
+        }
+        else
+        {
+            c.SetAnnotation("PBI_ChangedProperties", textPBI_ChangedProperties);
+        }
+    }
+
+    if (!fullReset)
+    {
+        c.RemoveAnnotation("disallowApplyingDefaultFormatting");
+    }
+
+}
+
+ScriptHost.Info("Script finished.");
+
+        }
+        public static bool Enabled(Selection Selected, Model Model) {
+            return true;
+        }
+    }
+}
+namespace Macro67
+{
+    
+    
+    internal static class __MacroAction
+    {
+        public static void Execute(Selection Selected, Model Model) {
+            Func<string, string, string> RemoveFromPBI_ChangedProperties = (string textPBI_ChangedProperties, string textProperty) =>
+{
+    List<string> textProperties = textPBI_ChangedProperties.Trim('[', ']').Replace("\"", "").Split(',').ToList();
+    textProperties = textProperties.Where(p => p != textProperty).ToList();
+    return "[\"" + String.Join("\",\"", textProperties) + "\"]";
+};
+
+foreach (var c in ScriptHost.Model.AllColumns)
+{
+
+    if (c.Table.ObjectType == ObjectType.CalculationGroupTable) { continue; }
+
+    c.SortByColumn = null;
+
+    string textPBI_ChangedProperties = c.GetAnnotation("PBI_ChangedProperties");
+    if (!String.IsNullOrEmpty(textPBI_ChangedProperties))
+    {
+        textPBI_ChangedProperties = RemoveFromPBI_ChangedProperties(textPBI_ChangedProperties, "SortByColumn");
+        if (textPBI_ChangedProperties=="[\"\"]")
+        {
+            c.RemoveAnnotation("PBI_ChangedProperties");
+        }
+        else
+        {
+            c.SetAnnotation("PBI_ChangedProperties", textPBI_ChangedProperties);
+        }
+    }
+
+}
+
+ScriptHost.Info("Script finished.");
+
+        }
+        public static bool Enabled(Selection Selected, Model Model) {
+            return true;
+        }
+    }
+}
+namespace Macro7
+{
+    
+    
+    internal static class __MacroAction
+    {
+        public static void Execute(Selection Selected, Model Model) {
+            foreach (var c in ScriptHost.Model.AllColumns)
+{
+    if (c.SummarizeBy != AggregateFunction.None)
+    {
+        c.SummarizeBy = AggregateFunction.None;
+        c.SetAnnotation("SummarizationSetBy", "User");
+    }
+}
+
+Model.DiscourageImplicitMeasures = true;
+
+ScriptHost.Info("Script finished.");
+
+        }
+        public static bool Enabled(Selection Selected, Model Model) {
+            return true;
+        }
+    }
+}
+namespace Macro16
+{
+    using Microsoft.AnalysisServices;
+    
+    internal static class __MacroAction
+    {
+        public static void Execute(Selection Selected, Model Model) {
+            BackupInfo backupInfo = new BackupInfo();
+
+backupInfo.File = ScriptHost.Model.Database.Name + ".abf";
+backupInfo.AllowOverwrite = true;
+backupInfo.ApplyCompression = true;
+
+Model.Database.TOMDatabase.Backup(backupInfo);
+ScriptHost.Info("Script finished.",13);
+
+        }
+        public static bool Enabled(Selection Selected, Model Model) {
+            return true;
+        }
+    }
+}
+namespace Macro20
+{
+    using Microsoft.AnalysisServices;
+using System.Windows.Forms;
+    
+    internal static class __MacroAction
+    {
+        public static void Execute(Selection Selected, Model Model) {
+            Func<string, string, string, string> InputBox = (string promptText, string titleText, string defaultText) =>
+{
+
+    var labelText = new Label()
+    {
+        Text = promptText,
+        Dock = DockStyle.Fill,
+    };
+
+    var textboxText = new TextBox()
+    {
+        Text = defaultText,
+        Dock = DockStyle.Bottom
+    };
+
+    var panelButtons = new Panel()
+    {
+        Height = 30,
+        Dock = DockStyle.Bottom
+    };
+
+    var buttonOK = new Button()
+    {
+        Text = "OK",
+        DialogResult = DialogResult.OK,
+        Top = 8,
+        Left = 120
+    };
+
+    var buttonCancel = new Button()
+    {
+        Text = "Cancel",
+        DialogResult = DialogResult.Cancel,
+        Top = 8,
+        Left = 204
+    };
+
+    var formInputBox = new Form()
+    {
+        Text = titleText,
+        Height = 143,
+        Padding = new System.Windows.Forms.Padding(8),
+        FormBorderStyle = FormBorderStyle.FixedDialog,
+        MinimizeBox = false,
+        MaximizeBox = false,
+        StartPosition = FormStartPosition.CenterScreen,
+        AcceptButton = buttonOK,
+        CancelButton = buttonCancel
+    };
+
+    formInputBox.Controls.AddRange(new Control[] { labelText, textboxText, panelButtons });
+    panelButtons.Controls.AddRange(new Control[] { buttonOK, buttonCancel });
+
+    return formInputBox.ShowDialog() == DialogResult.OK ? textboxText.Text : null;
+
+};
+
+var dbName = InputBox(
+    "Provide the name of the restored database. (This will overwrite the database if it already exists.)",
+    "Set Database Name",
+    ScriptHost.Model.Database.Name
+    );
+
+if (dbName == null) { return; }
+
+RestoreInfo restoreInfo = new RestoreInfo();
+
+restoreInfo.File = ScriptHost.Model.Database.Name + ".abf";
+restoreInfo.DatabaseName = dbName;
+restoreInfo.AllowOverwrite = true;
+
+Model.Database.TOMDatabase.Server.Restore(restoreInfo);
+ScriptHost.Info("Script finished.",79);
+
+        }
+        public static bool Enabled(Selection Selected, Model Model) {
+            return true;
+        }
+    }
+}
+namespace Macro15
+{
+    using Microsoft.AnalysisServices.Core;
+using System.Xml;
+    
+    internal static class __MacroAction
+    {
+        public static void Execute(Selection Selected, Model Model) {
+            var DMV_Cmd = ExecuteDax("SELECT [SESSION_ID],[SESSION_LAST_COMMAND] FROM $SYSTEM.DISCOVER_SESSIONS").Tables[0];
+bool runTMSL = true;
+string databaseID = ScriptHost.Model.Database.ID;
+string databaseName = ScriptHost.Model.Database.Name;
+string sID = string.Empty;
+
+for (int r = 0; r < DMV_Cmd.Rows.Count; r++)
+{
+    string sessionID = DMV_Cmd.Rows[r][0].ToString();
+    string cmdText = DMV_Cmd.Rows[r][1].ToString();
+    
+    // Capture refresh command for the database
+    if (cmdText.StartsWith("<Batch Transaction=") && cmdText.Contains("<Refresh xmlns") && cmdText.Contains("<DatabaseID>"+databaseID+"</DatabaseID>"))
+    {
+        sID = sessionID;
+    }      
+}
+
+if (sID == string.Empty)
+{
+ScriptHost.Error("No processing Session ID found for the '"+databaseName+"' ScriptHost.Model.",29);
+    return;
+}
+
+if (runTMSL)
+{
+    ScriptHost.Model.Database.TOMDatabase.Server.CancelSession(sID);
+ScriptHost.Info("Processing for the '"+databaseName+"' model has been cancelled (Session ID: "+sID+").",36);
+}
+else
+{
+    sID.Output(40);
+}
+
+        }
+        public static bool Enabled(Selection Selected, Model Model) {
+            return true;
+        }
+    }
+}
+namespace Macro75
+{
+    
+    
+    internal static class __MacroAction
+    {
+        public static void Execute(Selection Selected, Model Model) {
+            foreach(var c in ScriptHost.Selected.Columns)
+{
+    var newMeasure = c.Table.AddMeasure(
+        "Avg Of " + c.Name,
+        "AVERAGE(" + c.DaxObjectFullName + ")",
+        c.DisplayFolder + "\\Avg Of Measures"
+        );
+    c.IsHidden = true;
+}
+
+ScriptHost.Info("Script finished.");
+
+        }
+        public static bool Enabled(Selection Selected, Model Model) {
+            return true;
+        }
+    }
+}
+namespace Macro48
+{
+    
+    
+    internal static class __MacroAction
+    {
+        public static void Execute(Selection Selected, Model Model) {
+            foreach(var c in ScriptHost.Selected.Columns)
+{
+    var newMeasure = c.Table.AddMeasure(
+        "Distinct Count Of " + c.Name,
+        "DISTINCTCOUNT(" + c.DaxObjectFullName + ")",
+        c.DisplayFolder + "\\Distinct Count Of Measures"
+        );
+    //c.IsHidden = true;
+}
+ScriptHost.Info("Script finished.",13);
+
+        }
+        public static bool Enabled(Selection Selected, Model Model) {
+            return true;
+        }
+    }
+}
+namespace Macro23
+{
+    
+    
+    internal static class __MacroAction
+    {
+        public static void Execute(Selection Selected, Model Model) {
+            foreach(var c in ScriptHost.Selected.Columns)
+{
+    var newMeasure = c.Table.AddMeasure(
+        "Sum Of " + c.Name,
+        "SUM(" + c.DaxObjectFullName + ")",
+        c.DisplayFolder + "\\Sum Of Measures"
+        );
+    c.IsHidden = true;
+}
+ScriptHost.Info("Script finished.",13);
+
+        }
+        public static bool Enabled(Selection Selected, Model Model) {
+            return true;
+        }
+    }
+}
+namespace Macro24
+{
+    using System.Windows.Forms;
+    
+    internal static class __MacroAction
+    {
+        public static void Execute(Selection Selected, Model Model) {
+            var promptForVariables = false;                         // Set to true to prompt the user for the defaultTimeIntelligenceName & defaultCurrentPeriodItemName
+var defaultTimeIntelligenceName = "Time Intelligence";  // Used to determine the calculation group's suffix
+var defaultCurrentPeriodItemName = "CUR";               // Calculation item to excluded from measure creation
+var defaultMeasureExpression =                          // The template DAX query
+    "\r\n" +
+    "CALCULATE(\r\n" +
+    "    <measure>,\r\n" +
+    "    <column> = \"<item>\"\r\n" +
+    ")";
+
+// Custom InputBox (instead of VB InputBox as this returns null instead of "" on cancel)
+
+Func<string, string, string, string> InputBox = (string promptText, string titleText, string defaultText) =>
+{
+
+    var labelText = new Label()
+    {
+        Text = promptText,
+        Dock = DockStyle.Fill,
+    };
+
+    var textboxText = new TextBox()
+    {
+        Text = defaultText,
+        Dock = DockStyle.Bottom
+    };
+
+    var panelButtons = new Panel()
+    {
+        Height = 30,
+        Dock = DockStyle.Bottom
+    };
+    
+    var buttonOK = new Button()
+    {
+        Text = "OK",
+        DialogResult = DialogResult.OK,
+        Top = 8,
+        Left = 120
+    };
+
+    var buttonCancel = new Button()
+    {
+        Text = "Cancel",
+        DialogResult = DialogResult.Cancel,
+        Top = 8,
+        Left = 204
+    };
+
+    var formInputBox = new Form()
+    {
+        Text = titleText,
+        Height = 143,
+        Padding = new System.Windows.Forms.Padding(8),
+        FormBorderStyle = FormBorderStyle.FixedDialog,
+        MinimizeBox = false,
+        MaximizeBox = false,
+        StartPosition = FormStartPosition.CenterScreen,
+        AcceptButton = buttonOK,
+        CancelButton = buttonCancel
+    };
+
+    formInputBox.Controls.AddRange(new Control[] { labelText, textboxText, panelButtons });
+    panelButtons.Controls.AddRange(new Control[] { buttonOK, buttonCancel });
+
+    return formInputBox.ShowDialog() == DialogResult.OK ? textboxText.Text : null;
+
+};
+
+// Check measure(s) are selected
+
+if (!ScriptHost.Selected.Measures.Any())
+{
+    ScriptHost.Error("No measure(s) ScriptHost.Selected.");
+    return;
+}
+
+// Get variables input
+
+if (promptForVariables)
+{
+
+    defaultTimeIntelligenceName = InputBox(
+        "Provide the common name for time/period intelligence tables. This is used to determine the calculation group's suffix, e.g. '(ISO)' in 'Time Intelligence (ISO)'.",
+        "Default Time Intelligence Name",
+        defaultTimeIntelligenceName
+        );
+    if (defaultTimeIntelligenceName == null) { return; }
+
+    defaultCurrentPeriodItemName = InputBox(
+        "Provide the name of the 'current' time/period intelligence calculation item. Any calculation item with this name will be excluded from measure creation.",
+        "Default 'Current' Name",
+        defaultCurrentPeriodItemName
+        );
+    if (defaultCurrentPeriodItemName == null) { return; }
+
+}
+
+// Get calculation group table
+
+var ts = ScriptHost.Model.Tables.Where(x => x.ObjectType == (ObjectType.CalculationGroupTable));
+var t = null as CalculationGroupTable;
+
+if (ts.Any())
+{
+    t = ScriptHost.SelectTable(ts, label:"Select calculation group table:") as CalculationGroupTable;
+    if (t == null) { return; }
+}
+else
+{
+    ScriptHost.Error("No calculation group tables in the ScriptHost.Model.");
+}
+
+// Get calculation group's calculation items data column
+
+var cs = t.DataColumns.Where(x => x.SourceColumn == "Name");
+var c = null as DataColumn;
+
+if (cs.Count() != 1)
+{
+    ScriptHost.Warning("Cannot identify calculation items column.");
+    c = ScriptHost.SelectColumn(t, label:"Select calculation items column:") as DataColumn;
+    if (c == null) { return; }
+}
+else
+{
+    c = cs.First();
+}
+
+// If calculation group is a time intelligence calculation group get the suffix (if any)
+
+var tableSuffix = "" as string;
+if (defaultTimeIntelligenceName.Length < t.Name.Length &&
+    t.Name.ToUpper().Substring(0, defaultTimeIntelligenceName.Length) == defaultTimeIntelligenceName.ToUpper())
+{
+    tableSuffix = " " + t.Name.Substring(defaultTimeIntelligenceName.Length).Trim();
+}
+
+// Create measures
+
+foreach (var m in ScriptHost.Selected.Measures)
+{
+
+    bool isCalculationGroupMeasure = Convert.ToBoolean(m.GetAnnotation("isCalculationGroupMeasure"));
+    if (isCalculationGroupMeasure) { continue; }
+
+    foreach (var i in t.CalculationItems.Where(i => !i.Name.ToUpper().Contains(defaultCurrentPeriodItemName.ToUpper())))
+    {
+
+        var measureName = m.Name + " " + i.Name + tableSuffix;
+        var measureExpression = defaultMeasureExpression
+            .Replace("<measure>", m.DaxObjectName)
+            .Replace("<column>", c.DaxObjectFullName)
+            .Replace("<item>", i.Name);
+        var measureDisplayFolder = m.DisplayFolder + "\\🢒" + t.Name + "\\" + m.Name;
+
+        var mms = ScriptHost.Model.AllMeasures.Where(x => x.Name == measureName);
+        if (mms.Any()) { foreach (var mm in mms.ToList()) { mm.Delete(); } }
+
+        var nm = m.Table.AddMeasure(measureName, measureExpression, measureDisplayFolder);
+
+        var e = i.FormatStringExpression;
+        if (String.IsNullOrEmpty(e))
+        {
+            // Format string expression is blank
+            nm.FormatString = m.FormatString;
+        }
+        else if (e.Trim('\r', '\n', '"').Length < e.Length)
+        {
+            // Format string expression is a string
+            nm.FormatString = e.Trim('\r', '\n', '"');
+        }
+        // Todo: Add in process to handle DAX expressions e.g. https://www.esbrina-ba.com/showing-measure-descriptions-in-tooltips/
+
+        nm.SetAnnotation("isCalculationGroupMeasure", "true");
+
+        // Todo: Add in logic to create descriptions
+
+    }
+}
+
+// End
+
+ScriptHost.Info("Script finished.");
+
+        }
+        public static bool Enabled(Selection Selected, Model Model) {
+            return true;
+        }
+    }
+}
+namespace Macro77
+{
+    
+    
+    internal static class __MacroAction
+    {
+        public static void Execute(Selection Selected, Model Model) {
+            if (!ScriptHost.Selected.Measures.Any()) { return; }
+
+var cg = null as CalculationGroupTable;
+
+if (!ScriptHost.Model.CalculationGroups.Where(x => x.Name == "Switch Measures").Any())
+{
+
+    cg = ScriptHost.Model.AddCalculationGroup("Switch Measures");
+    cg.CalculationGroupPrecedence = 99;
+    cg.Columns["Name"].Name = "Switch Measures";
+
+    if (!ScriptHost.Model.AllMeasures.Where(x => x.Name == "Switch Measure").Any())
+    {
+        cg.AddMeasure("Switch Measure", "ERROR(\"Please use with the 'Switch Measures' calculation group.\")");
+    }
+
+}
+else
+{
+    cg = ScriptHost.Model.Tables["Switch Measures"] as CalculationGroupTable;
+}
+
+foreach (var m in ScriptHost.Selected.Measures)
+{
+    if (!cg.CalculationItems.Where(x => x.Name == m.Name).Any()) { cg.AddCalculationItem(m.Name, m.DaxObjectName); }
+}
+
+ScriptHost.Info("Script finished.");
+
+        }
+        public static bool Enabled(Selection Selected, Model Model) {
+            return true;
+        }
+    }
+}
+namespace Macro45
+{
+    
+    
+    internal static class __MacroAction
+    {
+        public static void Execute(Selection Selected, Model Model) {
+            var useShortFormat = true;
+var insertSpaceAfterFunctionName = false;
+var insertLineBreakOnFirstLine = true;
+
+Func<string, string> GetFormattedDax = (string daxInput) =>
+{
+    var formattedDax = ScriptHost.FormatDax(daxInput, shortFormat: useShortFormat, skipSpaceAfterFunctionName: !insertSpaceAfterFunctionName);
+    return insertLineBreakOnFirstLine ? "\r\n" + formattedDax : formattedDax;
+};
+
+foreach (var m in ScriptHost.Model.AllMeasures)
+{
+    if (!String.IsNullOrEmpty(m.Expression)) { m.Expression = GetFormattedDax(m.Expression); } else { m.Delete(); }
+}
+
+foreach (var i in ScriptHost.Model.AllCalculationItems)
+{
+    if (!String.IsNullOrEmpty(i.Expression)) { i.Expression = GetFormattedDax(i.Expression); } else { i.Delete(); }
+    if (!String.IsNullOrEmpty(i.FormatStringExpression)) { i.FormatStringExpression = GetFormattedDax(i.FormatStringExpression); }
+}
+
+foreach (var t in ScriptHost.Model.Tables.OfType<CalculatedTable>().Where(x => !x.Name.StartsWith("DateTableTemplate_") && !x.Name.StartsWith("LocalDateTable_")))
+{
+    if (!String.IsNullOrEmpty(t.Expression)) { t.Expression = GetFormattedDax(t.Expression); } else { t.Delete(); }
+}
+
+foreach (var c in ScriptHost.Model.AllColumns.OfType<CalculatedColumn>().Where(x => !x.DaxTableName.StartsWith("DateTableTemplate_") && !x.DaxTableName.StartsWith("LocalDateTable_")))
+{
+    if (!String.IsNullOrEmpty(c.Expression)) { c.Expression = GetFormattedDax(c.Expression); } else { c.Delete(); }
+}
+ScriptHost.Info("Script finished.",32);
+
+        }
+        public static bool Enabled(Selection Selected, Model Model) {
+            return true;
+        }
+    }
+}
+namespace Macro21
+{
+    
+    
+    internal static class __MacroAction
+    {
+        public static void Execute(Selection Selected, Model Model) {
+            var useShortFormat = true;
+var insertSpaceAfterFunctionName = false;
+var insertLineBreakOnFirstLine = true;
+
+foreach (var m in ScriptHost.Model.AllMeasures) { ScriptHost.FormatDax(m); }
+foreach (var i in ScriptHost.Model.AllCalculationItems) { ScriptHost.FormatDax(i); }
+foreach (var t in ScriptHost.Model.Tables.OfType<CalculatedTable>().Where(x => !x.Name.Contains("DateTableTemplate_") && !x.Name.Contains("LocalDateTable_"))) { ScriptHost.FormatDax(t); }
+foreach (var c in ScriptHost.Model.AllColumns.OfType<CalculatedColumn>().Where(x => !x.DaxTableName.Contains("DateTableTemplate_") && !x.DaxTableName.Contains("LocalDateTable_"))) { ScriptHost.FormatDax(c); }
+ScriptHost.CallDaxFormatter(shortFormat: useShortFormat, skipSpaceAfterFunctionName: !insertSpaceAfterFunctionName);
+
+if (insertLineBreakOnFirstLine)
+{
+    foreach (var m in ScriptHost.Model.AllMeasures) { m.Expression = "\r\n" + m.Expression; }
+    foreach (var i in ScriptHost.Model.AllCalculationItems) { i.Expression = "\r\n" + i.Expression; }
+    foreach (var t in ScriptHost.Model.Tables.OfType<CalculatedTable>().Where(x => !x.Name.Contains("DateTableTemplate_") && !x.Name.Contains("LocalDateTable_"))) { t.Expression = "\r\n" + t.Expression; }
+    foreach (var c in ScriptHost.Model.AllColumns.OfType<CalculatedColumn>().Where(x => !x.DaxTableName.Contains("DateTableTemplate_") && !x.DaxTableName.Contains("LocalDateTable_"))) { c.Expression = "\r\n" + c.Expression; }
+}
+ScriptHost.Info("Script finished.",20);
+
+        }
+        public static bool Enabled(Selection Selected, Model Model) {
+            return false;
+        }
+    }
+}
+namespace Macro51
+{
+    
+    
+    internal static class __MacroAction
+    {
+        public static void Execute(Selection Selected, Model Model) {
+            Func<string, string, string> AddToPBI_ChangedProperties = (string textPBI_ChangedProperties, string textProperty) =>
+{
+    List<string> textProperties = textPBI_ChangedProperties.Trim('[', ']').Replace("\"", "").Split(',').ToList();
+    textProperties = textProperties.Where(p => p != "").ToList();
+    if (!textProperties.Contains(textProperty)) { textProperties.Add(textProperty); }
+    return "[\"" + String.Join("\",\"", textProperties) + "\"]";
+};
+
+foreach (var m in ScriptHost.Selected.Measures)
+{
+
+    if (m.DataType != DataType.Decimal && m.DataType != DataType.Double && m.DataType != DataType.Int64) { continue; }
+
+    m.FormatString = "\\$#,0.00;-\\$#,0.00;\\$#,0.00";
+    m.SetAnnotation("Format", "<Format Format=\"CurrencyCustom\" Accuracy=\"2\" ThousandSeparator=\"True\"><Currency LCID=\"5129\" DisplayName=\"$ English (New Zealand)\" Symbol=\"$\" PositivePattern=\"0\" NegativePattern=\"1\" /></Format>");
+    m.RemoveAnnotation("PBI_FormatHint");
+
+    string textPBI_ChangedProperties = m.GetAnnotation("PBI_ChangedProperties") ?? "";
+    textPBI_ChangedProperties = AddToPBI_ChangedProperties(textPBI_ChangedProperties, "FormatString");
+    m.SetAnnotation("PBI_ChangedProperties", textPBI_ChangedProperties);
+
+    m.SetAnnotation("disallowApplyingDefaultFormatting", "true");
+
+}
+
+ScriptHost.Info("Script finished.");
+
+        }
+        public static bool Enabled(Selection Selected, Model Model) {
+            return true;
+        }
+    }
+}
+namespace Macro58
+{
+    
+    
+    internal static class __MacroAction
+    {
+        public static void Execute(Selection Selected, Model Model) {
+            Func<string, string, string> AddToPBI_ChangedProperties = (string textPBI_ChangedProperties, string textProperty) =>
+{
+    List<string> textProperties = textPBI_ChangedProperties.Trim('[', ']').Replace("\"", "").Split(',').ToList();
+    textProperties = textProperties.Where(p => p != "").ToList();
+    if (!textProperties.Contains(textProperty)) { textProperties.Add(textProperty); }
+    return "[\"" + String.Join("\",\"", textProperties) + "\"]";
+};
+
+foreach (var c in ScriptHost.Selected.Columns)
+{
+
+    if (c.Table.ObjectType == ObjectType.CalculationGroupTable) { continue; }
+    if (c.DataType != DataType.Decimal && c.DataType != DataType.Double && c.DataType != DataType.Int64) { continue; }
+
+    c.FormatString = "\\$#,0.00;-\\$#,0.00;\\$#,0.00";
+    c.SetAnnotation("Format", "<Format Format=\"CurrencyCustom\" Accuracy=\"2\" ThousandSeparator=\"True\"><Currency LCID=\"5129\" DisplayName=\"$ English (New Zealand)\" Symbol=\"$\" PositivePattern=\"0\" NegativePattern=\"1\" /></Format>");
+
+    string textPBI_ChangedProperties = c.GetAnnotation("PBI_ChangedProperties") ?? "";
+    textPBI_ChangedProperties = AddToPBI_ChangedProperties(textPBI_ChangedProperties, "FormatString");
+    c.SetAnnotation("PBI_ChangedProperties", textPBI_ChangedProperties);
+
+    c.SetAnnotation("disallowApplyingDefaultFormatting", "true");
+
+}
+
+ScriptHost.Info("Script finished.");
+
+        }
+        public static bool Enabled(Selection Selected, Model Model) {
+            return true;
+        }
+    }
+}
+namespace Macro52
+{
+    
+    
+    internal static class __MacroAction
+    {
+        public static void Execute(Selection Selected, Model Model) {
+            Func<string, string, string> AddToPBI_ChangedProperties = (string textPBI_ChangedProperties, string textProperty) =>
+{
+    List<string> textProperties = textPBI_ChangedProperties.Trim('[', ']').Replace("\"", "").Split(',').ToList();
+    textProperties = textProperties.Where(p => p != "").ToList();
+    if (!textProperties.Contains(textProperty)) { textProperties.Add(textProperty); }
+    return "[\"" + String.Join("\",\"", textProperties) + "\"]";
+};
+
+foreach (var m in ScriptHost.Selected.Measures)
+{
+
+    if (m.DataType != DataType.Decimal && m.DataType != DataType.Double && m.DataType != DataType.Int64) { continue; }
+
+    m.FormatString = "\\$#,0.00;(\\$#,0.00);\\$#,0.00";
+    m.SetAnnotation("Format", "<Format Format=\"CurrencyCustom\" Accuracy=\"2\" ThousandSeparator=\"True\"><Currency LCID=\"1033\" DisplayName=\"$ English (United States)\" Symbol=\"$\" PositivePattern=\"0\" NegativePattern=\"0\" /></Format>");
+    m.RemoveAnnotation("PBI_FormatHint");
+
+    string textPBI_ChangedProperties = m.GetAnnotation("PBI_ChangedProperties") ?? "";
+    textPBI_ChangedProperties = AddToPBI_ChangedProperties(textPBI_ChangedProperties, "FormatString");
+    m.SetAnnotation("PBI_ChangedProperties", textPBI_ChangedProperties);
+
+    m.SetAnnotation("disallowApplyingDefaultFormatting", "true");
+
+}
+
+ScriptHost.Info("Script finished.");
+
+        }
+        public static bool Enabled(Selection Selected, Model Model) {
+            return true;
+        }
+    }
+}
+namespace Macro59
+{
+    
+    
+    internal static class __MacroAction
+    {
+        public static void Execute(Selection Selected, Model Model) {
+            Func<string, string, string> AddToPBI_ChangedProperties = (string textPBI_ChangedProperties, string textProperty) =>
+{
+    List<string> textProperties = textPBI_ChangedProperties.Trim('[', ']').Replace("\"", "").Split(',').ToList();
+    textProperties = textProperties.Where(p => p != "").ToList();
+    if (!textProperties.Contains(textProperty)) { textProperties.Add(textProperty); }
+    return "[\"" + String.Join("\",\"", textProperties) + "\"]";
+};
+
+foreach (var c in ScriptHost.Selected.Columns)
+{
+
+    if (c.Table.ObjectType == ObjectType.CalculationGroupTable) { continue; }
+    if (c.DataType != DataType.Decimal && c.DataType != DataType.Double && c.DataType != DataType.Int64) { continue; }
+
+    c.FormatString = "\\$#,0.00;(\\$#,0.00);\\$#,0.00";
+    c.SetAnnotation("Format", "<Format Format=\"CurrencyCustom\" Accuracy=\"2\" ThousandSeparator=\"True\"><Currency LCID=\"1033\" DisplayName=\"$ English (United States)\" Symbol=\"$\" PositivePattern=\"0\" NegativePattern=\"0\" /></Format>");
+
+    string textPBI_ChangedProperties = c.GetAnnotation("PBI_ChangedProperties") ?? "";
+    textPBI_ChangedProperties = AddToPBI_ChangedProperties(textPBI_ChangedProperties, "FormatString");
+    c.SetAnnotation("PBI_ChangedProperties", textPBI_ChangedProperties);
+
+    c.SetAnnotation("disallowApplyingDefaultFormatting", "true");
+
+}
+
+ScriptHost.Info("Script finished.");
+
+        }
+        public static bool Enabled(Selection Selected, Model Model) {
+            return true;
+        }
+    }
+}
+namespace Macro73
+{
+    
+    
+    internal static class __MacroAction
+    {
+        public static void Execute(Selection Selected, Model Model) {
+            Func<string, string, string> AddToPBI_ChangedProperties = (string textPBI_ChangedProperties, string textProperty) =>
+{
+    List<string> textProperties = textPBI_ChangedProperties.Trim('[', ']').Replace("\"", "").Split(',').ToList();
+    textProperties = textProperties.Where(p => p != "").ToList();
+    if (!textProperties.Contains(textProperty)) { textProperties.Add(textProperty); }
+    return "[\"" + String.Join("\",\"", textProperties) + "\"]";
+};
+
+foreach (var c in ScriptHost.Selected.Columns)
+{
+
+    if (c.Table.ObjectType == ObjectType.CalculationGroupTable) { continue; }
+    if (c.DataType != DataType.Decimal && c.DataType != DataType.Double && c.DataType != DataType.Int64) { continue; }
+
+    c.FormatString = "#,#;(#,#);0";
+    c.SetAnnotation("Format", "<Format Format=\"Custom\" Custom=\"#,#;(#,#);0\" />");
+
+    string textPBI_ChangedProperties = c.GetAnnotation("PBI_ChangedProperties") ?? "";
+    textPBI_ChangedProperties = AddToPBI_ChangedProperties(textPBI_ChangedProperties, "FormatString");
+    c.SetAnnotation("PBI_ChangedProperties", textPBI_ChangedProperties);
+
+    c.SetAnnotation("disallowApplyingDefaultFormatting", "true");
+
+}
+
+ScriptHost.Info("Script finished.");
+
+        }
+        public static bool Enabled(Selection Selected, Model Model) {
+            return true;
+        }
+    }
+}
+namespace Macro74
+{
+    
+    
+    internal static class __MacroAction
+    {
+        public static void Execute(Selection Selected, Model Model) {
+            Func<string, string, string> AddToPBI_ChangedProperties = (string textPBI_ChangedProperties, string textProperty) =>
+{
+    List<string> textProperties = textPBI_ChangedProperties.Trim('[', ']').Replace("\"", "").Split(',').ToList();
+    textProperties = textProperties.Where(p => p != "").ToList();
+    if (!textProperties.Contains(textProperty)) { textProperties.Add(textProperty); }
+    return "[\"" + String.Join("\",\"", textProperties) + "\"]";
+};
+
+foreach (var m in ScriptHost.Selected.Measures)
+{
+
+    if (m.DataType != DataType.Decimal && m.DataType != DataType.Double && m.DataType != DataType.Int64) { continue; }
+
+    m.FormatString = "#,#;(#,#);0";
+    m.SetAnnotation("Format", "<Format Format=\"Custom\" Custom=\"#,#;(#,#);0\" />");
+    m.RemoveAnnotation("PBI_FormatHint");
+
+    string textPBI_ChangedProperties = m.GetAnnotation("PBI_ChangedProperties") ?? "";
+    textPBI_ChangedProperties = AddToPBI_ChangedProperties(textPBI_ChangedProperties, "FormatString");
+    m.SetAnnotation("PBI_ChangedProperties", textPBI_ChangedProperties);
+
+    m.SetAnnotation("disallowApplyingDefaultFormatting", "true");
+
+}
+
+ScriptHost.Info("Script finished.");
+
+        }
+        public static bool Enabled(Selection Selected, Model Model) {
+            return true;
+        }
+    }
+}
+namespace Macro71
+{
+    
+    
+    internal static class __MacroAction
+    {
+        public static void Execute(Selection Selected, Model Model) {
+            Func<string, string, string> AddToPBI_ChangedProperties = (string textPBI_ChangedProperties, string textProperty) =>
+{
+    List<string> textProperties = textPBI_ChangedProperties.Trim('[', ']').Replace("\"", "").Split(',').ToList();
+    textProperties = textProperties.Where(p => p != "").ToList();
+    if (!textProperties.Contains(textProperty)) { textProperties.Add(textProperty); }
+    return "[\"" + String.Join("\",\"", textProperties) + "\"]";
+};
+
+foreach (var m in ScriptHost.Selected.Measures)
+{
+
+    if (m.DataType != DataType.Decimal && m.DataType != DataType.Double && m.DataType != DataType.Int64) { continue; }
+
+    m.FormatString = "#,0.00;(#,0.00);0.00";
+    m.SetAnnotation("Format", "<Format Format=\"Custom\" Custom=\"#,0.00;(#,0.00);0.00\" />");
+    m.RemoveAnnotation("PBI_FormatHint");
+
+    string textPBI_ChangedProperties = m.GetAnnotation("PBI_ChangedProperties") ?? "";
+    textPBI_ChangedProperties = AddToPBI_ChangedProperties(textPBI_ChangedProperties, "FormatString");
+    m.SetAnnotation("PBI_ChangedProperties", textPBI_ChangedProperties);
+
+    m.SetAnnotation("disallowApplyingDefaultFormatting", "true");
+
+}
+
+ScriptHost.Info("Script finished.");
+
+        }
+        public static bool Enabled(Selection Selected, Model Model) {
+            return true;
+        }
+    }
+}
+namespace Macro72
+{
+    
+    
+    internal static class __MacroAction
+    {
+        public static void Execute(Selection Selected, Model Model) {
+            Func<string, string, string> AddToPBI_ChangedProperties = (string textPBI_ChangedProperties, string textProperty) =>
+{
+    List<string> textProperties = textPBI_ChangedProperties.Trim('[', ']').Replace("\"", "").Split(',').ToList();
+    textProperties = textProperties.Where(p => p != "").ToList();
+    if (!textProperties.Contains(textProperty)) { textProperties.Add(textProperty); }
+    return "[\"" + String.Join("\",\"", textProperties) + "\"]";
+};
+
+foreach (var c in ScriptHost.Selected.Columns)
+{
+
+    if (c.Table.ObjectType == ObjectType.CalculationGroupTable) { continue; }
+    if (c.DataType != DataType.Decimal && c.DataType != DataType.Double && c.DataType != DataType.Int64) { continue; }
+
+    c.FormatString = "#,0.00;(#,0.00);0.00";
+    c.SetAnnotation("Format", "<Format Format=\"Custom\" Custom=\"#,0.00;(#,0.00);0.00\" />");
+
+    string textPBI_ChangedProperties = c.GetAnnotation("PBI_ChangedProperties") ?? "";
+    textPBI_ChangedProperties = AddToPBI_ChangedProperties(textPBI_ChangedProperties, "FormatString");
+    c.SetAnnotation("PBI_ChangedProperties", textPBI_ChangedProperties);
+
+    c.SetAnnotation("disallowApplyingDefaultFormatting", "true");
+
+}
+
+ScriptHost.Info("Script finished.");
+
+        }
+        public static bool Enabled(Selection Selected, Model Model) {
+            return true;
+        }
+    }
+}
+namespace Macro61
+{
+    
+    
+    internal static class __MacroAction
+    {
+        public static void Execute(Selection Selected, Model Model) {
+            Func<string, string, string> AddToPBI_ChangedProperties = (string textPBI_ChangedProperties, string textProperty) =>
+{
+    List<string> textProperties = textPBI_ChangedProperties.Trim('[', ']').Replace("\"", "").Split(',').ToList();
+    textProperties = textProperties.Where(p => p != "").ToList();
+    if (!textProperties.Contains(textProperty)) { textProperties.Add(textProperty); }
+    return "[\"" + String.Join("\",\"", textProperties) + "\"]";
+};
+
+foreach (var c in ScriptHost.Selected.Columns)
+{
+
+    if (c.Table.ObjectType == ObjectType.CalculationGroupTable) { continue; }
+    if (c.DataType != DataType.Decimal && c.DataType != DataType.Double && c.DataType != DataType.Int64) { continue; }
+
+    c.FormatString = "#,0.00";
+    c.SetAnnotation("Format", "<Format Format=\"NumberDecimal\" Accuracy=\"2\" ThousandSeparator=\"True\" />");
+
+    string textPBI_ChangedProperties = c.GetAnnotation("PBI_ChangedProperties") ?? "";
+    textPBI_ChangedProperties = AddToPBI_ChangedProperties(textPBI_ChangedProperties, "FormatString");
+    c.SetAnnotation("PBI_ChangedProperties", textPBI_ChangedProperties);
+
+    c.SetAnnotation("disallowApplyingDefaultFormatting", "true");
+
+}
+
+ScriptHost.Info("Script finished.");
+
+        }
+        public static bool Enabled(Selection Selected, Model Model) {
+            return true;
+        }
+    }
+}
+namespace Macro62
+{
+    
+    
+    internal static class __MacroAction
+    {
+        public static void Execute(Selection Selected, Model Model) {
+            Func<string, string, string> AddToPBI_ChangedProperties = (string textPBI_ChangedProperties, string textProperty) =>
+{
+    List<string> textProperties = textPBI_ChangedProperties.Trim('[', ']').Replace("\"", "").Split(',').ToList();
+    textProperties = textProperties.Where(p => p != "").ToList();
+    if (!textProperties.Contains(textProperty)) { textProperties.Add(textProperty); }
+    return "[\"" + String.Join("\",\"", textProperties) + "\"]";
+};
+
+foreach (var m in ScriptHost.Selected.Measures)
+{
+
+    if (m.DataType != DataType.Decimal && m.DataType != DataType.Double && m.DataType != DataType.Int64) { continue; }
+
+    m.FormatString = "#,0.00";
+    m.SetAnnotation("Format", "<Format Format=\"NumberDecimal\" Accuracy=\"2\" ThousandSeparator=\"True\" />");
+    m.RemoveAnnotation("PBI_FormatHint");
+
+    string textPBI_ChangedProperties = m.GetAnnotation("PBI_ChangedProperties") ?? "";
+    textPBI_ChangedProperties = AddToPBI_ChangedProperties(textPBI_ChangedProperties, "FormatString");
+    m.SetAnnotation("PBI_ChangedProperties", textPBI_ChangedProperties);
+
+    m.SetAnnotation("disallowApplyingDefaultFormatting", "true");
+
+}
+
+ScriptHost.Info("Script finished.");
+
+        }
+        public static bool Enabled(Selection Selected, Model Model) {
+            return true;
+        }
+    }
+}
+namespace Macro54
+{
+    
+    
+    internal static class __MacroAction
+    {
+        public static void Execute(Selection Selected, Model Model) {
+            Func<string, string, string> RemoveFromPBI_ChangedProperties = (string textPBI_ChangedProperties, string textProperty) =>
+{
+    List<string> textProperties = textPBI_ChangedProperties.Trim('[', ']').Replace("\"", "").Split(',').ToList();
+    textProperties = textProperties.Where(p => p != textProperty).ToList();
+    return "[\"" + String.Join("\",\"", textProperties) + "\"]";
+};
+
+// foreach (var m in ScriptHost.Model.AllMeasures)
+foreach (var m in ScriptHost.Selected.Measures)
+{
+
+    // if (!fullReset)
+    // {
+    //     bool disallowApplyingDefaultFormatting = Convert.ToBoolean(m.GetAnnotation("disallowApplyingDefaultFormatting"));
+    //     if (disallowApplyingDefaultFormatting) { continue; }
+    // }
+
+    m.FormatString = "";
+    m.SetAnnotation("Format", "<Format Format=\"General\" />");
+    m.SetAnnotation("PBI_FormatHint", "{\"isGeneralNumber\":true}");
+
+    string textPBI_ChangedProperties = m.GetAnnotation("PBI_ChangedProperties");
+    if (!String.IsNullOrEmpty(textPBI_ChangedProperties))
+    {
+        textPBI_ChangedProperties = RemoveFromPBI_ChangedProperties(textPBI_ChangedProperties, "FormatString");
+        if (textPBI_ChangedProperties=="[\"\"]")
+        {
+            m.RemoveAnnotation("PBI_ChangedProperties");
+        }
+        else
+        {
+            m.SetAnnotation("PBI_ChangedProperties", textPBI_ChangedProperties);
+        }
+    }
+
+    // if (!fullReset)
+    // {
+        m.RemoveAnnotation("disallowApplyingDefaultFormatting");
+    // }
+
+}
+
+ScriptHost.Info("Script finished.");
+
+        }
+        public static bool Enabled(Selection Selected, Model Model) {
+            return true;
+        }
+    }
+}
+namespace Macro56
+{
+    
+    
+    internal static class __MacroAction
+    {
+        public static void Execute(Selection Selected, Model Model) {
+            Func<string, string, string> RemoveFromPBI_ChangedProperties = (string textPBI_ChangedProperties, string textProperty) =>
+{
+    List<string> textProperties = textPBI_ChangedProperties.Trim('[', ']').Replace("\"", "").Split(',').ToList();
+    textProperties = textProperties.Where(p => p != textProperty).ToList();
+    return "[\"" + String.Join("\",\"", textProperties) + "\"]";
+};
+
+// foreach (var c in ScriptHost.Model.AllColumns)
+foreach (var c in ScriptHost.Selected.Columns)
+{
+
+    // if (!fullReset)
+    // {
+    //     bool disallowApplyingDefaultFormatting = Convert.ToBoolean(c.GetAnnotation("disallowApplyingDefaultFormatting"));
+    //     if (disallowApplyingDefaultFormatting) { continue; }
+    // }
+
+    if (c.Table.ObjectType == ObjectType.CalculationGroupTable) { continue; }
+
+    switch (c.DataType)
+    {
+        case DataType.Boolean:
+            c.FormatString = "\"TRUE\";\"TRUE\";\"FALSE\"";
+            c.SetAnnotation("Format", "<Format Format=\"Boolean\" />");
+            break;
+        case DataType.DateTime:
+            c.FormatString = "General Date";
+            // c.SetAnnotation("Format", "<Format Format=\"DateTimeGeneralPattern\"><DateTimes><DateTime LCID=\"5129\" Group=\"GeneralDateTimeLong\" FormatString=\"G\" /></DateTimes></Format>");
+            c.SetAnnotation("Format", "<Format Format=\"DateTimeGeneralPattern\"><DateTimes><DateTime LCID=\"1033\" Group=\"GeneralDateTimeLong\" FormatString=\"G\" /></DateTimes></Format>");
+            c.RemoveAnnotation("UnderlyingDateTimeDataType");
+            break;
+        case DataType.Decimal:
+            c.FormatString = "\\$#,0.###############;-\\$#,0.###############;\\$#,0.###############";
+            // c.SetAnnotation("Format", "<Format Format=\"CurrencyGeneral\" ThousandSeparator=\"True\"><Currency LCID=\"5129\" DisplayName=\"$ English (New Zealand)\" Symbol=\"$\" PositivePattern=\"0\" NegativePattern=\"1\" /></Format>");
+            // c.SetAnnotation("PBI_FormatHint", "{\"currencyCulture\":\"en-NZ\"}");
+            c.SetAnnotation("Format", "<Format Format=\"CurrencyGeneral\" ThousandSeparator=\"True\"><Currency LCID=\"1033\" DisplayName=\"Currency General\" Symbol=\"$\" PositivePattern=\"0\" NegativePattern=\"0\" /></Format>");
+            c.RemoveAnnotation("PBI_FormatHint");
+            break;
+        case DataType.Double:
+            c.FormatString = "";
+            c.SetAnnotation("Format", "<Format Format=\"General\" />");
+            break;
+        case DataType.Int64:
+            c.FormatString = "0";
+            c.SetAnnotation("Format", "<Format Format=\"NumberWhole\" Accuracy=\"0\" />");
+            break;
+        case DataType.String:
+            c.FormatString = "";
+            c.SetAnnotation("Format", "<Format Format=\"Text\" />");
+            break;
+        default:
+            break;
+    }
+
+    string textPBI_ChangedProperties = c.GetAnnotation("PBI_ChangedProperties");
+    if (!String.IsNullOrEmpty(textPBI_ChangedProperties))
+    {
+        textPBI_ChangedProperties = RemoveFromPBI_ChangedProperties(textPBI_ChangedProperties, "FormatString");
+        if (textPBI_ChangedProperties=="[\"\"]")
+        {
+            c.RemoveAnnotation("PBI_ChangedProperties");
+        }
+        else
+        {
+            c.SetAnnotation("PBI_ChangedProperties", textPBI_ChangedProperties);
+        }
+    }
+
+    // if (!fullReset)
+    // {
+        c.RemoveAnnotation("disallowApplyingDefaultFormatting");
+    // }
+
+}
+
+ScriptHost.Info("Script finished.");
+
+        }
+        public static bool Enabled(Selection Selected, Model Model) {
+            return true;
+        }
+    }
+}
+namespace Macro76
+{
+    
+    
+    internal static class __MacroAction
+    {
+        public static void Execute(Selection Selected, Model Model) {
+            Func<string, string, string> AddToPBI_ChangedProperties = (string textPBI_ChangedProperties, string textProperty) =>
+{
+    List<string> textProperties = textPBI_ChangedProperties.Trim('[', ']').Replace("\"", "").Split(',').ToList();
+    textProperties = textProperties.Where(p => p != "").ToList();
+    if (!textProperties.Contains(textProperty)) { textProperties.Add(textProperty); }
+    return "[\"" + String.Join("\",\"", textProperties) + "\"]";
+};
+
+foreach (var m in ScriptHost.Selected.Measures)
+{
+
+    if (m.DataType != DataType.DateTime) { continue; }
+
+    m.FormatString = "General Date";
+    m.RemoveAnnotation("Format");
+    m.RemoveAnnotation("PBI_FormatHint");
+
+    string textPBI_ChangedProperties = m.GetAnnotation("PBI_ChangedProperties") ?? "";
+    textPBI_ChangedProperties = AddToPBI_ChangedProperties(textPBI_ChangedProperties, "FormatString");
+    m.SetAnnotation("PBI_ChangedProperties", textPBI_ChangedProperties);
+
+    m.SetAnnotation("disallowApplyingDefaultFormatting", "true");
+
+}
+
+ScriptHost.Info("Script finished.");
+
+        }
+        public static bool Enabled(Selection Selected, Model Model) {
+            return true;
+        }
+    }
+}
+namespace Macro53
+{
+    
+    
+    internal static class __MacroAction
+    {
+        public static void Execute(Selection Selected, Model Model) {
+            Func<string, string, string> AddToPBI_ChangedProperties = (string textPBI_ChangedProperties, string textProperty) =>
+{
+    List<string> textProperties = textPBI_ChangedProperties.Trim('[', ']').Replace("\"", "").Split(',').ToList();
+    textProperties = textProperties.Where(p => p != "").ToList();
+    if (!textProperties.Contains(textProperty)) { textProperties.Add(textProperty); }
+    return "[\"" + String.Join("\",\"", textProperties) + "\"]";
+};
+
+foreach (var m in ScriptHost.Selected.Measures)
+{
+
+    if (m.DataType != DataType.Decimal && m.DataType != DataType.Double && m.DataType != DataType.Int64) { continue; }
+
+    m.FormatString = "0.00%;-0.00%;0.00%";
+    m.SetAnnotation("Format", "<Format Format=\"Percentage\" Accuracy=\"2\" />");
+    m.RemoveAnnotation("PBI_FormatHint");
+
+    string textPBI_ChangedProperties = m.GetAnnotation("PBI_ChangedProperties") ?? "";
+    textPBI_ChangedProperties = AddToPBI_ChangedProperties(textPBI_ChangedProperties, "FormatString");
+    m.SetAnnotation("PBI_ChangedProperties", textPBI_ChangedProperties);
+
+    m.SetAnnotation("disallowApplyingDefaultFormatting", "true");
+
+}
+
+ScriptHost.Info("Script finished.");
+
+        }
+        public static bool Enabled(Selection Selected, Model Model) {
+            return true;
+        }
+    }
+}
+namespace Macro60
+{
+    
+    
+    internal static class __MacroAction
+    {
+        public static void Execute(Selection Selected, Model Model) {
+            Func<string, string, string> AddToPBI_ChangedProperties = (string textPBI_ChangedProperties, string textProperty) =>
+{
+    List<string> textProperties = textPBI_ChangedProperties.Trim('[', ']').Replace("\"", "").Split(',').ToList();
+    textProperties = textProperties.Where(p => p != "").ToList();
+    if (!textProperties.Contains(textProperty)) { textProperties.Add(textProperty); }
+    return "[\"" + String.Join("\",\"", textProperties) + "\"]";
+};
+
+foreach (var c in ScriptHost.Selected.Columns)
+{
+
+    if (c.Table.ObjectType == ObjectType.CalculationGroupTable) { continue; }
+    if (c.DataType != DataType.Decimal && c.DataType != DataType.Double && c.DataType != DataType.Int64) { continue; }
+
+    c.FormatString = "0.00%;-0.00%;0.00%";
+    c.SetAnnotation("Format", "<Format Format=\"Percentage\" Accuracy=\"2\" />");
+
+    string textPBI_ChangedProperties = c.GetAnnotation("PBI_ChangedProperties") ?? "";
+    textPBI_ChangedProperties = AddToPBI_ChangedProperties(textPBI_ChangedProperties, "FormatString");
+    c.SetAnnotation("PBI_ChangedProperties", textPBI_ChangedProperties);
+
+    c.SetAnnotation("disallowApplyingDefaultFormatting", "true");
+
+}
+
+ScriptHost.Info("Script finished.");
+
+        }
+        public static bool Enabled(Selection Selected, Model Model) {
+            return true;
+        }
+    }
+}
+namespace Macro63
+{
+    
+    
+    internal static class __MacroAction
+    {
+        public static void Execute(Selection Selected, Model Model) {
+            Func<string, string, string> AddToPBI_ChangedProperties = (string textPBI_ChangedProperties, string textProperty) =>
+{
+    List<string> textProperties = textPBI_ChangedProperties.Trim('[', ']').Replace("\"", "").Split(',').ToList();
+    textProperties = textProperties.Where(p => p != "").ToList();
+    if (!textProperties.Contains(textProperty)) { textProperties.Add(textProperty); }
+    return "[\"" + String.Join("\",\"", textProperties) + "\"]";
+};
+
+foreach (var c in ScriptHost.Selected.Columns)
+{
+
+    if (c.Table.ObjectType == ObjectType.CalculationGroupTable) { continue; }
+    if (c.DataType != DataType.DateTime) { continue; }
+
+    c.FormatString = "Short Date";
+    c.SetAnnotation("Format", "<Format Format=\"DateTimeGeneralPattern\"><DateTimes><DateTime LCID=\"5129\" Group=\"ShortDate\" FormatString=\"d\" /></DateTimes></Format>");
+    c.SetAnnotation("UnderlyingDateTimeDataType", "Date");
+
+    string textPBI_ChangedProperties = c.GetAnnotation("PBI_ChangedProperties") ?? "";
+    textPBI_ChangedProperties = AddToPBI_ChangedProperties(textPBI_ChangedProperties, "FormatString");
+    c.SetAnnotation("PBI_ChangedProperties", textPBI_ChangedProperties);
+
+    c.SetAnnotation("disallowApplyingDefaultFormatting", "true");
+
+}
+
+ScriptHost.Info("Script finished.");
+
+        }
+        public static bool Enabled(Selection Selected, Model Model) {
+            return true;
+        }
+    }
+}
+namespace Macro64
+{
+    
+    
+    internal static class __MacroAction
+    {
+        public static void Execute(Selection Selected, Model Model) {
+            Func<string, string, string> AddToPBI_ChangedProperties = (string textPBI_ChangedProperties, string textProperty) =>
+{
+    List<string> textProperties = textPBI_ChangedProperties.Trim('[', ']').Replace("\"", "").Split(',').ToList();
+    textProperties = textProperties.Where(p => p != "").ToList();
+    if (!textProperties.Contains(textProperty)) { textProperties.Add(textProperty); }
+    return "[\"" + String.Join("\",\"", textProperties) + "\"]";
+};
+
+foreach (var c in ScriptHost.Selected.Columns)
+{
+
+    if (c.Table.ObjectType == ObjectType.CalculationGroupTable) { continue; }
+    if (c.DataType != DataType.DateTime) { continue; }
+
+    c.FormatString = "Short Time";
+    c.SetAnnotation("Format", "<Format Format=\"DateTimeGeneralPattern\"><DateTimes><DateTime LCID=\"5129\" Group=\"ShortTime\" FormatString=\"t\" /></DateTimes></Format>");
+    c.SetAnnotation("UnderlyingDateTimeDataType", "Time");
+
+    string textPBI_ChangedProperties = c.GetAnnotation("PBI_ChangedProperties") ?? "";
+    textPBI_ChangedProperties = AddToPBI_ChangedProperties(textPBI_ChangedProperties, "FormatString");
+    c.SetAnnotation("PBI_ChangedProperties", textPBI_ChangedProperties);
+
+    c.SetAnnotation("disallowApplyingDefaultFormatting", "true");
+
+}
+
+ScriptHost.Info("Script finished.");
+
+        }
+        public static bool Enabled(Selection Selected, Model Model) {
+            return true;
+        }
+    }
+}
+namespace Macro50
+{
+    
+    
+    internal static class __MacroAction
+    {
+        public static void Execute(Selection Selected, Model Model) {
+            Func<string, string, string> AddToPBI_ChangedProperties = (string textPBI_ChangedProperties, string textProperty) =>
+{
+    List<string> textProperties = textPBI_ChangedProperties.Trim('[', ']').Replace("\"", "").Split(',').ToList();
+    textProperties = textProperties.Where(p => p != "").ToList();
+    if (!textProperties.Contains(textProperty)) { textProperties.Add(textProperty); }
+    return "[\"" + String.Join("\",\"", textProperties) + "\"]";
+};
+
+foreach (var m in ScriptHost.Selected.Measures)
+{
+
+    if (m.DataType != DataType.Decimal && m.DataType != DataType.Double && m.DataType != DataType.Int64) { continue; }
+
+    m.FormatString = "#,0";
+    m.SetAnnotation("Format", "<Format Format=\"NumberWhole\" Accuracy=\"0\" ThousandSeparator=\"True\" />");
+    m.RemoveAnnotation("PBI_FormatHint");
+
+    string textPBI_ChangedProperties = m.GetAnnotation("PBI_ChangedProperties") ?? "";
+    textPBI_ChangedProperties = AddToPBI_ChangedProperties(textPBI_ChangedProperties, "FormatString");
+    m.SetAnnotation("PBI_ChangedProperties", textPBI_ChangedProperties);
+
+    m.SetAnnotation("disallowApplyingDefaultFormatting", "true");
+
+}
+
+ScriptHost.Info("Script finished.");
+
+        }
+        public static bool Enabled(Selection Selected, Model Model) {
+            return true;
+        }
+    }
+}
+namespace Macro55
+{
+    
+    
+    internal static class __MacroAction
+    {
+        public static void Execute(Selection Selected, Model Model) {
+            Func<string, string, string> AddToPBI_ChangedProperties = (string textPBI_ChangedProperties, string textProperty) =>
+{
+    List<string> textProperties = textPBI_ChangedProperties.Trim('[', ']').Replace("\"", "").Split(',').ToList();
+    textProperties = textProperties.Where(p => p != "").ToList();
+    if (!textProperties.Contains(textProperty)) { textProperties.Add(textProperty); }
+    return "[\"" + String.Join("\",\"", textProperties) + "\"]";
+};
+
+foreach (var c in ScriptHost.Selected.Columns)
+{
+
+    if (c.DataType != DataType.Decimal && c.DataType != DataType.Double && c.DataType != DataType.Int64) { continue; }
+
+    c.FormatString = "#,0";
+    c.SetAnnotation("Format", "<Format Format=\"NumberWhole\" Accuracy=\"0\" ThousandSeparator=\"True\" />");
+
+    string textPBI_ChangedProperties = c.GetAnnotation("PBI_ChangedProperties") ?? "";
+    textPBI_ChangedProperties = AddToPBI_ChangedProperties(textPBI_ChangedProperties, "FormatString");
+    c.SetAnnotation("PBI_ChangedProperties", textPBI_ChangedProperties);
+
+    c.SetAnnotation("disallowApplyingDefaultFormatting", "true");
+
+}
+
+ScriptHost.Info("Script finished.");
+
+        }
+        public static bool Enabled(Selection Selected, Model Model) {
+            return true;
+        }
+    }
+}
+namespace Macro37
+{
+    using System.Diagnostics;
+    
+    internal static class __MacroAction
+    {
+        public static void Execute(Selection Selected, Model Model) {
+            var connectionInfo = ScriptHost.Model.Database.TOMDatabase.Server.ConnectionInfo;
+var server = "";
+var database = "";
+
+if (connectionInfo.Port == null)
+{
+
+    server = connectionInfo.Server;
+    database = ScriptHost.Model.Database.Name;
+
+}
+else
+{
+
+    server = connectionInfo.Server + ":" + connectionInfo.Port;
+    database = ScriptHost.Model.Database.ID;
+
+}
+
+Process.Start("C:\\Program Files\\Power BI ALM Toolkit\\Power BI ALM Toolkit\\AlmToolkit.exe", "\"" + server + "\" \"" + database + "\"");
+
+        }
+        public static bool Enabled(Selection Selected, Model Model) {
+            return true;
+        }
+    }
+}
+namespace Macro40
+{
+    using System.Diagnostics;
+    
+    internal static class __MacroAction
+    {
+        public static void Execute(Selection Selected, Model Model) {
+            var connectionInfo = ScriptHost.Model.Database.TOMDatabase.Server.ConnectionInfo;
+var server = "";
+var database = "";
+
+if (connectionInfo.Port == null)
+{
+    server = connectionInfo.Server;
+    database = ScriptHost.Model.Database.Name;
+}
+else
+{
+    server = connectionInfo.Server + ":" + connectionInfo.Port;
+    database = ScriptHost.Model.Database.ID;
+}
+
+Process.Start("C:\\Program Files (x86)\\Sqlbi\\Analyze in Excel for Power BI Desktop\\AnalyzeInExcel.exe", "--server=\"" + server + "\" --database=\"" + database + "\" --telemetry");
+
+        }
+        public static bool Enabled(Selection Selected, Model Model) {
+            return true;
+        }
+    }
+}
+namespace Macro36
+{
+    using System.Diagnostics;
+    
+    internal static class __MacroAction
+    {
+        public static void Execute(Selection Selected, Model Model) {
+            var connectionInfo = ScriptHost.Model.Database.TOMDatabase.Server.ConnectionInfo;
+var server = "";
+var database = "";
+
+if (connectionInfo.Port == null)
+{
+
+    server = connectionInfo.Server;
+    database = ScriptHost.Model.Database.Name;
+
+}
+else
+{
+
+    server = connectionInfo.Server + ":" + connectionInfo.Port;
+    database = ScriptHost.Model.Database.ID;
+
+}
+
+Process.Start("C:\\Program Files\\DAX Studio\\DaxStudio.exe", "-s \"" + server + "\" -d \"" + database + "\"");
+
+        }
+        public static bool Enabled(Selection Selected, Model Model) {
+            return true;
+        }
+    }
+}
+namespace Macro35
+{
+    using System.IO;
+using System.Diagnostics;
+using System.Reflection;
+    
+    internal static class __MacroAction
+    {
+        public static void Execute(Selection Selected, Model Model) {
+            var document = ((dynamic)SharedApp.Instance).ViewService.CurrentDocument;
+if (document == null) { return; }
+
+// Get the code within the current document:
+
+var code = null as string;
+try { code = document.Content.ToString(); } catch { return; }
+
+// Save a (temporary) file:
+
+var file = Path.ChangeExtension(Path.Combine(Path.GetTempPath(), document.Caption.ToString()), ".dax");
+File.WriteAllText(file, code);
+
+// Get Analysis Services connection details:
+
+var connectionInfo = ScriptHost.Model.Database.TOMDatabase.Server.ConnectionInfo;
+var server = "";
+var database = "";
+
+if (connectionInfo.Port == null)
+{
+
+    server = connectionInfo.Server;
+    database = ScriptHost.Model.Database.Name;
+
+}
+else
+{
+
+    server = connectionInfo.Server + ":" + connectionInfo.Port;
+    database = ScriptHost.Model.Database.ID;
+
+}
+
+// Launch DAX Studio with the -f argument to load the file, and the -s and -d arguments to connect to Analysis Services:
+
+Process.Start("C:\\Program Files\\DAX Studio\\DaxStudio.exe", "-s \"" + server + "\" -d \"" + database + "\" -f \"" + file + "\"");
+
+        }
+        public static bool Enabled(Selection Selected, Model Model) {
+            return true;
+        }
+    }
+}
+namespace Macro8
+{
+    using System.Drawing;
+    
+    internal static class __MacroAction
+    {
+        public static void Execute(Selection Selected, Model Model) {
+            System.Windows.Forms.Form newForm = new System.Windows.Forms.Form();
+System.Windows.Forms.Panel newPanel = new System.Windows.Forms.Panel();
+System.Windows.Forms.Label toolLabel = new System.Windows.Forms.Label();
+System.Windows.Forms.TreeView treeView = new System.Windows.Forms.TreeView();
+System.Windows.Forms.Button createButton = new System.Windows.Forms.Button();
+System.Windows.Forms.TextBox enterTextBox = new System.Windows.Forms.TextBox();
+System.Windows.Forms.Label nameLabel = new System.Windows.Forms.Label();
+System.Windows.Forms.ImageList imageList = new System.Windows.Forms.ImageList();
+System.Windows.Forms.RadioButton newmodelButton = new System.Windows.Forms.RadioButton();
+System.Windows.Forms.RadioButton existingmodelButton = new System.Windows.Forms.RadioButton();
+System.Windows.Forms.Button goButton = new System.Windows.Forms.Button();
+System.Windows.Forms.ComboBox enterComboBox = new System.Windows.Forms.ComboBox();
+System.Net.WebClient w = new System.Net.WebClient();
+System.Windows.Forms.LinkLabel ebiHome = new System.Windows.Forms.LinkLabel();
+
+// Colors
+System.Drawing.Color visibleColor = Color.Black;
+System.Drawing.Color hiddenColor = Color.Gray;
+System.Drawing.Color bkgrdColor =  ColorTranslator.FromHtml("#F2F2F2");
+System.Drawing.Color darkblackColor =  ColorTranslator.FromHtml("#0D1117");
+System.Drawing.Color darkgrayColor =  ColorTranslator.FromHtml("#21262D");
+System.Drawing.Color lightgrayColor =  ColorTranslator.FromHtml("#C9D1D9");
+
+// Fonts
+string fontName = "Century Gothic";
+System.Drawing.Font homeToolNameFont = new Font(fontName, 24);
+System.Drawing.Font stdFont = new Font(fontName, 10);
+System.Drawing.Font elegantFont = new Font(fontName, 10, FontStyle.Italic);
+
+// Add images from web to Image List
+string urlPrefix = "https://github.com/m-kovalsky/Tabular/raw/master/Icons/";
+string urlSuffix = "Icon.png";
+string toolName = "Perspective Editor";
+string ebiURL = @"https://www.elegantbi.com";
+
+string[] imageURLList = { "Table", "Column", "Measure", "Hierarchy" };
+for (int b = 0; b < imageURLList.Count(); b++)
+{
+    string url = urlPrefix + imageURLList[b] + urlSuffix;      
+    byte[] imageByte = w.DownloadData(url);
+    System.IO.MemoryStream ms = new System.IO.MemoryStream(imageByte);
+    System.Drawing.Image im = System.Drawing.Image.FromStream(ms);
+    imageList.Images.Add(im);
+}    
+    
+// Images
+treeView.ImageList = imageList;
+treeView.ImageIndex = 0;   
+imageList.ImageSize = new Size(16, 16);   
+     
+// Form
+newForm.Text = toolName;
+int formWidth = 600;
+int formHeight = 600;
+newForm.TopLevel = true;
+newForm.Size = new Size(formWidth,formHeight);
+newForm.Controls.Add(newPanel);
+newForm.BackColor = bkgrdColor;
+newForm.MaximumSize = new Size(formWidth,formHeight);
+newForm.MinimumSize = new Size(formWidth,formHeight);
+
+// Panel
+newPanel.Size = new Size(formWidth,formHeight);
+newPanel.Location =  new Point(0, 0);
+newPanel.BorderStyle = System.Windows.Forms.BorderStyle.None;
+newPanel.BackColor = bkgrdColor;
+newPanel.Controls.Add(treeView);
+newPanel.Controls.Add(createButton);
+newPanel.Controls.Add(enterTextBox);
+newPanel.Controls.Add(nameLabel);
+newPanel.Visible = false;
+
+// TreeView
+int treeViewWidth = formWidth * 2 / 3;
+int treeViewHeight = formHeight - 100;
+int treeViewX = 10;
+int treeViewY = 50;
+treeView.CheckBoxes = false;
+treeView.Size = new Size(treeViewWidth,treeViewHeight);
+treeView.Location = new Point(treeViewX,treeViewY);
+treeView.StateImageList = new System.Windows.Forms.ImageList();
+treeView.Visible = false;
+bool IsExpOrCol = false;
+string perspName = string.Empty;
+
+// Add images for tri-state tree view
+string[] stateimageURLList = { "Unchecked", "Checked", "PartiallyChecked" };
+for (int c = 0; c < stateimageURLList.Count(); c++)
+{
+    var url = urlPrefix + stateimageURLList[c] + urlSuffix;      
+    byte[] imageByte = w.DownloadData(url);
+    System.IO.MemoryStream ms = new System.IO.MemoryStream(imageByte);
+    System.Drawing.Image im = System.Drawing.Image.FromStream(ms);
+    treeView.StateImageList.Images.Add(im);
+}  
+            
+// Create Button
+createButton.Size = new Size(130,55);
+createButton.Location = new Point(treeViewWidth + 35,treeViewY);
+createButton.Text = "Create Perspective";
+createButton.Visible = false;
+createButton.Font = stdFont;
+
+int startScreenX = 200;
+int startScreenY = 200;
+
+toolLabel.Size = new Size(300,60);
+toolLabel.Text = toolName;
+toolLabel.Location = new Point(150,100);
+toolLabel.Font = homeToolNameFont;
+toolLabel.ForeColor = visibleColor;
+
+// New Model Button
+newmodelButton.Size = new Size(250,40);
+newmodelButton.Location = new Point(startScreenX,startScreenY);
+newmodelButton.Text = "Create New Perspective";
+newmodelButton.Font = stdFont;
+
+// Existing Model Button
+existingmodelButton.Size = new Size(250,40);
+existingmodelButton.Location = new Point(startScreenX,startScreenY+30);
+existingmodelButton.Text = "Modify Existing Perspective";
+existingmodelButton.Font = stdFont;
+
+// Enter Combo Box
+enterComboBox.Visible = false;
+enterComboBox.Size = new Size(215,40);
+enterComboBox.Location = new Point(startScreenX-10,startScreenY+80);
+enterComboBox.Font = stdFont;
+
+// Add items to combo box
+foreach (var p in ScriptHost.Model.Perspectives.ToList())
+{
+    string pName = p.Name;
+    enterComboBox.Items.Add(pName);
+}
+
+// New Model Button
+goButton.Size = new Size(140,30);
+goButton.Location = new Point(startScreenX+80,startScreenY+80);
+goButton.Text = "Go";
+goButton.Font = stdFont;
+goButton.Visible = false;
+goButton.Enabled = false; 
+
+// Add starting elements to form
+newForm.Controls.Add(newmodelButton);
+newForm.Controls.Add(existingmodelButton);
+newForm.Controls.Add(enterComboBox);
+newForm.Controls.Add(goButton);
+newForm.Controls.Add(toolLabel);
+newForm.Controls.Add(ebiHome);
+
+ebiHome.Text = "Designed by Elegant BI";
+ebiHome.Size = new Size(200,40);
+ebiHome.Location = new Point(220,400);
+ebiHome.Font = elegantFont;
+
+ebiHome.LinkClicked += (System.Object sender, System.Windows.Forms.LinkLabelLinkClickedEventArgs e) => {
+
+    System.Diagnostics.Process.Start(ebiURL);
+};
+
+// Label
+nameLabel.Size = new Size(60,40);
+nameLabel.Location = new Point(treeViewX,20);
+nameLabel.Text = "Name:";
+nameLabel.Font = stdFont;
+nameLabel.Visible = false;
+
+// Text box
+enterTextBox.Size = new Size(348,40);
+enterTextBox.Location = new Point(63,18);
+enterTextBox.Visible = false;
+enterTextBox.Font = stdFont;
+
+// Add nodes to treeview
+foreach (var t in ScriptHost.Model.Tables.OrderBy(a => a.Name).ToList())
+{  
+    // Add table nodes
+    string tableName = t.Name;    
+    var tn = treeView.Nodes.Add(tableName);    
+    tn.StateImageIndex = 0;
+    tn.ImageIndex = 0;
+    tn.SelectedImageIndex = 0;
+    
+    if (t.IsHidden)
+    {
+        tn.ForeColor = hiddenColor;
+    }
+    
+    // Add column sub-nodes
+    foreach (var c in t.Columns.OrderBy(a => a.Name).ToList())
+    {
+        string columnName = c.Name;
+        var x = tn.Nodes.Add(columnName);        
+        x.StateImageIndex = 0;
+        x.ImageIndex = 1;        
+        x.SelectedImageIndex = 1;
+        
+        if (c.IsHidden)
+        {
+            x.ForeColor = hiddenColor;
+        }
+    }
+    
+    // Add measure sub-nodes
+    foreach (var m in t.Measures.OrderBy(a => a.Name).ToList())
+    {
+        string measureName = m.Name;
+        var x = tn.Nodes.Add(measureName);
+        x.StateImageIndex = 0;
+        x.ImageIndex = 2;        
+        x.SelectedImageIndex = 2;
+        
+        if (m.IsHidden)
+        {
+            x.ForeColor = hiddenColor;
+        }
+    }   
+   
+    // Add hierarchy sub-nodes
+    foreach (var h in t.Hierarchies.OrderBy(a => a.Name).ToList())
+    {
+        string hierarchyName = h.Name;
+        var x = tn.Nodes.Add(hierarchyName);
+         x.ImageIndex = 3;
+         x.StateImageIndex = 0;
+         x.SelectedImageIndex = 3;
+         
+        if (h.IsHidden)
+        {
+            x.ForeColor = hiddenColor;
+        }
+    }    
+}
+
+newmodelButton.Click += (System.Object sender1, System.EventArgs e1) => {
+
+    goButton.Visible = true;
+    existingmodelButton.Checked = false;
+    newmodelButton.Checked = true;
+    goButton.Location = new Point(startScreenX+25, startScreenY+80);
+    enterComboBox.Visible = false;
+    goButton.Enabled = true;
+    enterComboBox.Text = string.Empty;
+    createButton.Text = "Create Perspective";   
+    enterTextBox.Enabled = true;
+};
+
+existingmodelButton.Click += (System.Object sender2, System.EventArgs e2) => {
+
+    goButton.Location = new Point(startScreenX+25, startScreenY+120);
+    enterComboBox.Visible = true;
+    goButton.Visible = true;    
+    newmodelButton.Checked = false;
+    existingmodelButton.Checked = true;  
+    createButton.Text = "Modify Perspective";    
+    enterTextBox.Enabled = false;
+    
+    // Add items to combo box
+    enterComboBox.Items.Clear();
+    foreach (var p in ScriptHost.Model.Perspectives.ToList())
+    {
+        string pName = p.Name;
+        enterComboBox.Items.Add(pName);
+    }
+    
+    if (enterComboBox.SelectedItem == null)
+    {
+        goButton.Enabled = false;
+    }
+};
+
+enterComboBox.SelectedValueChanged += (System.Object sender3, System.EventArgs e3) => {
+
+    goButton.Enabled = true;         
+};
+
+goButton.Click += (System.Object sender4, System.EventArgs e4) => {
+
+    // Hide initial buttons    
+    newmodelButton.Visible = false;
+    existingmodelButton.Visible = false;    
+    enterComboBox.Visible = false;
+    goButton.Visible = false;
+    toolLabel.Visible = false;
+    ebiHome.Visible = false;
+    
+    string p = enterComboBox.Text;
+    
+    // Make panel items visible
+    newPanel.Visible = true;
+    createButton.Visible = true;
+    treeView.Visible = true;
+    nameLabel.Visible = true;
+    enterTextBox.Visible = true;
+    
+    // Populate tree from perspective if modifying existing mini model
+    if (p != string.Empty)
+    {
+        enterTextBox.Text = p;
+     
+        foreach (System.Windows.Forms.TreeNode rootNode in treeView.Nodes)
+        {
+             string tableName = rootNode.Text;
+             int childNodeCount = rootNode.Nodes.Count;
+             int childNodeCheckedCount = 0;
+
+             // Loop through checked child nodes (columns, measures, hierarchies)
+             foreach (System.Windows.Forms.TreeNode childNode in rootNode.Nodes)
+             {
+                 var objectName = childNode.Text;
+                 
+                 if (childNode.ImageIndex == 1)
+                 {
+                     if (ScriptHost.Model.Tables[tableName].Columns[objectName].InPerspective[p] == true)
+                     {
+                         childNode.StateImageIndex = 1;
+                     }
+                 }
+                 else if (childNode.ImageIndex == 2)
+                 {
+                     if (ScriptHost.Model.Tables[tableName].Measures[objectName].InPerspective[p] == true)
+                     {
+                         childNode.StateImageIndex = 1;
+                     }
+                 }
+                 else if (childNode.ImageIndex == 3)
+                 {
+                     if (ScriptHost.Model.Tables[tableName].Hierarchies[objectName].InPerspective[p] == true)
+                     {
+                         childNode.StateImageIndex = 1;
+                     }
+                 }
+                 
+                 if (childNode.StateImageIndex == 1)
+                 {
+                    childNodeCheckedCount+=1;
+                 }
+            }
+             
+            // Finish populating tree root nodes (tables)
+            // If all child nodes are checked, set parent node to checked
+            if (childNodeCheckedCount == childNodeCount)
+            {
+                rootNode.StateImageIndex = 1;
+            }
+            // If no child nodes are checked, set parent node to unchecked
+            else if (childNodeCheckedCount == 0)
+            {
+                rootNode.StateImageIndex = 0;
+            }
+            // If not all children nodes are selected, set parent node to partially checked icon
+            else if (childNodeCheckedCount < childNodeCount)
+            {
+                rootNode.StateImageIndex = 2;
+            }
+         }
+     }                      
+};
+
+treeView.NodeMouseClick += (System.Object sender, System.Windows.Forms.TreeNodeMouseClickEventArgs e) => {
+    
+    if (IsExpOrCol == false)
+    {
+        if (e.Node.StateImageIndex != 1)
+        {
+            e.Node.StateImageIndex = 1;
+        }
+        else if (e.Node.StateImageIndex == 1)
+        {
+            e.Node.StateImageIndex = 0;
+        }
+        
+        // If parent node is checked, check all child nodes
+        if (e.Node.Nodes.Count > 0 && e.Node.StateImageIndex == 1)
+        {
+            foreach (System.Windows.Forms.TreeNode childNode in e.Node.Nodes)
+            {
+                childNode.StateImageIndex = 1;
+            }
+        }       
+        
+        // If parent node is unhecked, uncheck all child nodes
+        else if (e.Node.Nodes.Count > 0 && e.Node.StateImageIndex == 0)
+        {
+            foreach (System.Windows.Forms.TreeNode childNode in e.Node.Nodes)
+            {
+                childNode.StateImageIndex = 0;
+            }
+        }
+        
+        if (e.Node.Parent != null)
+        {
+            int childNodeCount = e.Node.Parent.Nodes.Count;   
+            int childNodeCheckedCount = 0;    
+        
+            foreach (System.Windows.Forms.TreeNode n in e.Node.Parent.Nodes)
+            {
+                if (n.StateImageIndex == 1)
+                {
+                    childNodeCheckedCount+=1;
+                }
+            }
+            
+            // If all child nodes are checked, set parent node to checked
+            if (childNodeCheckedCount == childNodeCount)
+            {
+                e.Node.Parent.StateImageIndex = 1;
+            }
+            // If no child nodes are checked, set parent node to unchecked
+            else if (childNodeCheckedCount == 0)
+            {
+                e.Node.Parent.StateImageIndex = 0;
+            }
+            // If not all children nodes are selected, set parent node to partially checked icon
+            else if (childNodeCheckedCount < childNodeCount)
+            {
+                e.Node.Parent.StateImageIndex = 2;
+            }
+        }   
+    }
+    
+    IsExpOrCol = false;
+};
+
+treeView.AfterExpand += (System.Object sender9, System.Windows.Forms.TreeViewEventArgs e9) => {
+    
+    IsExpOrCol = true;
+};
+
+treeView.AfterCollapse += (System.Object sender10, System.Windows.Forms.TreeViewEventArgs e10) => {
+    
+    IsExpOrCol = true;
+};
+
+createButton.Click += (System.Object sender6, System.EventArgs e6) => {
+   
+     perspName = enterTextBox.Text;     
+     
+     if (perspName == string.Empty)
+     {
+ScriptHost.Error("Please enter a name for the new perspective.",452);
+     }
+     else
+     {
+         if (!ScriptHost.Model.Perspectives.Any(a => a.Name == perspName))
+         {
+             // Create new perspective
+             ScriptHost.Model.AddPerspective(perspName);
+         }
+
+         // Clear perspective
+         foreach (var t in ScriptHost.Model.Tables.ToList())
+         {
+             string tableName = t.Name;             
+             ScriptHost.Model.Tables[tableName].InPerspective[perspName] = false;
+         }
+         
+         // Loop through root nodes (tables)
+         foreach (System.Windows.Forms.TreeNode rootNode in treeView.Nodes)
+         {
+             string tableName = rootNode.Text;
+         
+             // Loop through checked child nodes (columns, measures, hierarchies)
+             foreach (System.Windows.Forms.TreeNode childNode in rootNode.Nodes)
+             {
+                 string objectName = childNode.Text;
+                 
+                 if (childNode.StateImageIndex == 1)
+                 {
+                     // Columns
+                     if (childNode.ImageIndex == 1)                    
+                     {
+                         ScriptHost.Model.Tables[tableName].Columns[objectName].InPerspective[perspName] = true;                                              
+                     }                    
+                     // Measures
+                     else if (childNode.ImageIndex == 2)                    
+                     {
+                         ScriptHost.Model.Tables[tableName].Measures[objectName].InPerspective[perspName] = true;                                            
+                     }
+                     // Hierarchies
+                     else if (childNode.ImageIndex == 3)                    
+                     {
+                         ScriptHost.Model.Tables[tableName].Hierarchies[objectName].InPerspective[perspName] = true;
+                     }
+                 }
+             }
+         }
+     }        
+};
+
+newForm.Show();
+
+        }
+        public static bool Enabled(Selection Selected, Model Model) {
+            return true;
+        }
+    }
+}
+namespace Macro46
+{
+    using System.Diagnostics;
+    
+    internal static class __MacroAction
+    {
+        public static void Execute(Selection Selected, Model Model) {
+            var connectionInfo = ScriptHost.Model.Database.TOMDatabase.Server.ConnectionInfo;
+var server = "";
+var database = "";
+
+if (connectionInfo.Port == null)
+{
+
+    server = connectionInfo.Server;
+    database = ScriptHost.Model.Database.Name;
+
+}
+else
+{
+
+    server = connectionInfo.Server + ":" + connectionInfo.Port;
+    database = ScriptHost.Model.Database.ID;
+
+}
+
+Process.Start("C:\\Program Files (x86)\\Tabular Editor\\TabularEditor.exe", "\"" + server + "\" \"" + database + "\"");
+
+        }
+        public static bool Enabled(Selection Selected, Model Model) {
+            return true;
+        }
+    }
+}
+namespace Macro70
+{
+    using System.IO;
+using System.Windows.Forms;
+    
+    internal static class __MacroAction
+    {
+        public static void Execute(Selection Selected, Model Model) {
+            var jsonFile = Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData) + @"\TabularEditor3\MacroActions.json";
+
+var fbd = new FolderBrowserDialog();
+if (fbd.ShowDialog() == DialogResult.Cancel) { return; }
+var outFolder = fbd.SelectedPath;
+
+File.Copy(jsonFile, Path.Combine(outFolder, Path.GetFileName(jsonFile)), true);
+
+ScriptHost.Info("Script finished.");
+
+        }
+        public static bool Enabled(Selection Selected, Model Model) {
+            return true;
+        }
+    }
+}
+namespace Macro69
+{
+    using Newtonsoft.Json.Linq;
+using System.IO;
+using System.Windows.Forms;
+    
+    internal static class __MacroAction
+    {
+        public static void Execute(Selection Selected, Model Model) {
+            var fbd = new FolderBrowserDialog();
+if (fbd.ShowDialog() == DialogResult.Cancel) { return; }
+var outFolder = fbd.SelectedPath;
+
+// Delete csx and json files from folder
+var mbResult = MessageBox.Show(
+    // "Do you want to delete all existing csx and json files in the folder first?",
+    "Do you want to delete all existing csx files in the folder first?",
+    "Question",
+    MessageBoxButtons.YesNoCancel,
+    MessageBoxIcon.Question
+    );
+switch (mbResult)
+{
+    case DialogResult.Yes:
+        foreach (var f in Directory.EnumerateFiles(outFolder, "*.csx", SearchOption.AllDirectories)) { File.Delete(f); }
+        // foreach (var f in Directory.EnumerateFiles(outFolder, "*.json", SearchOption.AllDirectories)) { File.Delete(f); }
+        foreach (var d in Directory.EnumerateDirectories(outFolder, "*", SearchOption.AllDirectories))
+        {
+            if (!Directory.EnumerateFiles(d).Any() && !Directory.EnumerateDirectories(d).Any()) { Directory.Delete(d); }
+        }
+        break;
+    case DialogResult.No:
+        break;
+    case DialogResult.Cancel:
+        return;
+    default:
+        return;
+}
+
+// Load MacroActions
+var jsonFile = Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData) + @"\TabularEditor3\MacroActions.json";
+var json = JObject.Parse(File.ReadAllText(jsonFile));
+
+// Export each MacroAction
+foreach (var jtokenItem in json["Actions"])
+{
+
+    // Generate filename without extension and relataive path
+    var fileName = string.Join("_", jtokenItem["Name"].Value<string>().Replace('\\','~').Split(Path.GetInvalidFileNameChars())).Replace('~','\\')+
+                   " ["+
+                   jtokenItem["Id"].Value<string>()+
+                   "]";
+
+    // Define default parts
+    List<string> assemblyList = new List<string>()
+    {
+        "#r \"C:\\Program Files\\Tabular Editor 3\\TabularEditor3.exe\" // *** Needed for C# scripting, remove in TE3 ***",
+        "#r \"C:\\Program Files (x86)\\Tabular Editor 3\\TabularEditor3.exe\" // *** Needed for C# scripting, remove in TE3 ***"
+    };
+    List<string> namespaceList = new List<string>()
+    {
+        "using TabularEditor.TOMWrapper; // *** Needed for C# scripting, remove in TE3 ***",
+        "using TabularEditor.Scripting; // *** Needed for C# scripting, remove in TE3 ***"
+    };
+    List<string> classList = new List<string>()
+    {
+        "Model Model; // *** Needed for C# scripting, remove in TE3 ***",
+        "TabularEditor.Shared.Interaction.Selection Selected; // *** Needed for C# scripting, remove in TE3 ***"
+    };
+    List<string> bodyList = new List<string>();
+
+    // Get csxContent
+    var csxContent = jtokenItem["Execute"].Value<string>();
+
+    // Deconstruct csxContent
+    var reader = new StringReader(csxContent);
+    var line = "";
+    while ((line = reader.ReadLine()) != null)
+    {
+        if (line.StartsWith("#r ")) { assemblyList.Add(line); }
+        else if (line.StartsWith("using ")) { namespaceList.Add(line); }
+        else { bodyList.Add(line); }
+    };
+    reader.Dispose();
+
+    // Reconstruct csxContent with default elements
+    var writer = new StringWriter();
+    foreach (var listItem in assemblyList) { writer.WriteLine(listItem); }
+    writer.WriteLine("");
+    foreach (var listItem in namespaceList) { writer.WriteLine(listItem); }
+    writer.WriteLine("");
+    foreach (var listItem in classList) { writer.WriteLine(listItem); }
+    writer.WriteLine("");
+    foreach (var listItem in bodyList) { writer.WriteLine(listItem); }
+    csxContent = writer.ToString();
+    writer.Dispose();
+
+    // Save csxContent
+    var csxFilePath = outFolder+"\\"+fileName+".csx";
+    FileInfo fileInfo = new FileInfo(csxFilePath);
+    if (!fileInfo.Directory.Exists) { fileInfo.Directory.Create(); }
+    File.WriteAllText(csxFilePath, csxContent, System.Text.Encoding.UTF8);
+
+    // // Get jsonContent
+    // jtokenItem["Execute"].Parent.Remove();
+    // var jsonContent = JsonConvert.SerializeObject(jtokenItem, Newtonsoft.Json.Formatting.Indented);
+
+    // // Save jsonContent
+    // var jsonFilePath = outFolder+"\\"+fileName+".json";
+    // File.WriteAllText(jsonFilePath, jsonContent, System.Text.Encoding.UTF8);
+
+}
+
+ScriptHost.Info("Script finished.");
+
+        }
+        public static bool Enabled(Selection Selected, Model Model) {
+            return true;
+        }
+    }
+}
+namespace Macro68
+{
+    using System.IO;
+using Newtonsoft.Json.Linq;
+    
+    internal static class __MacroAction
+    {
+        public static void Execute(Selection Selected, Model Model) {
+            var jsonFile = Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData) + @"\TabularEditor3\MacroActions.json";
+var json = JObject.Parse(File.ReadAllText(jsonFile));
+json["Actions"] = new JArray(json["Actions"].OrderBy(i => i["Name"]));
+File.WriteAllText(jsonFile, JsonConvert.SerializeObject(json, Newtonsoft.Json.Formatting.Indented), System.Text.Encoding.UTF8);
+ScriptHost.Warning("Script finished. Please restart Tabular Editor 3.");
+
+        }
+        public static bool Enabled(Selection Selected, Model Model) {
+            return true;
+        }
+    }
+}
+namespace Macro22
+{
+    
+    
+    internal static class __MacroAction
+    {
+        public static void Execute(Selection Selected, Model Model) {
+            string defaultQuery =
+    "TOPN( 500, VALUES( <column> ) )\r\n" +
+    "ORDER BY <column>";
+
+foreach (var c in ScriptHost.Selected.Columns)
+{
+    string daxQuery = defaultQuery.Replace("<column>", c.DaxObjectFullName);
+    EvaluateDax(daxQuery).Output(8);
+}
+        }
+        public static bool Enabled(Selection Selected, Model Model) {
+            return true;
+        }
+    }
+}
+namespace Macro66
+{
+    
+    
+    internal static class __MacroAction
+    {
+        public static void Execute(Selection Selected, Model Model) {
+            Func<string, string, string> RemoveFromPBI_ChangedProperties = (string textPBI_ChangedProperties, string textProperty) =>
+{
+    List<string> textProperties = textPBI_ChangedProperties.Trim('[').Trim(']').Replace("\"", "").Split(',').ToList();
+    textProperties = textProperties.Where(p => p != textProperty).ToList();
+    return "[\"" + String.Join("\",\"", textProperties) + "\"]";
+};
+
+foreach (var c in ScriptHost.Selected.Columns)
+{
+
+    c.SortByColumn = null;
+
+    string textPBI_ChangedProperties = c.GetAnnotation("PBI_ChangedProperties");
+    if (!String.IsNullOrEmpty(textPBI_ChangedProperties))
+    {
+        textPBI_ChangedProperties = RemoveFromPBI_ChangedProperties(textPBI_ChangedProperties, "SortByColumn");
+        if (textPBI_ChangedProperties=="[\"\"]")
+        {
+            c.RemoveAnnotation("PBI_ChangedProperties");
+        }
+        else
+        {
+            c.SetAnnotation("PBI_ChangedProperties", textPBI_ChangedProperties);
+        }
+    }
+
+}
+
+ScriptHost.Info("Script finished.");
+
+        }
+        public static bool Enabled(Selection Selected, Model Model) {
+            return true;
+        }
+    }
+}
+namespace Macro65
+{
+    
+    
+    internal static class __MacroAction
+    {
+        public static void Execute(Selection Selected, Model Model) {
+            Func<string, string, string> AddToPBI_ChangedProperties = (string textPBI_ChangedProperties, string textProperty) =>
+{
+    List<string> textProperties = textPBI_ChangedProperties.Trim('[').Trim(']').Replace("\"", "").Split(',').ToList();
+    textProperties = textProperties.Where(p => p != "").ToList();
+    if (!textProperties.Contains(textProperty)) { textProperties.Add(textProperty); }
+    return "[\"" + String.Join("\",\"", textProperties) + "\"]";
+};
+
+foreach (var c in ScriptHost.Selected.Columns)
+{
+
+    Column sortByColumn = ScriptHost.SelectColumn(c.Table, null, "Select sort by column for " + c.DaxObjectFullName + ":");
+    if (sortByColumn == null) { continue; }
+
+    if (sortByColumn != c) { c.SortByColumn = sortByColumn; }
+
+    string textPBI_ChangedProperties = c.GetAnnotation("PBI_ChangedProperties") ?? "";
+    textPBI_ChangedProperties = AddToPBI_ChangedProperties(textPBI_ChangedProperties, "SortByColumn");
+    c.SetAnnotation("PBI_ChangedProperties", textPBI_ChangedProperties);
+
+}
+
+ScriptHost.Info("Script finished.");
+
+        }
+        public static bool Enabled(Selection Selected, Model Model) {
+            return true;
+        }
+    }
+}
+namespace Macro57
+{
+    
+    
+    internal static class __MacroAction
+    {
+        public static void Execute(Selection Selected, Model Model) {
+            foreach (var m in ScriptHost.Selected.Measures)
+{
+    if (String.IsNullOrEmpty(m.GetAnnotation("disallowApplyingDefaultFormatting")))
+    {
+        m.SetAnnotation("disallowApplyingDefaultFormatting", "true");
+    }
+    else
+    {
+        m.RemoveAnnotation("disallowApplyingDefaultFormatting");
+    }
+}
+
+foreach (var c in ScriptHost.Selected.Columns)
+{
+    if (String.IsNullOrEmpty(c.GetAnnotation("disallowApplyingDefaultFormatting")))
+    {
+        c.SetAnnotation("disallowApplyingDefaultFormatting", "true");
+    }
+    else
+    {
+        c.RemoveAnnotation("disallowApplyingDefaultFormatting");
+    }
+}
+
+ScriptHost.Info("Script finished.");
+
+        }
+        public static bool Enabled(Selection Selected, Model Model) {
+            return true;
+        }
+    }
+}
+namespace Macro33
+{
+    
+    
+    internal static class __MacroAction
+    {
+        public static void Execute(Selection Selected, Model Model) {
+            foreach (var c in ScriptHost.Selected.Columns)
+{
+    if (c.DataType != DataType.Decimal && c.DataType != DataType.Double && c.DataType != DataType.Int64)
+    {
+        if (String.IsNullOrEmpty(c.GetExtendedProperty("ParameterMetadata")))
+        {
+            c.SetExtendedProperty("ParameterMetadata", "{\"version\":0}", ExtendedPropertyType.Json);
+        }
+        else
+        {
+            c.RemoveExtendedProperty("ParameterMetadata");
+        }
+    }
+}
+ScriptHost.Info("Script finished.",18);
+
+        }
+        public static bool Enabled(Selection Selected, Model Model) {
+            return true;
+        }
+    }
+}
+namespace Macro42
+{
+    
+    
+    internal static class __MacroAction
+    {
+        public static void Execute(Selection Selected, Model Model) {
+            int version = typeof(Model).Assembly.GetName().Version.Major;
+if (version == 2)
+{
+    // Tabular Editor 2.x specific code
+}
+if (version == 3)
+{
+    // Tabular Editor 3.x specific code
+}
+
+        }
+        public static bool Enabled(Selection Selected, Model Model) {
+            return false;
+        }
+    }
+}
+namespace Macro32
+{
+    using System.Windows.Forms;
+    
+    internal static class __MacroAction
+    {
+        public static void Execute(Selection Selected, Model Model) {
+            Func<string, string, string, string> InputBox = (string promptText, string titleText, string defaultText) =>
+{
+
+    var labelText = new Label()
+    {
+        Text = promptText,
+        Dock = DockStyle.Fill,
+    };
+
+    var textboxText = new TextBox()
+    {
+        Text = defaultText,
+        Dock = DockStyle.Bottom
+    };
+
+    var panelButtons = new Panel()
+    {
+        Height = 30,
+        Dock = DockStyle.Bottom
+    };
+    
+    var buttonOK = new Button()
+    {
+        Text = "OK",
+        DialogResult = DialogResult.OK,
+        Top = 8,
+        Left = 120
+    };
+
+    var buttonCancel = new Button()
+    {
+        Text = "Cancel",
+        DialogResult = DialogResult.Cancel,
+        Top = 8,
+        Left = 204
+    };
+
+    var formInputBox = new Form()
+    {
+        Text = titleText,
+        Height = 143,
+        Padding = new System.Windows.Forms.Padding(8),
+        FormBorderStyle = FormBorderStyle.FixedDialog,
+        MinimizeBox = false,
+        MaximizeBox = false,
+        StartPosition = FormStartPosition.CenterScreen,
+        AcceptButton = buttonOK,
+        CancelButton = buttonCancel
+    };
+
+    formInputBox.Controls.AddRange(new Control[] { labelText, textboxText, panelButtons });
+    panelButtons.Controls.AddRange(new Control[] { buttonOK, buttonCancel });
+
+    return formInputBox.ShowDialog() == DialogResult.OK ? textboxText.Text : null;
+
+};
+
+var stringDefault = "Time Intelligence";
+
+stringDefault = InputBox(
+    "Provide the common name for time/period intelligence tables. This is used to determine the calculation group's suffix, e.g. '(ISO)' in 'Time Intelligence (ISO)'.",
+    "Default Time Intelligence Name",
+    stringDefault
+    );
+
+stringDefault.Output(68);
+
+        }
+        public static bool Enabled(Selection Selected, Model Model) {
+            return false;
+        }
+    }
+}
+namespace Macro43
+{
+    
+    
+    internal static class __MacroAction
+    {
+        public static void Execute(Selection Selected, Model Model) {
+            var selectedObject = ScriptHost.SelectObject(
+    new TabularNamedObject[]
+    {
+        ScriptHost.Model.Tables["Account"],
+        (ScriptHost.Model.Tables["Dates"].Columns["Date"] as DataColumn),
+        ScriptHost.Model.Tables["Transactional"].Measures["Total Actual COGS"]
+    });
+
+selectedObject.Output(9);
+
+        }
+        public static bool Enabled(Selection Selected, Model Model) {
+            return false;
+        }
+    }
+}
+namespace Macro31
+{
+    using System.Windows.Forms;
+    
+    internal static class __MacroAction
+    {
+        public static void Execute(Selection Selected, Model Model) {
+            Func<IList<string>, string, string> SelectString = (IList<string> listText, string titleText) =>
+{
+
+    var listboxText = new ListBox()
+    {
+        Dock = DockStyle.Fill
+    };
+
+    var panelButtons = new Panel()
+    {
+        Height = 22,
+        Dock = DockStyle.Bottom
+    };
+    
+    var buttonOK = new Button()
+    {
+        Text = "OK",
+        DialogResult = DialogResult.OK,
+        Left = 120
+    };
+
+    var buttonCancel = new Button()
+    {
+        Text = "Cancel",
+        DialogResult = DialogResult.Cancel,
+        Left = 204
+    };
+
+    var formInputBox = new Form()
+    {
+        Text = titleText,
+        Padding = new System.Windows.Forms.Padding(8),
+        FormBorderStyle = FormBorderStyle.FixedDialog,
+        MinimizeBox = false,
+        MaximizeBox = false,
+        StartPosition = FormStartPosition.CenterScreen,
+        AcceptButton = buttonOK,
+        CancelButton = buttonCancel
+    };
+
+    listboxText.Items.AddRange(listText.ToArray());
+    listboxText.SelectedItem = listText[0];
+    formInputBox.Controls.AddRange(new Control[] { listboxText, panelButtons });
+    panelButtons.Controls.AddRange(new Control[] { buttonOK, buttonCancel });
+
+    return formInputBox.ShowDialog() == DialogResult.OK ? listboxText.SelectedItem.ToString() : null;
+
+};
+
+var stringSelected = SelectString(
+    new string[] { "123", "abc", "456", "def", "789", "ghi" },
+    "Select list item:"
+    );
+
+stringSelected.Output(57);
+
+        }
+        public static bool Enabled(Selection Selected, Model Model) {
+            return false;
+        }
+    }
+}
+namespace Macro0
+{
+    using Newtonsoft.Json.Linq;
+    
+    internal static class __MacroAction
+    {
+        public static void Execute(Selection Selected, Model Model) {
+            Func<string, string, string> AddToPBI_ChangedProperties = (string textPBI_ChangedProperties, string textProperty) =>
+{
+    List<string> textProperties = textPBI_ChangedProperties.Trim('[', ']').Replace("\"", "").Split(',').ToList();
+    textProperties = textProperties.Where(p => p != "").ToList();
+    if (!textProperties.Contains(textProperty)) { textProperties.Add(textProperty); }
+    return "[\"" + String.Join("\",\"", textProperties) + "\"]";
+};
+
+Func<string, string, string> RemoveFromPBI_ChangedProperties = (string textPBI_ChangedProperties, string textProperty) =>
+{
+    var jsonArray = JObject.Parse(textPBI_ChangedProperties);
+    // var jsonArray = JsonConvert.DeserializeObject(textPBI_ChangedProperties);
+    ScriptHost.Output(jsonArray);
+    jsonArray.Property("textProperty").RemoveAll();
+    // jsonArray[0].Remove();
+    return JsonConvert.SerializeObject(jsonArray);
+};
+
+foreach (var m in ScriptHost.Selected.Measures)
+{
+    string textPBI_ChangedProperties = m.GetAnnotation("PBI_ChangedProperties");
+    RemoveFromPBI_ChangedProperties(textPBI_ChangedProperties, "FormatString").Output(25);
+    // string textPBI_ChangedProperties = m.GetAnnotation("PBI_ChangedProperties") ?? "";
+    // AddToPBI_ChangedProperties(textPBI_ChangedProperties, "FormatString").Output();
+}
+        }
+        public static bool Enabled(Selection Selected, Model Model) {
+            return true;
+        }
+    }
+}
