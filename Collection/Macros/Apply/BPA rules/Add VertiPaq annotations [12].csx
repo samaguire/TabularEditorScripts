@@ -32,7 +32,7 @@ var DMV_StorageTables = ScriptHost.ExecuteDax("SELECT [DIMENSION_NAME],[TABLE_ID
 var DMV_ColumnSegments = ScriptHost.ExecuteDax("SELECT [DIMENSION_NAME],[TABLE_ID],[COLUMN_ID],[USED_SIZE] FROM $SYSTEM.DISCOVER_STORAGE_TABLE_COLUMN_SEGMENTS").Tables[0];
 
 // Remove Existing Vertipaq Annotations
-Model.RemoveAnnotation("Vertipaq_ModelSize");
+ScriptHost.Model.RemoveAnnotation("Vertipaq_ModelSize");
 
 foreach (var o in ScriptHost.Model.AllHierarchies)
 {
@@ -238,7 +238,7 @@ for (int r = 0; r < DMV_ColumnSegments.Rows.Count; r++)
     foreach (var o in ScriptHost.Model.Tables[tableName].Hierarchies.Where(a => a.GetAnnotation("Vertipaq_HierarchyID") == usedObjID))
     {
         string hName = o.Name;
-        int hSize = Convert.ToInt32(Model.Tables[tableName].Hierarchies[hName].GetAnnotation("Vertipaq_UserHierarchySize"));
+        int hSize = Convert.ToInt32(ScriptHost.Model.Tables[tableName].Hierarchies[hName].GetAnnotation("Vertipaq_UserHierarchySize"));
 
         if (usedObj.StartsWith("U$"))
         {
@@ -251,7 +251,7 @@ for (int r = 0; r < DMV_ColumnSegments.Rows.Count; r++)
     foreach (var o in ScriptHost.Model.Relationships.Where(a => a.GetAnnotation("Vertipaq_RelationshipID") == usedObjID))
     {
         string rName = o.ID;
-        int rSize = Convert.ToInt32(Model.Relationships[rName].GetAnnotation("Vertipaq_RelationshipSize"));
+        int rSize = Convert.ToInt32(ScriptHost.Model.Relationships[rName].GetAnnotation("Vertipaq_RelationshipSize"));
 
         if (usedObj.StartsWith("R$"))
         {
@@ -264,7 +264,7 @@ for (int r = 0; r < DMV_ColumnSegments.Rows.Count; r++)
     foreach (var o in ScriptHost.Model.Tables[tableName].Columns.Where(a => a.GetAnnotation("Vertipaq_ColumnID") == usedObjID))
     {
         string colName = o.Name;
-        long colSize = Convert.ToInt64(Model.Tables[tableName].Columns[colName].GetAnnotation("Vertipaq_ColumnHierarchySize"));
+        long colSize = Convert.ToInt64(ScriptHost.Model.Tables[tableName].Columns[colName].GetAnnotation("Vertipaq_ColumnHierarchySize"));
 
         if (usedObj.StartsWith("H$"))
         {
@@ -277,7 +277,7 @@ for (int r = 0; r < DMV_ColumnSegments.Rows.Count; r++)
     foreach (var o in ScriptHost.Model.Tables[tableName].Columns.Where(a => a.GetAnnotation("Vertipaq_ColumnID") == usedObjID2))
     {
         string colName = o.Name;
-        long colSize = Convert.ToInt64(Model.Tables[tableName].Columns[colName].GetAnnotation("Vertipaq_DataSize"));
+        long colSize = Convert.ToInt64(ScriptHost.Model.Tables[tableName].Columns[colName].GetAnnotation("Vertipaq_DataSize"));
 
         if (usedObj.StartsWith("H$") == false && usedObj.StartsWith("R$") == false && usedObj.StartsWith("U$") == false)
         {
@@ -340,7 +340,7 @@ foreach (var t in ScriptHost.Model.Tables.ToList())
 }
 
 // Set Model Size
-Model.SetAnnotation("Vertipaq_ModelSize", tableSizeCumulative.ToString());
+ScriptHost.Model.SetAnnotation("Vertipaq_ModelSize", tableSizeCumulative.ToString());
 
 // Set Max From/To Cardinality
 foreach (var r in ScriptHost.Model.Relationships.ToList())
@@ -360,7 +360,7 @@ foreach (var r in ScriptHost.Model.Relationships.ToList())
 }
 
 // Percent of Table and Model
-float modelSize = Convert.ToInt64(Model.GetAnnotation("Vertipaq_ModelSize"));
+float modelSize = Convert.ToInt64(ScriptHost.Model.GetAnnotation("Vertipaq_ModelSize"));
 
 foreach (var t in ScriptHost.Model.Tables.ToList())
 {

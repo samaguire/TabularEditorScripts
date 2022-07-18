@@ -21,7 +21,7 @@ using TabularEditor.Shared.BPA;
 //using TabularEditor.BestPracticeAnalyzer;
 
 var bpa = new Analyzer();
-bpa.SetModel(Model);
+bpa.SetModel(ScriptHost.Model);
 
 var sb = new System.Text.StringBuilder();
 string newline = Environment.NewLine;

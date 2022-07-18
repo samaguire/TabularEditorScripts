@@ -335,21 +335,21 @@ goButton.Click += (System.Object sender4, System.EventArgs e4) => {
                  
                  if (childNode.ImageIndex == 1)
                  {
-                     if (Model.Tables[tableName].Columns[objectName].InPerspective[p] == true)
+                     if (ScriptHost.Model.Tables[tableName].Columns[objectName].InPerspective[p] == true)
                      {
                          childNode.StateImageIndex = 1;
                      }
                  }
                  else if (childNode.ImageIndex == 2)
                  {
-                     if (Model.Tables[tableName].Measures[objectName].InPerspective[p] == true)
+                     if (ScriptHost.Model.Tables[tableName].Measures[objectName].InPerspective[p] == true)
                      {
                          childNode.StateImageIndex = 1;
                      }
                  }
                  else if (childNode.ImageIndex == 3)
                  {
-                     if (Model.Tables[tableName].Hierarchies[objectName].InPerspective[p] == true)
+                     if (ScriptHost.Model.Tables[tableName].Hierarchies[objectName].InPerspective[p] == true)
                      {
                          childNode.StateImageIndex = 1;
                      }

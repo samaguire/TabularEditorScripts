@@ -50,7 +50,7 @@ catch
 }
 
 // Remove Existing Vertipaq Annotations
-Model.RemoveAnnotation("Vertipaq_ModelSize");
+ScriptHost.Model.RemoveAnnotation("Vertipaq_ModelSize");
 
 foreach (var o in ScriptHost.Model.AllHierarchies)
 {
@@ -118,7 +118,7 @@ for (int i = 0; i < tableCount; i++)
     string rowCount = (string)json["Tables"][i]["RowsCount"];
     string tableSize = (string)json["Tables"][i]["TableSize"];
 
-    if (Model.Tables.Where(a => a.Name == tableName).Count() == 1)
+    if (ScriptHost.Model.Tables.Where(a => a.Name == tableName).Count() == 1)
     {
         var obj = ScriptHost.Model.Tables[tableName];
 
@@ -138,7 +138,7 @@ for (int i = 0; i < columnCount; i++)
     string hierarchiesSize = (string)json["Columns"][i]["HierarchiesSize"];
     string totalSize = (string)json["Columns"][i]["TotalSize"];
 
-    if (Model.Tables.Where(a => a.Name == tableName && a.Columns.Any(b => b.Name == columnName)).Count() == 1)
+    if (ScriptHost.Model.Tables.Where(a => a.Name == tableName && a.Columns.Any(b => b.Name == columnName)).Count() == 1)
 
     {
         var obj = ScriptHost.Model.Tables[tableName].Columns[columnName];
@@ -159,7 +159,7 @@ for (int i = 0; i < relationshipCount; i++)
     string toCardinality = (string)json["Relationships"][i]["ToCardinality"];
     string usedSize = (string)json["Relationships"][i]["UsedSize"];
 
-    if (Model.Relationships.Where(a => a.ID == relationshipName).Count() == 1)
+    if (ScriptHost.Model.Relationships.Where(a => a.ID == relationshipName).Count() == 1)
     {
         var obj = ScriptHost.Model.Relationships[relationshipName];
 
@@ -176,7 +176,7 @@ for (int i = 0; i < hierarchiesCount; i++)
     string tableName = (string)json["UserHierarchies"][i]["TableName"];
     string usedSize = (string)json["UserHierarchies"][i]["UsedSize"];
 
-    if (Model.AllHierarchies.Where(a => a.Name == hierarchyName && a.Table.Name == tableName).Count() == 1)
+    if (ScriptHost.Model.AllHierarchies.Where(a => a.Name == hierarchyName && a.Table.Name == tableName).Count() == 1)
     {
         var obj = ScriptHost.Model.Tables[tableName].Hierarchies[hierarchyName];
 
@@ -244,10 +244,10 @@ foreach (var t in ScriptHost.Model.Tables.ToList())
 
 // Add model size annotation
 string ms = ScriptHost.Model.Tables.Sum(a => Convert.ToInt64(a.GetAnnotation("Vertipaq_TableSize"))).ToString();
-Model.SetAnnotation("Vertipaq_ModelSize", ms);
+ScriptHost.Model.SetAnnotation("Vertipaq_ModelSize", ms);
 
 // Percent of Table and Model
-float modelSize = Convert.ToInt64(Model.GetAnnotation("Vertipaq_ModelSize"));
+float modelSize = Convert.ToInt64(ScriptHost.Model.GetAnnotation("Vertipaq_ModelSize"));
 
 foreach (var t in ScriptHost.Model.Tables.ToList())
 {
