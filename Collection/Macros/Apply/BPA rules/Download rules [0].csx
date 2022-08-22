@@ -16,8 +16,7 @@ using TabularEditor.Shared.Services;
 
 // https://github.com/microsoft/Analysis-Services/tree/master/BestPracticeRules
 
-System.Net.WebClient w = new System.Net.WebClient();
-
+//// System.Net.WebClient w = new System.Net.WebClient();
 var path = System.Environment.GetFolderPath(System.Environment.SpecialFolder.LocalApplicationData);
 var url = "https://raw.githubusercontent.com/microsoft/Analysis-Services/master/BestPracticeRules/BPARules.json";
 var version = typeof(Model).Assembly.GetName().Version.Major;
@@ -37,6 +36,15 @@ else
     return;
 }
 
-w.DownloadFile(url, downloadLoc);
+//// w.DownloadFile(url, downloadLoc);
+var httpClient = new System.Net.Http.HttpClient();
+ 
+using (var httpStream = await httpClient.GetStreamAsync(url))
+{
+    using (var fileStream = new FileStream(downloadLoc, FileMode.CreateNew))
+    {
+        await httpStream.CopyToAsync(fileStream);
+    }
+}
 
 ScriptHost.Info("Script finished.");

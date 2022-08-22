@@ -1,4 +1,4 @@
-﻿#r "C:\Program Files\dotnet\packs\Microsoft.WindowsDesktop.App.Ref\6.0.7\ref\net6.0\System.Windows.Forms.dll"
+#r "C:\Program Files\dotnet\packs\Microsoft.WindowsDesktop.App.Ref\6.0.7\ref\net6.0\System.Windows.Forms.dll"
 #r "C:\Program Files\Tabular Editor 3\TabularEditor3.Shared.dll"
 #r "C:\Program Files\Tabular Editor 3\TOMWrapper.dll"
 using System;
@@ -13,3 +13,12 @@ using TabularEditor.Shared.Interaction;
 using TabularEditor.Shared.Services;
 
 /*** Everything ABOVE this point is required for the C# scripting environment, remove in TE3 ***/
+
+using Newtonsoft.Json.Linq;
+using System.IO;
+using System.Windows.Forms;
+
+/*
+Notes:
+Future dev to impliment an import script; add all as new, or override existing (by id) and add new where id doesn't exist: with a warning about potentially breaking the layout
+*/

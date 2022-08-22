@@ -14,12 +14,9 @@ using TabularEditor.Shared.Services;
 
 /*** Everything ABOVE this point is required for the C# scripting environment, remove in TE3 ***/
 
-int version = typeof(Model).Assembly.GetName().Version.Major;
-if (version == 2)
+foreach (var m in ScriptHost.Selected.Measures)
 {
-    // Tabular Editor 2.x specific code
+    m.Description = m.Expression.TrimStart('\r').TrimStart('\n');
 }
-if (version == 3)
-{
-    // Tabular Editor 3.x specific code
-}
+
+ScriptHost.Info("Script finished.");

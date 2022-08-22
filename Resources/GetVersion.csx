@@ -14,14 +14,12 @@ using TabularEditor.Shared.Services;
 
 /*** Everything ABOVE this point is required for the C# scripting environment, remove in TE3 ***/
 
-using System.Windows.Forms;
-
-var jsonFile = Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData) + @"\TabularEditor3\MacroActions.json";
-
-var fbd = new FolderBrowserDialog();
-if (fbd.ShowDialog() == DialogResult.Cancel) { return; }
-var outFolder = fbd.SelectedPath;
-
-File.Copy(jsonFile, Path.Combine(outFolder, Path.GetFileName(jsonFile)), true);
-
-ScriptHost.Info("Script finished.");
+int version = typeof(TabularEditor.TOMWrapper.Model).Assembly.GetName().Version.Major;
+if (version == 2)
+{
+    // Tabular Editor 2.x specific code
+}
+if (version == 3)
+{
+    // Tabular Editor 3.x specific code
+}
