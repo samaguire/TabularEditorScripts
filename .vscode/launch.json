@@ -2,25 +2,17 @@
     "version": "0.2.0",
     "configurations": [
         {
-            // Use IntelliSense to find out which attributes exist for C# debugging
-            // Use hover for the description of the existing attributes
-            // For further information visit https://github.com/OmniSharp/omnisharp-vscode/blob/master/debugger-launchjson.md
-            "name": ".NET Core Launch (console)",
+            "name": ".NET Script Debug",
             "type": "coreclr",
             "request": "launch",
-            "preLaunchTask": "build",
-            // If you have changed target frameworks, make sure to update the program path.
-            "program": "${workspaceFolder}/bin/Debug/net6.0-windows/TabularEditor3Scripts.dll",
-            "args": [],
-            "cwd": "${workspaceFolder}",
-            // For more information about the 'console' field, see https://aka.ms/VSCode-CS-LaunchJson-Console
-            "console": "internalConsole",
+            "program": "dotnet",
+            "args": [
+                "exec",
+                "C:/Users/maguires/.dotnet/tools/.store/dotnet-script/1.3.1/dotnet-script/1.3.1/tools/net6.0/any/dotnet-script.dll",
+                "${file}"
+            ],
+            "cwd": "${workspaceRoot}",
             "stopAtEntry": false
-        },
-        {
-            "name": ".NET Core Attach",
-            "type": "coreclr",
-            "request": "attach"
         }
     ]
 }

@@ -31,7 +31,8 @@ System.Windows.Forms.RadioButton newmodelButton = new System.Windows.Forms.Radio
 System.Windows.Forms.RadioButton existingmodelButton = new System.Windows.Forms.RadioButton();
 System.Windows.Forms.Button goButton = new System.Windows.Forms.Button();
 System.Windows.Forms.ComboBox enterComboBox = new System.Windows.Forms.ComboBox();
-System.Net.WebClient w = new System.Net.WebClient();
+System.Net.Http.HttpClient w = new System.Net.Http.HttpClient();
+// System.Net.WebClient w = new System.Net.WebClient();
 System.Windows.Forms.LinkLabel ebiHome = new System.Windows.Forms.LinkLabel();
 
 // Colors
@@ -58,7 +59,8 @@ string[] imageURLList = { "Table", "Column", "Measure", "Hierarchy" };
 for (int b = 0; b < imageURLList.Count(); b++)
 {
     string url = urlPrefix + imageURLList[b] + urlSuffix;      
-    byte[] imageByte = w.DownloadData(url);
+    byte[] imageByte = await w.GetByteArrayAsync(url);
+    // byte[] imageByte = w.DownloadData(url);
     System.IO.MemoryStream ms = new System.IO.MemoryStream(imageByte);
     System.Drawing.Image im = System.Drawing.Image.FromStream(ms);
     imageList.Images.Add(im);
@@ -109,7 +111,8 @@ string[] stateimageURLList = { "Unchecked", "Checked", "PartiallyChecked" };
 for (int c = 0; c < stateimageURLList.Count(); c++)
 {
     var url = urlPrefix + stateimageURLList[c] + urlSuffix;      
-    byte[] imageByte = w.DownloadData(url);
+    byte[] imageByte = await w.GetByteArrayAsync(url);
+    // byte[] imageByte = w.DownloadData(url);
     System.IO.MemoryStream ms = new System.IO.MemoryStream(imageByte);
     System.Drawing.Image im = System.Drawing.Image.FromStream(ms);
     treeView.StateImageList.Images.Add(im);
