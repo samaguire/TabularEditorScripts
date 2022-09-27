@@ -172,7 +172,7 @@ foreach (var m in ScriptHost.Selected.Measures)
             .Replace("<measure>", m.DaxObjectName)
             .Replace("<column>", c.DaxObjectFullName)
             .Replace("<item>", i.Name);
-        var measureDisplayFolder = m.DisplayFolder + "\\🢒" + t.Name + "\\" + m.Name;
+        var measureDisplayFolder = m.DisplayFolder + "\\› " + t.Name + "\\› " + m.Name;
 
         var mms = ScriptHost.Model.AllMeasures.Where(x => x.Name == measureName);
         if (mms.Any()) { foreach (var mm in mms.ToList()) { mm.Delete(); } }
