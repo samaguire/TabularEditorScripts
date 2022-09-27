@@ -23,6 +23,10 @@ To run C# scripts from Visual Studio Code (**the 'Macro Management' scripts in t
 - The [dotnet script](https://github.com/filipw/dotnet-script) tool, and
 - the [Code Runner](https://marketplace.visualstudio.com/items?itemName=formulahendry.code-runner) extension.
 
+### dotnet script
+
+If you get the "`Tool 'dotnet-script' failed to install`" error when executing the install command from terminal, try updating the package source in your NuGet config file as per [this](https://stackoverflow.com/questions/67998134/dotnet-tool-install-g-unable-to-resolve) post on Stack Overflow.
+
 ## Macro Management Scripts
 
 The scripts in the "Macro Mangement" folder of this repo are designed to be run from within Visual Studio Code.
