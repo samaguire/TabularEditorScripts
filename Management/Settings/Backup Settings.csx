@@ -1,7 +1,15 @@
 ﻿using System.IO.Compression;
 
-var te3Path = Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData) + @"\TabularEditor3";
-var zipPath = Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData) + @"\TabularEditor3.zip";
+string localFolder = Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData);
+string[] appSubfolders = { "TabularEditor", "TabularEditor3" };
 
-File.Delete(zipPath);
-ZipFile.CreateFromDirectory(te3Path, zipPath);
+foreach (var item in appSubfolders)
+{
+    var folderPath = $"{localFolder}\\{item}";
+    var zipPath = $"{localFolder}\\{item}.zip";
+    if (Directory.Exists(folderPath))
+    {
+        File.Delete(zipPath);
+        ZipFile.CreateFromDirectory(folderPath, zipPath);
+    }
+}
