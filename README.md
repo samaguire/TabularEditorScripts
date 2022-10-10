@@ -29,11 +29,11 @@ If you get the "`Tool 'dotnet-script' failed to install`" error when executing t
 
 ## Macro Management Scripts
 
-The scripts in the "Macro Mangement" folder of this repo are designed to be run from within Visual Studio Code.
+The scripts in the "Macro Mangement" folder of this repo are designed to be run from within Visual Studio Code without Tabular Editor 3 running.
 
 If run from within Tabular Editor 3, there are a few requirements:
 
-1. Only one instance of Tabular Editor 3 should be running, otherwise, any updates to the macros may not carry over into new sessions.
+1. Only one instance of Tabular Editor 3 should be running. (As the last session to close will determine the settings that are saved and carried forward. This may not be the session in which the updates were applied.)
 2. Tabular Editor 3 needs to be restarted for any updates to take effect.
 
 ## Warning
