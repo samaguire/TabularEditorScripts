@@ -1,0 +1,7 @@
+﻿{
+  "Id": 37,
+  "Name": "Macros\\Launch\\ALM Toolkit",
+  "Enabled": "true",
+  "Tooltip": "",
+  "ValidContexts": "Model"
+}

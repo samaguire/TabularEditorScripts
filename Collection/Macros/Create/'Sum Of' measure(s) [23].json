@@ -1,0 +1,7 @@
+﻿{
+  "Id": 23,
+  "Name": "Macros\\Create\\'Sum Of' measure(s)",
+  "Enabled": "true",
+  "Tooltip": "",
+  "ValidContexts": "Column"
+}

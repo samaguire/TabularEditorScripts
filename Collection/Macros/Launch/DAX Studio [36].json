@@ -1,0 +1,7 @@
+﻿{
+  "Id": 36,
+  "Name": "Macros\\Launch\\DAX Studio",
+  "Enabled": "true",
+  "Tooltip": "",
+  "ValidContexts": "Model"
+}

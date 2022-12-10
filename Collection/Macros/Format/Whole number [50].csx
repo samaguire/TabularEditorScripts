@@ -1,10 +1,11 @@
-﻿#r "C:\Program Files\dotnet\packs\Microsoft.WindowsDesktop.App.Ref\6.0.9\ref\net6.0\System.Windows.Forms.dll"
+﻿#r "C:\Program Files\dotnet\packs\Microsoft.WindowsDesktop.App.Ref\6.0.11\ref\net6.0\System.Windows.Forms.dll"
 #r "C:\Program Files\Tabular Editor 3\TabularEditor3.Shared.dll"
 #r "C:\Program Files\Tabular Editor 3\TOMWrapper.dll"
 using System;
 using System.Linq;
 using System.Collections.Generic;
 using Newtonsoft.Json;
+using TabularEditor;
 using TabularEditor.TOMWrapper;
 using TabularEditor.TOMWrapper.Utils;
 using TabularEditor.Shared;
@@ -39,6 +40,22 @@ foreach (var m in ScriptHost.Selected.Measures)
     if (!String.IsNullOrEmpty(pbiChangedProperties)) { m.SetAnnotation("PBI_ChangedProperties", pbiChangedProperties); }
 
     m.SetAnnotation("DisallowApplyingDefaultFormatting", "true");
+
+}
+
+foreach (var c in ScriptHost.Selected.Columns)
+{
+
+    if (c.DataType != DataType.Decimal && c.DataType != DataType.Double && c.DataType != DataType.Int64) { continue; }
+
+    c.FormatString = "#,0";
+    c.SetAnnotation("Format", "<Format Format=\"NumberWhole\" Accuracy=\"0\" ThousandSeparator=\"True\" />");
+
+    var pbiChangedProperties = c.GetAnnotation("PBI_ChangedProperties");
+    pbiChangedProperties = AddPBIChangedProperty(pbiChangedProperties, "FormatString");
+    if (!String.IsNullOrEmpty(pbiChangedProperties)) { c.SetAnnotation("PBI_ChangedProperties", pbiChangedProperties); }
+
+    c.SetAnnotation("DisallowApplyingDefaultFormatting", "true");
 
 }
 

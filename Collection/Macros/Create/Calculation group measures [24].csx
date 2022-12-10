@@ -1,10 +1,11 @@
-﻿#r "C:\Program Files\dotnet\packs\Microsoft.WindowsDesktop.App.Ref\6.0.9\ref\net6.0\System.Windows.Forms.dll"
+﻿#r "C:\Program Files\dotnet\packs\Microsoft.WindowsDesktop.App.Ref\6.0.11\ref\net6.0\System.Windows.Forms.dll"
 #r "C:\Program Files\Tabular Editor 3\TabularEditor3.Shared.dll"
 #r "C:\Program Files\Tabular Editor 3\TOMWrapper.dll"
 using System;
 using System.Linq;
 using System.Collections.Generic;
 using Newtonsoft.Json;
+using TabularEditor;
 using TabularEditor.TOMWrapper;
 using TabularEditor.TOMWrapper.Utils;
 using TabularEditor.Shared;
@@ -174,8 +175,7 @@ foreach (var m in ScriptHost.Selected.Measures)
             .Replace("<item>", i.Name);
         var measureDisplayFolder = m.DisplayFolder + "\\› " + t.Name + "\\› " + m.Name;
 
-        var mms = ScriptHost.Model.AllMeasures.Where(x => x.Name == measureName);
-        if (mms.Any()) { foreach (var mm in mms.ToList()) { mm.Delete(); } }
+        foreach (var mm in ScriptHost.Model.AllMeasures.Where(x => x.Name == measureName).ToList()) { mm.Delete(); }
 
         var nm = m.Table.AddMeasure(measureName, measureExpression, measureDisplayFolder);
 

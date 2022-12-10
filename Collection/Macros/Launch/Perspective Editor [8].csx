@@ -1,10 +1,11 @@
-﻿#r "C:\Program Files\dotnet\packs\Microsoft.WindowsDesktop.App.Ref\6.0.9\ref\net6.0\System.Windows.Forms.dll"
+﻿#r "C:\Program Files\dotnet\packs\Microsoft.WindowsDesktop.App.Ref\6.0.11\ref\net6.0\System.Windows.Forms.dll"
 #r "C:\Program Files\Tabular Editor 3\TabularEditor3.Shared.dll"
 #r "C:\Program Files\Tabular Editor 3\TOMWrapper.dll"
 using System;
 using System.Linq;
 using System.Collections.Generic;
 using Newtonsoft.Json;
+using TabularEditor;
 using TabularEditor.TOMWrapper;
 using TabularEditor.TOMWrapper.Utils;
 using TabularEditor.Shared;
@@ -17,6 +18,7 @@ using TabularEditor.Shared.Services;
 // https://www.elegantbi.com/post/perspectiveeditor
 
 using System.Drawing;
+using System.IO;
 
 // Create elements
 System.Windows.Forms.Form newForm = new System.Windows.Forms.Form();
@@ -32,16 +34,15 @@ System.Windows.Forms.RadioButton existingmodelButton = new System.Windows.Forms.
 System.Windows.Forms.Button goButton = new System.Windows.Forms.Button();
 System.Windows.Forms.ComboBox enterComboBox = new System.Windows.Forms.ComboBox();
 System.Net.Http.HttpClient w = new System.Net.Http.HttpClient();
-// System.Net.WebClient w = new System.Net.WebClient();
 System.Windows.Forms.LinkLabel ebiHome = new System.Windows.Forms.LinkLabel();
 
 // Colors
 System.Drawing.Color visibleColor = Color.Black;
 System.Drawing.Color hiddenColor = Color.Gray;
-System.Drawing.Color bkgrdColor =  ColorTranslator.FromHtml("#F2F2F2");
-System.Drawing.Color darkblackColor =  ColorTranslator.FromHtml("#0D1117");
-System.Drawing.Color darkgrayColor =  ColorTranslator.FromHtml("#21262D");
-System.Drawing.Color lightgrayColor =  ColorTranslator.FromHtml("#C9D1D9");
+System.Drawing.Color bkgrdColor = ColorTranslator.FromHtml("#F2F2F2");
+System.Drawing.Color darkblackColor = ColorTranslator.FromHtml("#0D1117");
+System.Drawing.Color darkgrayColor = ColorTranslator.FromHtml("#21262D");
+System.Drawing.Color lightgrayColor = ColorTranslator.FromHtml("#C9D1D9");
 
 // Fonts
 string fontName = "Century Gothic";
@@ -58,33 +59,32 @@ string ebiURL = @"https://www.elegantbi.com";
 string[] imageURLList = { "Table", "Column", "Measure", "Hierarchy" };
 for (int b = 0; b < imageURLList.Count(); b++)
 {
-    string url = urlPrefix + imageURLList[b] + urlSuffix;      
-    byte[] imageByte = await w.GetByteArrayAsync(url);
-    // byte[] imageByte = w.DownloadData(url);
+    string url = urlPrefix + imageURLList[b] + urlSuffix;
+    byte[] imageByte = w.GetByteArrayAsync(url).GetAwaiter().GetResult();
     System.IO.MemoryStream ms = new System.IO.MemoryStream(imageByte);
     System.Drawing.Image im = System.Drawing.Image.FromStream(ms);
     imageList.Images.Add(im);
-}    
-    
+}
+
 // Images
 treeView.ImageList = imageList;
-treeView.ImageIndex = 0;   
-imageList.ImageSize = new Size(16, 16);   
-     
+treeView.ImageIndex = 0;
+imageList.ImageSize = new Size(16, 16);
+
 // Form
 newForm.Text = toolName;
 int formWidth = 600;
 int formHeight = 600;
 newForm.TopLevel = true;
-newForm.Size = new Size(formWidth,formHeight);
+newForm.Size = new Size(formWidth, formHeight);
 newForm.Controls.Add(newPanel);
 newForm.BackColor = bkgrdColor;
-newForm.MaximumSize = new Size(formWidth,formHeight);
-newForm.MinimumSize = new Size(formWidth,formHeight);
+newForm.MaximumSize = new Size(formWidth, formHeight);
+newForm.MinimumSize = new Size(formWidth, formHeight);
 
 // Panel
-newPanel.Size = new Size(formWidth,formHeight);
-newPanel.Location =  new Point(0, 0);
+newPanel.Size = new Size(formWidth, formHeight);
+newPanel.Location = new Point(0, 0);
 newPanel.BorderStyle = System.Windows.Forms.BorderStyle.None;
 newPanel.BackColor = bkgrdColor;
 newPanel.Controls.Add(treeView);
@@ -99,8 +99,8 @@ int treeViewHeight = formHeight - 100;
 int treeViewX = 10;
 int treeViewY = 50;
 treeView.CheckBoxes = false;
-treeView.Size = new Size(treeViewWidth,treeViewHeight);
-treeView.Location = new Point(treeViewX,treeViewY);
+treeView.Size = new Size(treeViewWidth, treeViewHeight);
+treeView.Location = new Point(treeViewX, treeViewY);
 treeView.StateImageList = new System.Windows.Forms.ImageList();
 treeView.Visible = false;
 bool IsExpOrCol = false;
@@ -110,17 +110,17 @@ string perspName = string.Empty;
 string[] stateimageURLList = { "Unchecked", "Checked", "PartiallyChecked" };
 for (int c = 0; c < stateimageURLList.Count(); c++)
 {
-    var url = urlPrefix + stateimageURLList[c] + urlSuffix;      
-    byte[] imageByte = await w.GetByteArrayAsync(url);
+    var url = urlPrefix + stateimageURLList[c] + urlSuffix;
+    byte[] imageByte = w.GetByteArrayAsync(url).GetAwaiter().GetResult();
     // byte[] imageByte = w.DownloadData(url);
     System.IO.MemoryStream ms = new System.IO.MemoryStream(imageByte);
     System.Drawing.Image im = System.Drawing.Image.FromStream(ms);
     treeView.StateImageList.Images.Add(im);
-}  
-            
+}
+
 // Create Button
-createButton.Size = new Size(130,55);
-createButton.Location = new Point(treeViewWidth + 35,treeViewY);
+createButton.Size = new Size(130, 55);
+createButton.Location = new Point(treeViewWidth + 35, treeViewY);
 createButton.Text = "Create Perspective";
 createButton.Visible = false;
 createButton.Font = stdFont;
@@ -128,28 +128,28 @@ createButton.Font = stdFont;
 int startScreenX = 200;
 int startScreenY = 200;
 
-toolLabel.Size = new Size(300,60);
+toolLabel.Size = new Size(300, 60);
 toolLabel.Text = toolName;
-toolLabel.Location = new Point(150,100);
+toolLabel.Location = new Point(150, 100);
 toolLabel.Font = homeToolNameFont;
 toolLabel.ForeColor = visibleColor;
 
-// New Model Button
-newmodelButton.Size = new Size(250,40);
-newmodelButton.Location = new Point(startScreenX,startScreenY);
+// New ScriptHost.Model Button
+newmodelButton.Size = new Size(250, 40);
+newmodelButton.Location = new Point(startScreenX, startScreenY);
 newmodelButton.Text = "Create New Perspective";
 newmodelButton.Font = stdFont;
 
-// Existing Model Button
-existingmodelButton.Size = new Size(250,40);
-existingmodelButton.Location = new Point(startScreenX,startScreenY+30);
+// Existing ScriptHost.Model Button
+existingmodelButton.Size = new Size(250, 40);
+existingmodelButton.Location = new Point(startScreenX, startScreenY + 30);
 existingmodelButton.Text = "Modify Existing Perspective";
 existingmodelButton.Font = stdFont;
 
 // Enter Combo Box
 enterComboBox.Visible = false;
-enterComboBox.Size = new Size(215,40);
-enterComboBox.Location = new Point(startScreenX-10,startScreenY+80);
+enterComboBox.Size = new Size(215, 40);
+enterComboBox.Location = new Point(startScreenX - 10, startScreenY + 80);
 enterComboBox.Font = stdFont;
 
 // Add items to combo box
@@ -159,13 +159,13 @@ foreach (var p in ScriptHost.Model.Perspectives.ToList())
     enterComboBox.Items.Add(pName);
 }
 
-// New Model Button
-goButton.Size = new Size(140,30);
-goButton.Location = new Point(startScreenX+80,startScreenY+80);
+// New ScriptHost.Model Button
+goButton.Size = new Size(140, 30);
+goButton.Location = new Point(startScreenX + 80, startScreenY + 80);
 goButton.Text = "Go";
 goButton.Font = stdFont;
 goButton.Visible = false;
-goButton.Enabled = false; 
+goButton.Enabled = false;
 
 // Add starting elements to form
 newForm.Controls.Add(newmodelButton);
@@ -176,112 +176,115 @@ newForm.Controls.Add(toolLabel);
 newForm.Controls.Add(ebiHome);
 
 ebiHome.Text = "Designed by Elegant BI";
-ebiHome.Size = new Size(200,40);
-ebiHome.Location = new Point(220,400);
+ebiHome.Size = new Size(200, 40);
+ebiHome.Location = new Point(220, 400);
 ebiHome.Font = elegantFont;
 
-ebiHome.LinkClicked += (System.Object sender, System.Windows.Forms.LinkLabelLinkClickedEventArgs e) => {
+ebiHome.LinkClicked += (System.Object sender, System.Windows.Forms.LinkLabelLinkClickedEventArgs e) =>
+{
 
     System.Diagnostics.Process.Start(ebiURL);
 };
 
 // Label
-nameLabel.Size = new Size(60,40);
-nameLabel.Location = new Point(treeViewX,20);
+nameLabel.Size = new Size(60, 40);
+nameLabel.Location = new Point(treeViewX, 20);
 nameLabel.Text = "Name:";
 nameLabel.Font = stdFont;
 nameLabel.Visible = false;
 
 // Text box
-enterTextBox.Size = new Size(348,40);
-enterTextBox.Location = new Point(63,18);
+enterTextBox.Size = new Size(348, 40);
+enterTextBox.Location = new Point(63, 18);
 enterTextBox.Visible = false;
 enterTextBox.Font = stdFont;
 
 // Add nodes to treeview
 foreach (var t in ScriptHost.Model.Tables.OrderBy(a => a.Name).ToList())
-{  
+{
     // Add table nodes
-    string tableName = t.Name;    
-    var tn = treeView.Nodes.Add(tableName);    
+    string tableName = t.Name;
+    var tn = treeView.Nodes.Add(tableName);
     tn.StateImageIndex = 0;
     tn.ImageIndex = 0;
     tn.SelectedImageIndex = 0;
-    
+
     if (t.IsHidden)
     {
         tn.ForeColor = hiddenColor;
     }
-    
+
     // Add column sub-nodes
     foreach (var c in t.Columns.OrderBy(a => a.Name).ToList())
     {
         string columnName = c.Name;
-        var x = tn.Nodes.Add(columnName);        
+        var x = tn.Nodes.Add(columnName);
         x.StateImageIndex = 0;
-        x.ImageIndex = 1;        
+        x.ImageIndex = 1;
         x.SelectedImageIndex = 1;
-        
+
         if (c.IsHidden)
         {
             x.ForeColor = hiddenColor;
         }
     }
-    
+
     // Add measure sub-nodes
     foreach (var m in t.Measures.OrderBy(a => a.Name).ToList())
     {
         string measureName = m.Name;
         var x = tn.Nodes.Add(measureName);
         x.StateImageIndex = 0;
-        x.ImageIndex = 2;        
+        x.ImageIndex = 2;
         x.SelectedImageIndex = 2;
-        
+
         if (m.IsHidden)
         {
             x.ForeColor = hiddenColor;
         }
-    }   
-   
+    }
+
     // Add hierarchy sub-nodes
     foreach (var h in t.Hierarchies.OrderBy(a => a.Name).ToList())
     {
         string hierarchyName = h.Name;
         var x = tn.Nodes.Add(hierarchyName);
-         x.ImageIndex = 3;
-         x.StateImageIndex = 0;
-         x.SelectedImageIndex = 3;
-         
+        x.ImageIndex = 3;
+        x.StateImageIndex = 0;
+        x.SelectedImageIndex = 3;
+
         if (h.IsHidden)
         {
             x.ForeColor = hiddenColor;
         }
-    }    
+    }
 }
 
-newmodelButton.Click += (System.Object sender1, System.EventArgs e1) => {
+newmodelButton.Click += (System.Object sender1, System.EventArgs e1) =>
+{
 
     goButton.Visible = true;
     existingmodelButton.Checked = false;
     newmodelButton.Checked = true;
-    goButton.Location = new Point(startScreenX+25, startScreenY+80);
+    goButton.Location = new Point(startScreenX + 25, startScreenY + 80);
     enterComboBox.Visible = false;
     goButton.Enabled = true;
     enterComboBox.Text = string.Empty;
-    createButton.Text = "Create Perspective";   
+    createButton.Text = "Create Perspective";
     enterTextBox.Enabled = true;
 };
 
-existingmodelButton.Click += (System.Object sender2, System.EventArgs e2) => {
+existingmodelButton.Click += (System.Object sender2, System.EventArgs e2) =>
+{
 
-    goButton.Location = new Point(startScreenX+25, startScreenY+120);
+    goButton.Location = new Point(startScreenX + 25, startScreenY + 120);
     enterComboBox.Visible = true;
-    goButton.Visible = true;    
+    goButton.Visible = true;
     newmodelButton.Checked = false;
-    existingmodelButton.Checked = true;  
-    createButton.Text = "Modify Perspective";    
+    existingmodelButton.Checked = true;
+    createButton.Text = "Modify Perspective";
     enterTextBox.Enabled = false;
-    
+
     // Add items to combo box
     enterComboBox.Items.Clear();
     foreach (var p in ScriptHost.Model.Perspectives.ToList())
@@ -289,81 +292,83 @@ existingmodelButton.Click += (System.Object sender2, System.EventArgs e2) => {
         string pName = p.Name;
         enterComboBox.Items.Add(pName);
     }
-    
+
     if (enterComboBox.SelectedItem == null)
     {
         goButton.Enabled = false;
     }
 };
 
-enterComboBox.SelectedValueChanged += (System.Object sender3, System.EventArgs e3) => {
+enterComboBox.SelectedValueChanged += (System.Object sender3, System.EventArgs e3) =>
+{
 
-    goButton.Enabled = true;         
+    goButton.Enabled = true;
 };
 
-goButton.Click += (System.Object sender4, System.EventArgs e4) => {
+goButton.Click += (System.Object sender4, System.EventArgs e4) =>
+{
 
     // Hide initial buttons    
     newmodelButton.Visible = false;
-    existingmodelButton.Visible = false;    
+    existingmodelButton.Visible = false;
     enterComboBox.Visible = false;
     goButton.Visible = false;
     toolLabel.Visible = false;
     ebiHome.Visible = false;
-    
+
     string p = enterComboBox.Text;
-    
+
     // Make panel items visible
     newPanel.Visible = true;
     createButton.Visible = true;
     treeView.Visible = true;
     nameLabel.Visible = true;
     enterTextBox.Visible = true;
-    
+
     // Populate tree from perspective if modifying existing mini model
     if (p != string.Empty)
     {
         enterTextBox.Text = p;
-     
+
         foreach (System.Windows.Forms.TreeNode rootNode in treeView.Nodes)
         {
-             string tableName = rootNode.Text;
-             int childNodeCount = rootNode.Nodes.Count;
-             int childNodeCheckedCount = 0;
+            string tableName = rootNode.Text;
+            int childNodeCount = rootNode.Nodes.Count;
+            int childNodeCheckedCount = 0;
 
-             // Loop through checked child nodes (columns, measures, hierarchies)
-             foreach (System.Windows.Forms.TreeNode childNode in rootNode.Nodes)
-             {
-                 var objectName = childNode.Text;
-                 
-                 if (childNode.ImageIndex == 1)
-                 {
-                     if (ScriptHost.Model.Tables[tableName].Columns[objectName].InPerspective[p] == true)
-                     {
-                         childNode.StateImageIndex = 1;
-                     }
-                 }
-                 else if (childNode.ImageIndex == 2)
-                 {
-                     if (ScriptHost.Model.Tables[tableName].Measures[objectName].InPerspective[p] == true)
-                     {
-                         childNode.StateImageIndex = 1;
-                     }
-                 }
-                 else if (childNode.ImageIndex == 3)
-                 {
-                     if (ScriptHost.Model.Tables[tableName].Hierarchies[objectName].InPerspective[p] == true)
-                     {
-                         childNode.StateImageIndex = 1;
-                     }
-                 }
-                 
-                 if (childNode.StateImageIndex == 1)
-                 {
-                    childNodeCheckedCount+=1;
-                 }
+            // Loop through checked child nodes (columns, measures, hierarchies)
+            foreach (System.Windows.Forms.TreeNode childNode in rootNode.Nodes)
+            {
+                var objectName = childNode.Text;
+
+                if (childNode.ImageIndex == 1)
+                {
+                    if (ScriptHost.Model.Tables[tableName].Columns[objectName].InPerspective[p] == true)
+                    {
+                        childNode.StateImageIndex = 1;
+                    }
+                }
+                else if (childNode.ImageIndex == 2)
+                {
+                    if (ScriptHost.Model.Tables[tableName].Measures[objectName].InPerspective[p] == true)
+                    {
+                        childNode.StateImageIndex = 1;
+                    }
+                }
+                else if (childNode.ImageIndex == 3)
+                {
+                    if (ScriptHost.Model.Tables[tableName].Hierarchies[objectName].InPerspective[p] == true)
+                    {
+                        childNode.StateImageIndex = 1;
+                    }
+                }
+
+                if (childNode.StateImageIndex == 1)
+                {
+                    childNodeCheckedCount += 1;
+                }
             }
-             
+
             // Finish populating tree root nodes (tables)
             // If all child nodes are checked, set parent node to checked
             if (childNodeCheckedCount == childNodeCount)
@@ -380,12 +385,13 @@ goButton.Click += (System.Object sender4, System.EventArgs e4) => {
             {
                 rootNode.StateImageIndex = 2;
             }
-         }
-     }                      
+        }
+    }
 };
 
-treeView.NodeMouseClick += (System.Object sender, System.Windows.Forms.TreeNodeMouseClickEventArgs e) => {
-    
+treeView.NodeMouseClick += (System.Object sender, System.Windows.Forms.TreeNodeMouseClickEventArgs e) =>
+{
+
     if (IsExpOrCol == false)
     {
         if (e.Node.StateImageIndex != 1)
@@ -396,7 +402,7 @@ treeView.NodeMouseClick += (System.Object sender, System.Windows.Forms.TreeNodeM
         {
             e.Node.StateImageIndex = 0;
         }
-        
+
         // If parent node is checked, check all child nodes
         if (e.Node.Nodes.Count > 0 && e.Node.StateImageIndex == 1)
         {
@@ -404,8 +410,8 @@ treeView.NodeMouseClick += (System.Object sender, System.Windows.Forms.TreeNodeM
             {
                 childNode.StateImageIndex = 1;
             }
-        }       
-        
+        }
+
         // If parent node is unhecked, uncheck all child nodes
         else if (e.Node.Nodes.Count > 0 && e.Node.StateImageIndex == 0)
         {
@@ -414,20 +420,20 @@ treeView.NodeMouseClick += (System.Object sender, System.Windows.Forms.TreeNodeM
                 childNode.StateImageIndex = 0;
             }
         }
-        
+
         if (e.Node.Parent != null)
         {
-            int childNodeCount = e.Node.Parent.Nodes.Count;   
-            int childNodeCheckedCount = 0;    
-        
+            int childNodeCount = e.Node.Parent.Nodes.Count;
+            int childNodeCheckedCount = 0;
+
             foreach (System.Windows.Forms.TreeNode n in e.Node.Parent.Nodes)
             {
                 if (n.StateImageIndex == 1)
                 {
-                    childNodeCheckedCount+=1;
+                    childNodeCheckedCount += 1;
                 }
             }
-            
+
             // If all child nodes are checked, set parent node to checked
             if (childNodeCheckedCount == childNodeCount)
             {
@@ -443,77 +449,80 @@ treeView.NodeMouseClick += (System.Object sender, System.Windows.Forms.TreeNodeM
             {
                 e.Node.Parent.StateImageIndex = 2;
             }
-        }   
+        }
     }
-    
+
     IsExpOrCol = false;
 };
 
-treeView.AfterExpand += (System.Object sender9, System.Windows.Forms.TreeViewEventArgs e9) => {
-    
+treeView.AfterExpand += (System.Object sender9, System.Windows.Forms.TreeViewEventArgs e9) =>
+{
+
     IsExpOrCol = true;
 };
 
-treeView.AfterCollapse += (System.Object sender10, System.Windows.Forms.TreeViewEventArgs e10) => {
-    
+treeView.AfterCollapse += (System.Object sender10, System.Windows.Forms.TreeViewEventArgs e10) =>
+{
+
     IsExpOrCol = true;
 };
 
-createButton.Click += (System.Object sender6, System.EventArgs e6) => {
-   
-     perspName = enterTextBox.Text;     
-     
-     if (perspName == string.Empty)
-     {
-         // Invalid perspective name
-         ScriptHost.Error("Please enter a name for the new perspective.");
-     }
-     else
-     {
-         if (!ScriptHost.Model.Perspectives.Any(a => a.Name == perspName))
-         {
-             // Create new perspective
-             ScriptHost.Model.AddPerspective(perspName);
-         }
+createButton.Click += (System.Object sender6, System.EventArgs e6) =>
+{
 
-         // Clear perspective
-         foreach (var t in ScriptHost.Model.Tables.ToList())
-         {
-             string tableName = t.Name;             
-             ScriptHost.Model.Tables[tableName].InPerspective[perspName] = false;
-         }
-         
-         // Loop through root nodes (tables)
-         foreach (System.Windows.Forms.TreeNode rootNode in treeView.Nodes)
-         {
-             string tableName = rootNode.Text;
-         
-             // Loop through checked child nodes (columns, measures, hierarchies)
-             foreach (System.Windows.Forms.TreeNode childNode in rootNode.Nodes)
-             {
-                 string objectName = childNode.Text;
-                 
-                 if (childNode.StateImageIndex == 1)
-                 {
-                     // Columns
-                     if (childNode.ImageIndex == 1)                    
-                     {
-                         ScriptHost.Model.Tables[tableName].Columns[objectName].InPerspective[perspName] = true;                                              
-                     }                    
-                     // Measures
-                     else if (childNode.ImageIndex == 2)                    
-                     {
-                         ScriptHost.Model.Tables[tableName].Measures[objectName].InPerspective[perspName] = true;                                            
-                     }
-                     // Hierarchies
-                     else if (childNode.ImageIndex == 3)                    
-                     {
-                         ScriptHost.Model.Tables[tableName].Hierarchies[objectName].InPerspective[perspName] = true;
-                     }
-                 }
-             }
-         }
-     }        
+    perspName = enterTextBox.Text;
+
+    if (perspName == string.Empty)
+    {
+        // Invalid perspective name
+        ScriptHost.Error("Please enter a name for the new perspective.");
+    }
+    else
+    {
+        if (!ScriptHost.Model.Perspectives.Any(a => a.Name == perspName))
+        {
+            // Create new perspective
+            ScriptHost.Model.AddPerspective(perspName);
+        }
+
+        // Clear perspective
+        foreach (var t in ScriptHost.Model.Tables.ToList())
+        {
+            string tableName = t.Name;
+            ScriptHost.Model.Tables[tableName].InPerspective[perspName] = false;
+        }
+
+        // Loop through root nodes (tables)
+        foreach (System.Windows.Forms.TreeNode rootNode in treeView.Nodes)
+        {
+            string tableName = rootNode.Text;
+
+            // Loop through checked child nodes (columns, measures, hierarchies)
+            foreach (System.Windows.Forms.TreeNode childNode in rootNode.Nodes)
+            {
+                string objectName = childNode.Text;
+
+                if (childNode.StateImageIndex == 1)
+                {
+                    // Columns
+                    if (childNode.ImageIndex == 1)
+                    {
+                        ScriptHost.Model.Tables[tableName].Columns[objectName].InPerspective[perspName] = true;
+                    }
+                    // Measures
+                    else if (childNode.ImageIndex == 2)
+                    {
+                        ScriptHost.Model.Tables[tableName].Measures[objectName].InPerspective[perspName] = true;
+                    }
+                    // Hierarchies
+                    else if (childNode.ImageIndex == 3)
+                    {
+                        ScriptHost.Model.Tables[tableName].Hierarchies[objectName].InPerspective[perspName] = true;
+                    }
+                }
+            }
+        }
+    }
 };
 
 newForm.Show();
