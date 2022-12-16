@@ -1,4 +1,4 @@
-﻿#r "C:\Program Files\dotnet\packs\Microsoft.WindowsDesktop.App.Ref\6.0.11\ref\net6.0\System.Windows.Forms.dll"
+﻿#r "C:\Program Files\dotnet\packs\Microsoft.WindowsDesktop.App.Ref\6.0.12\ref\net6.0\System.Windows.Forms.dll"
 #r "C:\Program Files\Tabular Editor 3\TabularEditor3.Shared.dll"
 #r "C:\Program Files\Tabular Editor 3\TOMWrapper.dll"
 using System;
@@ -17,13 +17,12 @@ using TabularEditor.Shared.Services;
 
 foreach(var c in ScriptHost.Selected.Columns)
 {
-    c
-    .Table.AddMeasure(
+    c.Table.AddMeasure(
         name: "Sum Of " + c.Name,
         expression: "SUM( " + c.DaxObjectFullName + " )",
         displayFolder: c.DisplayFolder + "\\Sum Of Measures"
-    )
-    .IsHidden = true;
+    );
+    c.IsHidden = true;
 }
 
 ScriptHost.Info("Script finished.");
