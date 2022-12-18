@@ -59,6 +59,7 @@ foreach (var jtokenItem in json["Actions"])
         csxContent = csxContent
             .Replace(" " + item, " ScriptHost." + item)
             .Replace("(" + item, "(ScriptHost." + item)
+            .Replace("{" + item, "{ScriptHost." + item)
             .Replace("!" + item, "!ScriptHost." + item)
             .Replace("\n" + item, "\nScriptHost." + item);
     }
