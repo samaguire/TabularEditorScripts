@@ -1,23 +1,24 @@
 # Tabular Editor Scripting in Visual Studio Code
 
-For those interested in writing scripts for Tabular Editor 2/3 from within Visual Studio Code; giving you the added benefit of source control for your Tabular Editor scripts as well as IntelliSense if you do not have Tabular Editor 3 (which I highly recommend you do use).
+For those interested in writing scripts for Tabular Editor 2/3 from within Visual Studio Code; giving you the added benefit of source control for your Tabular Editor scripts as well as IntelliSense if you don't use Tabular Editor 3 👏.
 
 ![image](https://user-images.githubusercontent.com/62320770/210715420-487a4a8a-6b2f-47d1-84b3-d511b2778060.png)
 
 ## Requirements
 
-The below software needs to be installed. Portable versions are not compatible.
+The below software needs to be installed. (Portable versions of Tabular Editor are not compatible.)
 
 ### Required
 
 - [Visual Studio Code](https://code.visualstudio.com/)
+- [.NET SDK 6.0 or 7.0](https://dotnet.microsoft.com/en-us/download)
 - [Tabular Editor 2](https://github.com/TabularEditor/TabularEditor) (free, open-source version)
 
 ### Optional
 
 - [Tabular Editor 3](https://tabulareditor.com/)
 
-## Installation Notes
+## Installation
 
 ### Quick Install
 
@@ -31,10 +32,10 @@ To author C# scripts (and code) from Visual Studio Code, you need to install:
 
 - The [C#](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csharp) extension.
 
-To run C# scripts from Visual Studio Code (**the Management scripts in this case**) you need to install both:
+To run C# scripts from Visual Studio Code (**the Management scripts in this case**) you need to install:
 
-- The [dotnet script](https://github.com/filipw/dotnet-script) tool, and
-- the [Code Runner](https://marketplace.visualstudio.com/items?itemName=formulahendry.code-runner) extension.
+- The [dotnet script](https://github.com/filipw/dotnet-script) extension, and
+- optionally, the [Code Runner](https://marketplace.visualstudio.com/items?itemName=formulahendry.code-runner) extension (but highly recommended).
 
 ### dotnet script
 
@@ -57,4 +58,3 @@ The default behaviour is to export/import into/from Tabular Editor 3 if it is de
 ## Warning
 
 Use at your own risk! Although I put much care into ensuring these scripts work, I offer no support if the use of these scripts breaks either Tabular Editor or a model you are working on.
-

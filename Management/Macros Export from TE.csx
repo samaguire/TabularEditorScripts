@@ -20,7 +20,7 @@ if (File.Exists(jsonFileV2)) { jsonFile = jsonFileV2; }
 if (File.Exists(jsonFileV3) && TE3overTE2) { jsonFile = jsonFileV3; }
 if (string.IsNullOrEmpty(jsonFile))
 {
-    Console.WriteLine("\"MacroActions.json\" not found!");
+    Console.WriteLine("\"MacroActions.json\" location not found!");
     return;
 }
 else
@@ -72,7 +72,7 @@ foreach (var jtokenItem in json["Actions"])
     {
         @"#r """ + Environment.GetFolderPath(Environment.SpecialFolder.ProgramFilesX86) + @"\Tabular Editor\TabularEditor.exe""",
         @"#r """ + Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData) + @"\TabularEditor\TOMWrapper14.dll""",
-        $"#r \"{Directory.GetFiles(@"C:\Windows\Microsoft.NET\assembly\GAC_MSIL\System.Windows.Forms", "System.Windows.Forms.dll", SearchOption.AllDirectories)[0]}\"",
+        $"#r \"{Directory.GetFiles(@"C:\Program Files\dotnet\packs\Microsoft.WindowsDesktop.App.Ref", "System.Windows.Forms.dll", SearchOption.AllDirectories)[0]}\"",
         "// *** The above assemblies are required for the C# scripting environment, remove in Tabular Editor ***"
     };
     var namespaceList = new List<string>()

@@ -18,7 +18,7 @@ var assemblyList = new List<string>()
 {
     @"#r """ + Environment.GetFolderPath(Environment.SpecialFolder.ProgramFilesX86) + @"\Tabular Editor\TabularEditor.exe""",
     @"#r """ + Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData) + @"\TabularEditor\TOMWrapper14.dll""",
-    $"#r \"{Directory.GetFiles(@"C:\Windows\Microsoft.NET\Framework", "System.Windows.Forms.dll", SearchOption.AllDirectories)[0]}\"",
+    $"#r \"{Directory.GetFiles(@"C:\Program Files\dotnet\packs\Microsoft.WindowsDesktop.App.Ref", "System.Windows.Forms.dll", SearchOption.AllDirectories)[0]}\"",
     "// *** The above assemblies are required for the C# scripting environment, remove in Tabular Editor ***"
 };
 var namespaceList = new List<string>()
@@ -72,8 +72,17 @@ jsonObject.Add("Actions", jsonArray);
 var jsonFile = string.Empty;
 var jsonFileV2 = Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData) + @"\TabularEditor\MacroActions.json";
 var jsonFileV3 = Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData) + @"\TabularEditor3\MacroActions.json";
-if (TE3overTE2) { jsonFile = jsonFileV3; } else { jsonFile = jsonFileV2; }
-Console.WriteLine("Using \"" + jsonFile + "\"");
+if (Directory.Exists(Path.GetDirectoryName(jsonFileV2))) { jsonFile = jsonFileV2; }
+if (Directory.Exists(Path.GetDirectoryName(jsonFileV3)) && TE3overTE2) { jsonFile = jsonFileV3; }
+if (string.IsNullOrEmpty(jsonFile))
+{
+    Console.WriteLine("\"MacroActions.json\" location not found!");
+    return;
+}
+else
+{
+    Console.WriteLine("Using \"" + jsonFile + "\"");
+}
 
 var jsonContent = JsonConvert.SerializeObject(jsonObject, Newtonsoft.Json.Formatting.Indented);
 File.WriteAllText(jsonFile, jsonContent, System.Text.Encoding.UTF8);
