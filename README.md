@@ -57,3 +57,4 @@ The default behaviour is to export/import into/from Tabular Editor 3 if it is de
 ## Warning
 
 Use at your own risk! Although I put much care into ensuring these scripts work, I offer no support if the use of these scripts breaks either Tabular Editor or a model you are working on.
+
