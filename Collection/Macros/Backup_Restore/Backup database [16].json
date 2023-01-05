@@ -1,7 +1,0 @@
-﻿{
-  "Id": 16,
-  "Name": "Macros\\Backup/Restore\\Backup database",
-  "Enabled": "true",
-  "Tooltip": "",
-  "ValidContexts": "Model"
-}

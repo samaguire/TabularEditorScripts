@@ -1,7 +1,0 @@
-﻿{
-  "Id": 77,
-  "Name": "Macros\\Create\\Switch Measures item(s)",
-  "Enabled": "true",
-  "Tooltip": "",
-  "ValidContexts": "Measure"
-}
