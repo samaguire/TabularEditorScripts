@@ -18,12 +18,9 @@ static readonly Model Model;
 static readonly UITreeSelection Selected;
 // *** The above class variables are required for the C# scripting environment, remove in Tabular Editor ***
 
-int version = typeof(TabularEditor.TOMWrapper.Model).Assembly.GetName().Version.Major;
-if (version == 2)
-{
-    // Tabular Editor 2.x specific code
-}
-if (version == 3)
-{
-    // Tabular Editor 3.x specific code
-}
+ScriptHelper.CustomAction("Macros\\Apply\\Best Practice Rules\\Download best practice rules");
+ScriptHelper.CustomAction("Macros\\Apply\\Best Practice Rules\\Add long length column annotations");
+ScriptHelper.CustomAction("Macros\\Apply\\Best Practice Rules\\Add split datetime annotations");
+ScriptHelper.CustomAction("Macros\\Apply\\Best Practice Rules\\Add VertiPaq annotations");
+
+ScriptHelper.Info("Script finished.");

@@ -1,25 +1,29 @@
-﻿#r "C:\Program Files\dotnet\packs\Microsoft.WindowsDesktop.App.Ref\6.0.9\ref\net6.0\System.Windows.Forms.dll"
-#r "C:\Program Files\Tabular Editor 3\TabularEditor3.Shared.dll"
-#r "C:\Program Files\Tabular Editor 3\TOMWrapper.dll"
+﻿#r "C:\Program Files (x86)\Tabular Editor\TabularEditor.exe"
+#r "C:\Users\samag\AppData\Local\TabularEditor\TOMWrapper14.dll"
+#r "C:\Windows\Microsoft.NET\assembly\GAC_MSIL\System.Windows.Forms\v4.0_4.0.0.0__b77a5c561934e089\System.Windows.Forms.dll"
+// *** The above assemblies are required for the C# scripting environment, remove in Tabular Editor ***
+
 using System;
 using System.Linq;
 using System.Collections.Generic;
 using Newtonsoft.Json;
+using TabularEditor;
 using TabularEditor.TOMWrapper;
 using TabularEditor.TOMWrapper.Utils;
-using TabularEditor.Shared;
-using TabularEditor.Shared.Scripting;
-using TabularEditor.Shared.Interaction;
-using TabularEditor.Shared.Services;
+using TabularEditor.UI;
+using TabularEditor.Scripting;
+// *** The above namespaces are required for the C# scripting environment, remove in Tabular Editor ***
 
-/*** Everything ABOVE this point is required for the C# scripting environment, remove in TE3 ***/
+static readonly Model Model;
+static readonly UITreeSelection Selected;
+// *** The above class variables are required for the C# scripting environment, remove in Tabular Editor ***
 
-var selectedObject = ScriptHost.SelectObject(
+var selectedObject = ScriptHelper.SelectObject(
     new TabularNamedObject[]
     {
-        ScriptHost.Model.Tables["Account"],
-        (ScriptHost.Model.Tables["Dates"].Columns["Date"] as DataColumn),
-        ScriptHost.Model.Tables["Transactional"].Measures["Total Actual COGS"]
+        Model.Tables["Account"],
+        (Model.Tables["Dates"].Columns["Date"] as DataColumn),
+        Model.Tables["Transactional"].Measures["Total Actual COGS"]
     }
     );
 

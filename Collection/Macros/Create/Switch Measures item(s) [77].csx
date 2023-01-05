@@ -18,12 +18,29 @@ static readonly Model Model;
 static readonly UITreeSelection Selected;
 // *** The above class variables are required for the C# scripting environment, remove in Tabular Editor ***
 
-int version = typeof(TabularEditor.TOMWrapper.Model).Assembly.GetName().Version.Major;
-if (version == 2)
+var cg = null as CalculationGroupTable;
+
+if (!Model.CalculationGroups.Where(x => x.Name == "Switch Measures").Any())
 {
-    // Tabular Editor 2.x specific code
+
+    cg = Model.AddCalculationGroup("Switch Measures");
+    cg.CalculationGroupPrecedence = 99;
+    cg.Columns["Name"].Name = "Switch Measures";
+
+    if (!Model.AllMeasures.Where(x => x.Name == "Switch Measure").Any())
+    {
+        cg.AddMeasure("Switch Measure", "ERROR(\"Please use with the 'Switch Measures' calculation group.\")");
+    }
+
 }
-if (version == 3)
+else
 {
-    // Tabular Editor 3.x specific code
+    cg = Model.Tables["Switch Measures"] as CalculationGroupTable;
 }
+
+foreach (var m in Selected.Measures)
+{
+    if (!cg.CalculationItems.Where(x => x.Name == m.Name).Any()) { cg.AddCalculationItem(m.Name, m.DaxObjectName); }
+}
+
+ScriptHelper.Info("Script finished.");

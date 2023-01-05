@@ -18,12 +18,19 @@ static readonly Model Model;
 static readonly UITreeSelection Selected;
 // *** The above class variables are required for the C# scripting environment, remove in Tabular Editor ***
 
-int version = typeof(TabularEditor.TOMWrapper.Model).Assembly.GetName().Version.Major;
-if (version == 2)
+foreach (var c in Selected.Columns)
 {
-    // Tabular Editor 2.x specific code
+    if (c.DataType == DataType.Decimal || c.DataType == DataType.Double || c.DataType == DataType.Int64)
+    {
+        if (String.IsNullOrEmpty(c.GetExtendedProperty("ParameterMetadata")))
+        {
+            c.SetExtendedProperty("ParameterMetadata", "{\"version\":0}", ExtendedPropertyType.Json);
+        }
+        else
+        {
+            c.RemoveExtendedProperty("ParameterMetadata");
+        }
+    }
 }
-if (version == 3)
-{
-    // Tabular Editor 3.x specific code
-}
+
+ScriptHelper.Info("Script finished.");

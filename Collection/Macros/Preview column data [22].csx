@@ -18,12 +18,12 @@ static readonly Model Model;
 static readonly UITreeSelection Selected;
 // *** The above class variables are required for the C# scripting environment, remove in Tabular Editor ***
 
-int version = typeof(TabularEditor.TOMWrapper.Model).Assembly.GetName().Version.Major;
-if (version == 2)
+string defaultQuery =
+    "TOPN( 500, VALUES( <column> ) )\r\n" +
+    "ORDER BY <column>";
+
+foreach (var c in Selected.Columns)
 {
-    // Tabular Editor 2.x specific code
-}
-if (version == 3)
-{
-    // Tabular Editor 3.x specific code
+    string daxQuery = defaultQuery.Replace("<column>", c.DaxObjectFullName);
+    ScriptHelper.EvaluateDax(daxQuery).Output();
 }

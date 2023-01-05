@@ -1,0 +1,7 @@
+﻿{
+  "Id": 49,
+  "Name": "Macros\\Apply\\Default formats",
+  "Enabled": "true",
+  "Tooltip": "",
+  "ValidContexts": "Model"
+}

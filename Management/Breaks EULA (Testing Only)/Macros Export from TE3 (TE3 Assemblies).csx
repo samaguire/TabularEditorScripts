@@ -1,16 +1,20 @@
 ﻿#r "C:\Program Files\Tabular Editor 3\TabularEditor3.Shared.dll"
-#r "C:\Program Files\Tabular Editor 3\TOMWrapper.dll"
-#r "nuget: Newtonsoft.Json, 13.0.1"
 
 using TabularEditor.Shared.Scripting;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 
-//  *** Warning! ***  this will clear all existing content in the 'outFolder' folder
-//  *** Warning! ***  this will clear all existing content in the 'outFolder' folder
-//  *** Warning! ***  this will clear all existing content in the 'outFolder' folder
+/* TODO
 
-var outFolder = @".\CollectionTest";
+- Update to the new logic used in the standard export/import
+
+*/
+
+//  *** Warning! ***  this will clear all existing script content in the 'outFolder' folder
+//  *** Warning! ***  this will clear all existing script content in the 'outFolder' folder
+//  *** Warning! ***  this will clear all existing script content in the 'outFolder' folder
+
+var outFolder = @".\CollectionTE3";
 
 // Check folder path and clear existing files and empty directories
 if (!Directory.Exists(outFolder)) { Directory.CreateDirectory(outFolder); }
@@ -25,11 +29,11 @@ foreach (var d in Directory.EnumerateDirectories(outFolder, "*", SearchOption.Al
 var winFormsPath = Directory.GetFiles(@"C:\Program Files\dotnet\packs\Microsoft.WindowsDesktop.App.Ref", "System.Windows.Forms.dll", SearchOption.AllDirectories)[0];
 var scriptingEnvironment = string.Format(@"#r ""{0}""
 #r ""C:\Program Files\Tabular Editor 3\TabularEditor3.Shared.dll""
-#r ""C:\Program Files\Tabular Editor 3\TOMWrapper.dll""
 using System;
 using System.Linq;
 using System.Collections.Generic;
 using Newtonsoft.Json;
+using TabularEditor;
 using TabularEditor.TOMWrapper;
 using TabularEditor.TOMWrapper.Utils;
 using TabularEditor.Shared;
@@ -38,6 +42,7 @@ using TabularEditor.Shared.Interaction;
 using TabularEditor.Shared.Services;
 
 /*** Everything ABOVE this point is required for the C# scripting environment, remove in TE3 ***/
+
 ", winFormsPath);
 
 // Load MacroActions
@@ -63,7 +68,11 @@ foreach (var jtokenItem in json["Actions"])
             .Replace("!" + item, "!ScriptHost." + item)
             .Replace("\n" + item, "\nScriptHost." + item);
     }
-    csxContent = csxContent.Replace("ScriptHelper", "ScriptHost").Replace("#r", "// #r");
+    csxContent = csxContent
+        .Replace("ScriptHelper", "ScriptHost")
+        .Replace("typeof(ScriptHost.", "typeof(")
+        .Replace("#r", "// #r")
+        .Trim('\n');
 
     // Save csxContent (and create directory)
     var csxFilePath = outFolder + @"\" + fileName + ".csx";

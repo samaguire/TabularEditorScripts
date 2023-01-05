@@ -2,6 +2,7 @@
 #r "C:\Users\samag\AppData\Local\TabularEditor\TOMWrapper14.dll"
 #r "C:\Windows\Microsoft.NET\assembly\GAC_MSIL\System.Windows.Forms\v4.0_4.0.0.0__b77a5c561934e089\System.Windows.Forms.dll"
 // *** The above assemblies are required for the C# scripting environment, remove in Tabular Editor ***
+#r "Microsoft.AnalysisServices.Core.dll"
 
 using System;
 using System.Linq;
@@ -13,17 +14,19 @@ using TabularEditor.TOMWrapper.Utils;
 using TabularEditor.UI;
 using TabularEditor.Scripting;
 // *** The above namespaces are required for the C# scripting environment, remove in Tabular Editor ***
+using Microsoft.AnalysisServices.Core;
 
 static readonly Model Model;
 static readonly UITreeSelection Selected;
 // *** The above class variables are required for the C# scripting environment, remove in Tabular Editor ***
 
-int version = typeof(TabularEditor.TOMWrapper.Model).Assembly.GetName().Version.Major;
-if (version == 2)
-{
-    // Tabular Editor 2.x specific code
-}
-if (version == 3)
-{
-    // Tabular Editor 3.x specific code
-}
+Model.Database.TOMDatabase.Backup(
+    file: Model.Database.Name + ".abf",
+    allowOverwrite: true,
+    backupRemotePartitions: default,
+    locations: default,
+    applyCompression: true,
+    password: default
+);
+
+ScriptHelper.Info("Script finished.");

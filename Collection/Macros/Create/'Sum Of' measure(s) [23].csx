@@ -18,12 +18,14 @@ static readonly Model Model;
 static readonly UITreeSelection Selected;
 // *** The above class variables are required for the C# scripting environment, remove in Tabular Editor ***
 
-int version = typeof(TabularEditor.TOMWrapper.Model).Assembly.GetName().Version.Major;
-if (version == 2)
+foreach(var c in Selected.Columns)
 {
-    // Tabular Editor 2.x specific code
+    c.Table.AddMeasure(
+        name: "Sum Of " + c.Name,
+        expression: "SUM( " + c.DaxObjectFullName + " )",
+        displayFolder: c.DisplayFolder + "\\Sum Of Measures"
+    );
+    c.IsHidden = true;
 }
-if (version == 3)
-{
-    // Tabular Editor 3.x specific code
-}
+
+ScriptHelper.Info("Script finished.");

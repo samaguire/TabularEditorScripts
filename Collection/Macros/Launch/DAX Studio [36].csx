@@ -13,17 +13,27 @@ using TabularEditor.TOMWrapper.Utils;
 using TabularEditor.UI;
 using TabularEditor.Scripting;
 // *** The above namespaces are required for the C# scripting environment, remove in Tabular Editor ***
+using System.Diagnostics;
 
 static readonly Model Model;
 static readonly UITreeSelection Selected;
 // *** The above class variables are required for the C# scripting environment, remove in Tabular Editor ***
 
-int version = typeof(TabularEditor.TOMWrapper.Model).Assembly.GetName().Version.Major;
-if (version == 2)
+// https://github.com/TabularEditor/TabularEditor3/issues/249#issuecomment-939848828
+
+var connectionInfo = Model.Database.TOMDatabase.Server.ConnectionInfo;
+string server = null;
+string database = null;
+
+if (connectionInfo.Port == null)
 {
-    // Tabular Editor 2.x specific code
+    server = connectionInfo.Server;
+    database = Model.Database.Name;
 }
-if (version == 3)
+else
 {
-    // Tabular Editor 3.x specific code
+    server = connectionInfo.Server + ":" + connectionInfo.Port;
+    database = Model.Database.ID;
 }
+
+Process.Start("C:\\Program Files\\DAX Studio\\DaxStudio.exe", "-s \"" + server + "\" -d \"" + database + "\"");

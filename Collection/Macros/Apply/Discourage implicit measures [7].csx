@@ -18,12 +18,12 @@ static readonly Model Model;
 static readonly UITreeSelection Selected;
 // *** The above class variables are required for the C# scripting environment, remove in Tabular Editor ***
 
-int version = typeof(TabularEditor.TOMWrapper.Model).Assembly.GetName().Version.Major;
-if (version == 2)
+foreach (var c in Model.AllColumns.Where(x => x.SummarizeBy != AggregateFunction.None))
 {
-    // Tabular Editor 2.x specific code
+    c.SummarizeBy = AggregateFunction.None;
+    c.SetAnnotation("SummarizationSetBy", "User");
 }
-if (version == 3)
-{
-    // Tabular Editor 3.x specific code
-}
+
+Model.DiscourageImplicitMeasures = true;
+
+ScriptHelper.Info("Script finished.");

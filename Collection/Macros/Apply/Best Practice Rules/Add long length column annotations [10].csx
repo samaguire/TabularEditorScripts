@@ -18,12 +18,25 @@ static readonly Model Model;
 static readonly UITreeSelection Selected;
 // *** The above class variables are required for the C# scripting environment, remove in Tabular Editor ***
 
-int version = typeof(TabularEditor.TOMWrapper.Model).Assembly.GetName().Version.Major;
-if (version == 2)
+// https://github.com/microsoft/Analysis-Services/tree/master/BestPracticeRules
+
+int maxLen = 100;
+string annName = "LongLengthRowCount";
+
+foreach (var c in Model.AllColumns.Where(a => a.DataType == DataType.String))
 {
-    // Tabular Editor 2.x specific code
-}
-if (version == 3)
-{
-    // Tabular Editor 3.x specific code
+
+    string tableName = c.Table.Name;
+    string columnName = c.Name;
+    
+    var obj = Model.Tables[tableName].Columns[columnName];
+    var result = ScriptHelper.EvaluateDax("SUMMARIZECOLUMNS(\"test\",CALCULATE(COUNTROWS(DISTINCT('"+tableName+"'["+columnName+"])),LEN('"+tableName+"'["+columnName+"]) > "+maxLen+"))");
+    
+    obj.SetAnnotation(annName,result.ToString());
+    
+    if (obj.GetAnnotation(annName) == "Table")
+    {
+        obj.SetAnnotation(annName,"0");
+    }
+
 }

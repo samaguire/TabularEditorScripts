@@ -18,12 +18,14 @@ static readonly Model Model;
 static readonly UITreeSelection Selected;
 // *** The above class variables are required for the C# scripting environment, remove in Tabular Editor ***
 
-int version = typeof(TabularEditor.TOMWrapper.Model).Assembly.GetName().Version.Major;
-if (version == 2)
+// https://community.powerbi.com/t5/Desktop/Vertipaq-Engine-VALUE-vs-HASH/m-p/690874#M333145
+
+foreach (var c in Model.AllColumns)
 {
-    // Tabular Editor 2.x specific code
+    if (c.DataType == DataType.DateTime || c.DataType == DataType.Decimal || c.DataType == DataType.Double || c.DataType == DataType.Int64)
+    {
+        c.EncodingHint = EncodingHintType.Value;
+    }
 }
-if (version == 3)
-{
-    // Tabular Editor 3.x specific code
-}
+
+ScriptHelper.Info("Script finished.");
