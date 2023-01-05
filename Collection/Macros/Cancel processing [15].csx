@@ -1,24 +1,29 @@
-﻿#r "C:\Program Files\dotnet\packs\Microsoft.WindowsDesktop.App.Ref\6.0.9\ref\net6.0\System.Windows.Forms.dll"
-#r "C:\Program Files\Tabular Editor 3\TabularEditor3.Shared.dll"
-#r "C:\Program Files\Tabular Editor 3\TOMWrapper.dll"
+﻿#r "C:\Program Files (x86)\Tabular Editor\TabularEditor.exe"
+#r "C:\Users\samag\AppData\Local\TabularEditor\TOMWrapper14.dll"
+#r "C:\Windows\Microsoft.NET\assembly\GAC_MSIL\System.Windows.Forms\v4.0_4.0.0.0__b77a5c561934e089\System.Windows.Forms.dll"
+// *** The above assemblies are required for the C# scripting environment, remove in Tabular Editor ***
+#r "Microsoft.AnalysisServices.Core.dll"
+
 using System;
 using System.Linq;
 using System.Collections.Generic;
 using Newtonsoft.Json;
+using TabularEditor;
 using TabularEditor.TOMWrapper;
 using TabularEditor.TOMWrapper.Utils;
-using TabularEditor.Shared;
-using TabularEditor.Shared.Scripting;
-using TabularEditor.Shared.Interaction;
-using TabularEditor.Shared.Services;
-
-/*** Everything ABOVE this point is required for the C# scripting environment, remove in TE3 ***/
-
+using TabularEditor.UI;
+using TabularEditor.Scripting;
+// *** The above namespaces are required for the C# scripting environment, remove in Tabular Editor ***
+using Microsoft.AnalysisServices.Core;
 using System.Data;
 
-string databaseId = ScriptHost.Model.Database.ID;
-string databaseName = ScriptHost.Model.Database.Name;
-DataTable dtDmvCmd = ScriptHost.ExecuteDax("SELECT [SESSION_ID],[SESSION_LAST_COMMAND] FROM $SYSTEM.DISCOVER_SESSIONS").Tables[0];
+static readonly Model Model;
+static readonly UITreeSelection Selected;
+// *** The above class variables are required for the C# scripting environment, remove in Tabular Editor ***
+
+string databaseId = Model.Database.ID;
+string databaseName = Model.Database.Name;
+DataTable dtDmvCmd = ScriptHelper.ExecuteDax("SELECT [SESSION_ID],[SESSION_LAST_COMMAND] FROM $SYSTEM.DISCOVER_SESSIONS").Tables[0];
 string sId = null;
 
 foreach (DataRow drDmvCmd in dtDmvCmd.Rows)
@@ -30,10 +35,10 @@ foreach (DataRow drDmvCmd in dtDmvCmd.Rows)
 
 if (sId == null)
 {
-    ScriptHost.Error("No processing Session ID found for the '" + databaseName + "' ScriptHost.Model.");
+    ScriptHelper.Error("No processing Session ID found for the '" + databaseName + "' Model.");
 }
 else
 {
-    ScriptHost.Model.Database.TOMDatabase.Server.CancelSession(sId);
-    ScriptHost.Info("Processing for the '" + databaseName + "' model has been cancelled (Session ID: " + sId + ").");
+    Model.Database.TOMDatabase.Server.CancelSession(sId);
+    ScriptHelper.Info("Processing for the '" + databaseName + "' model has been cancelled (Session ID: " + sId + ").");
 }

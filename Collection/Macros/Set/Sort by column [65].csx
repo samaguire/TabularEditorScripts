@@ -1,20 +1,23 @@
-﻿#r "C:\Program Files\dotnet\packs\Microsoft.WindowsDesktop.App.Ref\6.0.9\ref\net6.0\System.Windows.Forms.dll"
-#r "C:\Program Files\Tabular Editor 3\TabularEditor3.Shared.dll"
-#r "C:\Program Files\Tabular Editor 3\TOMWrapper.dll"
+﻿#r "C:\Program Files (x86)\Tabular Editor\TabularEditor.exe"
+#r "C:\Users\samag\AppData\Local\TabularEditor\TOMWrapper14.dll"
+#r "C:\Windows\Microsoft.NET\assembly\GAC_MSIL\System.Windows.Forms\v4.0_4.0.0.0__b77a5c561934e089\System.Windows.Forms.dll"
+// *** The above assemblies are required for the C# scripting environment, remove in Tabular Editor ***
+
 using System;
 using System.Linq;
 using System.Collections.Generic;
 using Newtonsoft.Json;
+using TabularEditor;
 using TabularEditor.TOMWrapper;
 using TabularEditor.TOMWrapper.Utils;
-using TabularEditor.Shared;
-using TabularEditor.Shared.Scripting;
-using TabularEditor.Shared.Interaction;
-using TabularEditor.Shared.Services;
-
-/*** Everything ABOVE this point is required for the C# scripting environment, remove in TE3 ***/
-
+using TabularEditor.UI;
+using TabularEditor.Scripting;
+// *** The above namespaces are required for the C# scripting environment, remove in Tabular Editor ***
 using Newtonsoft.Json.Linq;
+
+static readonly Model Model;
+static readonly UITreeSelection Selected;
+// *** The above class variables are required for the C# scripting environment, remove in Tabular Editor ***
 
 Func<string, string, string> AddPBIChangedProperty = (string pbiChangedProperties, string propertyName) =>
 {
@@ -25,13 +28,13 @@ Func<string, string, string> AddPBIChangedProperty = (string pbiChangedPropertie
     return jsonArray.Any() ? JsonConvert.SerializeObject(jsonArray) : null;
 };
 
-foreach (var c in ScriptHost.Selected.Columns)
+foreach (var c in Selected.Columns)
 {
 
     if (c.Table.ObjectType == ObjectType.CalculationGroupTable) { continue; }
 
     var tableColumns = c.Table.Columns.Where(tc => tc != c);
-    Column sortByColumn = ScriptHost.SelectColumn(tableColumns, null, "Select sort by column for " + c.DaxObjectFullName + ":");
+    Column sortByColumn = ScriptHelper.SelectColumn(tableColumns, null, "Select sort by column for " + c.DaxObjectFullName + ":");
     if (sortByColumn == null) { continue; }
     if (sortByColumn != c) { c.SortByColumn = sortByColumn; }
 
@@ -41,4 +44,4 @@ foreach (var c in ScriptHost.Selected.Columns)
 
 }
 
-ScriptHost.Info("Script finished.");
+ScriptHelper.Info("Script finished.");

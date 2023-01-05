@@ -1,20 +1,23 @@
-﻿#r "C:\Program Files\dotnet\packs\Microsoft.WindowsDesktop.App.Ref\6.0.9\ref\net6.0\System.Windows.Forms.dll"
-#r "C:\Program Files\Tabular Editor 3\TabularEditor3.Shared.dll"
-#r "C:\Program Files\Tabular Editor 3\TOMWrapper.dll"
+﻿#r "C:\Program Files (x86)\Tabular Editor\TabularEditor.exe"
+#r "C:\Users\samag\AppData\Local\TabularEditor\TOMWrapper14.dll"
+#r "C:\Windows\Microsoft.NET\assembly\GAC_MSIL\System.Windows.Forms\v4.0_4.0.0.0__b77a5c561934e089\System.Windows.Forms.dll"
+// *** The above assemblies are required for the C# scripting environment, remove in Tabular Editor ***
+
 using System;
 using System.Linq;
 using System.Collections.Generic;
 using Newtonsoft.Json;
+using TabularEditor;
 using TabularEditor.TOMWrapper;
 using TabularEditor.TOMWrapper.Utils;
-using TabularEditor.Shared;
-using TabularEditor.Shared.Scripting;
-using TabularEditor.Shared.Interaction;
-using TabularEditor.Shared.Services;
-
-/*** Everything ABOVE this point is required for the C# scripting environment, remove in TE3 ***/
-
+using TabularEditor.UI;
+using TabularEditor.Scripting;
+// *** The above namespaces are required for the C# scripting environment, remove in Tabular Editor ***
 using System.Windows.Forms;
+
+static readonly Model Model;
+static readonly UITreeSelection Selected;
+// *** The above class variables are required for the C# scripting environment, remove in Tabular Editor ***
 
 // Variables
 
@@ -89,9 +92,9 @@ Func<string, string, string, string> InputBox = (string promptText, string title
 
 // Check measure(s) are selected
 
-if (!ScriptHost.Selected.Measures.Any())
+if (!Selected.Measures.Any())
 {
-    ScriptHost.Error("No measure(s) ScriptHost.Selected.");
+    ScriptHelper.Error("No measure(s) Selected.");
     return;
 }
 
@@ -118,17 +121,17 @@ if (promptForVariables)
 
 // Get calculation group table
 
-var ts = ScriptHost.Model.Tables.Where(x => x.ObjectType == (ObjectType.CalculationGroupTable));
+var ts = Model.Tables.Where(x => x.ObjectType == (ObjectType.CalculationGroupTable));
 var t = null as CalculationGroupTable;
 
 if (ts.Any())
 {
-    t = ScriptHost.SelectTable(ts, label:"Select calculation group table:") as CalculationGroupTable;
+    t = ScriptHelper.SelectTable(ts, label:"Select calculation group table:") as CalculationGroupTable;
     if (t == null) { return; }
 }
 else
 {
-    ScriptHost.Error("No calculation group tables in the ScriptHost.Model.");
+    ScriptHelper.Error("No calculation group tables in the Model.");
 }
 
 // Get calculation group's calculation items data column
@@ -138,8 +141,8 @@ var c = null as DataColumn;
 
 if (cs.Count() != 1)
 {
-    ScriptHost.Warning("Cannot identify calculation items column.");
-    c = ScriptHost.SelectColumn(t, label:"Select calculation items column:") as DataColumn;
+    ScriptHelper.Warning("Cannot identify calculation items column.");
+    c = ScriptHelper.SelectColumn(t, label:"Select calculation items column:") as DataColumn;
     if (c == null) { return; }
 }
 else
@@ -158,7 +161,7 @@ if (defaultTimeIntelligenceName.Length < t.Name.Length &&
 
 // Create measures
 
-foreach (var m in ScriptHost.Selected.Measures)
+foreach (var m in Selected.Measures)
 {
 
     bool isCalculationGroupMeasure = Convert.ToBoolean(m.GetAnnotation("isCalculationGroupMeasure"));
@@ -174,8 +177,7 @@ foreach (var m in ScriptHost.Selected.Measures)
             .Replace("<item>", i.Name);
         var measureDisplayFolder = m.DisplayFolder + "\\› " + t.Name + "\\› " + m.Name;
 
-        var mms = ScriptHost.Model.AllMeasures.Where(x => x.Name == measureName);
-        if (mms.Any()) { foreach (var mm in mms.ToList()) { mm.Delete(); } }
+        foreach (var mm in Model.AllMeasures.Where(x => x.Name == measureName).ToList()) { mm.Delete(); }
 
         var nm = m.Table.AddMeasure(measureName, measureExpression, measureDisplayFolder);
 
@@ -201,4 +203,4 @@ foreach (var m in ScriptHost.Selected.Measures)
 
 // End
 
-ScriptHost.Info("Script finished.");
+ScriptHelper.Info("Script finished.");
