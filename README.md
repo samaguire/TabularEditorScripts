@@ -1,8 +1,8 @@
 # Tabular Editor Scripting in Visual Studio Code
 
-For those interested in writing scripts for Tabular Editor 2/3 from with in Visual Studio Code.
+For those interested in writing scripts for Tabular Editor 2/3 from within Visual Studio Code; giving you the added benefit of source control for your Tabular Editor scripts as well as IntelliSense if you do not have Tabular Editor 3 (which I highly recommend you do use).
 
-<'image'>
+![image](https://user-images.githubusercontent.com/62320770/210715420-487a4a8a-6b2f-47d1-84b3-d511b2778060.png)
 
 ## Requirements
 
@@ -42,18 +42,18 @@ If you get the "`Tool 'dotnet-script' failed to install`" error when executing t
 
 ## Macro Management Scripts
 
-The scripts in the "Mangement" folder of this repo are designed to be run from within Visual Studio Code without Tabular Editor running.
+The scripts in the "Management" folder of this repo are designed to be run from within Visual Studio Code without Tabular Editor running.
 
 - Macros Export from TE.csx
 - Macros Import into TE.csx
 - Settings Backup.csx
 - Settings Restore.csx
-- TE Script Compiler Update.csx (for updating the script compiler in Tabular Editor 2, not required for Tabular Editor 3)
+- TE2 Script Compiler Update.csx
 
-These scripts are are compatible with either Tabular Editor 3 or Tabular Editor 2. (With the exception of the 'TE Script Compiler Update.csx' script which doesn't apply to Tabular Editor 3.)
+These scripts are compatible with either Tabular Editor 3 or Tabular Editor 2. (With the exception of the 'TE2 Script Compiler Update.csx' script which applies to Tabular Editor 2 only.)
 
 The default behaviour is to export/import into/from Tabular Editor 3 if it is detected, otherwise, Tabular Editor 2 will be used. This behaviour can be controlled by setting the variable 'TE3overTE2' to 'true' or 'false' in the export/import scripts. If the variable 'TE3overTE2' is set to 'false', then Tabular Editor 2 will be exported/imported into/from even if Tabular Editor 3 is installed.
 
 ## Warning
 
-Though I do put much care into ensuring these scripts work. However, I offer no support if the use of these scripts either breaks TE3 or a model you are working. Use at your own risk
+Use at your own risk! Although I put much care into ensuring these scripts work, I offer no support if the use of these scripts breaks either Tabular Editor or a model you are working on.
