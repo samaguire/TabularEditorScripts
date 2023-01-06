@@ -1,6 +1,4 @@
-﻿#r "TabularEditor.dll"
-
-using System.IO.Compression;
+﻿using System.IO.Compression;
 
 string localFolder = Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData);
 string[] appSubfolders = { "TabularEditor", "TabularEditor3" };

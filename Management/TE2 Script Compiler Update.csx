@@ -1,4 +1,4 @@
-#r "TabularEditor.dll"
+#r "nuget: Newtonsoft.Json, 13.0.2"
 #r "nuget: Microsoft.Net.Compilers.Toolset, 4.4.0"
 
 using Newtonsoft.Json;

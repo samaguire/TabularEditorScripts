@@ -1,4 +1,6 @@
-﻿#r "TabularEditor.dll"
+﻿#r ".\Assemblies\TabularEditor.exe"
+#r ".\Assemblies\TOMWrapper14.dll"
+#r "nuget: Newtonsoft.Json, 13.0.2"
 
 using TabularEditor.Scripting;
 using Newtonsoft.Json;

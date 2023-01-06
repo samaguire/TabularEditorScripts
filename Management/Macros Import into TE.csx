@@ -1,4 +1,4 @@
-#r "TabularEditor.dll"
+#r "nuget: Newtonsoft.Json, 13.0.2"
 
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
