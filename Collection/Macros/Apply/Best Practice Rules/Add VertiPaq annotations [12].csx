@@ -1,6 +1,6 @@
 ﻿#r "C:\Program Files (x86)\Tabular Editor\TabularEditor.exe"
 #r "C:\Users\samag\AppData\Local\TabularEditor\TOMWrapper14.dll"
-#r "C:\Program Files\dotnet\packs\Microsoft.WindowsDesktop.App.Ref\6.0.12\ref\net6.0\System.Windows.Forms.dll"
+#r "C:\Program Files\dotnet\packs\Microsoft.WindowsDesktop.App.Ref\6.0.13\ref\net6.0\System.Windows.Forms.dll"
 // *** The above assemblies are required for the C# scripting environment, remove in Tabular Editor ***
 
 using System;
