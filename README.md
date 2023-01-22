@@ -55,6 +55,10 @@ These scripts are compatible with either Tabular Editor 3 or Tabular Editor 2. (
 
 The default behaviour is to export/import into/from Tabular Editor 3 if it is detected, otherwise, Tabular Editor 2 will be used. This behaviour can be controlled by setting the variable 'TE3overTE2' to 'true' or 'false' in the export/import scripts. If the variable 'TE3overTE2' is set to 'false', then Tabular Editor 2 will be exported/imported into/from even if Tabular Editor 3 is installed.
 
+### Run & Debug
+
+If you intend to to use the native debugger to run the Macro Management Scripts then you will also need to execute the command `dotnet script init` to reset the environemnt before running the debugger.
+
 ## Warning
 
 Use at your own risk! Although I put much care into ensuring these scripts work, I offer no support if the use of these scripts breaks either Tabular Editor or a model you are working on.
