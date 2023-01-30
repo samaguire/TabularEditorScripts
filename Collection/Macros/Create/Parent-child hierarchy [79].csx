@@ -240,7 +240,8 @@ else
 
         hLevels.AddLevel(
             column: cLevel,
-            levelName: $"Level {i}"
+            // levelName: $"Level {i}"
+            levelName: nameLevel
         );
 
     }
