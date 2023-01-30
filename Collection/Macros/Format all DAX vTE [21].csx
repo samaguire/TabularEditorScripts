@@ -18,7 +18,7 @@ static readonly Model Model;
 static readonly UITreeSelection Selected;
 // *** The above class variables are required for the C# scripting environment, remove in Tabular Editor ***
 
-var useShortFormat = true;
+var useShortFormat = false;
 var insertSpaceAfterFunctionName = false;
 var insertLineBreakOnFirstLine = true;
 
