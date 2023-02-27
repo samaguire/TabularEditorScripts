@@ -16,9 +16,12 @@ if (!Directory.Exists(inFolder)) { return; }
 // Define C# scripting environment
 var assemblyList = new List<string>()
 {
-    @"#r """ + Environment.GetFolderPath(Environment.SpecialFolder.ProgramFilesX86) + @"\Tabular Editor\TabularEditor.exe""",
-    @"#r """ + Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData) + @"\TabularEditor\TOMWrapper14.dll""",
-    $"#r \"{Directory.GetFiles(@"C:\Program Files\dotnet\packs\Microsoft.WindowsDesktop.App.Ref", "System.Windows.Forms.dll", SearchOption.AllDirectories)[0]}\"",
+    // @"#r """ + Environment.GetFolderPath(Environment.SpecialFolder.ProgramFilesX86) + @"\Tabular Editor\TabularEditor.exe""",
+    // @"#r """ + Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData) + @"\TabularEditor\TOMWrapper14.dll""",
+    // $"#r \"{Directory.GetFiles(@"C:\Program Files\dotnet\packs\Microsoft.WindowsDesktop.App.Ref", "System.Windows.Forms.dll", SearchOption.AllDirectories)[0]}\"",
+    @"TabularEditor.exe""",
+    @"TOMWrapper14.dll""",
+    @"System.Windows.Forms.dll""",
     "// *** The above assemblies are required for the C# scripting environment, remove in Tabular Editor ***"
 };
 var namespaceList = new List<string>()
@@ -51,11 +54,11 @@ foreach (var filePath in Directory.EnumerateFiles(inFolder, "*.csx", SearchOptio
     var scriptBodyList = new List<string>();
     foreach (var line in File.ReadLines(filePath).Skip(4))
     {
-        if (!assemblyList.Contains(line) && !namespaceList.Contains(line) && !classVariableList.Contains(line)) { scriptBodyList.Add(line); }
+        if ( !((line.StartsWith("#r") && assemblyList.Contains(line.Split('\\').Last())) && !assemblyList.Contains(line)) && !namespaceList.Contains(line) && !classVariableList.Contains(line)) { scriptBodyList.Add(line); }
     }
-    var csxContent = String.Join("\n", scriptBodyList)
+    var csxContent = String.Join(Environment.NewLine, scriptBodyList)
                         .Replace("ScriptHelper.", string.Empty)
-                        .Trim('\n');
+                        .Trim('\r', '\n');
 
     // Build MacroAction and add to 'Actions' json array
     var jsonContent = (JObject.Parse(File.ReadAllText(filePath.Replace(".csx", ".json"))));

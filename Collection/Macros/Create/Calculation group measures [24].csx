@@ -137,12 +137,12 @@ else
 // Get calculation group's calculation items data column
 
 var cs = t.DataColumns.Where(x => x.SourceColumn == "Name");
-var c = null as DataColumn;
+var c = null as TabularEditor.TOMWrapper.DataColumn;
 
 if (cs.Count() != 1)
 {
     ScriptHelper.Warning("Cannot identify calculation items column.");
-    c = ScriptHelper.SelectColumn(t, label:"Select calculation items column:") as DataColumn;
+    c = ScriptHelper.SelectColumn(t, label:"Select calculation items column:") as TabularEditor.TOMWrapper.DataColumn;
     if (c == null) { return; }
 }
 else

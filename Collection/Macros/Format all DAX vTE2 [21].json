@@ -1,7 +1,7 @@
 ﻿{
   "Id": 21,
-  "Name": "Macros\\Format all DAX vTE",
-  "Enabled": "false",
+  "Name": "Macros\\Format all DAX vTE2",
+  "Enabled": "true",
   "Tooltip": "",
   "ValidContexts": "Model"
 }
