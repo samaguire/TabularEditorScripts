@@ -1,6 +1,6 @@
 ﻿{
   "Id": 77,
-  "Name": "Macros\\Create\\Switch Measures item(s)",
+  "Name": "Macros\\Create\\Field parameter",
   "Enabled": "true",
   "Tooltip": "",
   "ValidContexts": "Measure"
