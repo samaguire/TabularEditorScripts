@@ -13,7 +13,6 @@ using TabularEditor.TOMWrapper.Utils;
 using TabularEditor.UI;
 using TabularEditor.Scripting;
 // *** The above namespaces are required for the C# scripting environment, remove in Tabular Editor ***
-using System.Windows.Forms;
 
 static readonly Model Model;
 static readonly UITreeSelection Selected;
