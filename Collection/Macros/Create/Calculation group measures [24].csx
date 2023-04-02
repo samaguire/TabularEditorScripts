@@ -58,12 +58,48 @@ if (Model.Database.CompatibilityLevel < 1601)
     Model.Database.CompatibilityLevel = 1601;
 }
 
+// Create helper calculation group table, deleting existing table if it exists
+if(Model.Tables.Where(x => x.Name == "getSelectedMeasureFormatString").Any()) { Model.Tables["getSelectedMeasureFormatString"].Delete(); }
+var cg = Model.AddCalculationGroup(
+    name: "getSelectedMeasureFormatString"
+    );
+cg.AddCalculationItem(
+    name: "getSelectedMeasureFormatString",
+    expression: "SELECTEDMEASUREFORMATSTRING()"
+    );
+cg.IsHidden = true;
+
 // Set template measure expression
 var templateMeasureExpression = @"
 CALCULATE(
     <m>,
     <c> = ""<i>""
 )";
+
+// Set template measure format string expression
+var templateMeasureFormatStringExpression = @"
+VAR CalculationItemFormat =
+    CALCULATE(
+        CALCULATE(
+            <m>,
+            <c> = ""<i>""
+        ),
+        'getSelectedMeasureFormatString'[Name] = ""getSelectedMeasureFormatString""
+    )
+VAR MeasureFormat =
+    CALCULATE(
+        <m>,
+        'getSelectedMeasureFormatString'[Name] = ""getSelectedMeasureFormatString""
+    )
+RETURN
+    CONVERT(
+        IF(
+            ISBLANK( CalculationItemFormat ),
+            MeasureFormat,
+            CalculationItemFormat
+        ),
+        STRING
+    )";
 
 // Cycle through selected measures
 foreach (var m in Selected.Measures)
@@ -96,15 +132,11 @@ foreach (var m in Selected.Measures)
         // Flag the new measure as derived from a calculation group
         nm.SetAnnotation("isCalculationGroupMeasure", "true");
 
-        // Use the format string from the source measure unless the calculation group item has a format string expression
-        if (string.IsNullOrEmpty(i.FormatStringExpression))
-        {
-            nm.FormatString = m.FormatString;
-        }
-        else
-        {
-            nm.FormatStringExpression = i.FormatStringExpression;
-        }
+        // Set the new measure's format string expression to derive from either the calculation group item or the source measure
+        nm.FormatStringExpression = templateMeasureFormatStringExpression
+            .Replace("<m>", m.DaxObjectName)
+            .Replace("<c>", c.DaxObjectFullName)
+            .Replace("<i>", i.Name);
 
         // Use the descriptions from both the source measure and calculation group item
         if (!string.IsNullOrEmpty(m.Description) && !string.IsNullOrEmpty(i.Description))
