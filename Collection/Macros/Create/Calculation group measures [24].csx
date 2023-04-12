@@ -26,7 +26,7 @@ if (!Selected.Measures.Any())
 }
 
 // Get calculation group table
-var ts = Model.Tables.Where(x => x.ObjectType == (ObjectType.CalculationGroupTable));
+var ts = Model.Tables.Where(x => x.ObjectType == (ObjectType.CalculationGroupTable)).Where(x => x.Name != "getSelectedMeasureFormatString");
 var t = null as CalculationGroupTable;
 if (ts.Any())
 {
@@ -40,11 +40,11 @@ else
 
 // Get calculation group's calculation items data column
 var cs = t.DataColumns.Where(x => x.SourceColumn == "Name");
-var c = null as TabularEditor.TOMWrapper.DataColumn;
+var c = null as DataColumn;
 if (cs.Count() != 1)
 {
     ScriptHelper.Warning("Cannot identify calculation items column.");
-    c = ScriptHelper.SelectColumn(t, label: "Select calculation items column:") as TabularEditor.TOMWrapper.DataColumn;
+    c = ScriptHelper.SelectColumn(t, label: "Select calculation items column:") as DataColumn;
     if (c == null) { return; }
 }
 else
@@ -68,6 +68,7 @@ cg.AddCalculationItem(
     expression: "SELECTEDMEASUREFORMATSTRING()"
     );
 cg.IsHidden = true;
+cg.IsPrivate= true;
 
 // Set template measure expression
 var templateMeasureExpression = @"
