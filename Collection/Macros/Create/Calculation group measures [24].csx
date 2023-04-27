@@ -94,11 +94,7 @@ VAR MeasureFormat =
     )
 RETURN
     CONVERT(
-        IF(
-            ISBLANK( CalculationItemFormat ),
-            MeasureFormat,
-            CalculationItemFormat
-        ),
+        COALESCE(CalculationItemFormat, MeasureFormat),
         STRING
     )";
 
