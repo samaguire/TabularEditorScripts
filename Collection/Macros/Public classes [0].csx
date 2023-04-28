@@ -1,6 +1,4 @@
-﻿#r "C:\Program Files (x86)\Tabular Editor\TabularEditor.exe"
-#r "C:\Users\samag\AppData\Local\TabularEditor\TOMWrapper14.dll"
-#r "C:\Program Files\dotnet\packs\Microsoft.WindowsDesktop.App.Ref\6.0.15\ref\net6.0\System.Windows.Forms.dll"
+﻿#load "..\..\Management\Common Library.csx"
 // *** The above assemblies are required for the C# scripting environment, remove in Tabular Editor ***
 #r "Microsoft.VisualBasic"
 
@@ -16,14 +14,7 @@ using TabularEditor.Scripting;
 // *** The above namespaces are required for the C# scripting environment, remove in Tabular Editor ***
 using Microsoft.VisualBasic;
 
-static readonly Model Model;
-static readonly UITreeSelection Selected;
-// *** The above class variables are required for the C# scripting environment, remove in Tabular Editor ***
-
 // *** The below public classes are common across scripts ***
-
-// #r "Microsoft.VisualBasic"
-// using Microsoft.VisualBasic;
 
 public static class Fx
 {
@@ -35,7 +26,7 @@ public static class Fx
         return model.AddCalculatedTable(name: tableName, expression: tableExpression);
     }
 
-    public static Table SelectTableExt(Model model, string possibleName = null, string annotationName = null, string annotationValue = null,
+    public static Table ScriptHelper.SelectTableExt(Model model, string possibleName = null, string annotationName = null, string annotationValue = null,
         Func<Table, bool> lambdaExpression = null, string label = "Select Table", bool skipDialogIfSingleMatch = true, bool showOnlyMatchingTables = true,
         IEnumerable<Table> candidateTables = null, bool showErrorIfNoTablesFound = false, string errorMessage = "No tables found", bool selectFirst = false,
         bool showErrorIfNoSelection = true, string noSelectionErrorMessage = "No table was selected", bool excludeCalcGroups = false, bool returnNullIfNoTablesFound = false)

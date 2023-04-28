@@ -1,0 +1,7 @@
+﻿{
+  "Id": 1,
+  "Name": "Macros\\Scratchpad",
+  "Enabled": "false",
+  "Tooltip": "",
+  "ValidContexts": "Model"
+}

@@ -1,4 +1,4 @@
-﻿#load ".\Common Library.csx"
+﻿#load "..\Management\Common Library.csx"
 
 #r "nuget: Newtonsoft.Json, 13.0.2"
 
@@ -10,7 +10,7 @@ using Newtonsoft.Json.Linq;
 //  *** Warning! ***  this will clear all existing script content in the 'outFolder' folder
 //  *** Warning! ***  this will clear all existing script content in the 'outFolder' folder
 
-var outFolder = @".\CollectionTest";
+var outFolder = @".\Collection";
 var TE3overTE2 = true;
 
 // Load MacroActions
@@ -77,30 +77,21 @@ foreach (var jtokenItem in json["Actions"])
     // Define C# scripting environment
     var assemblyList = new List<string>()
     {
-        @"#r """ + Environment.GetFolderPath(Environment.SpecialFolder.ProgramFilesX86) + @"\Tabular Editor\TabularEditor.exe""",
-        @"#r """ + Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData) + @"\TabularEditor\TOMWrapper14.dll""",
-        $"#r \"{Directory.GetFiles(@"C:\Program Files\dotnet\packs\Microsoft.WindowsDesktop.App.Ref", "System.Windows.Forms.dll", SearchOption.AllDirectories)[0]}\"",
-        "// *** The above assemblies are required for the C# scripting environment, remove in Tabular Editor ***"
+        loadCommonLibrary,
+        @"// *** The above assemblies are required for the C# scripting environment, remove in Tabular Editor ***"
     };
     var namespaceList = new List<string>()
     {
-        "using System;",
-        "using System.Linq;",
-        "using System.Collections.Generic;",
-        "using Newtonsoft.Json;",
-        "using TabularEditor;",
-        "using TabularEditor.TOMWrapper;",
-        "using TabularEditor.TOMWrapper.Utils;",
-        "using TabularEditor.UI;",
-        "using TabularEditor.Scripting;"
-        // "using TOM = Microsoft.AnalysisServices.Tabular;"
-        // "// *** The above namespaces are required for the C# scripting environment, remove in Tabular Editor ***"
-    };
-    var classVariableList = new List<string>()
-    {
-        "static readonly Model Model;",
-        "static readonly UITreeSelection Selected;",
-        "// *** The above class variables are required for the C# scripting environment, remove in Tabular Editor ***"
+        @"using System;",
+        @"using System.Linq;",
+        @"using System.Collections.Generic;",
+        @"using Newtonsoft.Json;",
+        @"using TabularEditor;",
+        @"using TabularEditor.TOMWrapper;",
+        @"using TabularEditor.TOMWrapper.Utils;",
+        @"using TabularEditor.UI;",
+        @"using TabularEditor.Scripting;",
+        @"// *** The above namespaces are required for the C# scripting environment, remove in Tabular Editor ***"
     };
     var scriptBodyList = new List<string>();
 
@@ -119,11 +110,8 @@ foreach (var jtokenItem in json["Actions"])
     // Reconstruct csxContent from lists
     csxContent = string.Join(Environment.NewLine, new List<string>()
     {
-        loadCommonLibrary,
-        // string.Join(Environment.NewLine, assemblyList),
-        string.Join(Environment.NewLine, namespaceList),
-        @"// *** The above is required for the C# scripting environment, remove in Tabular Editor ***" + Environment.NewLine,
-        // string.Join(Environment.NewLine, classVariableList),
+        string.Join(Environment.NewLine, assemblyList) + Environment.NewLine,
+        string.Join(Environment.NewLine, namespaceList) + Environment.NewLine,
         string.Join(Environment.NewLine, scriptBodyList).Trim('\r', '\n')
             .Replace(Environment.NewLine + Environment.NewLine + Environment.NewLine, Environment.NewLine + Environment.NewLine)
     });

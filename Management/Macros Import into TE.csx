@@ -16,33 +16,21 @@ if (!Directory.Exists(inFolder)) { return; }
 // Define C# scripting environment
 var assemblyList = new List<string>()
 {
-    // @"#r """ + Environment.GetFolderPath(Environment.SpecialFolder.ProgramFilesX86) + @"\Tabular Editor\TabularEditor.exe""",
-    // @"#r """ + Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData) + @"\TabularEditor\TOMWrapper14.dll""",
-    // $"#r \"{Directory.GetFiles(@"C:\Program Files\dotnet\packs\Microsoft.WindowsDesktop.App.Ref", "System.Windows.Forms.dll", SearchOption.AllDirectories)[0]}\"",
-    @"TabularEditor.exe""",
-    @"TOMWrapper14.dll""",
-    @"System.Windows.Forms.dll""",
+    @"Common Library.csx""",
     "// *** The above assemblies are required for the C# scripting environment, remove in Tabular Editor ***"
 };
 var namespaceList = new List<string>()
 {
-    "using System;",
-    "using System.Linq;",
-    "using System.Collections.Generic;",
-    "using Newtonsoft.Json;",
-    "using TabularEditor;",
-    "using TabularEditor.TOMWrapper;",
-    "using TabularEditor.TOMWrapper.Utils;",
-    "using TabularEditor.UI;",
-    "using TabularEditor.Scripting;",
-    // "using TOM = Microsoft.AnalysisServices.Tabular;",
-    "// *** The above namespaces are required for the C# scripting environment, remove in Tabular Editor ***"
-};
-var classVariableList = new List<string>()
-{
-    "static readonly Model Model;",
-    "static readonly UITreeSelection Selected;",
-    "// *** The above class variables are required for the C# scripting environment, remove in Tabular Editor ***"
+    @"using System;",
+    @"using System.Linq;",
+    @"using System.Collections.Generic;",
+    @"using Newtonsoft.Json;",
+    @"using TabularEditor;",
+    @"using TabularEditor.TOMWrapper;",
+    @"using TabularEditor.TOMWrapper.Utils;",
+    @"using TabularEditor.UI;",
+    @"using TabularEditor.Scripting;",
+    @"// *** The above namespaces are required for the C# scripting environment, remove in Tabular Editor ***"
 };
 
 // Pull details from csx and json files
@@ -52,9 +40,9 @@ foreach (var filePath in Directory.EnumerateFiles(inFolder, "*.csx", SearchOptio
 
     // Extract macro, removing C# scripting environment modifications
     var scriptBodyList = new List<string>();
-    foreach (var line in File.ReadLines(filePath).Skip(4))
+    foreach (var line in File.ReadLines(filePath))
     {
-        if ( !((line.StartsWith("#r") && assemblyList.Contains(line.Split('\\').Last())) && !assemblyList.Contains(line)) && !namespaceList.Contains(line) && !classVariableList.Contains(line)) { scriptBodyList.Add(line); }
+        if ( !((line.StartsWith("#") && assemblyList.Contains(line.Split('\\').Last())) || assemblyList.Contains(line)) && !namespaceList.Contains(line)) { scriptBodyList.Add(line); }
     }
     var csxContent = String.Join(Environment.NewLine, scriptBodyList)
                         .Replace("ScriptHelper.", string.Empty)
