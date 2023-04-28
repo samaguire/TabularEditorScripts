@@ -1,7 +1,8 @@
 ﻿#r "C:\Program Files (x86)\Tabular Editor\TabularEditor.exe"
 #r "C:\Users\samag\AppData\Local\TabularEditor\TOMWrapper14.dll"
-#r "C:\Program Files\dotnet\packs\Microsoft.WindowsDesktop.App.Ref\6.0.15\ref\net6.0\System.Windows.Forms.dll"
+#r "C:\Program Files\dotnet\packs\Microsoft.WindowsDesktop.App.Ref\6.0.16\ref\net6.0\System.Windows.Forms.dll"
 // *** The above assemblies are required for the C# scripting environment, remove in Tabular Editor ***
+#r "Microsoft.VisualBasic"
 
 using System;
 using System.Linq;
@@ -13,13 +14,38 @@ using TabularEditor.TOMWrapper.Utils;
 using TabularEditor.UI;
 using TabularEditor.Scripting;
 // *** The above namespaces are required for the C# scripting environment, remove in Tabular Editor ***
+using Microsoft.VisualBasic;
 using Newtonsoft.Json.Linq;
 
 static readonly Model Model;
 static readonly UITreeSelection Selected;
 // *** The above class variables are required for the C# scripting environment, remove in Tabular Editor ***
 
-bool fullReset = false;
+// Get the number of decimal places from the user
+var fullResetOption = Interaction.InputBox(
+    Prompt: "Should this reset all measures and columns (or just those where a format hasn't been set by using the macros)? Y/N",
+    Title: "Set full reset:",
+    DefaultResponse: "N"
+);
+
+var fullReset = false;
+
+switch (fullResetOption)
+{
+    case "Y":
+        fullReset = false;
+        break;
+
+    case "N":
+        fullReset = false;
+        break;
+
+    default:
+        ScriptHelper.Error(
+            message: "Incorrect value entered!"
+        );
+        return;
+}
 
 Func<string, string, string> RemovePBIChangedProperty = (string pbiChangedProperties, string propertyName) =>
 {
@@ -38,7 +64,8 @@ foreach (var m in Model.AllMeasures)
         if (disallowApplyingDefaultFormatting) { continue; }
     }
 
-    m.FormatString = "";
+    m.FormatString = string.Empty;
+    m.FormatStringExpression = string.Empty;
     m.SetAnnotation("Format", "<Format Format=\"General\" />");
     m.SetAnnotation("PBI_FormatHint", "{\"isGeneralNumber\":true}");
 
