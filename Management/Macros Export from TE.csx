@@ -1,5 +1,5 @@
-﻿#r ".\Assemblies\TabularEditor.exe"
-#r ".\Assemblies\TOMWrapper14.dll"
+﻿#load ".\Common Library.csx"
+
 #r "nuget: Newtonsoft.Json, 13.0.2"
 
 using TabularEditor.Scripting;
@@ -10,7 +10,7 @@ using Newtonsoft.Json.Linq;
 //  *** Warning! ***  this will clear all existing script content in the 'outFolder' folder
 //  *** Warning! ***  this will clear all existing script content in the 'outFolder' folder
 
-var outFolder = @".\Collection";
+var outFolder = @".\CollectionTest";
 var TE3overTE2 = true;
 
 // Load MacroActions
@@ -48,6 +48,11 @@ foreach (var jtokenItem in json["Actions"])
     // Generate filename without extension and relataive path
     var fileName = string.Join("_", jtokenItem["Name"].Value<string>().Replace('\\', '~').Split(Path.GetInvalidFileNameChars())).Replace('~', '\\');
     if (jsonFile == jsonFileV3) { fileName = fileName + " [" + jtokenItem["Id"].Value<string>() + "]"; }
+
+    // Generate "Common Library.csx" load directive
+    var relativeBasePath = string.Concat (Enumerable.Repeat (@"..\", outFolder.Count(x => x == '\\')));
+    var relativeMacroPath = string.Concat (Enumerable.Repeat (@"..\", fileName.Count(x => x == '\\')));
+    var loadCommonLibrary = @"#load """ + relativeBasePath + relativeMacroPath + @"Management\Common Library.csx""";
 
     // Get csxContent and adapt to C# scripting environment
     var csxContent = "\n" + jtokenItem["Execute"].Value<string>();
@@ -87,9 +92,9 @@ foreach (var jtokenItem in json["Actions"])
         "using TabularEditor.TOMWrapper;",
         "using TabularEditor.TOMWrapper.Utils;",
         "using TabularEditor.UI;",
-        "using TabularEditor.Scripting;",
-        // "using TOM = Microsoft.AnalysisServices.Tabular;",
-        "// *** The above namespaces are required for the C# scripting environment, remove in Tabular Editor ***"
+        "using TabularEditor.Scripting;"
+        // "using TOM = Microsoft.AnalysisServices.Tabular;"
+        // "// *** The above namespaces are required for the C# scripting environment, remove in Tabular Editor ***"
     };
     var classVariableList = new List<string>()
     {
@@ -112,11 +117,13 @@ foreach (var jtokenItem in json["Actions"])
     }
 
     // Reconstruct csxContent from lists
-    csxContent = string.Join(Environment.NewLine + Environment.NewLine, new List<string>()
+    csxContent = string.Join(Environment.NewLine, new List<string>()
     {
-        string.Join(Environment.NewLine, assemblyList),
+        loadCommonLibrary,
+        // string.Join(Environment.NewLine, assemblyList),
         string.Join(Environment.NewLine, namespaceList),
-        string.Join(Environment.NewLine, classVariableList),
+        @"// *** The above is required for the C# scripting environment, remove in Tabular Editor ***" + Environment.NewLine,
+        // string.Join(Environment.NewLine, classVariableList),
         string.Join(Environment.NewLine, scriptBodyList).Trim('\r', '\n')
             .Replace(Environment.NewLine + Environment.NewLine + Environment.NewLine, Environment.NewLine + Environment.NewLine)
     });
