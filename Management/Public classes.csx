@@ -1,5 +1,6 @@
 ﻿#load ".\Common Library.csx"
 // *** The above assemblies are required for the C# scripting environment, remove in Tabular Editor ***
+#r "Microsoft.VisualBasic"
 
 using System;
 using System.Linq;
