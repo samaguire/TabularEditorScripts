@@ -1,5 +1,6 @@
 ﻿#load "..\..\..\Management\Common Library.csx"
 // *** The above assemblies are required for the C# scripting environment, remove in Tabular Editor ***
+#r "Microsoft.VisualBasic"
 #r "Microsoft.AnalysisServices.Core"
 
 using System;
@@ -12,6 +13,7 @@ using TabularEditor.TOMWrapper.Utils;
 using TabularEditor.UI;
 using TabularEditor.Scripting;
 // *** The above namespaces are required for the C# scripting environment, remove in Tabular Editor ***
+using Microsoft.VisualBasic;
 using Microsoft.AnalysisServices.Core;
 
 Model.Database.TOMDatabase.Backup(

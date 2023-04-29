@@ -1,6 +1,5 @@
-﻿#load "..\..\Management\Common Library.csx"
+﻿#load ".\Common Library.csx"
 // *** The above assemblies are required for the C# scripting environment, remove in Tabular Editor ***
-#r "Microsoft.VisualBasic"
 
 using System;
 using System.Linq;
@@ -26,7 +25,7 @@ public static class Fx
         return model.AddCalculatedTable(name: tableName, expression: tableExpression);
     }
 
-    public static Table ScriptHelper.SelectTableExt(Model model, string possibleName = null, string annotationName = null, string annotationValue = null,
+    public static Table SelectTableExt(Model model, string possibleName = null, string annotationName = null, string annotationValue = null,
         Func<Table, bool> lambdaExpression = null, string label = "Select Table", bool skipDialogIfSingleMatch = true, bool showOnlyMatchingTables = true,
         IEnumerable<Table> candidateTables = null, bool showErrorIfNoTablesFound = false, string errorMessage = "No tables found", bool selectFirst = false,
         bool showErrorIfNoSelection = true, string noSelectionErrorMessage = "No table was selected", bool excludeCalcGroups = false, bool returnNullIfNoTablesFound = false)

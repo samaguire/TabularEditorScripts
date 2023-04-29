@@ -1,5 +1,6 @@
 ﻿#load "..\..\..\..\Management\Common Library.csx"
 // *** The above assemblies are required for the C# scripting environment, remove in Tabular Editor ***
+#r "Microsoft.VisualBasic"
 #r "System.IO"
 #r "System.IO.Compression.FileSystem"
 
@@ -13,6 +14,7 @@ using TabularEditor.TOMWrapper.Utils;
 using TabularEditor.UI;
 using TabularEditor.Scripting;
 // *** The above namespaces are required for the C# scripting environment, remove in Tabular Editor ***
+using Microsoft.VisualBasic;
 using System.IO;
 using System.IO.Compression;
 

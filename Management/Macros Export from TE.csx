@@ -78,8 +78,10 @@ foreach (var jtokenItem in json["Actions"])
     var assemblyList = new List<string>()
     {
         loadCommonLibrary,
-        @"// *** The above assemblies are required for the C# scripting environment, remove in Tabular Editor ***"
+        @"// *** The above assemblies are required for the C# scripting environment, remove in Tabular Editor ***",
+        @"#r ""Microsoft.VisualBasic"""
     };
+    var assemblyHashset = new HashSet<string>(assemblyList);
     var namespaceList = new List<string>()
     {
         @"using System;",
@@ -91,8 +93,10 @@ foreach (var jtokenItem in json["Actions"])
         @"using TabularEditor.TOMWrapper.Utils;",
         @"using TabularEditor.UI;",
         @"using TabularEditor.Scripting;",
-        @"// *** The above namespaces are required for the C# scripting environment, remove in Tabular Editor ***"
+        @"// *** The above namespaces are required for the C# scripting environment, remove in Tabular Editor ***",
+        @"using Microsoft.VisualBasic;"
     };
+    var namespaceHashset = new HashSet<string>(namespaceList);
     var scriptBodyList = new List<string>();
 
     // Deconstruct csxContent to C# scripting environment lists
@@ -101,8 +105,14 @@ foreach (var jtokenItem in json["Actions"])
         var line = "";
         while ((line = reader.ReadLine()) != null)
         {
-            if (line.StartsWith("#r ")) { assemblyList.Add(line); }
-            else if (line.StartsWith("using ") && !line.StartsWith("using (")) { namespaceList.Add(line); }
+            if (line.StartsWith("#r "))
+            {
+                if (assemblyHashset.Add(line)) { assemblyList.Add(line); }
+            }
+            else if (line.StartsWith("using ") && !line.StartsWith("using ("))
+            {
+                if (namespaceHashset.Add(line)) { namespaceList.Add(line); }
+            }
             else { scriptBodyList.Add(line); }
         }
     }

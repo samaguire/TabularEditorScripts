@@ -1,5 +1,6 @@
 #load "..\Management\Common Library.csx"
 // *** The above assemblies are required for the C# scripting environment, remove in Tabular Editor ***
+#r "Microsoft.VisualBasic"
 
 using System;
 using System.Linq;
@@ -11,6 +12,7 @@ using TabularEditor.TOMWrapper.Utils;
 using TabularEditor.UI;
 using TabularEditor.Scripting;
 // *** The above namespaces are required for the C# scripting environment, remove in Tabular Editor ***
+using Microsoft.VisualBasic;
 using System.Windows.Forms;
 
 Func<IList<string>, string, string> SelectString = (IList<string> listText, string titleText) =>
