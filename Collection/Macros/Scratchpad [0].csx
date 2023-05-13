@@ -1,4 +1,5 @@
 ﻿#load "..\..\Management\Common Library.csx"
+#load "..\..\Management\Common Classes.csx"
 // *** The above assemblies are required for the C# scripting environment, remove in Tabular Editor ***
 #r "Microsoft.VisualBasic"
 
@@ -14,6 +15,3 @@ using TabularEditor.Scripting;
 // *** The above namespaces are required for the C# scripting environment, remove in Tabular Editor ***
 using Microsoft.VisualBasic;
 
-// #load ".\Public classes [0].csx"
-
-// *** The below public classes are common across scripts ***

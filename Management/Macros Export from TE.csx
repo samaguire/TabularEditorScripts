@@ -53,6 +53,7 @@ foreach (var jtokenItem in json["Actions"])
     var relativeBasePath = string.Concat (Enumerable.Repeat (@"..\", outFolder.Count(x => x == '\\')));
     var relativeMacroPath = string.Concat (Enumerable.Repeat (@"..\", fileName.Count(x => x == '\\')));
     var loadCommonLibrary = @"#load """ + relativeBasePath + relativeMacroPath + @"Management\Common Library.csx""";
+    var loadPublicClasses = @"#load """ + relativeBasePath + relativeMacroPath + @"Management\Common Classes.csx""";
 
     // Get csxContent and adapt to C# scripting environment
     var csxContent = "\n" + jtokenItem["Execute"].Value<string>();
@@ -78,6 +79,7 @@ foreach (var jtokenItem in json["Actions"])
     var assemblyList = new List<string>()
     {
         loadCommonLibrary,
+        loadPublicClasses,
         @"// *** The above assemblies are required for the C# scripting environment, remove in Tabular Editor ***",
         @"#r ""Microsoft.VisualBasic"""
     };

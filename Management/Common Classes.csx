@@ -15,7 +15,6 @@ using TabularEditor.Scripting;
 using Microsoft.VisualBasic;
 
 // *** The below public classes are common across scripts ***
-
 public static class Fx
 {
 
