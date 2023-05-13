@@ -23,13 +23,32 @@ Func<string, string, string> RemovePBIChangedProperty = (string pbiChangedProper
     return jsonArray.Any() ? JsonConvert.SerializeObject(jsonArray) : null;
 };
 
-foreach (var c in Model.AllColumns.Where(x => x.SortByColumn != null))
+foreach (var c in Model.AllColumns)
 {
 
+    // if column is on a calculation group table move to next column
     if (c.Table.ObjectType == ObjectType.CalculationGroupTable) { continue; }
 
-    c.SortByColumn = null;
+    // if a valid sortby column can be found use that, otherwsie clear the SortBy column
+    var tableColumns = c.Table.Columns.Where(tc =>
+        tc.Name.ToLower() == (c.Name + " Number").ToLower() ||
+        tc.Name.ToLower() == (c.Name + " Sort").ToLower() ||
+        tc.Name.ToLower() == (c.Name + " SortBy").ToLower() ||
+        tc.Name.ToLower() == (c.Name + " Order").ToLower() ||
+        tc.Name.ToLower() == (c.Name + " OrderBy").ToLower() ||
+        tc.Name.ToLower() == (c.Name + " Ordinal").ToLower()
+        ).OrderBy(tc => tc);
+    if (tableColumns.Any())
+    {
+        c.SortByColumn = tableColumns.First();
+        tableColumns.First().IsHidden = true;
+    }
+    else
+    {
+        c.SortByColumn = null;
+    }
 
+    // clean up old desktop annotations
     var pbiChangedProperties = c.GetAnnotation("PBI_ChangedProperties");
     pbiChangedProperties = RemovePBIChangedProperty(pbiChangedProperties, "SortByColumn");
     if (!String.IsNullOrEmpty(pbiChangedProperties))

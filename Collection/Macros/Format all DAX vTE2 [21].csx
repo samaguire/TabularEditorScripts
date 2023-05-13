@@ -14,7 +14,7 @@ using TabularEditor.Scripting;
 // *** The above namespaces are required for the C# scripting environment, remove in Tabular Editor ***
 using Microsoft.VisualBasic;
 
-var useShortFormat = false;
+var useShortFormat = true;
 var insertSpaceAfterFunctionName = false;
 var insertLineBreakOnFirstLine = true;
 

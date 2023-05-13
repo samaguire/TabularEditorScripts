@@ -15,7 +15,7 @@ using TabularEditor.Scripting;
 using Microsoft.VisualBasic;
 using Newtonsoft.Json.Linq;
 
-// Get the number of decimal places from the user
+// Ask the user if this is a full reset or not
 var fullResetOption = Interaction.InputBox(
     Prompt: "Should this reset all measures and columns (or just those where a format hasn't been set by using the macros)? Y/N",
     Title: "Set full reset:",
@@ -27,7 +27,7 @@ var fullReset = false;
 switch (fullResetOption)
 {
     case "Y":
-        fullReset = false;
+        fullReset = true;
         break;
 
     case "N":
