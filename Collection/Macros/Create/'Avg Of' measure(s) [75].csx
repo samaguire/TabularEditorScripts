@@ -18,9 +18,9 @@ using Microsoft.VisualBasic;
 foreach(var c in Selected.Columns)
 {
     c.Table.AddMeasure(
-        name: "Avg Of " + c.Name,
+        name: "Avg of " + c.Name,
         expression: "AVERAGE( " + c.DaxObjectFullName + " )",
-        displayFolder: c.DisplayFolder + "\\Avg Of Measures"
+        displayFolder: c.DisplayFolder + "\\Avg of Measures"
     );
     c.IsHidden = true;
 }

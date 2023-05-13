@@ -18,9 +18,9 @@ using Microsoft.VisualBasic;
 foreach(var c in Selected.Columns)
 {
     c.Table.AddMeasure(
-        name: "Sum Of " + c.Name,
+        name: "Sum of " + c.Name,
         expression: "SUM( " + c.DaxObjectFullName + " )",
-        displayFolder: c.DisplayFolder + "\\Sum Of Measures"
+        displayFolder: c.DisplayFolder + "\\Sum of Measures"
     );
     c.IsHidden = true;
 }

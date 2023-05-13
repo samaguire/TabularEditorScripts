@@ -18,9 +18,9 @@ using Microsoft.VisualBasic;
 foreach(var c in Selected.Columns)
 {
     c.Table.AddMeasure(
-        name: "Distinct Count Of " + c.Name,
+        name: "Distinct Count of " + c.Name,
         expression: "DISTINCTCOUNT( " + c.DaxObjectFullName + " )",
-        displayFolder: c.DisplayFolder + "\\Distinct Count Of Measures"
+        displayFolder: c.DisplayFolder + "\\Distinct Count of Measures"
     );
     c.IsHidden = true;
 }

@@ -1,6 +1,6 @@
 ﻿{
   "Id": 48,
-  "Name": "Macros\\Create\\'Distinct Count Of' measure(s)",
+  "Name": "Macros\\Create\\'Distinct Count of' measure(s)",
   "Enabled": "true",
   "Tooltip": "",
   "ValidContexts": "Column"
