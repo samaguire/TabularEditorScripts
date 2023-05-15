@@ -17,7 +17,7 @@ if (!Directory.Exists(inFolder)) { return; }
 var assemblyList = new List<string>()
 {
     @"Common Library.csx""",
-    @"Common Classes.csx""",
+    @"Custom Classes.csx""",
     "// *** The above assemblies are required for the C# scripting environment, remove in Tabular Editor ***"
 };
 var namespaceList = new List<string>()
