@@ -23,6 +23,8 @@ static readonly Model Model;
 static readonly UITreeSelection Selected;
 // *** The above class variables are required for the C# scripting environment, remove in Tabular Editor ***
 
+// https://docs.tabulareditor.com/te3/features/csharp-scripts.html
+
 var rootFolder = @"C:\Program Files\dotnet\packs\Microsoft.WindowsDesktop.App.Ref";
 var subFolders = Directory.GetDirectories(rootFolder, "6.*");
 var dotNetPath = Path.Combine(rootFolder, subFolders[0]);
