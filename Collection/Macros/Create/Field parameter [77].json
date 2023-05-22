@@ -3,5 +3,5 @@
   "Name": "Macros\\Create\\Field parameter",
   "Enabled": "true",
   "Tooltip": "",
-  "ValidContexts": "Measure"
+  "ValidContexts": "Measure, Column"
 }
