@@ -23,7 +23,7 @@ if (!Selected.Measures.Any())
 }
 
 // Get calculation group table
-var ts = Model.Tables.Where(x => x.ObjectType == (ObjectType.CalculationGroupTable)).Where(x => x.Name != "getSelectedMeasureFormatString");
+var ts = Model.Tables.Where(x => x.ObjectType == (ObjectType.CalculationGroupTable)).Where(x => x.Name != "getFormatString");
 var t = null as CalculationGroupTable;
 if (ts.Any())
 {
@@ -56,16 +56,15 @@ if (Model.Database.CompatibilityLevel < 1601)
 }
 
 // Create helper calculation group table, deleting existing table if it exists
-if(Model.Tables.Where(x => x.Name == "getSelectedMeasureFormatString").Any()) { Model.Tables["getSelectedMeasureFormatString"].Delete(); }
+if(Model.Tables.Where(x => x.Name == "getFormatString").Any()) { Model.Tables["getFormatString"].Delete(); }
 var cg = Model.AddCalculationGroup(
-    name: "getSelectedMeasureFormatString"
+    name: "getFormatString"
     );
 cg.AddCalculationItem(
-    name: "getSelectedMeasureFormatString",
+    name: "getFormatString",
     expression: "SELECTEDMEASUREFORMATSTRING()"
     );
 cg.IsHidden = true;
-cg.IsPrivate= true;
 
 // Set template measure expression
 var templateMeasureExpression = @"
@@ -82,12 +81,12 @@ VAR CalculationItemFormat =
             <m>,
             <c> = ""<i>""
         ),
-        'getSelectedMeasureFormatString'[Name] = ""getSelectedMeasureFormatString""
+        'getFormatString'[Name] = ""getFormatString""
     )
 VAR MeasureFormat =
     CALCULATE(
         <m>,
-        'getSelectedMeasureFormatString'[Name] = ""getSelectedMeasureFormatString""
+        'getFormatString'[Name] = ""getFormatString""
     )
 RETURN
     CONVERT(
