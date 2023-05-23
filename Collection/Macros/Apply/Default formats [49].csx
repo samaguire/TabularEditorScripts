@@ -100,7 +100,7 @@ foreach (var c in Model.AllColumns)
             c.SetAnnotation("Format", "<Format Format=\"Boolean\" />");
             break;
         case DataType.DateTime:
-            c.FormatString = "General Date";
+            c.FormatString = "Long Date";
             // c.SetAnnotation("Format", "<Format Format=\"DateTimeGeneralPattern\"><DateTimes><DateTime LCID=\"5129\" Group=\"GeneralDateTimeLong\" FormatString=\"G\" /></DateTimes></Format>");
             c.SetAnnotation("Format", "<Format Format=\"DateTimeGeneralPattern\"><DateTimes><DateTime LCID=\"1033\" Group=\"GeneralDateTimeLong\" FormatString=\"G\" /></DateTimes></Format>");
             c.RemoveAnnotation("UnderlyingDateTimeDataType");
@@ -113,7 +113,7 @@ foreach (var c in Model.AllColumns)
             c.RemoveAnnotation("PBI_FormatHint");
             break;
         case DataType.Double:
-            c.FormatString = "";
+            c.FormatString = string.Empty;
             c.SetAnnotation("Format", "<Format Format=\"General\" />");
             break;
         case DataType.Int64:
@@ -121,7 +121,7 @@ foreach (var c in Model.AllColumns)
             c.SetAnnotation("Format", "<Format Format=\"NumberWhole\" Accuracy=\"0\" />");
             break;
         case DataType.String:
-            c.FormatString = "";
+            c.FormatString = string.Empty;
             c.SetAnnotation("Format", "<Format Format=\"Text\" />");
             break;
         default:
