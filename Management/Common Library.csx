@@ -26,7 +26,7 @@ static readonly UITreeSelection Selected;
 // https://docs.tabulareditor.com/te3/features/csharp-scripts.html
 
 var rootFolder = @"C:\Program Files\dotnet\packs\Microsoft.WindowsDesktop.App.Ref";
-var subFolders = Directory.GetDirectories(rootFolder, "6.*");
+var subFolders = Directory.GetDirectories(rootFolder, "7.*");
 var dotNetPath = Path.Combine(rootFolder, subFolders[0]);
 
 var assemblyFiles = new List<string>()

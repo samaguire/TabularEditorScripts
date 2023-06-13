@@ -1,5 +1,5 @@
-﻿#load "..\..\Management\Common Library.csx"
-#load "..\..\Management\Custom Classes.csx"
+﻿#load "..\..\..\Management\Common Library.csx"
+#load "..\..\..\Management\Custom Classes.csx"
 // *** The above assemblies are required for the C# scripting environment, remove in Tabular Editor ***
 #r "Microsoft.VisualBasic"
 
@@ -15,3 +15,11 @@ using TabularEditor.Scripting;
 // *** The above namespaces are required for the C# scripting environment, remove in Tabular Editor ***
 using Microsoft.VisualBasic;
 
+foreach (var r in Model.Relationships)
+{
+    var c = r.FromColumn.Name;
+    var t = r.FromTable.Name;
+    Model.Tables[t].Columns[c].IsHidden = true;
+}
+
+ScriptHelper.Info("Script finished.");

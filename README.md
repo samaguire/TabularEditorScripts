@@ -23,7 +23,7 @@ The below software needs to be installed. (Portable versions of Tabular Editor a
 ### Quick Install
 
 1. Opening this repo in Visual Studio Code will prompt to install the C# and Code Runner extensions if not already installed.
-2. The dotnet script tool can be installed from the terminal using the command `dotnet tool install -g dotnet-script`
+2. The dotnet script tool can be installed from the terminal using the command `dotnet tool install -g dotnet-script --version 1.3.1`
 3. Update the Code Runner Executor Map setting for C# to `"csharp": "dotnet script --isolated-load-context"` from `"csharp": "cscript"`
 
 ### Visual Studio Extensions
