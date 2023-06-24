@@ -28,7 +28,7 @@ Func<string, string, string> AddPBIChangedProperty = (string pbiChangedPropertie
 foreach (var m in Selected.Measures)
 {
 
-    if (m.DataType != DataType.Decimal && m.DataType != DataType.Double && m.DataType != DataType.Int64) { continue; }
+    if (m.DataType != DataType.Decimal && m.DataType != DataType.Double && m.DataType != DataType.Int64 && m.DataType != DataType.Variant) { continue; }
 
     m.FormatString = "#,#;(#,#);0";
     m.SetAnnotation("Format", "<Format Format=\"Custom\" Custom=\"#,#;(#,#);0\" />");
