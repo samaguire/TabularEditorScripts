@@ -1,0 +1,7 @@
+﻿{
+  "Id": 36,
+  "Name": "Macros\\Remove\\Sort by column",
+  "Enabled": "true",
+  "Tooltip": "",
+  "ValidContexts": "Column"
+}

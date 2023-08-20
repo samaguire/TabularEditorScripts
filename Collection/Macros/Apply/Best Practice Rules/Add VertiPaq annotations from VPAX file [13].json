@@ -1,7 +1,0 @@
-﻿{
-  "Id": 13,
-  "Name": "Macros\\Apply\\Best Practice Rules\\Add VertiPaq annotations from VPAX file",
-  "Enabled": "false",
-  "Tooltip": "",
-  "ValidContexts": "Model"
-}

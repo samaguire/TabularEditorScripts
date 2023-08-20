@@ -1,0 +1,7 @@
+﻿{
+  "Id": 19,
+  "Name": "Macros\\Create\\Parent-child hierarchy",
+  "Enabled": "true",
+  "Tooltip": "",
+  "ValidContexts": "Table"
+}

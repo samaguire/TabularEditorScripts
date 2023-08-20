@@ -1,0 +1,7 @@
+﻿{
+  "Id": 35,
+  "Name": "Macros\\Launch\\Perspective Editor",
+  "Enabled": "true",
+  "Tooltip": "",
+  "ValidContexts": "Model"
+}

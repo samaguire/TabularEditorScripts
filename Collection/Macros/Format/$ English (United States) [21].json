@@ -1,0 +1,7 @@
+﻿{
+  "Id": 21,
+  "Name": "Macros\\Format\\$ English (United States)",
+  "Enabled": "true",
+  "Tooltip": "",
+  "ValidContexts": "Measure, Column"
+}

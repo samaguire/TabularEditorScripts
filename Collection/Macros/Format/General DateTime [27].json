@@ -1,0 +1,7 @@
+﻿{
+  "Id": 27,
+  "Name": "Macros\\Format\\General DateTime",
+  "Enabled": "true",
+  "Tooltip": "",
+  "ValidContexts": "Measure"
+}

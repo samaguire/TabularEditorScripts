@@ -1,0 +1,7 @@
+﻿{
+  "Id": 22,
+  "Name": "Macros\\Format\\Custom display units",
+  "Enabled": "true",
+  "Tooltip": "",
+  "ValidContexts": "Measure"
+}

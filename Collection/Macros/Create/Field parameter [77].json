@@ -1,7 +1,0 @@
-﻿{
-  "Id": 77,
-  "Name": "Macros\\Create\\Field parameter",
-  "Enabled": "true",
-  "Tooltip": "",
-  "ValidContexts": "Measure, Column"
-}

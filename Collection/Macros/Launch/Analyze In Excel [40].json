@@ -1,7 +1,0 @@
-﻿{
-  "Id": 40,
-  "Name": "Macros\\Launch\\Analyze In Excel",
-  "Enabled": "true",
-  "Tooltip": "",
-  "ValidContexts": "Model"
-}

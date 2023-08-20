@@ -1,0 +1,7 @@
+﻿{
+  "Id": 9,
+  "Name": "Macros\\Apply\\Discourage implicit measures",
+  "Enabled": "true",
+  "Tooltip": "",
+  "ValidContexts": "Model"
+}
