@@ -1,0 +1,7 @@
+﻿{
+  "Id": 44,
+  "Name": "Macros\\Apply\\Blank lineage tags",
+  "Enabled": "true",
+  "Tooltip": "",
+  "ValidContexts": "Model"
+}
