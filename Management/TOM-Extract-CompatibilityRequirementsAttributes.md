@@ -8,12 +8,12 @@
 | Microsoft.AnalysisServices.Tabular.BasicRefreshPolicy | Class | 1450 | 1450 | 1450 |
 | Microsoft.AnalysisServices.Tabular.CalculatedColumn.EvaluationBehavior | Property | Preview | Preview | Preview |
 | Microsoft.AnalysisServices.Tabular.CalculationGroup | Class | 1470 | 1470 | 1470 |
-| Microsoft.AnalysisServices.Tabular.CalculationGroup.MultiSelectionExpression | Property | Preview | Preview | Preview |
-| Microsoft.AnalysisServices.Tabular.CalculationGroup.NoSelectionExpression | Property | Preview | Preview | Preview |
+| Microsoft.AnalysisServices.Tabular.CalculationGroup.MultipleOrEmptySelectionExpression | Property | 1605 | 1605 | 1605 |
+| Microsoft.AnalysisServices.Tabular.CalculationGroup.NoSelectionExpression | Property | 1605 | 1605 | 1605 |
 | Microsoft.AnalysisServices.Tabular.CalculationGroupAnnotationCollection | Class | 1470 | 1470 | 1470 |
-| Microsoft.AnalysisServices.Tabular.CalculationGroupExpression | Class | Preview | Preview | Preview |
-| Microsoft.AnalysisServices.Tabular.CalculationGroupExpressionCollection | Class | Preview | Preview | Preview |
-| Microsoft.AnalysisServices.Tabular.CalculationGroupSelectionMode | Enum | Preview | Preview | Preview |
+| Microsoft.AnalysisServices.Tabular.CalculationGroupExpression | Class | 1605 | 1605 | 1605 |
+| Microsoft.AnalysisServices.Tabular.CalculationGroupExpressionCollection | Class | 1605 | 1605 | 1605 |
+| Microsoft.AnalysisServices.Tabular.CalculationGroupSelectionMode | Enum | 1605 | 1605 | 1605 |
 | Microsoft.AnalysisServices.Tabular.CalculationGroupSource | Class | 1470 | 1470 | 1470 |
 | Microsoft.AnalysisServices.Tabular.CalculationItem | Class | 1470 | 1470 | 1470 |
 | Microsoft.AnalysisServices.Tabular.CalculationItem.Ordinal | Property | 1500 | 1500 | 1500 |
@@ -32,6 +32,7 @@
 | Microsoft.AnalysisServices.Tabular.DataCoverageDefinition | Class | 1603 | 1603 | 1603 |
 | Microsoft.AnalysisServices.Tabular.DataCoverageDefinitionAnnotationCollection | Class | 1603 | 1603 | 1603 |
 | Microsoft.AnalysisServices.Tabular.DataSourceVariablesOverrideBehaviorType | Enum | 1475 | 1475 | 1475 |
+| Microsoft.AnalysisServices.Tabular.DirectLakeBehavior | Enum | 1604 | 1604 | 1604 |
 | Microsoft.AnalysisServices.Tabular.EntityPartitionSource.SchemaName | Property | 1604 | 1604 | 1604 |
 | Microsoft.AnalysisServices.Tabular.EvaluationBehavior | Enum | Preview | Preview | Preview |
 | Microsoft.AnalysisServices.Tabular.ExcludedArtifact | Class | Preview | Preview | Preview |
@@ -61,6 +62,7 @@
 | Microsoft.AnalysisServices.Tabular.Model.DataSourceDefaultMaxConnections | Property | 1510 | 1510 | 1510 |
 | Microsoft.AnalysisServices.Tabular.Model.DataSourceVariablesOverrideBehavior | Property | 1475 | 1475 | 1475 |
 | Microsoft.AnalysisServices.Tabular.Model.DefaultPowerBIDataSourceVersion | Property | 1450 | 1450 | 1450 |
+| Microsoft.AnalysisServices.Tabular.Model.DirectLakeBehavior | Property | 1604 | 1604 | 1604 |
 | Microsoft.AnalysisServices.Tabular.Model.DisableAutoExists | Property | 1566 | 1566 | 1566 |
 | Microsoft.AnalysisServices.Tabular.Model.DisableSystemDefaultExpression | Property | Preview | Preview | Preview |
 | Microsoft.AnalysisServices.Tabular.Model.DiscourageCompositeModels | Property | 1560 | 1560 | 1560 |
@@ -88,7 +90,7 @@
 | Microsoft.AnalysisServices.Tabular.ObjectTranslation.Altered | Property | 1571 | 1571 | 1571 |
 | Microsoft.AnalysisServices.Tabular.ObjectType.AlternateOf | Field | 1460 | 1460 | 1460 |
 | Microsoft.AnalysisServices.Tabular.ObjectType.AnalyticsAIMetadata | Field | Preview | Preview | Preview |
-| Microsoft.AnalysisServices.Tabular.ObjectType.CalculationExpression | Field | Preview | Preview | Preview |
+| Microsoft.AnalysisServices.Tabular.ObjectType.CalculationExpression | Field | 1605 | 1605 | 1605 |
 | Microsoft.AnalysisServices.Tabular.ObjectType.CalculationGroup | Field | 1470 | 1470 | 1470 |
 | Microsoft.AnalysisServices.Tabular.ObjectType.CalculationItem | Field | 1470 | 1470 | 1470 |
 | Microsoft.AnalysisServices.Tabular.ObjectType.Calendar | Field | Preview | Preview | Preview |

@@ -1,7 +1,7 @@
 // https://notes.mthierba.net/power-bi/analysis-services/list-new-features-in-tom-library#linqpad-script
 // https://www.nuget.org/packages/Microsoft.AnalysisServices.retail.amd64#versions-body-tab
 
-#r "nuget: Microsoft.AnalysisServices.NetCore.retail.amd64"
+#r "nuget: Microsoft.AnalysisServices.retail.amd64, 19.69.6.2"
 
 using System.Reflection;
 using TOM = Microsoft.AnalysisServices.Tabular;
