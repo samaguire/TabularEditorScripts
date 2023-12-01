@@ -1,0 +1,7 @@
+﻿{
+  "Id": 25,
+  "Name": "Macros\\Format\\Percentage",
+  "Enabled": "true",
+  "Tooltip": "",
+  "ValidContexts": "Measure, Column"
+}

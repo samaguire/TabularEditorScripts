@@ -1,0 +1,7 @@
+﻿{
+  "Id": 1,
+  "Name": "Macros\\Preview columns and measures",
+  "Enabled": "true",
+  "Tooltip": "",
+  "ValidContexts": "Measure, Column"
+}

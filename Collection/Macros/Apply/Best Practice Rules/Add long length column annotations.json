@@ -1,0 +1,7 @@
+﻿{
+  "Id": 36,
+  "Name": "Macros\\Apply\\Best Practice Rules\\Add long length column annotations",
+  "Enabled": "false",
+  "Tooltip": "",
+  "ValidContexts": "Model"
+}

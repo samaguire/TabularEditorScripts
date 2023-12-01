@@ -36,6 +36,7 @@ var namespaceList = new List<string>()
 
 // Pull details from csx and json files
 var jsonArray = new JArray();
+int loopCounter = 0;
 foreach (var filePath in Directory.EnumerateFiles(inFolder, "*.csx", SearchOption.AllDirectories))
 {
 
@@ -51,8 +52,11 @@ foreach (var filePath in Directory.EnumerateFiles(inFolder, "*.csx", SearchOptio
 
     // Build MacroAction and add to 'Actions' json array
     var jsonContent = (JObject.Parse(File.ReadAllText(filePath.Replace(".csx", ".json"))));
+    jsonContent["Id"] = loopCounter;
     jsonContent.Add("Execute", csxContent);
     jsonArray.Add(jsonContent);
+
+    loopCounter++;
 
 }
 

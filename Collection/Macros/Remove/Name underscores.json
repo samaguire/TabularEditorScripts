@@ -1,0 +1,7 @@
+﻿{
+  "Id": 33,
+  "Name": "Macros\\Remove\\Name underscores",
+  "Enabled": "true",
+  "Tooltip": "",
+  "ValidContexts": "Table, Column"
+}

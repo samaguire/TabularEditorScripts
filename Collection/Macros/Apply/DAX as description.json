@@ -1,0 +1,7 @@
+﻿{
+  "Id": 5,
+  "Name": "Macros\\Apply\\DAX as description",
+  "Enabled": "true",
+  "Tooltip": "",
+  "ValidContexts": "Measure"
+}

@@ -47,7 +47,7 @@ foreach (var jtokenItem in json["Actions"])
 
     // Generate filename without extension and relataive path
     var fileName = string.Join("_", jtokenItem["Name"].Value<string>().Replace('\\', '~').Split(Path.GetInvalidFileNameChars())).Replace('~', '\\');
-    if (jsonFile == jsonFileV3) { fileName = fileName + " [" + jtokenItem["Id"].Value<string>() + "]"; }
+    // if (jsonFile == jsonFileV3) { fileName = fileName + " [" + jtokenItem["Id"].Value<string>() + "]"; } // ignored as causes git version control changes when macro ids are reset, however, the watchout is the duplicate names
 
     // Generate "Common Library.csx" load directive
     var relativeBasePath = string.Concat (Enumerable.Repeat (@"..\", outFolder.Count(x => x == '\\')));
@@ -80,8 +80,7 @@ foreach (var jtokenItem in json["Actions"])
     {
         loadCommonLibrary,
         loadCustomClasses,
-        @"// *** The above assemblies are required for the C# scripting environment, remove in Tabular Editor ***",
-        @"#r ""Microsoft.VisualBasic"""
+        @"// *** The above assemblies are required for the C# scripting environment, remove in Tabular Editor ***"
     };
     var assemblyHashset = new HashSet<string>(assemblyList);
     var namespaceList = new List<string>()
@@ -95,8 +94,7 @@ foreach (var jtokenItem in json["Actions"])
         @"using TabularEditor.TOMWrapper.Utils;",
         @"using TabularEditor.UI;",
         @"using TabularEditor.Scripting;",
-        @"// *** The above namespaces are required for the C# scripting environment, remove in Tabular Editor ***",
-        @"using Microsoft.VisualBasic;"
+        @"// *** The above namespaces are required for the C# scripting environment, remove in Tabular Editor ***"
     };
     var namespaceHashset = new HashSet<string>(namespaceList);
     var scriptBodyList = new List<string>();

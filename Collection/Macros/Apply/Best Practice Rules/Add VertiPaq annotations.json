@@ -1,0 +1,7 @@
+﻿{
+  "Id": 39,
+  "Name": "Macros\\Apply\\Best Practice Rules\\Add VertiPaq annotations",
+  "Enabled": "false",
+  "Tooltip": "",
+  "ValidContexts": "Model"
+}

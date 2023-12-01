@@ -1,7 +1,0 @@
-﻿{
-  "Id": 31,
-  "Name": "Macros\\Format\\Whole number",
-  "Enabled": "true",
-  "Tooltip": "",
-  "ValidContexts": "Measure, Column"
-}

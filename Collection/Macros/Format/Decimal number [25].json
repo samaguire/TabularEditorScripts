@@ -1,7 +1,0 @@
-﻿{
-  "Id": 25,
-  "Name": "Macros\\Format\\Decimal number",
-  "Enabled": "true",
-  "Tooltip": "",
-  "ValidContexts": "Measure, Column"
-}

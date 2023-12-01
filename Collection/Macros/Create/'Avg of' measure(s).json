@@ -1,0 +1,7 @@
+﻿{
+  "Id": 11,
+  "Name": "Macros\\Create\\'Avg of' measure(s)",
+  "Enabled": "true",
+  "Tooltip": "",
+  "ValidContexts": "Column"
+}

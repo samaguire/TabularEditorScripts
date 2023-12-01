@@ -1,0 +1,7 @@
+﻿{
+  "Id": 37,
+  "Name": "Macros\\Apply\\Best Practice Rules\\Add split datetime annotations",
+  "Enabled": "false",
+  "Tooltip": "",
+  "ValidContexts": "Model"
+}

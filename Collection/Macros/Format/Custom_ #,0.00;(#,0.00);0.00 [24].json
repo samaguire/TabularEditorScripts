@@ -1,7 +1,0 @@
-﻿{
-  "Id": 24,
-  "Name": "Macros\\Format\\Custom: #,0.00;(#,0.00);0.00",
-  "Enabled": "true",
-  "Tooltip": "",
-  "ValidContexts": "Measure, Column"
-}
