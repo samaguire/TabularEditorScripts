@@ -13,3 +13,4 @@ using TabularEditor.UI;
 using TabularEditor.Scripting;
 // *** The above namespaces are required for the C# scripting environment, remove in Tabular Editor ***
 
+// CustomClass.CreateCT("tst", "{0}");

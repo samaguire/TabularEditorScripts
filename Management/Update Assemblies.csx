@@ -13,7 +13,7 @@ var assemblyFiles = new List<string>()
     {Directory.GetFiles(dotNetPath, "System.Windows.Forms.Primitives.dll", SearchOption.AllDirectories)[0]}
 };
 
-var destFolder = @".\Assemblies";
+var destFolder = @".\Management\Assemblies";
 
 foreach (var sourceFile in assemblyFiles)
 {

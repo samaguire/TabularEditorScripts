@@ -6,11 +6,11 @@ using TabularEditor.Scripting;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 
-//  *** Warning! ***  this will clear all existing script content in the 'outFolder' folder
-//  *** Warning! ***  this will clear all existing script content in the 'outFolder' folder
-//  *** Warning! ***  this will clear all existing script content in the 'outFolder' folder
+//  *** Warning! ***  this will clear all existing script content in the 'collectionFolder' folder
+//  *** Warning! ***  this will clear all existing script content in the 'collectionFolder' folder
+//  *** Warning! ***  this will clear all existing script content in the 'collectionFolder' folder
 
-var outFolder = @".\Collection";
+var collectionFolder = @".\Collection";
 var TE3overTE2 = true;
 
 // Load MacroActions
@@ -33,10 +33,10 @@ else
 var json = JObject.Parse(File.ReadAllText(jsonFile));
 
 // Check folder path and clear existing files and empty directories
-if (!Directory.Exists(outFolder)) { Directory.CreateDirectory(outFolder); }
-foreach (var f in Directory.EnumerateFiles(outFolder, "*.csx", SearchOption.AllDirectories)) { File.Delete(f); }
-foreach (var f in Directory.EnumerateFiles(outFolder, "*.json", SearchOption.AllDirectories)) { File.Delete(f); }
-foreach (var d in Directory.EnumerateDirectories(outFolder, "*", SearchOption.AllDirectories))
+if (!Directory.Exists(collectionFolder)) { Directory.CreateDirectory(collectionFolder); }
+foreach (var f in Directory.EnumerateFiles(collectionFolder, "*.csx", SearchOption.AllDirectories)) { File.Delete(f); }
+foreach (var f in Directory.EnumerateFiles(collectionFolder, "*.json", SearchOption.AllDirectories)) { File.Delete(f); }
+foreach (var d in Directory.EnumerateDirectories(collectionFolder, "*", SearchOption.AllDirectories))
 {
     if (!Directory.EnumerateFiles(d).Any() && !Directory.EnumerateDirectories(d).Any()) { Directory.Delete(d); }
 }
@@ -50,7 +50,7 @@ foreach (var jtokenItem in json["Actions"])
     // if (jsonFile == jsonFileV3) { fileName = fileName + " [" + jtokenItem["Id"].Value<string>() + "]"; } // ignored as causes git version control changes when macro ids are reset, however, the watchout is the duplicate names
 
     // Generate "Common Library.csx" load directive
-    var relativeBasePath = string.Concat (Enumerable.Repeat (@"..\", outFolder.Count(x => x == '\\')));
+    var relativeBasePath = string.Concat (Enumerable.Repeat (@"..\", collectionFolder.Count(x => x == '\\')));
     var relativeMacroPath = string.Concat (Enumerable.Repeat (@"..\", fileName.Count(x => x == '\\')));
     var loadCommonLibrary = @"#load """ + relativeBasePath + relativeMacroPath + @"Management\Common Library.csx""";
     var loadCustomClasses = @"#load """ + relativeBasePath + relativeMacroPath + @"Management\Custom Classes.csx""";
@@ -105,7 +105,11 @@ foreach (var jtokenItem in json["Actions"])
         var line = "";
         while ((line = reader.ReadLine()) != null)
         {
-            if (line.StartsWith("#r "))
+            if (line.StartsWith("#load ") || line.StartsWith("// #load "))
+            {
+                continue;
+            }
+            else if (line.StartsWith("#r "))
             {
                 if (assemblyHashset.Add(line)) { assemblyList.Add(line); }
             }
@@ -127,14 +131,15 @@ foreach (var jtokenItem in json["Actions"])
     });
 
     // Save csxContent (and create directory)
-    var csxFilePath = outFolder + @"\" + fileName + ".csx";
+    var csxFilePath = collectionFolder + @"\" + fileName + ".csx";
     if (!Directory.Exists(Path.GetDirectoryName(csxFilePath))) { Directory.CreateDirectory(Path.GetDirectoryName(csxFilePath)); }
     File.WriteAllText(csxFilePath, csxContent, System.Text.Encoding.UTF8);
 
     // Save jsonContent
+    jtokenItem["Id"].Parent.Remove();
     jtokenItem["Execute"].Parent.Remove();
     var jsonContent = JsonConvert.SerializeObject(jtokenItem, Newtonsoft.Json.Formatting.Indented);
-    var jsonFilePath = outFolder + @"\" + fileName + ".json";
+    var jsonFilePath = collectionFolder + @"\" + fileName + ".json";
     File.WriteAllText(jsonFilePath, jsonContent, System.Text.Encoding.UTF8);
 
 }

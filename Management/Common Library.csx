@@ -1,8 +1,8 @@
-﻿#r "..\Assemblies\TabularEditor.exe"
-#r "..\Assemblies\TOMWrapper14.dll"
-#r "..\Assemblies\System.Drawing.Common.dll"
-#r "..\Assemblies\System.Windows.Forms.dll"
-#r "..\Assemblies\System.Windows.Forms.Primitives.dll"
+﻿#r ".\Assemblies\TabularEditor.exe"
+#r ".\Assemblies\TOMWrapper14.dll"
+#r ".\Assemblies\System.Drawing.Common.dll"
+#r ".\Assemblies\System.Windows.Forms.dll"
+#r ".\Assemblies\System.Windows.Forms.Primitives.dll"
 // *** The above assemblies are required for the C# scripting environment, remove in Tabular Editor ***
 
 using System;
