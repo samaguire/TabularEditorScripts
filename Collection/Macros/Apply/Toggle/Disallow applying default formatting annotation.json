@@ -1,6 +1,0 @@
-﻿{
-  "Name": "Macros\\Toggle\\Disallow applying default formatting annotation",
-  "Enabled": "true",
-  "Tooltip": "",
-  "ValidContexts": "Measure, Column"
-}
