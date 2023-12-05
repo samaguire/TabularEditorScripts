@@ -22,7 +22,7 @@ var decimalPlaces = Interaction.InputBox(
     DefaultResponse: "1"
 );
 
-if(decimalPlaces == "") { return; }
+if(decimalPlaces == String.Empty) { return; }
 
 // Update model's compatibility level if required
 if (Model.Database.CompatibilityLevel < 1601)
@@ -65,12 +65,7 @@ RETURN
 // Apply format string expression
 foreach (var m in Selected.Measures)
 {
-
     m.FormatString = string.Empty;
-
     m.FormatStringExpression = templateMeasureFormatStringExpression
         .Replace("<d>", decimalPlaces);
-
-    m.SetAnnotation("DisallowApplyingDefaultFormatting", "true");
-
 }

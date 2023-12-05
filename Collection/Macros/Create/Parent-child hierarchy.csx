@@ -41,7 +41,7 @@ if (t.GetAnnotation("Parent-child hierarchy") == null)
     if (cEntityName == null) { return; }
 
     // set datatype for use in PATHITEM()
-    var dataTypeEntityKey = "";
+    var dataTypeEntityKey = String.Empty;
     if (cEntityKey.DataType == DataType.Int64) { dataTypeEntityKey = "INTEGER"; } else { dataTypeEntityKey = "TEXT"; }
 
     // create ParentSafe column
@@ -167,7 +167,7 @@ else
     var cEntityName = t.Columns[annotatedColumnNames[2]];
 
     // set datatype for use in PATHITEM()
-    var dataTypeEntityKey = "";
+    var dataTypeEntityKey = String.Empty;
     if (cEntityKey.DataType == DataType.Int64) { dataTypeEntityKey = "INTEGER"; } else { dataTypeEntityKey = "TEXT"; }
 
     // set previously created objects

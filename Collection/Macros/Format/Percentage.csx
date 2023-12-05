@@ -12,47 +12,18 @@ using TabularEditor.TOMWrapper.Utils;
 using TabularEditor.UI;
 using TabularEditor.Scripting;
 // *** The above namespaces are required for the C# scripting environment, remove in Tabular Editor ***
-using Newtonsoft.Json.Linq;
 
-Func<string, string, string> AddPBIChangedProperty = (string pbiChangedProperties, string propertyName) =>
-{
-    var jsonArray = new JArray();
-    if (!String.IsNullOrEmpty(pbiChangedProperties)) { jsonArray = JArray.Parse(pbiChangedProperties); }
-    if (!String.IsNullOrEmpty(propertyName)) { jsonArray.Add(new JValue(propertyName)); }
-    jsonArray = new JArray(jsonArray.Distinct());
-    return jsonArray.Any() ? JsonConvert.SerializeObject(jsonArray) : null;
-};
+var formatString = "0.00%;-0.00%;0.00%";
 
 foreach (var m in Selected.Measures)
 {
-
     if (m.DataType != DataType.Decimal && m.DataType != DataType.Double && m.DataType != DataType.Int64 && m.DataType != DataType.Variant) { continue; }
-
-    m.FormatString = "0.00%;-0.00%;0.00%";
-    m.SetAnnotation("Format", "<Format Format=\"Percentage\" Accuracy=\"2\" />");
-    m.RemoveAnnotation("PBI_FormatHint");
-
-    var pbiChangedProperties = m.GetAnnotation("PBI_ChangedProperties");
-    pbiChangedProperties = AddPBIChangedProperty(pbiChangedProperties, "FormatString");
-    if (!String.IsNullOrEmpty(pbiChangedProperties)) { m.SetAnnotation("PBI_ChangedProperties", pbiChangedProperties); }
-
-    m.SetAnnotation("DisallowApplyingDefaultFormatting", "true");
-
+    m.FormatString = formatString;
 }
 
 foreach (var c in Selected.Columns)
 {
-
     if (c.Table.ObjectType == ObjectType.CalculationGroupTable) { continue; }
     if (c.DataType != DataType.Decimal && c.DataType != DataType.Double && c.DataType != DataType.Int64) { continue; }
-
-    c.FormatString = "0.00%;-0.00%;0.00%";
-    c.SetAnnotation("Format", "<Format Format=\"Percentage\" Accuracy=\"2\" />");
-
-    var pbiChangedProperties = c.GetAnnotation("PBI_ChangedProperties");
-    pbiChangedProperties = AddPBIChangedProperty(pbiChangedProperties, "FormatString");
-    if (!String.IsNullOrEmpty(pbiChangedProperties)) { c.SetAnnotation("PBI_ChangedProperties", pbiChangedProperties); }
-
-    c.SetAnnotation("DisallowApplyingDefaultFormatting", "true");
-
+    c.FormatString = formatString;
 }

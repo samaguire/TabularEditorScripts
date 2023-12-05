@@ -1,5 +1,5 @@
 ﻿{
-  "Name": "Macros\\Remove\\Name underscores",
+  "Name": "Macros\\Remove\\Annotations and ExtendedProperties",
   "Enabled": "true",
   "Tooltip": "",
   "ValidContexts": "Model"

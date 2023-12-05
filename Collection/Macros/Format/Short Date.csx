@@ -12,31 +12,18 @@ using TabularEditor.TOMWrapper.Utils;
 using TabularEditor.UI;
 using TabularEditor.Scripting;
 // *** The above namespaces are required for the C# scripting environment, remove in Tabular Editor ***
-using Newtonsoft.Json.Linq;
 
-Func<string, string, string> AddPBIChangedProperty = (string pbiChangedProperties, string propertyName) =>
+var formatString = "Short Date";
+
+foreach (var m in Selected.Measures)
 {
-    var jsonArray = new JArray();
-    if (!String.IsNullOrEmpty(pbiChangedProperties)) { jsonArray = JArray.Parse(pbiChangedProperties); }
-    if (!String.IsNullOrEmpty(propertyName)) { jsonArray.Add(new JValue(propertyName)); }
-    jsonArray = new JArray(jsonArray.Distinct());
-    return jsonArray.Any() ? JsonConvert.SerializeObject(jsonArray) : null;
-};
+    if (m.DataType != DataType.DateTime && m.DataType != DataType.Variant) { continue; }
+    m.FormatString = formatString;
+}
 
 foreach (var c in Selected.Columns)
 {
-
     if (c.Table.ObjectType == ObjectType.CalculationGroupTable) { continue; }
     if (c.DataType != DataType.DateTime) { continue; }
-
-    c.FormatString = "Short Date";
-    c.SetAnnotation("Format", "<Format Format=\"DateTimeGeneralPattern\"><DateTimes><DateTime LCID=\"5129\" Group=\"ShortDate\" FormatString=\"d\" /></DateTimes></Format>");
-    c.SetAnnotation("UnderlyingDateTimeDataType", "Date");
-
-    var pbiChangedProperties = c.GetAnnotation("PBI_ChangedProperties");
-    pbiChangedProperties = AddPBIChangedProperty(pbiChangedProperties, "FormatString");
-    if (!String.IsNullOrEmpty(pbiChangedProperties)) { c.SetAnnotation("PBI_ChangedProperties", pbiChangedProperties); }
-
-    c.SetAnnotation("DisallowApplyingDefaultFormatting", "true");
-
+    c.FormatString = formatString;
 }

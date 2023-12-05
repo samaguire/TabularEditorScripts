@@ -16,7 +16,6 @@ using TabularEditor.Scripting;
 foreach (var c in Model.AllColumns.Where(x => x.SummarizeBy != AggregateFunction.None))
 {
     c.SummarizeBy = AggregateFunction.None;
-    c.SetAnnotation("SummarizationSetBy", "User");
 }
 
 Model.DiscourageImplicitMeasures = true;

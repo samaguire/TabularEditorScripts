@@ -16,9 +16,9 @@ using TabularEditor.Scripting;
 foreach(var c in Selected.Columns)
 {
     c.Table.AddMeasure(
-        name: "Distinct Count of " + c.Name,
-        expression: "DISTINCTCOUNT( " + c.DaxObjectFullName + " )",
-        displayFolder: c.DisplayFolder + "\\Distinct Count of Measures"
+        name: $"dCnt of {c.Name}",
+        expression: $"DISTINCTCOUNT( {c.DaxObjectFullName} )",
+        displayFolder: string.IsNullOrEmpty(c.DisplayFolder) ? $"dCnt of Measures" : $"{c.DisplayFolder}\\dCnt of Measures"
     );
     c.IsHidden = true;
 }

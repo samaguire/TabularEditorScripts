@@ -19,7 +19,7 @@ using System.IO;
 
 var url = "https://raw.githubusercontent.com/microsoft/Analysis-Services/master/BestPracticeRules/BPARules.json";
 var path = System.Environment.GetFolderPath(System.Environment.SpecialFolder.LocalApplicationData);
-var jsonPath = "";
+var jsonPath = String.Empty;
 var version = typeof(Model).Assembly.GetName().Version.Major;
 
 switch (version)

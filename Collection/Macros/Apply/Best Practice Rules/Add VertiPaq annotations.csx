@@ -131,7 +131,7 @@ for (int r = 0; r < DMV_Columns.Rows.Count; r++)
     {
         string tableName = t.Name;
 
-        if (colName.StartsWith("RowNumber-") == false && colName != "")
+        if (colName.StartsWith("RowNumber-") == false && colName != String.Empty)
         {
             Model.Tables[tableName].Columns[colName].SetAnnotation("Vertipaq_ColumnID", colID);
         }

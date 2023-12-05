@@ -20,9 +20,5 @@ TextInfo textInfo = cultureInfo.TextInfo;
 
 string ReplaceUnderscoreAndCapitalize(string input) => textInfo.ToTitleCase(input.Replace("_", " "));
 
-foreach (var c in Selected.Columns) { c.Name = ReplaceUnderscoreAndCapitalize(c.Name); }
-foreach (var t in Selected.Tables)
-{
-    foreach (var c in t.Columns) { c.Name = ReplaceUnderscoreAndCapitalize(c.Name); }
-    t.Name = ReplaceUnderscoreAndCapitalize(t.Name);
-}
+foreach (var c in Model.AllColumns) { c.Name = ReplaceUnderscoreAndCapitalize(c.Name); }
+foreach (var t in Model.Tables) { t.Name = ReplaceUnderscoreAndCapitalize(t.Name); }

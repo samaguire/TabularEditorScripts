@@ -102,7 +102,7 @@ foreach (var jtokenItem in json["Actions"])
     // Deconstruct csxContent to C# scripting environment lists
     using (var reader = new StringReader(csxContent))
     {
-        var line = "";
+        var line = String.Empty;
         while ((line = reader.ReadLine()) != null)
         {
             if (line.StartsWith("#load ") || line.StartsWith("// #load "))

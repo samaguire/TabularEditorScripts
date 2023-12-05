@@ -13,8 +13,9 @@ using TabularEditor.UI;
 using TabularEditor.Scripting;
 // *** The above namespaces are required for the C# scripting environment, remove in Tabular Editor ***
 
-foreach (var m in Model.AllMeasures) { m.LineageTag = null; }
-foreach (var l in Model.AllLevels) { l.LineageTag = null; }
-foreach (var h in Model.AllHierarchies) { h.LineageTag = null; }
-foreach (var c in Model.AllColumns) { c.LineageTag = null; }
-foreach (var t in Model.Tables) { t.LineageTag = null; }
+// not a complete list
+foreach (var m in Model.AllMeasures) { m.LineageTag = String.Empty; }
+foreach (var l in Model.AllLevels) { l.LineageTag = String.Empty; }
+foreach (var h in Model.AllHierarchies) { h.LineageTag = String.Empty; }
+foreach (var c in Model.AllColumns) { c.LineageTag = String.Empty; }
+foreach (var t in Model.Tables) { t.LineageTag = String.Empty; }

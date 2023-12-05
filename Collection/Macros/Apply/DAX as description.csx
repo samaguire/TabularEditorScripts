@@ -13,7 +13,7 @@ using TabularEditor.UI;
 using TabularEditor.Scripting;
 // *** The above namespaces are required for the C# scripting environment, remove in Tabular Editor ***
 
-foreach (var m in Selected.Measures)
+foreach (var m in Model.AllMeasures)
 {
     m.Description = m.Expression.TrimStart('\r', '\n');
 }
