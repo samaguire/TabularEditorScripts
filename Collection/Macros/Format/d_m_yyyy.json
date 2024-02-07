@@ -1,5 +1,5 @@
 ﻿{
-  "Name": "Macros\\Format\\Short Time",
+  "Name": "Macros\\Format\\d/m/yyyy",
   "Enabled": "true",
   "Tooltip": "",
   "ValidContexts": "Measure, Column"
