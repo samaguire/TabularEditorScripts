@@ -19,7 +19,7 @@ var insertLineBreakOnFirstLine = true;
 
 Func<string, string> GetFormattedDax = (string daxInput) =>
 {
-    var formattedDax = ScriptHelper.FormatDax(daxInput, shortFormat: useShortFormat, skipSpaceAfterFunctionName: !insertSpaceAfterFunctionName);
+    var formattedDax = ScriptHelper.FormatDax(daxInput, shortFormat: useShortFormat, skipSpaceAfterFunctionName: !insertSpaceAfterFunctionName).replace("( )", "()");
     return insertLineBreakOnFirstLine ? "\r\n" + formattedDax : formattedDax;
 };
 
