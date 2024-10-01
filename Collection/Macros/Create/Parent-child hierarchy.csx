@@ -50,12 +50,11 @@ if (t.GetAnnotation("Parent-child hierarchy") == null)
         VAR ParentId = <cEntityParentKey>
         VAR Result =
             IF(
-                NOT ISEMPTY( FILTER( <t>, <cEntityKey> = ParentId ) ),
-                <cEntityParentKey>
+                NOT ISEMPTY( FILTER( VALUES( <cEntityKey> ), <cEntityKey> = ParentId ) ),
+                ParentId
             )
         RETURN
             Result"
-        .Replace("<t>", t.DaxTableName)
         .Replace("<cEntityKey>", cEntityKey.DaxObjectFullName)
         .Replace("<cEntityParentKey>", cEntityParentKey.DaxObjectFullName);
     foreach (var c in t.Columns.Where(x => x.Name == nameParentSafe).ToList()) { c.Delete(); }
