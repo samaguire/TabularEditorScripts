@@ -29,12 +29,22 @@ else
 var json = JObject.Parse(File.ReadAllText(jsonFile));
 
 // Check folder path and clear existing files and empty directories
-if (!Directory.Exists(collectionFolder)) { Directory.CreateDirectory(collectionFolder); }
-foreach (var f in Directory.EnumerateFiles(collectionFolder, "*.csx", SearchOption.AllDirectories)) { File.Delete(f); }
-foreach (var f in Directory.EnumerateFiles(collectionFolder, "*.json", SearchOption.AllDirectories)) { File.Delete(f); }
-foreach (var d in Directory.EnumerateDirectories(collectionFolder, "*", SearchOption.AllDirectories))
+if (!Directory.Exists(collectionFolder))
 {
-    if (!Directory.EnumerateFiles(d).Any() && !Directory.EnumerateDirectories(d).Any()) { Directory.Delete(d); }
+    Directory.CreateDirectory(collectionFolder);
+}
+
+// Delete files with .csx and .json extensions and remove empty directories
+foreach (var entry in Directory.EnumerateFileSystemEntries(collectionFolder, "*", SearchOption.AllDirectories))
+{
+    if (File.Exists(entry) && (entry.EndsWith(".csx") || entry.EndsWith(".json")))
+    {
+        File.Delete(entry);
+    }
+    else if (Directory.Exists(entry) && !Directory.EnumerateFileSystemEntries(entry).Any())
+    {
+        Directory.Delete(entry);
+    }
 }
 
 // Export each MacroAction
