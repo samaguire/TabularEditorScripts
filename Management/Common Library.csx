@@ -1,5 +1,6 @@
 ﻿#r ".\Assemblies\TabularEditor.exe"
 #r ".\Assemblies\TOMWrapper14.dll"
+#r ".\Assemblies\newtonsoft.json.dll"
 #r ".\Assemblies\System.Drawing.Common.dll"
 #r ".\Assemblies\System.Windows.Forms.dll"
 #r ".\Assemblies\System.Windows.Forms.Primitives.dll"
