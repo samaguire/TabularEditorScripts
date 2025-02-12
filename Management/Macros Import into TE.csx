@@ -1,4 +1,4 @@
-#r "nuget: Newtonsoft.Json, 13.0.2"
+#load "..\Management\Common Library.csx"
 
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
@@ -8,7 +8,6 @@ using Newtonsoft.Json.Linq;
 //  *** Warning! ***  this will clear all existing macros in Tabular Editor / Tabular Editor 3
 
 var collectionFolder = @".\Collection";
-var customClassesSource = @".\Management\Custom Classes.csx";
 var TE3overTE2 = true;
 
 // Check paths
@@ -29,13 +28,10 @@ else
     Console.WriteLine("Using \"" + jsonFile + "\"");
 }
 
-var customClassesFile = jsonFile.Replace(@"MacroActions.json", "CustomClasses.csx");
-
 // Define C# scripting environment
 var assemblyList = new List<string>()
 {
     @"Common Library.csx""",
-    @"Custom Classes.csx""",
     "// *** The above assemblies are required for the C# scripting environment, remove in Tabular Editor ***"
 };
 var namespaceList = new List<string>()
@@ -49,6 +45,7 @@ var namespaceList = new List<string>()
     @"using TabularEditor.TOMWrapper.Utils;",
     @"using TabularEditor.UI;",
     @"using TabularEditor.Scripting;",
+    @"// using TOM = Microsoft.AnalysisServices.Tabular;",
     @"// *** The above namespaces are required for the C# scripting environment, remove in Tabular Editor ***"
 };
 
@@ -59,10 +56,7 @@ foreach (var filePath in Directory.EnumerateFiles(collectionFolder, "*.csx", Sea
 {
 
     // Extract macro, removing C# scripting environment modifications
-    var scriptBodyList = new List<string>()
-    {
-        $"// #load \"{customClassesFile}\""
-    };
+    var scriptBodyList = new List<string>(){};
     foreach (var line in File.ReadLines(filePath))
     {
         if (!((line.StartsWith("#") && assemblyList.Contains(line.Split('\\').Last())) || assemblyList.Contains(line)) && !namespaceList.Contains(line)) { scriptBodyList.Add(line); }
@@ -81,23 +75,8 @@ foreach (var filePath in Directory.EnumerateFiles(collectionFolder, "*.csx", Sea
 
 }
 
-// Pull details from Custom Classes csx and write Custom Classes csx file
-// Extract script, removing C# scripting environment modifications
-var scriptBodyList = new List<string>();
-foreach (var line in File.ReadLines(@".\Management\Custom Classes.csx"))
-{
-    if (!((line.StartsWith("#") && assemblyList.Contains(line.Split('\\').Last())) || assemblyList.Contains(line)) && !namespaceList.Contains(line)) { scriptBodyList.Add(line); }
-}
-var customClassesContent = String.Join(Environment.NewLine, scriptBodyList)
-                    .Replace("ScriptHelper.", string.Empty)
-                    .Trim('\r', '\n');
-
 // Write MacroActions
 var jsonObject = new JObject();
 jsonObject.Add("Actions", jsonArray);
 var jsonContent = JsonConvert.SerializeObject(jsonObject, Newtonsoft.Json.Formatting.Indented);
 File.WriteAllText(jsonFile, jsonContent, System.Text.Encoding.UTF8);
-
-// Write CustomClasses
-Console.WriteLine("Using \"" + customClassesFile + "\"");
-File.WriteAllText(customClassesFile, customClassesContent, System.Text.Encoding.UTF8);

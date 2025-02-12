@@ -1,13 +1,9 @@
 ﻿#load "..\Management\Common Library.csx"
 
-#r "nuget: Newtonsoft.Json, 13.0.2"
-
-using TabularEditor.Scripting;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
+using TabularEditor.Scripting;
 
-//  *** Warning! ***  this will clear all existing script content in the 'collectionFolder' folder
-//  *** Warning! ***  this will clear all existing script content in the 'collectionFolder' folder
 //  *** Warning! ***  this will clear all existing script content in the 'collectionFolder' folder
 
 var collectionFolder = @".\Collection";
@@ -53,13 +49,49 @@ foreach (var jtokenItem in json["Actions"])
     var relativeBasePath = string.Concat (Enumerable.Repeat (@"..\", collectionFolder.Count(x => x == '\\')));
     var relativeMacroPath = string.Concat (Enumerable.Repeat (@"..\", fileName.Count(x => x == '\\')));
     var loadCommonLibrary = @"#load """ + relativeBasePath + relativeMacroPath + @"Management\Common Library.csx""";
-    var loadCustomClasses = @"#load """ + relativeBasePath + relativeMacroPath + @"Management\Custom Classes.csx""";
 
     // Get csxContent and adapt to C# scripting environment
     var csxContent = "\n" + jtokenItem["Execute"].Value<string>();
 
     // Prefix ScriptHelper to ScriptHelper methods
-    var scripthelperMethods = typeof(ScriptHelper).GetMethods().Select(x => x.Name.Replace("get_", "").Replace("set_", "")).Distinct().ToList();
+        // Run in TE2 to get the list of ScriptHelper methods:
+        // var scripthelperMethods = typeof(ScriptHelper).GetMethods()
+        //     .Select(x => x.Name.Replace("get_", "").Replace("set_", ""))
+        //     .Distinct().OrderBy(name => name)
+        //     .ToList();
+        // Output(scripthelperMethods);
+    var scripthelperMethods = new List<string>()
+    {
+        @"AfterScriptExecution",
+        @"BeforeScriptExecution",
+        @"CallDaxFormatter",
+        @"ConvertDax",
+        @"CustomAction",
+        @"Equals",
+        @"Error",
+        @"EvaluateDax",
+        @"ExecuteCommand",
+        @"ExecuteDax",
+        @"ExecuteReader",
+        @"FormatDax",
+        @"GetHashCode",
+        @"GetType",
+        @"Info",
+        @"Output",
+        @"OutputErrors",
+        @"ReadFile",
+        @"ReferenceEquals",
+        @"SaveFile",
+        @"SchemaCheck",
+        @"SelectColumn",
+        @"SelectMeasure",
+        @"SelectObject",
+        @"SelectTable",
+        @"SuspendWaitForm",
+        @"ToString",
+        @"WaitFormVisible",
+        @"Warning"
+    };
     foreach (var item in scripthelperMethods)
     {
         csxContent = csxContent
@@ -79,7 +111,6 @@ foreach (var jtokenItem in json["Actions"])
     var assemblyList = new List<string>()
     {
         loadCommonLibrary,
-        loadCustomClasses,
         @"// *** The above assemblies are required for the C# scripting environment, remove in Tabular Editor ***"
     };
     var assemblyHashset = new HashSet<string>(assemblyList);
@@ -105,11 +136,7 @@ foreach (var jtokenItem in json["Actions"])
         var line = String.Empty;
         while ((line = reader.ReadLine()) != null)
         {
-            if (line.StartsWith("#load ") || line.StartsWith("// #load "))
-            {
-                continue;
-            }
-            else if (line.StartsWith("#r "))
+            if (line.StartsWith("#r "))
             {
                 if (assemblyHashset.Add(line)) { assemblyList.Add(line); }
             }

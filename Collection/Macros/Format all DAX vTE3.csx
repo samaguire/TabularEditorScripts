@@ -1,5 +1,4 @@
 ﻿#load "..\..\Management\Common Library.csx"
-#load "..\..\Management\Custom Classes.csx"
 // *** The above assemblies are required for the C# scripting environment, remove in Tabular Editor ***
 
 using System;
@@ -13,13 +12,13 @@ using TabularEditor.UI;
 using TabularEditor.Scripting;
 // *** The above namespaces are required for the C# scripting environment, remove in Tabular Editor ***
 
-var useShortFormat = true;
+var useShortFormat = false;
 var insertSpaceAfterFunctionName = false;
 var insertLineBreakOnFirstLine = true;
 
 Func<string, string> GetFormattedDax = (string daxInput) =>
 {
-    var formattedDax = ScriptHelper.FormatDax(daxInput, shortFormat: useShortFormat, skipSpaceAfterFunctionName: !insertSpaceAfterFunctionName).replace("( )", "()");
+    var formattedDax = ScriptHelper.FormatDax(daxInput, shortFormat: useShortFormat, skipSpaceAfterFunctionName: !insertSpaceAfterFunctionName).Replace("( )", "()");
     return insertLineBreakOnFirstLine ? "\r\n" + formattedDax : formattedDax;
 };
 

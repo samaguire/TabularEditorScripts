@@ -1,5 +1,4 @@
 ﻿#load "..\..\..\Management\Common Library.csx"
-#load "..\..\..\Management\Custom Classes.csx"
 // *** The above assemblies are required for the C# scripting environment, remove in Tabular Editor ***
 #r "System.Globalization"
 
