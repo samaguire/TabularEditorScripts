@@ -1,0 +1,6 @@
+﻿{
+  "Name": "Macros\\Create\\'Max of' measure(s)",
+  "Enabled": "true",
+  "Tooltip": "",
+  "ValidContexts": "Column"
+}

@@ -1,0 +1,6 @@
+﻿{
+  "Name": "Macros\\Create\\'Min of' measure(s)",
+  "Enabled": "true",
+  "Tooltip": "",
+  "ValidContexts": "Column"
+}
