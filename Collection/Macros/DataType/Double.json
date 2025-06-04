@@ -1,0 +1,6 @@
+﻿{
+  "Name": "Macros\\DataType\\Double",
+  "Enabled": "true",
+  "Tooltip": "",
+  "ValidContexts": "Column"
+}

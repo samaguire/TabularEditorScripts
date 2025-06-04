@@ -1,0 +1,6 @@
+﻿{
+  "Name": "Macros\\DataType\\Int64",
+  "Enabled": "true",
+  "Tooltip": "",
+  "ValidContexts": "Column"
+}
