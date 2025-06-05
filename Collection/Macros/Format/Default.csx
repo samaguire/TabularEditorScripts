@@ -21,7 +21,8 @@ string GetFormatString(DataType dataType)
         case DataType.DateTime:
             return "General Date";
         case DataType.Decimal:
-            return "\\$#,0.###############;-\\$#,0.###############;\\$#,0.###############";
+            return string.Empty;
+            // return "\\$#,0.###############;-\\$#,0.###############;\\$#,0.###############";
             // return "$ #,##0.00"; // TE3 version
         case DataType.Double:
             return string.Empty;
