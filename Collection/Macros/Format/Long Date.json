@@ -1,0 +1,6 @@
+﻿{
+  "Name": "Macros\\Format\\Long Date",
+  "Enabled": "true",
+  "Tooltip": "",
+  "ValidContexts": "Measure, Column"
+}
