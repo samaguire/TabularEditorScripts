@@ -1,5 +1,5 @@
 ﻿{
-  "Name": "Macros\\Format\\Custom: #,#;(#,#);0",
+  "Name": "Macros\\Format\\Custom: #,0;(#,0);0",
   "Enabled": "true",
   "Tooltip": "",
   "ValidContexts": "Measure, Column"

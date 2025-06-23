@@ -14,37 +14,26 @@ using TabularEditor.Scripting;
 
 string GetFormatString(DataType dataType)
 {
-    switch (dataType)
+    return dataType switch
     {
-        case DataType.Boolean:
-            return "\"TRUE\";\"TRUE\";\"FALSE\"";
-        case DataType.DateTime:
-            return "General Date";
-        case DataType.Decimal:
-            return string.Empty;
-            // return "\\$#,0.###############;-\\$#,0.###############;\\$#,0.###############";
-            // return "$ #,##0.00"; // TE3 version
-        case DataType.Double:
-            return string.Empty;
-        case DataType.Int64:
-            return "0";
-        case DataType.String:
-            return string.Empty;
-        case DataType.Variant:
-            return string.Empty;
-        default:
-            return string.Empty;
-    }
+        DataType.Boolean => "\"TRUE\";\"TRUE\";\"FALSE\"",
+        DataType.DateTime => "General Date",
+        DataType.Int64 => "0",
+        _ => (String)string.Empty
+    };
 }
 
 foreach (var m in Selected.Measures)
 {
     m.FormatString = GetFormatString(m.DataType);
     m.FormatStringExpression = string.Empty;
+    m.RemoveAnnotation("PBI_FormatHint");
 }
 
 foreach (var c in Selected.Columns)
 {
     if (c.Table.ObjectType == ObjectType.CalculationGroupTable) { continue; }
     c.FormatString = GetFormatString(c.DataType);
+    c.RemoveAnnotation("PBI_FormatHint");
+    c.RemoveAnnotation("UnderlyingDateTimeDataType");
 }

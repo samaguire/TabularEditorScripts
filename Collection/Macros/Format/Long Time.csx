@@ -18,6 +18,7 @@ foreach (var m in Selected.Measures)
 {
     if (m.DataType != DataType.DateTime && m.DataType != DataType.Variant) { continue; }
     m.FormatString = formatString;
+    m.RemoveAnnotation("PBI_FormatHint");
 }
 
 foreach (var c in Selected.Columns)
@@ -25,4 +26,6 @@ foreach (var c in Selected.Columns)
     if (c.Table.ObjectType == ObjectType.CalculationGroupTable) { continue; }
     if (c.DataType != DataType.DateTime) { continue; }
     c.FormatString = formatString;
+    c.RemoveAnnotation("PBI_FormatHint");
+    c.SetAnnotation("UnderlyingDateTimeDataType", "Time");
 }

@@ -12,12 +12,13 @@ using TabularEditor.UI;
 using TabularEditor.Scripting;
 // *** The above namespaces are required for the C# scripting environment, remove in Tabular Editor ***
 
-var formatString = "#,#;(#,#);0";
+var formatString = "#,0;(#,0);0";
 
 foreach (var m in Selected.Measures)
 {
     if (m.DataType != DataType.Decimal && m.DataType != DataType.Double && m.DataType != DataType.Int64 && m.DataType != DataType.Variant) { continue; }
     m.FormatString = formatString;
+    m.RemoveAnnotation("PBI_FormatHint");
 }
 
 foreach (var c in Selected.Columns)
@@ -25,4 +26,6 @@ foreach (var c in Selected.Columns)
     if (c.Table.ObjectType == ObjectType.CalculationGroupTable) { continue; }
     if (c.DataType != DataType.Decimal && c.DataType != DataType.Double && c.DataType != DataType.Int64) { continue; }
     c.FormatString = formatString;
+    c.RemoveAnnotation("PBI_FormatHint");
+    c.RemoveAnnotation("UnderlyingDateTimeDataType");
 }

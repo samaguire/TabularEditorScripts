@@ -67,4 +67,5 @@ foreach (var m in Selected.Measures)
     m.FormatString = string.Empty;
     m.FormatStringExpression = templateMeasureFormatStringExpression
         .Replace("<d>", decimalPlaces);
+    m.RemoveAnnotation("PBI_FormatHint");
 }
