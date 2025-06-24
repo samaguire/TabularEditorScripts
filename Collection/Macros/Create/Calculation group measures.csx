@@ -109,7 +109,10 @@ foreach (var m in Selected.Measures)
             .Replace("<m>", m.DaxObjectName)
             .Replace("<c>", c.DaxObjectFullName)
             .Replace("<i>", i.Name);
-        var measureDisplayFolder = m.DisplayFolder + "\\› " + t.Name + "\\› " + m.Name;
+        //var measureDisplayFolder = m.DisplayFolder + "\\› " + t.Name + "\\› " + m.Name;
+        var measureDisplayFolder = string.IsNullOrEmpty(m.DisplayFolder)
+            ? $"› {t.Name}\\› {m.Name}"
+            : $"{m.DisplayFolder}\\› {t.Name}\\› {m.Name}";
 
         // Add measure to the model, deleting existing measure if it exists
         foreach (var mm in Model.AllMeasures.Where(x => x.Name == measureName).ToList()) { mm.Delete(); }
