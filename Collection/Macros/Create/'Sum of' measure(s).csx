@@ -14,10 +14,15 @@ using TabularEditor.Scripting;
 
 foreach(var c in Selected.Columns)
 {
+    //c.Table.AddMeasure(
+    //    name: $"Sum of {c.Name}",
+    //    expression: $"SUM( {c.DaxObjectFullName} )",
+    //    displayFolder: string.IsNullOrEmpty(c.DisplayFolder) ? $"Sum of Measures" : $"{c.DisplayFolder}\\Sum of Measures"
+    //);
     c.Table.AddMeasure(
-        name: $"Sum of {c.Name}",
+        name: $"{c.Name} Sum",
         expression: $"SUM( {c.DaxObjectFullName} )",
-        displayFolder: string.IsNullOrEmpty(c.DisplayFolder) ? $"Sum of Measures" : $"{c.DisplayFolder}\\Sum of Measures"
+        displayFolder: string.IsNullOrEmpty(c.DisplayFolder) ? $"› Measures" : $"{c.DisplayFolder}\\› Measures"
     );
     c.IsHidden = true;
 }

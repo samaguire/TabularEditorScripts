@@ -14,10 +14,15 @@ using TabularEditor.Scripting;
 
 foreach(var c in Selected.Columns)
 {
+    //c.Table.AddMeasure(
+    //    name: $"Max of {c.Name}",
+    //    expression: $"MAX( {c.DaxObjectFullName} )",
+    //    displayFolder: string.IsNullOrEmpty(c.DisplayFolder) ? $"Max of Measures" : $"{c.DisplayFolder}\\Max of Measures"
+    //);
     c.Table.AddMeasure(
-        name: $"Max of {c.Name}",
+        name: $"{c.Name} Max",
         expression: $"MAX( {c.DaxObjectFullName} )",
-        displayFolder: string.IsNullOrEmpty(c.DisplayFolder) ? $"Max of Measures" : $"{c.DisplayFolder}\\Max of Measures"
+        displayFolder: string.IsNullOrEmpty(c.DisplayFolder) ? $"› Measures" : $"{c.DisplayFolder}\\› Measures"
     );
     c.IsHidden = true;
 }
