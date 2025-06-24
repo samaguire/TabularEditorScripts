@@ -12,13 +12,17 @@ using TabularEditor.UI;
 using TabularEditor.Scripting;
 // *** The above namespaces are required for the C# scripting environment, remove in Tabular Editor ***
 
-var useShortFormat = false;
-var insertSpaceAfterFunctionName = false;
+var useShortFormat = true;
+var insertSpaceAfterFunctionName = true;
 var insertLineBreakOnFirstLine = true;
 
 Func<string, string> GetFormattedDax = (string daxInput) =>
 {
-    var formattedDax = ScriptHelper.FormatDax(daxInput, shortFormat: useShortFormat, skipSpaceAfterFunctionName: !insertSpaceAfterFunctionName).Replace("( )", "()");
+    var formattedDax = ScriptHelper.FormatDax(
+            dax: daxInput,
+            shortFormat: useShortFormat,
+            skipSpaceAfterFunctionName: !insertSpaceAfterFunctionName
+        ).Replace("( )", "()");
     return insertLineBreakOnFirstLine ? "\r\n" + formattedDax : formattedDax;
 };
 
