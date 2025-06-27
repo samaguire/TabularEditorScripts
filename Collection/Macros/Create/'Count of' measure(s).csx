@@ -15,12 +15,12 @@ using TabularEditor.Scripting;
 foreach(var c in Selected.Columns)
 {
     //c.Table.AddMeasure(
-    //    name: $"Cnt of {c.Name}",
+    //    name: $"Count of {c.Name}",
     //    expression: $"DISTINCTCOUNT( {c.DaxObjectFullName} )",
-    //    displayFolder: string.IsNullOrEmpty(c.DisplayFolder) ? $"dCnt of Measures" : $"{c.DisplayFolder}\\dCnt of Measures"
+    //    displayFolder: string.IsNullOrEmpty(c.DisplayFolder) ? $"Count of Measures" : $"{c.DisplayFolder}\\Count of Measures"
     //);
     c.Table.AddMeasure(
-        name: $"{c.Name} Cnt",
+        name: $"{c.Name} Count",
         expression: $"DISTINCTCOUNT( {c.DaxObjectFullName} )",
         displayFolder: string.IsNullOrEmpty(c.DisplayFolder) ? $"› Measures" : $"{c.DisplayFolder}\\› Measures"
     );
