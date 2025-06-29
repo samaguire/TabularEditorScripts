@@ -24,5 +24,5 @@ foreach(var c in Selected.Columns)
         expression: $"DISTINCTCOUNT( {c.DaxObjectFullName} )",
         displayFolder: string.IsNullOrEmpty(c.DisplayFolder) ? $"› Measures" : $"{c.DisplayFolder}\\› Measures"
     );
-    c.IsHidden = true;
+    // c.IsHidden = true;
 }
