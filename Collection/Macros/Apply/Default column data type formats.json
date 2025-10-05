@@ -1,5 +1,5 @@
 ﻿{
-  "Name": "Macros\\Apply\\Default column data types and formats",
+  "Name": "Macros\\Apply\\Default column data type formats",
   "Enabled": "true",
   "Tooltip": "",
   "ValidContexts": "Model"
