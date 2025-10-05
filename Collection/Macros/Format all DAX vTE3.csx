@@ -12,7 +12,7 @@ using TabularEditor.UI;
 using TabularEditor.Scripting;
 // *** The above namespaces are required for the C# scripting environment, remove in Tabular Editor ***
 
-var useShortFormat = true;
+var useShortFormat = false;
 var insertSpaceAfterFunctionName = true;
 var insertLineBreakOnFirstLine = true;
 
