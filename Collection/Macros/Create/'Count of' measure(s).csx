@@ -14,15 +14,10 @@ using TabularEditor.Scripting;
 
 foreach(var c in Selected.Columns)
 {
-    //c.Table.AddMeasure(
-    //    name: $"Count of {c.Name}",
-    //    expression: $"DISTINCTCOUNT( {c.DaxObjectFullName} )",
-    //    displayFolder: string.IsNullOrEmpty(c.DisplayFolder) ? $"Count of Measures" : $"{c.DisplayFolder}\\Count of Measures"
-    //);
     c.Table.AddMeasure(
         name: $"{c.Name} Count",
         expression: $"DISTINCTCOUNT( {c.DaxObjectFullName} )",
         displayFolder: string.IsNullOrEmpty(c.DisplayFolder) ? $"› Measures" : $"{c.DisplayFolder}\\› Measures"
     );
-    // c.IsHidden = true;
+    //c.IsHidden = true;
 }
