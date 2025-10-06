@@ -43,18 +43,27 @@ if (t.GetAnnotation("Parent-child hierarchy") == null)
     var dataTypeEntityKey = String.Empty;
     if (cEntityKey.DataType == DataType.Int64) { dataTypeEntityKey = "INTEGER"; } else { dataTypeEntityKey = "TEXT"; }
 
+    // create ParentCount column
+    var nameParentCount = cEntityKey.Name + " ParentCount";
+    var daxParentCount = @"
+VAR _ParentId = <cEntityParentKey>
+RETURN
+    COALESCE ( CALCULATE ( COUNTROWS ( <t> ), REMOVEFILTERS (), <cEntityKey> = _ParentId ), 0 )"
+        .Replace("<cEntityParentKey>", cEntityParentKey.DaxObjectFullName)
+        .Replace("<t>", t.DaxObjectFullName)
+        .Replace("<cEntityKey>", cEntityKey.DaxObjectFullName);
+    foreach (var c in t.Columns.Where(x => x.Name == nameParentCount).ToList()) { c.Delete(); }
+    var cParentCount = t.AddCalculatedColumn(
+        name: nameParentCount,
+        expression: daxParentCount
+    );
+    cParentCount.IsHidden = true;
+
     // create ParentSafe column
-    var nameParentSafe = cEntityKey.Name + "ParentSafe";
+    var nameParentSafe = cEntityKey.Name + " ParentSafe";
     var daxParentSafe = @"
-        VAR ParentId = <cEntityParentKey>
-        VAR Result =
-            IF(
-                NOT ISEMPTY( FILTER( VALUES( <cEntityKey> ), <cEntityKey> = ParentId ) ),
-                ParentId
-            )
-        RETURN
-            Result"
-        .Replace("<cEntityKey>", cEntityKey.DaxObjectFullName)
+IF ( <cParentCount> > 0, <cEntityParentKey> )"
+        .Replace("<cParentCount>", cParentCount.DaxObjectFullName)
         .Replace("<cEntityParentKey>", cEntityParentKey.DaxObjectFullName);
     foreach (var c in t.Columns.Where(x => x.Name == nameParentSafe).ToList()) { c.Delete(); }
     var cParentSafe = t.AddCalculatedColumn(
@@ -63,24 +72,10 @@ if (t.GetAnnotation("Parent-child hierarchy") == null)
     );
     cParentSafe.IsHidden = true;
 
-    // create ParentMissing column
-    var nameParentMissing = cEntityKey.Name + "ParentMissing";
-    var daxParentMissing = @"
-        NOT <cEntityParentKey> == <cParentSafe>"
-        .Replace("<cEntityParentKey>", cEntityParentKey.DaxObjectFullName)
-        .Replace("<cParentSafe>", cParentSafe.DaxObjectFullName);
-
-    foreach (var c in t.Columns.Where(x => x.Name == nameParentMissing).ToList()) { c.Delete(); }
-    var cParentMissing = t.AddCalculatedColumn(
-        name: nameParentMissing,
-        expression: daxParentMissing
-    );
-    cParentMissing.IsHidden = true;
-
     // create Path column
-    var namePath = cEntityKey.Name + "Path";
+    var namePath = cEntityKey.Name + " Path";
     var daxPath = @"
-        PATH( <cEntityKey>, <cParentSafe> )"
+PATH( <cEntityKey>, <cParentSafe> )"
         .Replace("<cEntityKey>", cEntityKey.DaxObjectFullName)
         .Replace("<cParentSafe>", cParentSafe.DaxObjectFullName);
     foreach (var c in t.Columns.Where(x => x.Name == namePath).ToList()) { c.Delete(); }
@@ -90,38 +85,10 @@ if (t.GetAnnotation("Parent-child hierarchy") == null)
     );
     cPath.IsHidden = true;
 
-    // create Detached column
-    var nameDetached = cEntityKey.Name + "Detached";
-    var daxDetached = @"
-        VAR LevelKey = PATHITEM( <cPath>, 1, <dataTypeEntityKey> )
-        VAR LevelParent =
-            LOOKUPVALUE(
-                <cEntityParentKey>,
-                <cEntityKey>,
-                LevelKey
-            )
-        VAR Result = NOT LevelParent = BLANK( )
-        RETURN
-            Result"
-        .Replace("<cPath>", cPath.DaxObjectFullName)
-        .Replace("<cEntityParentKey>", cEntityParentKey.DaxObjectFullName)
-        .Replace("<cEntityKey>", cEntityKey.DaxObjectFullName)
-        .Replace("<dataTypeEntityKey>", dataTypeEntityKey);
-    foreach (var c in t.Columns.Where(x => x.Name == nameDetached).ToList()) { c.Delete(); }
-    var cDetached = t.AddCalculatedColumn(
-        name: nameDetached,
-        expression: daxDetached
-    );
-    cDetached.IsHidden = true;
-
     // create Depth column
-    var nameDepth = cEntityKey.Name + "Depth";
+    var nameDepth = cEntityKey.Name + " Depth";
     var daxDepth = @"
-        IF(
-            NOT <cDetached>,
-            PATHLENGTH( <cPath> )
-        )"
-        .Replace("<cDetached>", cDetached.DaxObjectFullName)
+PATHLENGTH( <cPath> )"
         .Replace("<cPath>", cPath.DaxObjectFullName);
     foreach (var c in t.Columns.Where(x => x.Name == nameDepth).ToList()) { c.Delete(); }
     var cDepth = t.AddCalculatedColumn(
@@ -169,11 +136,10 @@ else
     if (cEntityKey.DataType == DataType.Int64) { dataTypeEntityKey = "INTEGER"; } else { dataTypeEntityKey = "TEXT"; }
 
     // set previously created objects
-    var cParentSafe = t.Columns[cEntityKey.Name + "ParentSafe"];
-    var cParentMissing = t.Columns[cEntityKey.Name + "ParentMissing"];
-    var cPath = t.Columns[cEntityKey.Name + "Path"];
-    var cDetached = t.Columns[cEntityKey.Name + "Detached"];
-    var cDepth = t.Columns[cEntityKey.Name + "Depth"];
+    var cParentCount = t.Columns[cEntityKey.Name + " ParentCount"];
+    var cParentSafe = t.Columns[cEntityKey.Name + " ParentSafe"];
+    var cPath = t.Columns[cEntityKey.Name + " Path"];
+    var cDepth = t.Columns[cEntityKey.Name + " Depth"];
 
     // create hierarchy
     var nameLevels = cEntityName.Name + " Hierarchy";
@@ -186,7 +152,7 @@ else
     var daxBrowseDepthHashSet = new HashSet<string>();
 
     // get max hierarchy depth
-    var maxDepth = Convert.ToInt64(ScriptHelper.EvaluateDax($"VAR maxValue = MAX( {cDepth.DaxObjectFullName} ) RETURN IF( maxValue = BLANK( ), 0, maxValue )"));
+    var maxDepth = Convert.ToInt64(ScriptHelper.EvaluateDax($"VAR maxValue = MAX( {cDepth.DaxObjectFullName} ) RETURN IF( maxValue = BLANK(), 0, maxValue )"));
 
     // loop for each level and create columns
     for (int i = 1; i <= maxDepth; i++)
@@ -195,22 +161,27 @@ else
         // set column details
         var nameLevel = cEntityName.Name + $" Level {i}";
         var daxLevel = @"
-            IF(
-                NOT <cDetached>,
-                VAR LevelNumber = <i>
-                VAR LevelKey =
-                    PATHITEM( <cPath>, LevelNumber, <dataTypeEntityKey> )
-                VAR Result =
-                    LOOKUPVALUE( <cEntityName>, <cEntityKey>, LevelKey )
-                RETURN
-                    Result
-            )"
-            .Replace("<cDetached>", cDetached.DaxObjectFullName)
+VAR _LevelNumber = <i>
+RETURN
+    IF (
+        <cDepth> >= _LevelNumber,
+        IF (
+            <cDepth> = 1 || <cParentCount> = 1,
+            LOOKUPVALUE (
+                <cEntityName>,
+                <cEntityKey>,
+                PATHITEM ( <cPath>, _LevelNumber, <dataTypeEntityKey> ),
+                <cEntityName>
+            )
+        )
+    )"
             .Replace("<i>", i.ToString())
-            .Replace("<cPath>", cPath.DaxObjectFullName)
-            .Replace("<dataTypeEntityKey>", dataTypeEntityKey)
+            .Replace("<cDepth>", cDepth.DaxObjectFullName)
+            .Replace("<cParentCount>", cParentCount.DaxObjectFullName)
             .Replace("<cEntityName>", cEntityName.DaxObjectFullName)
-            .Replace("<cEntityKey>", cEntityKey.DaxObjectFullName);
+            .Replace("<cEntityKey>", cEntityKey.DaxObjectFullName)
+            .Replace("<cPath>", cPath.DaxObjectFullName)
+            .Replace("<dataTypeEntityKey>", dataTypeEntityKey);
 
         // remove column if it exists
         foreach (var c in t.Columns.Where(x => x.Name == nameLevel).ToList()) { c.Delete(); }
@@ -236,15 +207,27 @@ else
     }
 
     // create BrowseDepth measure
-    var nameBrowseDepth = cEntityName.Name + " Browse Depth";
-    var daxBrowseDepth = string.Join(Environment.NewLine + "+ ", daxBrowseDepthHashSet);
+    var nameBrowseDepth = cEntityName.Name + " BrowseDepth";
+    var daxBrowseDepth = Environment.NewLine + string.Join(Environment.NewLine + "+ ", daxBrowseDepthHashSet);
     foreach (var m in t.Measures.Where(x => x.Name == nameBrowseDepth).ToList()) { m.Delete(); }
     var mBrowseDepth = t.AddMeasure(
         name: nameBrowseDepth,
         expression: daxBrowseDepth
     );
     mBrowseDepth.IsHidden = true;
-    
+
+    // create RowDepth measure
+    var nameRowDepth = cEntityName.Name + " RowDepth";
+    var daxRowDepth = @"
+MAX ( <cDepth> )"
+        .Replace("<cDepth>", cDepth.DaxObjectFullName);
+    foreach (var m in t.Measures.Where(x => x.Name == nameRowDepth).ToList()) { m.Delete(); }
+    var mRowDepth = t.AddMeasure(
+        name: nameRowDepth,
+        expression: daxRowDepth
+    );
+    mRowDepth.IsHidden = true;
+
     // remove annotation
     t.RemoveAnnotation("Parent-child hierarchy");
 
