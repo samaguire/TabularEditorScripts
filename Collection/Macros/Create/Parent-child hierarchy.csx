@@ -21,21 +21,21 @@ if (t.GetAnnotation("Parent-child hierarchy") == null)
     // get EntityKey from user
     var cEntityKey = ScriptHelper.SelectColumn(
         label: "Select 'EntityKey' column:",
-        table: t
+        columns: t.Columns.OrderBy(c => c.Name)
     );
     if (cEntityKey == null) { return; }
 
     // get EntityParentKey from user
     var cEntityParentKey = ScriptHelper.SelectColumn(
         label: "Select 'EntityParentKey' column:",
-        table: t
+        columns: t.Columns.OrderBy(c => c.Name)
     );
     if (cEntityParentKey == null) { return; }
 
     // get EntityName from user
     var cEntityName = ScriptHelper.SelectColumn(
         label: "Select 'EntityName' column:",
-        table: t
+        columns: t.Columns.OrderBy(c => c.Name)
     );
     if (cEntityName == null) { return; }
 
