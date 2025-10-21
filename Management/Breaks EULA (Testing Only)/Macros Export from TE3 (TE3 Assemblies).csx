@@ -1,4 +1,5 @@
-﻿#r "C:\Program Files\Tabular Editor 3\TabularEditor3.Shared.dll"
+﻿#r "TabularEditor3.Shared.dll"
+// #r "C:\Program Files\Tabular Editor 3\TabularEditor3.Shared.dll"
 
 using TabularEditor.Shared.Scripting;
 using Newtonsoft.Json;
