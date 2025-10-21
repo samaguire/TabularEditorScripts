@@ -11,7 +11,7 @@ The below software needs to be installed. (Portable versions of Tabular Editor a
 ### Required
 
 - [Visual Studio Code](https://code.visualstudio.com/)
-- [.NET SDK 6.0 or 7.0](https://dotnet.microsoft.com/en-us/download)
+- [.NET SDK 8.0 or 9.0](https://dotnet.microsoft.com/en-us/download)
 - [Tabular Editor 2](https://github.com/TabularEditor/TabularEditor) (free, open-source version)
 
 ### Optional
@@ -23,7 +23,7 @@ The below software needs to be installed. (Portable versions of Tabular Editor a
 ### Quick Install
 
 1. Opening this repo in Visual Studio Code will prompt to install the C# and Code Runner extensions if not already installed.
-2. The dotnet script tool can be installed from the terminal using the command `dotnet tool install -g dotnet-script --version 1.3.1`
+2. The dotnet script tool can be installed from the terminal using the command `dotnet tool install -g dotnet-script`
 3. Update the Code Runner Executor Map setting for C# to `"csharp": "dotnet script --isolated-load-context"` from `"csharp": "cscript"`
 
 ### Visual Studio Extensions
@@ -35,11 +35,15 @@ To author C# scripts (and code) from Visual Studio Code, you need to install:
 To run C# scripts from Visual Studio Code (**the Management scripts in this case**) you need to install:
 
 - The [dotnet script](https://github.com/filipw/dotnet-script) extension, and
-- optionally, the [Code Runner](https://marketplace.visualstudio.com/items?itemName=formulahendry.code-runner) extension (but highly recommended).
+- optionally, the [Code Runner](https://marketplace.visualstudio.com/items?itemName=formulahendry.code-runner) extension (highly recommended).
 
 ### dotnet script
 
 If you get the "`Tool 'dotnet-script' failed to install`" error when executing the install command from terminal, try updating the package source in your NuGet config file as per [this](https://stackoverflow.com/a/68140757) post on Stack Overflow.
+
+### OmniSharp Language Server
+
+Please ensure the OmniSharp language server is being used. Newer version the C# extension have this turned off. To ensure it is being used, search for the setting `dotnet.server.useOmnisharp` and enable it.
 
 ## Macro Management Scripts
 
