@@ -1,70 +1,99 @@
 // https://notes.mthierba.net/power-bi/analysis-services/list-new-features-in-tom-library#linqpad-script
-// https://www.nuget.org/packages/Microsoft.AnalysisServices.retail.amd64#versions-body-tab
+// https://www.nuget.org/packages/Microsoft.AnalysisServices#versions-body-tab
 
-#r "nuget: Microsoft.AnalysisServices.retail.amd64, 19.69.6.2"
+#r "nuget: Microsoft.AnalysisServices, 19.106.1"
 
 using System.Reflection;
 using TOM = Microsoft.AnalysisServices.Tabular;
 
-var asm = typeof(TOM.Server).Assembly;
-var compatAttr = asm.GetType("Microsoft.AnalysisServices.Tabular.CompatibilityRequirementAttribute");
+// --- Data Structure ---
+public record CompatibilityInfo(string Name, string MemberType, string Box, string Excel, string PBI);
 
-string ReadProperty(string name, object attr) => compatAttr.GetProperty(name).GetValue(attr).ToString();
-string GetMemberType(Type t) => t.IsEnum ? "Enum" : t.IsInterface ? "Interface" : "Class";
-Attribute GetCustomAttributeSafe(MemberInfo member, Type t)
-{ // This is needed to avoid errors on a few specific attributes containing unsupported expressions - we're simply ignoring those
+// --- Helper Functions ---
+
+// Retrieves a property value from an attribute using reflection.
+// Assumes the property exists and its value can be converted to string.
+static string ReadProperty(string name, object attr) =>
+    attr.GetType().GetProperty(name, BindingFlags.Public | BindingFlags.Instance)?.GetValue(attr)?.ToString() ?? "N/A";
+
+// Determines the type category of a given Type.
+static string GetMemberType(Type t) => t.IsEnum ? "Enum" : t.IsInterface ? "Interface" : "Class";
+
+// Safely retrieves a custom attribute, handling specific TOM exceptions.
+static Attribute GetCustomAttributeSafe(MemberInfo member, Type t)
+{
     try
     {
         return member.GetCustomAttribute(t);
     }
     catch (TOM.TomException)
     {
+        // This is needed to avoid errors on a few specific attributes containing unsupported expressions - we're simply ignoring those
         return null;
     }
 }
 
-var members = asm.GetTypes()
-    .Select(t => new
+// Extracts Box, Excel, and PBI compatibility properties from the attribute.
+static (string Box, string Excel, string PBI) ExtractCompatibilityProperties(object attribute)
+{
+    return (
+        ReadProperty("Box", attribute),
+        ReadProperty("Excel", attribute),
+        ReadProperty("Pbi", attribute)
+    );
+}
+
+// Checks if a version string represents a version newer than a given threshold.
+static bool IsNewerThan(string versionString, int threshold)
+{
+    if (versionString == "Unsupported") return false;
+    if (int.TryParse(versionString, out var version))
     {
-        Type = t,
-        CompatAttribute = t.GetCustomAttribute(compatAttr)
-    })
-    .Where(x => x.CompatAttribute != null)
-    .Select(x => new
-    {
-        Name = x.Type.FullName,
-        MemberType = GetMemberType(x.Type),
-        Box = ReadProperty("Box", x.CompatAttribute),
-        Excel = ReadProperty("Excel", x.CompatAttribute),
-        PBI = ReadProperty("Pbi", x.CompatAttribute)
-    })
-    .Union(
-        asm.GetTypes()
-        .SelectMany(t => t.GetMembers())
-        .Select(m => new
-        {
-            Member = m,
-            Name = $"{m.DeclaringType.FullName}.{m.Name}",
-            CompatAttribute = GetCustomAttributeSafe(m, compatAttr),
-            MemberType = m.MemberType.ToString()
-        })
-        .Where(x => x.CompatAttribute != null)
-        .Select(x => new
-        {
-            x.Name,
-            x.MemberType,
-            Box = ReadProperty("Box", x.CompatAttribute),
-            Excel = ReadProperty("Excel", x.CompatAttribute),
-            PBI = ReadProperty("Pbi", x.CompatAttribute)
-        })
-    )
-    .Where(x => /* toggle this for 1200/1400: */ !(((int.TryParse(x.Box, out var box) && box <= 1400) || x.Box == "Unsupported")
-        && ((int.TryParse(x.Excel, out var excel) && excel <= 1400) || x.Excel == "Unsupported")
-        && ((int.TryParse(x.PBI, out var pbi) && pbi <= 1400) || x.PBI == "Unsupported")))
+        return version > threshold;
+    }
+    return false; // Treat non-numeric/non-"Unsupported" values as not newer
+}
+
+// --- Main Logic ---
+
+var asm = typeof(TOM.Server).Assembly;
+var compatibilityRequirementAttributeType = asm.GetType("Microsoft.AnalysisServices.Tabular.CompatibilityRequirementAttribute");
+
+// Common projection logic for both types and members
+Func<MemberInfo, Attribute, CompatibilityInfo> projectCompatibilityItem = (memberInfo, attribute) =>
+{
+    var props = ExtractCompatibilityProperties(attribute);
+    return new CompatibilityInfo(
+        Name: memberInfo is Type type ? type.FullName : $"{memberInfo.DeclaringType?.FullName}.{memberInfo.Name}",
+        MemberType: memberInfo is Type t ? GetMemberType(t) : memberInfo.MemberType.ToString(),
+        props.Box,
+        props.Excel,
+        props.PBI
+    );
+};
+
+// 1. Get types with CompatibilityRequirementAttribute
+var typesWithAttribute = asm.GetTypes()
+    .Select(t => new { Item = (MemberInfo)t, Attribute = GetCustomAttributeSafe(t, compatibilityRequirementAttributeType) })
+    .Where(x => x.Attribute != null)
+    .Select(x => projectCompatibilityItem(x.Item, x.Attribute));
+
+// 2. Get members with CompatibilityRequirementAttribute
+var membersWithAttribute = asm.GetTypes()
+    .SelectMany(t => t.GetMembers(BindingFlags.Public | BindingFlags.NonPublic | BindingFlags.Instance | BindingFlags.Static | BindingFlags.DeclaredOnly))
+    .Select(m => new { Item = m, Attribute = GetCustomAttributeSafe(m, compatibilityRequirementAttributeType) })
+    .Where(x => x.Attribute != null)
+    .Select(x => projectCompatibilityItem(x.Item, x.Attribute));
+
+// 3. Combine, filter, and order
+var members = typesWithAttribute
+    .Union(membersWithAttribute)
+    .Where(x => IsNewerThan(x.Box, 1400) || IsNewerThan(x.Excel, 1400) || IsNewerThan(x.PBI, 1400))
     .OrderBy(x => x.Name)
     .ToArray();
 
-// Convert to markdown table for blog post:
+// --- Output to Markdown File ---
+
 using (StreamWriter outputFile = new StreamWriter(@".\Management\TOM-Extract-CompatibilityRequirementsAttributes.md"))
 {
 	outputFile.WriteLine($"|Name|MemberType|Box|Excel|PBI|");
