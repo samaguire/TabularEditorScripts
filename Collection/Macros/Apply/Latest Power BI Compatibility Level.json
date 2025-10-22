@@ -1,0 +1,6 @@
+﻿{
+  "Name": "Macros\\Apply\\Latest Power BI Compatibility Level",
+  "Enabled": "true",
+  "Tooltip": "",
+  "ValidContexts": "Model"
+}
