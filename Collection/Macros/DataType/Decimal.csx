@@ -16,6 +16,7 @@ foreach (var c in Selected.Columns)
 {
     if (c.Table.ObjectType == ObjectType.CalculationGroupTable) { continue; }
     if (c.DataType != DataType.Decimal && c.DataType != DataType.Double && c.DataType != DataType.Int64) { continue; }
+    // this is a valid property in TE3
     c.ChangedProperties = "DataType";
     c.DataType = DataType.Decimal;
 }
