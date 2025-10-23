@@ -19,7 +19,7 @@ foreach (var c in Model.AllColumns)
         c.Table.ObjectType == ObjectType.CalculationGroupTable ||
         c.Table.Name.StartsWith("DateTableTemplate") ||
         c.Table.Name.StartsWith("LocalDateTable") ||
-        c.Table.Name == "DateAutoTemplate" ||
+        c.Table.Name.StartsWith("DateAutoTemplate") ||
         c.Table.Name == "Date" ||
         c.Table.Name == "Calendar"
         ) { continue; }
@@ -44,6 +44,8 @@ foreach (var c in Model.AllColumns)
             break;
 
         case DataType.Double:
+            // this is a valid property in TE3
+            c.ChangedProperties = "DataType";
             c.DataType = DataType.Decimal;
             c.FormatString = "#,0.00";
             break;
