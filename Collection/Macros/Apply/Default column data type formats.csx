@@ -17,10 +17,10 @@ foreach (var c in Model.AllColumns)
 
     if (
         c.Table.ObjectType == ObjectType.CalculationGroupTable ||
-        c.Table.Name.StartsWith("DateTableTemplate_") ||
-        c.Table.Name.StartsWith("LocalDateTable_") ||
-        c.Table.Name == "DateAutoTemplate" || 
-        c.Table.Name == "Date" || 
+        c.Table.Name.StartsWith("DateTableTemplate") ||
+        c.Table.Name.StartsWith("LocalDateTable") ||
+        c.Table.Name == "DateAutoTemplate" ||
+        c.Table.Name == "Date" ||
         c.Table.Name == "Calendar"
         ) { continue; }
 

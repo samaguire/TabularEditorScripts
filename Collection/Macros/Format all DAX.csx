@@ -17,8 +17,8 @@ void FormatObjects(IEnumerable<IDaxDependantObject> daxObjects) {
 }
 
 FormatObjects(Model.AllMeasures);
-FormatObjects(Model.Tables.Where(x => !x.Name.StartsWith("DateTableTemplate") && !x.Name.StartsWith("LocalDateTable") && !x.Name.StartsWith("DateAutoTemplate")));
-FormatObjects(Model.AllColumns.OfType<CalculatedColumn>().Where(x => !x.DaxTableName.StartsWith("DateTableTemplate") && !x.DaxTableName.StartsWith("LocalDateTable") && !x.Name.StartsWith("DateAutoTemplate")));
+FormatObjects(Model.Tables.Where(x => !x.Name.StartsWith("DateTableTemplate") && !x.Name.StartsWith("LocalDateTable") && x.Name != "DateAutoTemplate"));
+FormatObjects(Model.AllColumns.OfType<CalculatedColumn>().Where(x => !x.DaxTableName.StartsWith("DateTableTemplate") && !x.DaxTableName.StartsWith("LocalDateTable") && x.Name != "DateAutoTemplate"));
 FormatObjects(Model.AllCalculationItems);
 FormatObjects(Model.Roles.SelectMany(r => r.TablePermissions));
 FormatObjects(Model.Functions);
