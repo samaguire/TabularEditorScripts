@@ -1,4 +1,4 @@
-﻿#load "..\..\..\Management\Common Library.csx"
+﻿#load "..\..\Management\Common Library.csx"
 // *** The above assemblies are required for the C# scripting environment, remove in Tabular Editor ***
 
 using System;
