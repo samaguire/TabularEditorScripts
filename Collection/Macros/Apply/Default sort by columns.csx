@@ -15,14 +15,25 @@ using TabularEditor.Scripting;
 foreach (var c in Model.AllColumns)
 {
 
-    if (c.Table.ObjectType == ObjectType.CalculationGroupTable) { continue; }
+    if (
+        c.Table.ObjectType == ObjectType.CalculationGroupTable ||
+        c.Table.Name.StartsWith("DateTableTemplate") ||
+        c.Table.Name.StartsWith("LocalDateTable") ||
+        c.Table.Name.StartsWith("DateAutoTemplate") ||
+        c.Table.Name == "Date" ||
+        c.Table.Name == "Calendar"
+        ) { continue; }
 
     var tableColumns = c.Table.Columns.Where(tc =>
         tc.Name.ToLower() == (c.Name + " Number").ToLower() ||
         tc.Name.ToLower() == (c.Name + " Sort").ToLower() ||
         tc.Name.ToLower() == (c.Name + " SortBy").ToLower() ||
+        tc.Name.ToLower() == (c.Name + " Sort By").ToLower() ||
+        tc.Name.ToLower() == (c.Name + " SortOrder").ToLower() ||
+        tc.Name.ToLower() == (c.Name + " Sort Order").ToLower() ||
         tc.Name.ToLower() == (c.Name + " Order").ToLower() ||
         tc.Name.ToLower() == (c.Name + " OrderBy").ToLower() ||
+        tc.Name.ToLower() == (c.Name + " Order By").ToLower() ||
         tc.Name.ToLower() == (c.Name + " Ordinal").ToLower()
         ).OrderBy(tc => tc);
 
