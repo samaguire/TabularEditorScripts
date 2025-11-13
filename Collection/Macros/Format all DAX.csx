@@ -13,7 +13,7 @@ using TabularEditor.Scripting;
 // *** The above namespaces are required for the C# scripting environment, remove in Tabular Editor ***
 
 void FormatObjects(IEnumerable<IDaxDependantObject> daxObjects) {
-    ScriptHelper.FormatDax(objects: daxObjects, shortFormat: true, skipSpaceAfterFunctionName: false);
+    ScriptHelper.FormatDax(objects: daxObjects, shortFormat: false, skipSpaceAfterFunctionName: false);
 }
 
 FormatObjects(Model.AllMeasures);
