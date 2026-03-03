@@ -1,0 +1,6 @@
+﻿{
+  "Name": "Macros\\DataType\\Automatic",
+  "Enabled": "true",
+  "Tooltip": "",
+  "ValidContexts": "Column"
+}

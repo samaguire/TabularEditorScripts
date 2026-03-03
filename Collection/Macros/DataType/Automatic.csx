@@ -16,13 +16,10 @@ foreach (var c in Selected.Columns)
 {
     if (c.Table.ObjectType == ObjectType.CalculationGroupTable) { continue; }
     if (c.DataType != DataType.Decimal && c.DataType != DataType.Double && c.DataType != DataType.Int64) { continue; }
-    c.DataType = DataType.Double;
     // this is a valid property in TE3
     c.ChangedProperties = string.Join(",",
         (c.ChangedProperties ?? "")
             .Split(',', StringSplitOptions.RemoveEmptyEntries)
             .Select(p => p.Trim())
-            .Append("DataType")
-            .Distinct());
-
+            .Where(p => p != "DataType"));
 }
