@@ -15,7 +15,8 @@ using TabularEditor.Scripting;
 foreach(var c in Selected.Columns)
 {
     c.Table.AddMeasure(
-        name: $"{c.Name} Avg",
+        //name: $"{c.Name} Avg",
+        name: $"Avg of {c.Name}",
         expression: $"AVERAGE( {c.DaxObjectFullName} )",
         displayFolder: string.IsNullOrEmpty(c.DisplayFolder) ? $"› Measures" : $"{c.DisplayFolder}\\› Measures"
     );

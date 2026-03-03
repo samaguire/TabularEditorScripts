@@ -15,7 +15,8 @@ using TabularEditor.Scripting;
 foreach(var c in Selected.Columns)
 {
     c.Table.AddMeasure(
-        name: $"{c.Name} Count",
+        //name: $"{c.Name} DCnt",
+        name: $"DCnt of {c.Name}",
         expression: $"DISTINCTCOUNT( {c.DaxObjectFullName} )",
         displayFolder: string.IsNullOrEmpty(c.DisplayFolder) ? $"› Measures" : $"{c.DisplayFolder}\\› Measures"
     );

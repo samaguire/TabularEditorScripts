@@ -15,7 +15,8 @@ using TabularEditor.Scripting;
 foreach(var c in Selected.Columns)
 {
     c.Table.AddMeasure(
-        name: $"{c.Name} Min",
+        //name: $"{c.Name} Min",
+        name: $"Min of {c.Name}",
         expression: $"MIN( {c.DaxObjectFullName} )",
         displayFolder: string.IsNullOrEmpty(c.DisplayFolder) ? $"› Measures" : $"{c.DisplayFolder}\\› Measures"
     );
