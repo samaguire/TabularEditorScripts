@@ -11,7 +11,11 @@ var collectionFolder = @".\Collection";
 var TE3overTE2 = true;
 
 // Check paths
-if (!Directory.Exists(collectionFolder)) { return; }
+if (!Directory.Exists(collectionFolder))
+{
+    Console.WriteLine("\".\\Collection\" location not found!");
+    return;
+}
 
 var jsonFile = string.Empty;
 var jsonFileV2 = Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData) + @"\TabularEditor\MacroActions.json";
