@@ -17,5 +17,5 @@ ScriptHelper.CustomAction("Macros\\Apply\\Independent value filter behavior");
 ScriptHelper.CustomAction("Macros\\Apply\\Discourage implicit measures");
 ScriptHelper.CustomAction("Macros\\Apply\\Default column data types and formats");
 ScriptHelper.CustomAction("Macros\\Apply\\Default sort by columns");
-ScriptHelper.CustomAction("Macros\\Apply\\Encoding hints");
+// ScriptHelper.CustomAction("Macros\\Apply\\Encoding hints");
 ScriptHelper.CustomAction("Macros\\Format all DAX");
